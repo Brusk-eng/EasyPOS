@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { fetchItemVariants } from "../../api/Items";
 import { Modal, ErrorAlert } from "../common";
 import usePOSSessionStore from "../../store/posSessionStore";
+import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 import useCartStore from "../../store/cartStore";
 
 // Attribute-chip picker for a variant template item — narrows `attributes`
@@ -18,7 +19,8 @@ const ItemVariantModal = ({ templateItem, onClose, onAdd }) => {
 
   const warehouse = usePOSSessionStore((s) => s.warehouse);
   const priceList = usePOSSessionStore((s) => s.priceList);
-  const currencySymbol = usePOSSessionStore((s) => s.currencySymbol);
+  const posProfile = usePOSSessionStore((s) => s.posProfile);
+  const money = useCurrencyFormatter();
   const customer = useCartStore((s) => s.customer);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const ItemVariantModal = ({ templateItem, onClose, onAdd }) => {
     setError("");
     setSelected({});
     setQty(1);
-    fetchItemVariants(templateItem.item_code, warehouse, priceList, customer).then((data) => {
+    fetchItemVariants(templateItem.item_code, warehouse, priceList, customer, posProfile).then((data) => {
       if (!data || !data.variants?.length) {
         setError("No variants are set up for this item yet.");
         setLoading(false);
@@ -137,7 +139,7 @@ const ItemVariantModal = ({ templateItem, onClose, onAdd }) => {
                       <div className="fw-semibold">
                         {resolvedVariant.rate === null || resolvedVariant.rate === undefined
                           ? "—"
-                          : `${currencySymbol}${resolvedVariant.rate}`}
+                          : money(resolvedVariant.rate)}
                       </div>
                     </div>
                     <div className="pos-item-stepper" style={{ marginTop: 0 }}>

@@ -18,6 +18,7 @@ import { LinkField, TextField, SelectField, NumberField, CurrencyField, AlertMod
 import { roundCurrency } from "../../utils/number";
 import { computeCartTotals } from "../../utils/tax";
 import useCustomerDisplayBroadcaster from "../../hooks/useCustomerDisplayBroadcaster";
+import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 
 const PRICING_DEBOUNCE_MS = 400;
 
@@ -26,7 +27,7 @@ const Cart = () => {
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
   const hasOpeningEntry = usePOSSessionStore((s) => s.hasOpeningEntry);
   const openOpeningModal = usePOSSessionStore((s) => s.openOpeningModal);
-  const currencySymbol = usePOSSessionStore((s) => s.currencySymbol);
+  const money = useCurrencyFormatter();
   const currencyPrecision = usePOSSessionStore((s) => s.currencyPrecision);
   const floatPrecision = usePOSSessionStore((s) => s.floatPrecision);
   const taxTemplateRows = usePOSSessionStore((s) => s.taxTemplateRows);
@@ -221,11 +222,7 @@ const Cart = () => {
     [cartItems, taxTemplateRows, netAfterItemDiscount, discountOn, discount, currencyPrecision]
   );
 
-  const formatAmount = (value) =>
-    `${currencySymbol}${(value ?? 0).toLocaleString("en-IN", {
-      minimumFractionDigits: currencyPrecision,
-      maximumFractionDigits: currencyPrecision,
-    })}`;
+  const formatAmount = (value) => money(value);
 
   const clearCart = () => {
     clearItems();

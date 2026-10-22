@@ -69,6 +69,7 @@ INVOICE_FIELDS = [
 	"status",
 	"docstatus",
 	"pos_profile",
+	"currency",
 	"is_pos",
 ]
 

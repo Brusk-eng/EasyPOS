@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { fetchInvoices } from "../../api/InvoiceRegister";
 import { getPendingInvoices } from "../../engine/outbox";
 import { Modal, ListTable, Pagination, LinkField, TextField } from "../common";
 import usePOSSessionStore from "../../store/posSessionStore";
+import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 
 const PAGE_SIZE = 10;
 
@@ -11,7 +12,7 @@ const formatDate = (value) => {
   return new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 };
 
-const DRAFT_COLUMNS = [
+const buildDraftColumns = (money) => [
   {
     key: "name",
     label: "Invoice",
@@ -47,7 +48,7 @@ const DRAFT_COLUMNS = [
     key: "grand_total",
     label: "Amount",
     width: "0.8fr",
-    render: (inv) => <span style={{ fontFamily: "var(--font-mono)" }}>₹{inv.grand_total}</span>,
+    render: (inv) => <span style={{ fontFamily: "var(--font-mono)" }}>{money(inv.grand_total, inv.currency)}</span>,
   },
 ];
 
@@ -62,6 +63,8 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
+  const money = useCurrencyFormatter(drafts.map((inv) => inv.currency));
+  const columns = useMemo(() => buildDraftColumns(money), [money]);
 
   // Sales Invoices queued locally (submit=0, i.e. "Save Draft" made while
   // offline — see engine/outbox.js) that haven't synced to ERPNext yet. Only
@@ -178,7 +181,7 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
         <div className="d-flex flex-column pt-2" style={{ flex: 1, minHeight: 0 }}>
           <div style={{ flex: 1, minHeight: 0 }}>
             <ListTable
-              columns={DRAFT_COLUMNS}
+              columns={columns}
               rows={drafts}
               loading={loading}
               emptyMessage="No draft invoices found"

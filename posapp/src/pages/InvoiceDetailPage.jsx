@@ -8,6 +8,7 @@ import CreditNoteModal from "../components/Invoice/CreditNoteModal";
 import { formatDate, invoiceStatusBadgeClass } from "../utils/format";
 import useEngineSettingsStore from "../engine/settingsStore";
 import useConnectivityStore from "../engine/connectivity";
+import useCurrencyFormatter from "../hooks/useCurrencyFormatter";
 
 // Cashier-facing IDs minted by engine/outbox.js for an invoice queued offline
 // (see queueOfflineInvoice's genDisplayId) — never a real ERPNext Sales
@@ -32,9 +33,13 @@ const InvoiceDetailPage = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const { setTopbar } = useOutletContext();
-  const currencySymbol = usePOSSessionStore((s) => s.currencySymbol);
 
   const [invoice, setInvoice] = useState(null);
+  // Formatted in the invoice's own currency, not the open shift's — the
+  // Invoices list spans every profile, each possibly in a different currency.
+  const formatCurrency = useCurrencyFormatter([invoice?.currency]);
+  const companyCurrency = usePOSSessionStore((s) => s.companyCurrency);
+  const sessionCompany = usePOSSessionStore((s) => s.openingDetail?.company);
   const [loadedName, setLoadedName] = useState(null);
   const loading = loadedName !== name;
 
@@ -98,7 +103,7 @@ const InvoiceDetailPage = () => {
     setTopbar({ title: invoice?.name || pendingRow?.display_id || "Invoice" });
   }, [invoice, pendingRow, setTopbar]);
 
-  const money = (value) => `${currencySymbol}${(value ?? 0).toLocaleString("en-IN", { minimumFractionDigits: 2 })}`;
+  const money = (value) => formatCurrency(value, invoice?.currency);
 
   const openPrintView = () => {
     window.open(`/printview?doctype=Sales%20Invoice&name=${encodeURIComponent(name)}`, "_blank");
@@ -235,6 +240,17 @@ const InvoiceDetailPage = () => {
                 { label: "POS Profile", value: invoice.pos_profile },
                 { label: "POS Opening Entry", value: invoice.custom_ep_opening_entry, mono: true },
                 { label: "Currency", value: invoice.currency },
+                ...(invoice.currency && invoice.conversion_rate && invoice.conversion_rate !== 1
+                  ? [
+                      {
+                        label: "Exchange Rate",
+                        value: `1 ${invoice.currency} = ${invoice.conversion_rate}${
+                          invoice.company === sessionCompany ? ` ${companyCurrency}` : ""
+                        }`,
+                        mono: true,
+                      },
+                    ]
+                  : []),
                 { label: "Price List", value: invoice.selling_price_list },
                 { label: "Warehouse", value: invoice.set_warehouse },
                 ...(invoice.is_return
@@ -419,7 +435,6 @@ const InvoiceDetailPage = () => {
         open={creditNoteOpen}
         onClose={() => setCreditNoteOpen(false)}
         invoice={invoice}
-        currencySymbol={currencySymbol}
         onCreated={handleCreditNoteCreated}
       />
     </>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Modal, ChildTable, ErrorAlert } from "../common";
 import { createCreditNote } from "../../api/Invoice";
 import { flt } from "../../utils/number";
+import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 
 // Item/tax rows are seeded from the original invoice on open and edited
 // locally — nothing is written back until "Create Credit Note" is pressed.
@@ -31,11 +32,13 @@ const seedTaxRows = (invoice) =>
     tax_amount: tax.tax_amount,
   }));
 
-const CreditNoteModal = ({ open, onClose, invoice, currencySymbol, onCreated }) => {
+const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
   const [itemRows, setItemRows] = useState([]);
   const [taxRows, setTaxRows] = useState([]);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const formatCurrency = useCurrencyFormatter([invoice?.currency]);
+  const money = (value) => formatCurrency(value, invoice?.currency);
 
   useEffect(() => {
     if (open) {
@@ -47,7 +50,6 @@ const CreditNoteModal = ({ open, onClose, invoice, currencySymbol, onCreated }) 
 
   if (!open) return null;
 
-  const money = (value) => `${currencySymbol}${(value ?? 0).toLocaleString("en-IN", { minimumFractionDigits: 2 })}`;
 
   const updateItem = (idx, patch) => {
     setItemRows((rows) => rows.map((r) => (r._idx === idx ? { ...r, ...patch } : r)));

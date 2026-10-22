@@ -3,6 +3,7 @@ import "./style.css";
 import { fetchClosingEntry, postClosingEntry } from "../../api/ClosingEntry";
 import usePOSSessionStore from "../../store/posSessionStore";
 import { CurrencyField, Modal } from "../common";
+import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 
 const ClosingModal = ({ onConfirm, onClose }) => {
   const [closingDetails, setClosingDetails] = useState([]);
@@ -10,7 +11,7 @@ const ClosingModal = ({ onConfirm, onClose }) => {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
-  const currencySymbol = usePOSSessionStore((s) => s.currencySymbol);
+  const money = useCurrencyFormatter();
   const clearOpeningEntry = usePOSSessionStore((s) => s.clearOpeningEntry);
 
   const hasManualRows = closingDetails.some((row) => !row.automatically_calculated);
@@ -26,7 +27,7 @@ const ClosingModal = ({ onConfirm, onClose }) => {
     });
   }, []);
 
-  const formatAmount = (value) => `${currencySymbol}${(value ?? 0).toLocaleString("en-IN")}`;
+  const formatAmount = (value) => money(value);
 
   const handleConfirm = () => {
     setSubmitting(true);

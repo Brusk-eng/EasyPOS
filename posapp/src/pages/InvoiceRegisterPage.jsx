@@ -4,6 +4,7 @@ import usePOSSessionStore from "../store/posSessionStore";
 import { fetchInvoices } from "../api/InvoiceRegister";
 import { ListTable, FilterChips, Pagination, LinkField, TextField } from "../components/common";
 import { formatDate, invoiceStatusBadgeClass } from "../utils/format";
+import useCurrencyFormatter from "../hooks/useCurrencyFormatter";
 
 const PAGE_SIZE = 20;
 
@@ -14,7 +15,7 @@ const STATUS_FILTERS = [
   { label: "Overdue", value: "Overdue" },
 ];
 
-const INVOICE_COLUMNS = [
+const buildInvoiceColumns = (money) => [
   {
     key: "name",
     label: "Invoice",
@@ -37,7 +38,7 @@ const INVOICE_COLUMNS = [
     key: "grand_total",
     label: "Amount",
     width: "0.9fr",
-    render: (inv) => <span style={{ fontFamily: "var(--font-mono)" }}>₹{inv.grand_total}</span>,
+    render: (inv) => <span style={{ fontFamily: "var(--font-mono)" }}>{money(inv.grand_total, inv.currency)}</span>,
   },
   {
     key: "status",
@@ -68,6 +69,9 @@ const InvoiceRegisterPage = () => {
   const [email, setEmail] = useState("");
   const [search, setSearch] = useState("");
   const [invoices, setInvoices] = useState([]);
+  // Each row in its own invoice's currency — this list spans every profile.
+  const money = useCurrencyFormatter(invoices.map((inv) => inv.currency));
+  const columns = useMemo(() => buildInvoiceColumns(money), [money]);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -228,7 +232,7 @@ const InvoiceRegisterPage = () => {
         <div className="d-flex flex-column flex-fill px-4 pt-2 pb-4" style={{ minHeight: 0 }}>
           <div style={{ flex: 1, minHeight: 0 }}>
             <ListTable
-              columns={INVOICE_COLUMNS}
+              columns={columns}
               rows={visibleInvoices}
               loading={loading}
               emptyMessage="No invoices found"
