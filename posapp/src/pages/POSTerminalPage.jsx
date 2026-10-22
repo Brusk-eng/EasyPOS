@@ -6,12 +6,17 @@ import Cart from "../components/Cart";
 import OpeningEntryModal from "../components/Opening/OpeningEntryModal";
 import useBarcodeScanner from "../hooks/useBarcodeScanner";
 import { BarcodeScannerModal } from "../components/common";
+import useConnectivityStore from "../engine/connectivity";
+import useEngineSettingsStore from "../engine/settingsStore";
 
 const POSTerminalPage = () => {
   const { setTopbar } = useOutletContext();
   const [activeItemGroup, setActiveItemGroup] = useState("");
   const [searchText, setSearchText] = useState("");
   const [showCameraScanner, setShowCameraScanner] = useState(false);
+  const offlineModeEnabled = useEngineSettingsStore((s) => s.offlineModeEnabled);
+  const isOnline = useConnectivityStore((s) => s.isOnline);
+  const showOfflineBanner = offlineModeEnabled && !isOnline;
 
   const handleCameraDetected = useCallback((code) => {
     setShowCameraScanner(false);
@@ -36,6 +41,25 @@ const POSTerminalPage = () => {
 
   return (
     <>
+      {showOfflineBanner && (
+        <div
+          className="d-flex align-items-center"
+          style={{
+            margin: "12px 16px 0",
+            padding: "8px 14px",
+            borderRadius: "var(--radius-sm)",
+            background: "var(--color-danger-bg)",
+            color: "var(--color-danger-text)",
+            fontSize: 12.5,
+            gap: 8,
+            flexShrink: 0,
+          }}
+        >
+          <i className="bi bi-cloud-slash" />
+          Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected.
+        </div>
+      )}
+
       <div style={{ padding: "12px 16px 0", flexShrink: 0 }}>
         <ItemGroup selectedGroup={activeItemGroup} onChangeGroup={setActiveItemGroup} />
       </div>

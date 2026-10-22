@@ -10,9 +10,15 @@ import { queueOfflineInvoice } from "./outbox";
 // shape has a `localReads.js` adapter are eligible, and easy_pos.api.pos.
 // create_invoice is queued locally instead (see outbox.js) — both only while
 // the offline-mode feature is on (EasyPOS Settings) *and* connectivity is
-// actually down (useConnectivityStore, not just a static flag). Every other
-// write still fails hard offline, same as before. Going offline mid-shift
-// falls back automatically, same as coming back online.
+// actually down (useConnectivityStore, not just a static flag).
+// create_opening_entry/create_closing_entry are deliberately NOT queued —
+// opening a shift resolves item stock/rate scoped to that POS Profile's own
+// warehouse (easy_pos.api.sync.get_offline_snapshot), and a profile that was
+// never synced online (or was synced under a different warehouse) would show
+// wrong or missing stock offline with no way to re-resolve it without
+// connectivity — so shift open/close stays online-only, same as
+// createCustomer/createAddress/createContact and every other write. Going
+// offline mid-shift falls back automatically, same as coming back online.
 const WRITE_METHOD_MARKERS = [
 	"client.insert",
 	"client.save",

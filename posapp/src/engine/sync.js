@@ -15,6 +15,8 @@ export const SYNC_DOMAINS = [
 	{ key: "item_prices", label: "Item Price" },
 	{ key: "loyalty_programs", label: "Loyalty Program" },
 	{ key: "invoices", label: "Sales Invoice" },
+	{ key: "serial_nos", label: "Serial No" },
+	{ key: "batches", label: "Batch" },
 ];
 
 const TABLES = {
@@ -29,6 +31,8 @@ const TABLES = {
 	item_prices: db.item_prices,
 	loyalty_programs: db.loyalty_programs,
 	invoices: db.invoices,
+	serial_nos: db.serial_nos,
+	batches: db.batches,
 };
 
 // Pulls one full master-data snapshot for `posProfile` from the server and
@@ -69,6 +73,10 @@ export const runFullSync = async (posProfile) => {
 		await TABLES.loyalty_programs.bulkPut(snapshot.loyalty_programs ?? []);
 		await TABLES.invoices.clear();
 		await TABLES.invoices.bulkPut(snapshot.invoices ?? []);
+		await TABLES.serial_nos.clear();
+		await TABLES.serial_nos.bulkPut(snapshot.serial_nos ?? []);
+		await TABLES.batches.clear();
+		await TABLES.batches.bulkPut(snapshot.batches ?? []);
 		await db.meta.bulkPut(
 			SYNC_DOMAINS.map((domain) => ({ key: domain.key, lastSyncedAt: syncedAt }))
 		);

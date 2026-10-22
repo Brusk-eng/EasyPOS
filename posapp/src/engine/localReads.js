@@ -109,6 +109,17 @@ const readCheckOpeningEntry = async ({ user } = {}) => {
 	return ok(cached?.data ?? {});
 };
 
+// --- Pricing -----------------------------------------------------------------
+
+// Keys must match api/Pricing.js's fetchPricingRules cache write. Serves the
+// last successfully-fetched Item Code/Item Group Pricing Rule snapshot for
+// this profile — see that file's comment for why this exists (a page reload
+// while offline must not silently drop every discount rule for the shift).
+const readPricingRulesForProfile = async ({ pos_profile } = {}) => {
+	const cached = await db.meta.get(`pricingRules:${pos_profile}`);
+	return ok(cached?.rules ?? []);
+};
+
 // --- Customer ------------------------------------------------------------------
 
 const readCustomerGet = async ({ name } = {}) => ok((await db.customers.get(name)) ?? null);
@@ -178,6 +189,12 @@ const SEARCH_LINK_SOURCES = {
 		fields: ["name", "loyalty_program_name"],
 		description: (r) => r.loyalty_program_name,
 	},
+	// Cart/index.jsx's per-line Serial No / Batch No pickers — filters arrive
+	// as {item_code, status, warehouse: ["=", ...]} / {item, disabled} exactly
+	// like the live search_link call, matched against easy_pos.api.sync's
+	// cached serial_nos/batches rows the same way every other source here does.
+	"Serial No": { table: db.serial_nos, fields: ["name"], description: () => undefined },
+	Batch: { table: db.batches, fields: ["name"], description: () => undefined },
 };
 
 const readSearchLink = async ({ doctype, txt = "", filters, page_length = 20 } = {}) => {
@@ -241,6 +258,10 @@ const ADAPTERS = [
 	{
 		test: (url) => url.endsWith("easy_pos.api.pos.check_opening_entry"),
 		read: (ctx) => readCheckOpeningEntry(ctx.params),
+	},
+	{
+		test: (url) => url.endsWith("easy_pos.api.pricing.get_pricing_rules"),
+		read: (ctx) => readPricingRulesForProfile(ctx.params),
 	},
 	{
 		test: (url, ctx) =>

@@ -83,13 +83,20 @@ MAX_CACHED_ITEM_PRICES = 5000
 # terminal's recent invoices available offline, not every profile's.
 MAX_CACHED_INVOICES = 500
 
+# Field shapes Cart/index.jsx's per-line Serial No / Batch No LinkFields filter
+# against (item_code/status/warehouse, item/disabled) — see
+# posapp/src/engine/localReads.js's readSearchLink, which replays the exact
+# same filters client-side against these cached rows.
+SERIAL_NO_FIELDS = ["name", "item_code", "warehouse", "status"]
+BATCH_FIELDS = ["name", "item", "batch_qty", "disabled"]
+
 
 @frappe.whitelist()
 def get_offline_snapshot(pos_profile: str) -> dict:
 	"""One-shot master-data bundle for `posapp/src/engine/sync.js`'s runFullSync to cache into
 	Dexie — covers exactly the doctypes engine/index.js treats as offline-capable (Item, Item
 	Group, Customer, Price List, Pricing Rule, Sales Taxes and Charges Template, POS Profile,
-	Mode of Payment, Item Price, Loyalty Program, Sales Invoice).
+	Mode of Payment, Item Price, Loyalty Program, Sales Invoice, Serial No, Batch).
 
 	Deliberately reuses the *existing* resolution helpers (get_items, get_taxes_and_charges_template)
 	instead of re-deriving stock/rate/tax logic here or in JS — the cached item rows are exactly what
@@ -137,6 +144,34 @@ def get_offline_snapshot(pos_profile: str) -> dict:
 		limit_page_length=MAX_CACHED_INVOICES,
 	)
 
+	# Only the catalog's own serial/batch-tracked items need these cached —
+	# a Serial No/Batch dump for every tracked item in the company would dwarf
+	# everything else in the snapshot for no benefit (an item outside this
+	# profile's item_groups restriction can't be added to the cart to begin
+	# with). Cached broadly across any warehouse/status rather than
+	# pre-filtered to this profile's own warehouse, so the offline Serial
+	# No/Batch LinkField (engine/localReads.js's readSearchLink) can apply the
+	# exact same filters client-side the live search_link call would.
+	serial_batch_item_codes = [i["item_code"] for i in items if i.get("has_serial_no") or i.get("has_batch_no")]
+	serial_nos = (
+		frappe.get_all(
+			"Serial No",
+			filters={"item_code": ["in", serial_batch_item_codes], "status": "Active"},
+			fields=SERIAL_NO_FIELDS,
+		)
+		if serial_batch_item_codes
+		else []
+	)
+	batches = (
+		frappe.get_all(
+			"Batch",
+			filters={"item": ["in", serial_batch_item_codes], "disabled": 0},
+			fields=BATCH_FIELDS,
+		)
+		if serial_batch_item_codes
+		else []
+	)
+
 	return {
 		"synced_at": now_datetime().isoformat(),
 		"pos_profile": profile.as_dict(),
@@ -151,6 +186,8 @@ def get_offline_snapshot(pos_profile: str) -> dict:
 		"item_prices": item_prices,
 		"loyalty_programs": loyalty_programs,
 		"invoices": invoices,
+		"serial_nos": serial_nos,
+		"batches": batches,
 	}
 
 

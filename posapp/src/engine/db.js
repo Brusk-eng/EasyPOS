@@ -64,4 +64,17 @@ db.version(5).stores({
 	pending_invoices: "offline_id, status, created_at",
 });
 
+// v6 adds Serial No / Batch caching (easy_pos.api.sync.get_offline_snapshot's
+// serial_nos/batches) — Cart/index.jsx's per-line Serial No / Batch No
+// LinkFields search these via frappe.desk.search.search_link, which had no
+// offline equivalent before this: a serial/batch-tracked item added to the
+// cart while offline could never actually have a serial/batch number
+// assigned to it, only the has_serial_no/has_batch_no flags. Indexed on
+// item_code/item so engine/localReads.js's readSearchLink can filter by them
+// the same way the live search_link filters do.
+db.version(6).stores({
+	serial_nos: "name, item_code",
+	batches: "name, item",
+});
+
 export default db;

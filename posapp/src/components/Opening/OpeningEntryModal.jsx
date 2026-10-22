@@ -4,12 +4,23 @@ import { fetchProfile, fetchProfilesForCompany } from "../../api/POSProfile";
 import { postOpeningEntry } from "../../api/OpeningEntry";
 import { fetchCurrencySymbol } from "../../api/Currency";
 import usePOSSessionStore from "../../store/posSessionStore";
+import useConnectivityStore from "../../engine/connectivity";
+import useEngineSettingsStore from "../../engine/settingsStore";
 import { SelectField, CurrencyField, Modal, ErrorAlert } from "../common";
 
 const OpeningEntryModal = () => {
   const isOpen = usePOSSessionStore((s) => s.openingModalOpen);
   const closeOpeningModal = usePOSSessionStore((s) => s.closeOpeningModal);
   const setOpeningEntry = usePOSSessionStore((s) => s.setOpeningEntry);
+  const offlineModeEnabled = useEngineSettingsStore((s) => s.offlineModeEnabled);
+  const isOnline = useConnectivityStore((s) => s.isOnline);
+  // Opening a shift resolves item stock/rate scoped to the chosen POS
+  // Profile's own warehouse (easy_pos.api.sync.get_offline_snapshot) — a
+  // profile never synced online before (or synced under a different
+  // warehouse) would show wrong or missing stock with no way to re-resolve it
+  // without connectivity, so opening (and closing, see Topbar) a shift always
+  // requires being online, even with offline mode enabled for mid-shift sales.
+  const blockedOffline = offlineModeEnabled && !isOnline;
 
   const [companies, setCompanies] = useState([]);
   const [profiles, setProfiles] = useState([]);
@@ -104,7 +115,8 @@ const OpeningEntryModal = () => {
             type="button"
             className="pos-btn pos-btn-primary"
             onClick={handleSubmit}
-            disabled={submitting || !openingForm.company || !openingForm.pos_profile}
+            disabled={blockedOffline || submitting || !openingForm.company || !openingForm.pos_profile}
+            title={blockedOffline ? "Reconnect to open a shift" : undefined}
           >
             {submitting ? (
               <>
@@ -118,6 +130,14 @@ const OpeningEntryModal = () => {
         </>
       }
     >
+      {blockedOffline && (
+        <div className="text-muted mb-3" style={{ fontSize: 12.5 }}>
+          <i className="bi bi-cloud-slash me-1" />
+          Opening a shift requires an internet connection — stock and pricing for the profile you
+          pick have to be resolved live. Reconnect to open your till.
+        </div>
+      )}
+
       <ErrorAlert message={error} />
 
       <SelectField

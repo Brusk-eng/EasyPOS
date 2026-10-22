@@ -8,6 +8,8 @@ import { fetchCartPricing } from "../../api/Pricing";
 import { fetchCustomerWithLoyalty } from "../../api/Customer";
 import usePOSSessionStore from "../../store/posSessionStore";
 import useCartStore from "../../store/cartStore";
+import useConnectivityStore from "../../engine/connectivity";
+import useEngineSettingsStore from "../../engine/settingsStore";
 import { computeCartPricingLocally } from "../../utils/pricingEngine";
 import InvoicePay from "../InvoicePay";
 import NewCustomerModal from "../Customer/NewCustomerModal";
@@ -76,6 +78,14 @@ const Cart = () => {
   const [couponInput, setCouponInput] = useState("");
   const [couponError, setCouponError] = useState("");
   const [pricingLoading, setPricingLoading] = useState(false);
+  // Set when a cart line matches a Product Discount (free item) Pricing Rule
+  // that only the server can resolve (see the pricing effect below), and that
+  // server round trip isn't reachable — the line(s) involved just keep their
+  // plain price_list_rate with no visible explanation otherwise, which reads
+  // as a silently-missed discount rather than a known offline limitation.
+  const [offlinePricingUnresolved, setOfflinePricingUnresolved] = useState(false);
+  const offlineModeEnabled = useEngineSettingsStore((s) => s.offlineModeEnabled);
+  const isOnline = useConnectivityStore((s) => s.isOnline);
   // Read-only Product Bundle component preview, fetched lazily per item_code
   // the first time its cart line is expanded (see easy_pos.api.item.get_product_bundle_contents).
   const [bundleContents, setBundleContents] = useState({});
@@ -102,6 +112,7 @@ const Cart = () => {
       // Removing the last line one-by-one (rather than "Clear all") doesn't go
       // through clearItems() — free items from a now-gone rule must still drop.
       if (freeItems.length > 0) applyPricing({ items: [], free_items: [] });
+      setOfflinePricingUnresolved(false);
       return;
     }
     if (!posProfile) return;
@@ -122,11 +133,19 @@ const Cart = () => {
         currencyPrecision,
       );
       if (localResult) {
+        setOfflinePricingUnresolved(false);
         applyPricing(localResult, currencyPrecision);
         return;
       }
-      // Fall through to the server for the Product Discount case below.
+      // Fall through to the server for the Product Discount case below —
+      // offline, that call can't succeed, so warn instead of silently
+      // leaving whichever line(s) matched a free-item rule undiscounted.
+      if (offlineModeEnabled && !isOnline) {
+        setOfflinePricingUnresolved(true);
+        return;
+      }
     }
+    setOfflinePricingUnresolved(false);
 
     const handle = setTimeout(() => {
       setPricingLoading(true);
@@ -148,7 +167,7 @@ const Cart = () => {
     }, PRICING_DEBOUNCE_MS);
     return () => clearTimeout(handle);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cartKey, customer, customerGroup, territory, pricingRules, posProfile, couponCode, currencyPrecision]);
+  }, [cartKey, customer, customerGroup, territory, pricingRules, posProfile, couponCode, currencyPrecision, offlineModeEnabled, isOnline]);
 
   // Customer doc (customer_group/territory, for the pricing engine above) +
   // live Loyalty Program summary — one combined fetch
@@ -789,6 +808,14 @@ const Cart = () => {
                 <span className="cart-total-value" style={{ color: "var(--color-success-text)" }}>
                   – {formatAmount(itemDiscountTotal)}
                 </span>
+              </div>
+            )}
+
+            {offlinePricingUnresolved && (
+              <div className="mb-2" style={{ fontSize: 11, color: "var(--color-text-muted)" }}>
+                <i className="bi bi-cloud-slash me-1" />
+                A free-item offer in this cart needs a connection to resolve — pricing/discounts for
+                this whole cart are on hold at list price until reconnected.
               </div>
             )}
 

@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 import usePOSSessionStore from "../../store/posSessionStore";
 import useThemeStore from "../../store/themeStore";
+import useConnectivityStore from "../../engine/connectivity";
+import useEngineSettingsStore from "../../engine/settingsStore";
 import ClosingModal from "../Closing";
 
 const getInitials = (name) => {
@@ -24,6 +26,8 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder = "Searc
   const logout = useAuthStore((s) => s.logout);
   const theme = useThemeStore((s) => s.theme);
   const toggleTheme = useThemeStore((s) => s.toggleTheme);
+  const offlineModeEnabled = useEngineSettingsStore((s) => s.offlineModeEnabled);
+  const isOnline = useConnectivityStore((s) => s.isOnline);
   const [showClosingModal, setShowClosingModal] = useState(false);
 
   const handleLogout = () => {
@@ -61,6 +65,24 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder = "Searc
         </div>
 
         <div className="d-flex align-items-center gap-3">
+          {offlineModeEnabled && (
+            <div
+              className="pos-status-pill"
+              title={isOnline ? "Connected to the server" : "No connection — working from cached data"}
+              style={
+                isOnline
+                  ? { background: "var(--color-success-bg)", color: "var(--color-success-text)" }
+                  : { background: "var(--color-danger-bg)", color: "var(--color-danger-text)" }
+              }
+            >
+              <span
+                className="dot"
+                style={{ background: isOnline ? "var(--color-success-icon)" : "var(--color-danger-text)" }}
+              />
+              {isOnline ? "Online" : "Offline"}
+            </div>
+          )}
+
           {hasOpeningEntry ? (
             <div className="pos-status-pill success">
               <span className="dot" />
@@ -79,6 +101,8 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder = "Searc
               className="pos-btn pos-btn-secondary"
               style={{ height: 30, fontSize: 12, padding: "0 12px" }}
               onClick={() => setShowClosingModal(true)}
+              disabled={offlineModeEnabled && !isOnline}
+              title={offlineModeEnabled && !isOnline ? "Reconnect to close your shift" : undefined}
             >
               Close shift
             </button>
