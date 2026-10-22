@@ -1,3 +1,6 @@
+import i18n from "../i18n";
+import { _t } from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchProfiles } from "../api/POSProfile";
@@ -7,15 +10,15 @@ import { ListTable, FilterChips, Pagination, SelectField } from "../components/c
 const PAGE_SIZE = 20;
 
 const STATUS_FILTERS = [
-  { label: "All", value: "" },
-  { label: "Active", value: "Active" },
-  { label: "Disabled", value: "Disabled" },
+  { label: _t("All"), value: "" },
+  { label: _t("Active"), value: "Active" },
+  { label: _t("Disabled"), value: "Disabled" },
 ];
 
 const PROFILE_COLUMNS = [
   {
     key: "name",
-    label: "Profile",
+    label: _t("Profile"),
     width: "1.4fr",
     render: (p) => (
       <div>
@@ -26,29 +29,30 @@ const PROFILE_COLUMNS = [
   },
   {
     key: "warehouse",
-    label: "Warehouse",
+    label: _t("Warehouse"),
     width: "1fr",
     render: (p) => <span style={{ color: "var(--color-text-muted)" }}>{p.warehouse || "—"}</span>,
   },
   {
     key: "selling_price_list",
-    label: "Price List",
+    label: _t("Price List"),
     width: "1fr",
     render: (p) => <span style={{ color: "var(--color-text-muted)" }}>{p.selling_price_list || "—"}</span>,
   },
   {
     key: "disabled",
-    label: "Status",
+    label: _t("Status"),
     width: "0.8fr",
     render: (p) => (
       <span className={p.disabled ? "pos-badge" : "pos-badge pos-badge-paid"}>
-        {p.disabled ? "Disabled" : "Active"}
+        {p.disabled ? i18n.t("Disabled") : i18n.t("Active")}
       </span>
     ),
   },
 ];
 
 const POSProfileListPage = () => {
+  const { t } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -85,13 +89,13 @@ const POSProfileListPage = () => {
 
   useEffect(() => {
     setTopbar({
-      title: "POS Profiles",
+      title: _t("POS Profiles"),
       searchValue: search,
       onSearchChange: (value) => {
         setPage(0);
         setSearch(value);
       },
-      searchPlaceholder: "Search profile or warehouse",
+      searchPlaceholder: _t("Search profile or warehouse"),
     });
   }, [setTopbar, search]);
 
@@ -114,7 +118,7 @@ const POSProfileListPage = () => {
         <FilterChips options={STATUS_FILTERS} value={status} onChange={resetToFirstPage(setStatus)} />
         <Link to="/posapp/pos-profile/new" className="pos-btn pos-btn-primary" style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}>
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          New profile
+          {t("New profile")}
         </Link>
       </div>
 
@@ -122,8 +126,8 @@ const POSProfileListPage = () => {
         <div className="d-flex align-items-end gap-2">
           <div style={{ width: 220 }}>
             <SelectField
-              label="Company"
-              placeholder="All companies"
+              label={t("Company")}
+              placeholder={t("All companies")}
               value={company}
               onChange={resetToFirstPage(setCompany)}
               options={companies.map((c) => ({ label: c.company_name, value: c.name }))}
@@ -136,7 +140,7 @@ const POSProfileListPage = () => {
               style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
               onClick={clearFilters}
             >
-              Clear filters
+              {t("Clear filters")}
             </button>
           )}
         </div>
@@ -148,7 +152,7 @@ const POSProfileListPage = () => {
             columns={PROFILE_COLUMNS}
             rows={profiles}
             loading={loading}
-            emptyMessage="No POS Profiles found"
+            emptyMessage={t("No POS Profiles found")}
             onRowClick={(p) => navigate(`/posapp/pos-profile/${encodeURIComponent(p.name)}`)}
           />
         </div>

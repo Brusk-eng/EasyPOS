@@ -1,3 +1,6 @@
+import { getServerMessage } from "../utils/serverError";
+import { _t } from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchLoyaltyProgram, createLoyaltyProgram, saveLoyaltyProgram } from "../api/LoyaltyProgram";
@@ -37,6 +40,7 @@ const emptyProgram = {
 };
 
 const LoyaltyProgramDetailPage = () => {
+  const { t } = useTranslation();
   const { name } = useParams();
   const navigate = useNavigate();
   const { setTopbar } = useOutletContext();
@@ -64,7 +68,7 @@ const LoyaltyProgramDetailPage = () => {
   }, [isEdit, name]);
 
   useEffect(() => {
-    setTopbar({ title: isEdit ? form.loyalty_program_name || "Loyalty Program" : "New Loyalty Program" });
+    setTopbar({ title: isEdit ? form.loyalty_program_name || _t("Loyalty Program") : _t("New Loyalty Program") });
   }, [isEdit, form.loyalty_program_name, setTopbar]);
 
   const update = (field) => (value) => setForm((f) => ({ ...f, [field]: value }));
@@ -86,12 +90,12 @@ const LoyaltyProgramDetailPage = () => {
 
   const handleSubmit = async () => {
     if (!form.loyalty_program_name || !form.from_date || !form.conversion_factor) {
-      setError("Program Name, From Date and Conversion Factor are required");
+      setError(t("Program Name, From Date and Conversion Factor are required"));
       return;
     }
     const collection_rules = form.collection_rules.filter((r) => r.tier_name);
     if (collection_rules.length === 0) {
-      setError("Add at least one Collection Rule (tier) — mandatory even for a Single Tier Program");
+      setError(t("Add at least one Collection Rule (tier) — mandatory even for a Single Tier Program"));
       return;
     }
 
@@ -105,10 +109,10 @@ const LoyaltyProgramDetailPage = () => {
         ? await saveLoyaltyProgram({ ...fullDoc, ...payload, name: form.name, modified: form.modified })
         : await createLoyaltyProgram(payload);
 
-      toastSuccess("Loyalty Program saved successfully");
+      toastSuccess(t("Loyalty Program saved successfully"));
       navigate(`/posapp/loyalty-program/${encodeURIComponent(saved.name)}`, { replace: true });
     } catch (err) {
-      const message = err?.response?.data?.exc_type || "Failed to save Loyalty Program";
+      const message = getServerMessage(err) || t("Failed to save Loyalty Program");
       setError(message);
       toastError(message);
     } finally {
@@ -121,9 +125,9 @@ const LoyaltyProgramDetailPage = () => {
   return (
     <div className="px-3 px-md-4 py-3 py-md-4">
       <PageHeader
-        title={isEdit ? form.loyalty_program_name : "New Loyalty Program"}
+        title={isEdit ? form.loyalty_program_name : t("New Loyalty Program")}
         backTo="/posapp/loyalty-program"
-        backLabel="Loyalty Programs"
+        backLabel={t("Loyalty Programs")}
         actions={<SaveButton saving={saving} onClick={handleSubmit} />}
       />
 
@@ -131,39 +135,39 @@ const LoyaltyProgramDetailPage = () => {
 
       <div className="pos-card mb-3 p-3 p-md-4">
         <h6 className="mb-3" style={{ fontSize: 13, fontWeight: 600 }}>
-          Program Details
+          {t("Program Details")}
         </h6>
         <div className="row g-3">
           <div className="col-6 col-md-4">
-            <TextField label="Program Name" required value={form.loyalty_program_name} onChange={update("loyalty_program_name")} />
+            <TextField label={t("Program Name")} required value={form.loyalty_program_name} onChange={update("loyalty_program_name")} />
           </div>
           <div className="col-6 col-md-4">
             <SelectField
-              label="Program Type"
+              label={t("Program Type")}
               value={form.loyalty_program_type}
               onChange={update("loyalty_program_type")}
-              options={["Single Tier Program", "Multiple Tier Program"]}
+              options={[_t("Single Tier Program"), _t("Multiple Tier Program")]}
             />
           </div>
           <div className="col-6 col-md-4">
-            <LinkField label="Company" doctype="Company" value={form.company} onChange={update("company")} />
+            <LinkField label={t("Company")} doctype="Company" value={form.company} onChange={update("company")} />
           </div>
           <div className="col-6 col-md-4">
-            <DateField label="From Date" required value={form.from_date} onChange={update("from_date")} />
+            <DateField label={t("From Date")} required value={form.from_date} onChange={update("from_date")} />
           </div>
           <div className="col-6 col-md-4">
-            <DateField label="To Date" value={form.to_date} onChange={update("to_date")} />
+            <DateField label={t("To Date")} value={form.to_date} onChange={update("to_date")} />
           </div>
           <div className="col-6 col-md-4">
             <CheckboxField
-              label="Auto Opt-In"
+              label={t("Auto Opt-In")}
               checked={form.auto_opt_in}
               onChange={(v) => update("auto_opt_in")(v ? 1 : 0)}
             />
           </div>
           <div className="col-6 col-md-4">
             <LinkField
-              label="Customer Group"
+              label={t("Customer Group")}
               doctype="Customer Group"
               filters={{ is_group: 0 }}
               value={form.customer_group}
@@ -172,7 +176,7 @@ const LoyaltyProgramDetailPage = () => {
           </div>
           <div className="col-6 col-md-4">
             <LinkField
-              label="Customer Territory"
+              label={t("Customer Territory")}
               doctype="Territory"
               filters={{ is_group: 0 }}
               value={form.customer_territory}
@@ -184,19 +188,19 @@ const LoyaltyProgramDetailPage = () => {
 
       <div className="pos-card mb-3 p-3 p-md-4">
         <ChildTable
-          title="Collection Rules (Tiers)"
-          description="Spend thresholds and how many currency units earn 1 loyalty point at each tier."
+          title={t("Collection Rules (Tiers)")}
+          description={t("Spend thresholds and how many currency units earn 1 loyalty point at each tier.")}
           onAddRow={() => addRow("collection_rules", { tier_name: "", min_spent: 0, collection_factor: 0 })}
           rows={form.collection_rules}
-          emptyMessage="No tiers added"
+          emptyMessage={t("No tiers added")}
           columns={[
             {
               key: "tier_name",
-              label: "Tier Name",
+              label: _t("Tier Name"),
               width: "1.4fr",
               render: (row, idx) => (
                 <TextField
-                  placeholder="e.g. Silver"
+                  placeholder={t("e.g. Silver")}
                   value={row.tier_name}
                   onChange={(v) => updateRow("collection_rules", idx, { tier_name: v })}
                 />
@@ -204,7 +208,7 @@ const LoyaltyProgramDetailPage = () => {
             },
             {
               key: "min_spent",
-              label: "Minimum Total Spent",
+              label: _t("Minimum Total Spent"),
               width: "1.2fr",
               render: (row, idx) => (
                 <CurrencyField
@@ -215,7 +219,7 @@ const LoyaltyProgramDetailPage = () => {
             },
             {
               key: "collection_factor",
-              label: "Collection Factor (=1 point)",
+              label: _t("Collection Factor (=1 point)"),
               width: "1.2fr",
               render: (row, idx) => (
                 <CurrencyField
@@ -245,12 +249,12 @@ const LoyaltyProgramDetailPage = () => {
 
       <div className="pos-card mb-3 p-3 p-md-4">
         <h6 className="mb-3" style={{ fontSize: 13, fontWeight: 600 }}>
-          Redemption
+          {t("Redemption")}
         </h6>
         <div className="row g-3">
           <div className="col-6 col-md-4">
             <NumberField
-              label="Conversion Factor (1 point = ? currency)"
+              label={t("Conversion Factor (1 point = ? currency)")}
               required
               step="0.01"
               value={form.conversion_factor}
@@ -259,15 +263,15 @@ const LoyaltyProgramDetailPage = () => {
           </div>
           <div className="col-6 col-md-4">
             <NumberField
-              label="Expiry Duration (days)"
-              help="Leave empty for points to never expire"
+              label={t("Expiry Duration (days)")}
+              help={t("Leave empty for points to never expire")}
               value={form.expiry_duration}
               onChange={update("expiry_duration")}
             />
           </div>
           <div className="col-6 col-md-4">
             <LinkField
-              label="Expense Account"
+              label={t("Expense Account")}
               doctype="Account"
               filters={form.company ? { company: form.company, is_group: 0 } : undefined}
               value={form.expense_account}
@@ -276,7 +280,7 @@ const LoyaltyProgramDetailPage = () => {
           </div>
           <div className="col-6 col-md-4">
             <LinkField
-              label="Cost Center"
+              label={t("Cost Center")}
               doctype="Cost Center"
               filters={form.company ? { company: form.company, is_group: 0 } : undefined}
               value={form.cost_center}
@@ -284,7 +288,7 @@ const LoyaltyProgramDetailPage = () => {
             />
           </div>
           <div className="col-6 col-md-4">
-            <LinkField label="Project" doctype="Project" value={form.project} onChange={update("project")} />
+            <LinkField label={t("Project")} doctype="Project" value={form.project} onChange={update("project")} />
           </div>
         </div>
       </div>

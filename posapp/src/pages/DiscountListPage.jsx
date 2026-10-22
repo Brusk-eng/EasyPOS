@@ -1,3 +1,6 @@
+import i18n from "../i18n";
+import { _t } from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { fetchPricingRules } from "../api/PricingRule";
@@ -7,13 +10,13 @@ import { formatDate } from "../utils/format";
 const PAGE_SIZE = 20;
 
 const STATUS_FILTERS = [
-  { label: "All", value: "" },
-  { label: "Active", value: "Active" },
-  { label: "Disabled", value: "Disabled" },
+  { label: _t("All"), value: "" },
+  { label: _t("Active"), value: "Active" },
+  { label: _t("Disabled"), value: "Disabled" },
 ];
 
 const discountLabel = (rule) => {
-  if (rule.price_or_product_discount === "Product") return "Free item";
+  if (rule.price_or_product_discount === "Product") return i18n.t("Free item");
   if (rule.rate_or_discount === "Discount Percentage") return `${rule.discount_percentage || 0}%`;
   if (rule.rate_or_discount === "Discount Amount") return rule.discount_amount || 0;
   return "—";
@@ -22,7 +25,7 @@ const discountLabel = (rule) => {
 const DISCOUNT_COLUMNS = [
   {
     key: "title",
-    label: "Title",
+    label: _t("Title"),
     width: "1.4fr",
     render: (r) => (
       <div>
@@ -33,44 +36,45 @@ const DISCOUNT_COLUMNS = [
   },
   {
     key: "discount",
-    label: "Discount",
+    label: _t("Discount"),
     width: "0.9fr",
     render: (r) => <span>{discountLabel(r)}</span>,
   },
   {
     key: "type",
-    label: "Type",
+    label: _t("Type"),
     width: "0.8fr",
     render: (r) => (
       <span className={r.selling ? "pos-badge pos-badge-paid" : "pos-badge"}>
-        {r.selling ? "Selling" : r.buying ? "Buying" : "—"}
+        {r.selling ? i18n.t("Selling") : r.buying ? i18n.t("Buying") : "—"}
       </span>
     ),
   },
   {
     key: "priority",
-    label: "Priority",
+    label: _t("Priority"),
     width: "0.6fr",
     align: "center",
     render: (r) => <span style={{ color: "var(--color-text-muted)" }}>{r.priority || "—"}</span>,
   },
   {
     key: "valid_upto",
-    label: "Valid Upto",
+    label: _t("Valid Upto"),
     width: "0.9fr",
     render: (r) => <span style={{ color: "var(--color-text-muted)" }}>{r.valid_upto ? formatDate(r.valid_upto) : "—"}</span>,
   },
   {
     key: "disable",
-    label: "Status",
+    label: _t("Status"),
     width: "0.8fr",
     render: (r) => (
-      <span className={r.disable ? "pos-badge" : "pos-badge pos-badge-paid"}>{r.disable ? "Disabled" : "Active"}</span>
+      <span className={r.disable ? "pos-badge" : "pos-badge pos-badge-paid"}>{r.disable ? i18n.t("Disabled") : i18n.t("Active")}</span>
     ),
   },
 ];
 
 const DiscountListPage = () => {
+  const { t } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -100,13 +104,13 @@ const DiscountListPage = () => {
 
   useEffect(() => {
     setTopbar({
-      title: "Discounts",
+      title: _t("Discounts"),
       searchValue: search,
       onSearchChange: (value) => {
         setPage(0);
         setSearch(value);
       },
-      searchPlaceholder: "Search discount title",
+      searchPlaceholder: _t("Search discount title"),
     });
   }, [setTopbar, search]);
 
@@ -128,7 +132,7 @@ const DiscountListPage = () => {
           onClick={() => navigate("/posapp/discounts/new")}
         >
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          New discount
+          {t("New discount")}
         </button>
       </div>
 
@@ -138,7 +142,7 @@ const DiscountListPage = () => {
             columns={DISCOUNT_COLUMNS}
             rows={pricingRules}
             loading={loading}
-            emptyMessage="No discounts found"
+            emptyMessage={t("No discounts found")}
             onRowClick={(r) => navigate(`/posapp/discounts/${encodeURIComponent(r.name)}`)}
           />
         </div>

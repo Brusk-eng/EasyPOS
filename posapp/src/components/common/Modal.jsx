@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 const Modal = ({ open = true, onClose, title, subtitle, size, children, footer }) => {
+  const { t } = useTranslation();
   if (!open) return null;
 
   return (
@@ -21,7 +24,7 @@ const Modal = ({ open = true, onClose, title, subtitle, size, children, footer }
                   </p>
                 )}
               </div>
-              <button type="button" className="btn-close" aria-label="Close" onClick={onClose} />
+              <button type="button" className="btn-close" aria-label={t("Close")} onClick={onClose} />
             </div>
 
             <div className="modal-body">{children}</div>

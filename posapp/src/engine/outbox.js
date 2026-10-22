@@ -1,3 +1,4 @@
+import i18n from "../i18n";
 import axios from "../api/config";
 import db from "./db";
 
@@ -56,7 +57,7 @@ const extractErrorMessage = (err) => {
 			// fall through to the generic message below
 		}
 	}
-	return err?.response?.data?.exception || err?.message || "Failed to sync invoice";
+	return err?.response?.data?.exception || err?.message || i18n.t("Failed to sync invoice");
 };
 
 // Queues a create_invoice call locally and returns a response shaped like the

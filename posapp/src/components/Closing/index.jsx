@@ -1,3 +1,5 @@
+import { tData } from "../../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import "./style.css";
 import { fetchClosingEntry, postClosingEntry } from "../../api/ClosingEntry";
@@ -6,6 +8,7 @@ import { CurrencyField, Modal } from "../common";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 
 const ClosingModal = ({ onConfirm, onClose }) => {
+  const { t } = useTranslation();
   const [closingDetails, setClosingDetails] = useState([]);
   const [countedAmounts, setCountedAmounts] = useState({});
   const [loading, setLoading] = useState(true);
@@ -50,17 +53,17 @@ const ClosingModal = ({ onConfirm, onClose }) => {
 
   return (
     <Modal
-      title="Close your till"
+      title={t("Close your till")}
       subtitle={
         hasManualRows
-          ? "Count the drawer and enter the actual amount for manually entered payment modes."
-          : "Review the counted totals for this shift before closing."
+          ? t("Count the drawer and enter the actual amount for manually entered payment modes.")
+          : t("Review the counted totals for this shift before closing.")
       }
       onClose={onClose}
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={onClose}>
-            Cancel
+            {t("Cancel")}
           </button>
           <button
             type="button"
@@ -71,21 +74,21 @@ const ClosingModal = ({ onConfirm, onClose }) => {
             {submitting ? (
               <>
                 <span className="spinner-border spinner-border-sm" role="status" />
-                Closing…
+                {t("Closing…")}
               </>
             ) : (
-              "Close till"
+              t("Close till")
             )}
           </button>
         </>
       }
     >
       <div className="closing-entry-pill mb-3">
-        <span className="closing-entry-pill-label">POS Opening Entry</span>
+        <span className="closing-entry-pill-label">{t("POS Opening Entry")}</span>
         <span className="closing-entry-pill-value">{openingDetail?.name}</span>
       </div>
 
-      <label className="pos-field-label">Payment Summary</label>
+      <label className="pos-field-label">{t("Payment Summary")}</label>
 
       {loading ? (
         <div className="text-center py-4">
@@ -93,7 +96,7 @@ const ClosingModal = ({ onConfirm, onClose }) => {
         </div>
       ) : closingDetails.length === 0 ? (
         <div className="text-muted text-center py-3" style={{ fontSize: 13 }}>
-          No payment modes found for this shift.
+          {t("No payment modes found for this shift.")}
         </div>
       ) : (
         <div className="closing-rows">
@@ -103,23 +106,23 @@ const ClosingModal = ({ onConfirm, onClose }) => {
             const diff = editable ? counted - (row.closing_amount ?? 0) : 0;
             return (
               <div className="closing-row" key={idx}>
-                <div className="closing-row-title">{row.mode_of_payment}</div>
+                <div className="closing-row-title">{tData(row.mode_of_payment)}</div>
                 <div className="closing-row-figures">
                   <div className="closing-figure">
-                    <div className="closing-figure-label">Opening</div>
+                    <div className="closing-figure-label">{t("Opening")}</div>
                     <div className="closing-figure-value">{formatAmount(row.opening_amount)}</div>
                   </div>
 
                   <div className="closing-figure">
                     <div className="closing-figure-label">
-                      {editable ? "Expected" : "Closing"}
+                      {editable ? t("Expected") : t("Closing")}
                     </div>
                     <div className="closing-figure-value">{formatAmount(row.closing_amount)}</div>
                   </div>
 
                   {editable ? (
                     <div className="closing-figure">
-                      <div className="closing-figure-label">Counted</div>
+                      <div className="closing-figure-label">{t("Counted")}</div>
                       <CurrencyField
                         className="mb-0"
                         value={counted}
@@ -138,7 +141,7 @@ const ClosingModal = ({ onConfirm, onClose }) => {
                   )}
 
                   <div className="closing-figure">
-                    <div className="closing-figure-label">Difference</div>
+                    <div className="closing-figure-label">{t("Difference")}</div>
                     <div
                       className="closing-figure-value"
                       style={{

@@ -1,3 +1,5 @@
+import { tData } from "../../i18n";
+import { useTranslation } from "react-i18next";
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
@@ -19,10 +21,12 @@ import { roundCurrency } from "../../utils/number";
 import { computeCartTotals } from "../../utils/tax";
 import useCustomerDisplayBroadcaster from "../../hooks/useCustomerDisplayBroadcaster";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
+import { getServerMessage } from "../../utils/serverError";
 
 const PRICING_DEBOUNCE_MS = 400;
 
 const Cart = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
   const hasOpeningEntry = usePOSSessionStore((s) => s.hasOpeningEntry);
@@ -161,7 +165,7 @@ const Cart = () => {
         })
         .catch((err) => {
           if (couponCode) {
-            setCouponError(err?.response?.data?.exc_type || "Invalid or expired coupon code");
+            setCouponError(getServerMessage(err) || t("Invalid or expired coupon code"));
           }
         })
         .finally(() => setPricingLoading(false));
@@ -240,11 +244,11 @@ const Cart = () => {
       return;
     }
     if (!customer) {
-      setValidationError("Please select a customer");
+      setValidationError(t("Please select a customer"));
       return;
     }
     if (cartItems.length < 1) {
-      setValidationError("Please add at least one item to the cart");
+      setValidationError(t("Please add at least one item to the cart"));
       return;
     }
     setSaveDraft(true);
@@ -309,7 +313,7 @@ const Cart = () => {
         // can't resolve once pushed — see outbox.js's sanitizeInvoicePayload).
         if (data.__offline) setPendingOfflineId(data.offline_id);
       } else {
-        setValidationError("Failed to save draft");
+        setValidationError(t("Failed to save draft"));
         setSaveDraft(false);
       }
     });
@@ -388,7 +392,7 @@ const Cart = () => {
           <div className="d-flex align-items-center gap-2">
             <i className="bi bi-cart3" style={{ fontSize: 15, color: "var(--color-text-secondary)" }} />
             <h5 className="mb-0" style={{ fontFamily: "var(--font-heading)", fontSize: 15, fontWeight: 600, color: "var(--color-text-primary)" }}>
-              Shopping Cart
+              {t("Shopping Cart")}
             </h5>
           </div>
           <div className="d-flex align-items-center gap-2">
@@ -396,13 +400,13 @@ const Cart = () => {
               <button
                 type="button"
                 className="btn btn-link btn-sm p-0"
-                title="Open Customer Display"
+                title={t("Open Customer Display")}
                 onClick={openCustomerDisplay}
               >
                 <i className="bi bi-easel2" style={{ fontSize: 15 }} />
               </button>
             )}
-            <span className="pos-badge pos-badge-success">{cartItems.length} item{cartItems.length === 1 ? "" : "s"}</span>
+            <span className="pos-badge pos-badge-success">{cartItems.length === 1 ? t("1 item") : t("{{n}} items", { n: cartItems.length })}</span>
           </div>
         </div>
 
@@ -411,14 +415,14 @@ const Cart = () => {
           {/* ── Customer ── */}
           <div className="px-3 pt-3 pb-2 border-bottom">
             <LinkField
-              label="Customer"
+              label={t("Customer")}
               doctype="Customer"
               value={customer}
               displayValue={customer ? customerName : ""}
               filters={customerFilters}
-              placeholder="Search customer..."
+              placeholder={t("Search customer...")}
               actionIcon="bi-person-plus"
-              actionTitle="New customer"
+              actionTitle={t("New customer")}
               onAction={() => setShowNewCustomer(true)}
               onChange={(value, option) => {
                 setCustomer(value ?? "", option?.description || option?.value || "");
@@ -440,7 +444,9 @@ const Cart = () => {
             {customer && loyaltyProgram && (
               <div className="mt-1" style={{ fontSize: 11, color: "var(--color-text-muted)" }}>
                 <i className="bi bi-award me-1" style={{ color: "var(--color-primary)" }} />
-                {loyaltyPointsBalance} loyalty point{loyaltyPointsBalance === 1 ? "" : "s"} available
+                {loyaltyPointsBalance === 1
+                  ? t("1 loyalty point available")
+                  : t("{{n}} loyalty points available", { n: loyaltyPointsBalance })}
               </div>
             )}
             {customer && (
@@ -455,7 +461,7 @@ const Cart = () => {
                 }
               >
                 <i className="bi bi-clock-history me-1" />
-                View purchase history
+                {t("View purchase history")}
               </button>
             )}
           </div>
@@ -465,11 +471,11 @@ const Cart = () => {
 
             {/* Toolbar */}
             <div className="d-flex align-items-center justify-content-between px-3 pt-2 pb-1">
-              <p className="cart-section-label mb-0">Cart Items</p>
+              <p className="cart-section-label mb-0">{t("Cart Items")}</p>
               {cartItems.length > 0 && (
                 <button className="cart-clear-btn" onClick={clearCart}>
                   <i className="bi bi-trash3" />
-                  Clear all
+                  {t("Clear all")}
                 </button>
               )}
             </div>
@@ -479,8 +485,8 @@ const Cart = () => {
               {cartItems.length === 0 ? (
                 <div className="d-flex flex-column align-items-center justify-content-center text-muted gap-2 py-5">
                   <i className="bi bi-cart-x" style={{ fontSize: 28, opacity: 0.3 }} />
-                  <span style={{ fontSize: 13 }}>No items in cart</span>
-                  <span style={{ fontSize: 11.5, color: "var(--color-text-faint)" }}>Tap an item to add it here</span>
+                  <span style={{ fontSize: 13 }}>{t("No items in cart")}</span>
+                  <span style={{ fontSize: 11.5, color: "var(--color-text-faint)" }}>{t("Tap an item to add it here")}</span>
                 </div>
               ) : (
                 <div className="cart-lines">
@@ -513,7 +519,7 @@ const Cart = () => {
                               {item.item_code}
                             </div>
                             <div className="cart-line-meta">
-                              {formatAmount(item.rate)} each
+                              {t("{{rate}} each", { rate: formatAmount(item.rate) })}
                               <i className={`bi bi-chevron-${expanded ? "up" : "down"}`} />
                             </div>
                           </div>
@@ -536,7 +542,7 @@ const Cart = () => {
                               // can cover any quantity (e.g. 5 litres of milk from the
                               // same batch), so this is how that qty is set.
                               disabled={item.has_serial_no}
-                              title={item.has_serial_no ? "Scan/add the item again to add another unit" : undefined}
+                              title={item.has_serial_no ? t("Scan/add the item again to add another unit") : undefined}
                               onClick={() => updateItemQty(index, item.qty + 1, currencyPrecision)}
                             >
                               +
@@ -548,7 +554,7 @@ const Cart = () => {
                           <button
                             type="button"
                             className="cart-line-remove"
-                            title="Remove"
+                            title={t("Remove")}
                             onClick={(e) => { e.stopPropagation(); handleRemoveItem(index); }}
                           >
                             <i className="bi bi-x-lg" />
@@ -558,7 +564,7 @@ const Cart = () => {
                         {expanded && (
                           <div className="cart-line-detail">
                             <div style={{ minWidth: 110 }}>
-                              <div className="cart-detail-label">Rate</div>
+                              <div className="cart-detail-label">{t("Rate")}</div>
                               {allowRateChange ? (
                                 <CurrencyField
                                   size="sm"
@@ -583,7 +589,7 @@ const Cart = () => {
                             </div>
 
                             <div>
-                              <div className="cart-detail-label">Discount</div>
+                              <div className="cart-detail-label">{t("Discount")}</div>
                               <div className="cart-detail-value" style={{ fontFamily: "var(--font-mono)" }}>
                                 {item.discount_amount > 0 ? `– ${formatAmount(item.discount_amount)}` : formatAmount(0)}
                                 {item.discount_percentage > 0 ? ` (${item.discount_percentage.toFixed(1)}%)` : ""}
@@ -598,12 +604,12 @@ const Cart = () => {
 
                             {item.has_serial_no && (
                               <div style={{ minWidth: 130, flex: 1 }}>
-                                <div className="cart-detail-label">Serial No</div>
+                                <div className="cart-detail-label">{t("Serial No")}</div>
                                 <LinkField
                                   doctype="Serial No"
                                   size="sm"
                                   className="cart-detail-input"
-                                  placeholder="Search serial no"
+                                  placeholder={t("Search serial no")}
                                   value={item.serial_no ?? ""}
                                   filters={{
                                     item_code: item.item_code,
@@ -618,12 +624,12 @@ const Cart = () => {
 
                             {item.has_batch_no && (
                               <div style={{ minWidth: 130, flex: 1 }}>
-                                <div className="cart-detail-label">Batch No</div>
+                                <div className="cart-detail-label">{t("Batch No")}</div>
                                 <LinkField
                                   doctype="Batch"
                                   size="sm"
                                   className="cart-detail-input"
-                                  placeholder="Search batch no"
+                                  placeholder={t("Search batch no")}
                                   value={item.batch_no ?? ""}
                                   filters={{
                                     item: item.item_code,
@@ -639,12 +645,12 @@ const Cart = () => {
                               <div style={{ minWidth: 200, flex: 1 }}>
                                 <div className="cart-detail-label">
                                   <i className="bi bi-boxes me-1" />
-                                  Bundle Contents
+                                  {t("Bundle Contents")}
                                 </div>
                                 {bundleContents[item.item_code] === undefined ? (
-                                  <div style={{ fontSize: 11, color: "var(--color-text-faint)" }}>Loading…</div>
+                                  <div style={{ fontSize: 11, color: "var(--color-text-faint)" }}>{t("Loading…")}</div>
                                 ) : bundleContents[item.item_code].length === 0 ? (
-                                  <div style={{ fontSize: 11, color: "var(--color-text-faint)" }}>No components</div>
+                                  <div style={{ fontSize: 11, color: "var(--color-text-faint)" }}>{t("No components")}</div>
                                 ) : (
                                   bundleContents[item.item_code].map((row, i) => (
                                     <div
@@ -652,7 +658,7 @@ const Cart = () => {
                                       className="d-flex justify-content-between"
                                       style={{ fontSize: 11.5 }}
                                     >
-                                      <span>{row.item_name || row.item_code}</span>
+                                      <span>{tData(row.item_name || row.item_code)}</span>
                                       <span style={{ color: "var(--color-text-faint)" }}>
                                         {row.qty * item.qty} {row.uom}
                                       </span>
@@ -673,19 +679,19 @@ const Cart = () => {
 
           {/* ── Discount ── */}
           <div className="px-3 pt-2 pb-2 border-top">
-            <p className="cart-section-label mb-2">Order Discount</p>
+            <p className="cart-section-label mb-2">{t("Order Discount")}</p>
             <div className="d-flex gap-2 cart-discount-row">
               <div style={{ flex: 1.4 }}>
                 <SelectField
                   size="sm"
                   className="cart-discount-select"
-                  placeholder="Apply on…"
+                  placeholder={t("Apply on…")}
                   value={discountOn}
                   onChange={setDiscountOn}
                   disabled={!allowDiscountChange}
                   options={[
-                    { label: "Grand Total", value: "Grand Total" },
-                    { label: "Net Total", value: "Net Total" },
+                    { label: t("Grand Total"), value: "Grand Total" },
+                    { label: t("Net Total"), value: "Net Total" },
                   ]}
                 />
               </div>
@@ -705,7 +711,7 @@ const Cart = () => {
             </div>
             {!allowDiscountChange && (
               <div style={{ fontSize: 10.5, color: "var(--color-text-faint)" }} className="mt-1">
-                This POS Profile doesn't allow manual discount changes.
+                {t("This POS Profile doesn't allow manual discount changes.")}
               </div>
             )}
 
@@ -713,7 +719,7 @@ const Cart = () => {
               <div style={{ flex: 1 }}>
                 <TextField
                   size="sm"
-                  placeholder="Coupon code"
+                  placeholder={t("Coupon code")}
                   value={couponInput}
                   onChange={setCouponInput}
                   onKeyDown={(e) => {
@@ -728,13 +734,13 @@ const Cart = () => {
                 onClick={() => setCouponCode(couponInput.trim())}
                 disabled={pricingLoading || !couponInput.trim()}
               >
-                Apply
+                {t("Apply")}
               </button>
               {couponCode && (
                 <button
                   type="button"
                   className="cart-clear-btn"
-                  title="Remove coupon"
+                  title={t("Remove coupon")}
                   onClick={() => {
                     setCouponCode("");
                     setCouponInput("");
@@ -748,7 +754,7 @@ const Cart = () => {
             {couponCode && !couponError && (
               <div style={{ fontSize: 10.5, color: "var(--color-success-text)" }} className="mt-1">
                 <i className="bi bi-check-circle me-1" />
-                Coupon "{couponCode}" applied
+                {t('Coupon "{{code}}" applied', { code: couponCode })}
               </div>
             )}
             {couponError && (
@@ -760,7 +766,7 @@ const Cart = () => {
 
           {freeItems.length > 0 && (
             <div className="px-3 pt-1 pb-2">
-              <p className="cart-section-label mb-2">Free Items</p>
+              <p className="cart-section-label mb-2">{t("Free Items")}</p>
               {freeItems.map((item, i) => (
                 <div
                   key={`free-${item.item_code}-${i}`}
@@ -771,7 +777,7 @@ const Cart = () => {
                     <i className="bi bi-gift-fill me-1" style={{ color: "var(--color-success-text)" }} />
                     {item.item_code} × {item.qty}
                   </span>
-                  <span style={{ color: "var(--color-success-text)" }}>FREE</span>
+                  <span style={{ color: "var(--color-success-text)" }}>{t("FREE")}</span>
                 </div>
               ))}
             </div>
@@ -780,17 +786,17 @@ const Cart = () => {
           {/* ── Totals ── */}
           <div className="cart-totals px-3 py-2">
             <div className="d-flex justify-content-between mb-1">
-              <span className="cart-total-label">Item Total</span>
+              <span className="cart-total-label">{t("Item Total")}</span>
               <span className="cart-total-value">{formatAmount(itemTotal)}</span>
             </div>
             <div className="d-flex justify-content-between mb-1">
-              <span className="cart-total-label">Taxes</span>
+              <span className="cart-total-label">{t("Taxes")}</span>
               <span className="cart-total-value">{formatAmount(totalTaxAmount)}</span>
             </div>
 
             {taxRows.map((row) => (
               <div className="d-flex justify-content-between mb-1" key={row.account_head}>
-                <span className="cart-total-label" style={{ paddingLeft: 10, fontSize: 11.5 }}>
+                <span className="cart-total-label" style={{ paddingInlineStart: 10, fontSize: 11.5 }}>
                   {row.description || row.account_head} {row.rate ? `(${row.rate}%)` : ""}
                 </span>
                 <span className="cart-total-value" style={{ fontSize: 11.5 }}>
@@ -801,7 +807,7 @@ const Cart = () => {
 
             {itemDiscountTotal > 0 && (
               <div className="d-flex justify-content-between mb-1">
-                <span className="cart-total-label" style={{ color: "var(--color-success-text)" }}>Item Discounts</span>
+                <span className="cart-total-label" style={{ color: "var(--color-success-text)" }}>{t("Item Discounts")}</span>
                 <span className="cart-total-value" style={{ color: "var(--color-success-text)" }}>
                   – {formatAmount(itemDiscountTotal)}
                 </span>
@@ -811,15 +817,16 @@ const Cart = () => {
             {offlinePricingUnresolved && (
               <div className="mb-2" style={{ fontSize: 11, color: "var(--color-text-muted)" }}>
                 <i className="bi bi-cloud-slash me-1" />
-                A free-item offer in this cart needs a connection to resolve — pricing/discounts for
-                this whole cart are on hold at list price until reconnected.
+                {t(
+                  "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected.",
+                )}
               </div>
             )}
 
             {discountAmount > 0 && (
               <div className="d-flex justify-content-between mb-1">
                 <span className="cart-total-label" style={{ color: "var(--color-success-text)" }}>
-                  Order Discount ({discount}%)
+                  {t("Order Discount ({{pct}}%)", { pct: discount })}
                 </span>
                 <span className="cart-total-value" style={{ color: "var(--color-success-text)" }}>
                   – {formatAmount(discountAmount)}
@@ -828,7 +835,7 @@ const Cart = () => {
             )}
 
             <div className="cart-grand-total d-flex justify-content-between align-items-center">
-              <span>Grand Total</span>
+              <span>{t("Grand Total")}</span>
               <span>{formatAmount(grandTotal)}</span>
             </div>
           </div>
@@ -846,12 +853,12 @@ const Cart = () => {
                   {saveDraft ? (
                     <>
                       <span className="spinner-border spinner-border-sm me-1" role="status" />
-                      Saving…
+                      {t("Saving…")}
                     </>
                   ) : (
                     <>
                       <i className="bi bi-save2 me-1" />
-                      Save Draft
+                      {t("Save Draft")}
                     </>
                   )}
                 </button>
@@ -863,7 +870,7 @@ const Cart = () => {
                   onClick={() => setShowDraftPicker(true)}
                 >
                   <i className="bi bi-folder2-open me-1" />
-                  Load Draft
+                  {t("Load Draft")}
                 </button>
               </div>
             </div>
@@ -882,7 +889,7 @@ const Cart = () => {
               disabled={cartItems.length === 0 || !customer}
             >
               <i className="bi bi-credit-card me-1" />
-              Pay {formatAmount(grandTotal)}
+              {t("Pay {{amount}}", { amount: formatAmount(grandTotal) })}
             </button>
           </div>
 

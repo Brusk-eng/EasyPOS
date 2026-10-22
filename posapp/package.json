@@ -8,6 +8,7 @@
     "build": "vite build --base=/assets/easy_pos/posapp/ && yarn copy-html-entry",
     "copy-html-entry": "cp ../easy_pos/public/posapp/index.html ../easy_pos/www/posapp.html",
     "lint": "eslint .",
+    "i18n:extract": "node scripts/i18n-extract.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -18,8 +19,10 @@
     "bootstrap-icons": "^1.13.1",
     "dexie": "^4.4.4",
     "frappe-charts": "2.0.0-rc27",
+    "i18next": "^25.10.10",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-i18next": "^15.7.4",
     "react-router-dom": "^7.9.4",
     "zustand": "^5.0.8"
   },

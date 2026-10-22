@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import { Workbox } from "workbox-window";
 
@@ -11,6 +12,7 @@ const SW_URL = "/api/method/easy_pos.api.pwa.service_worker";
 const SW_SCOPE = "/posapp/";
 
 const PwaUpdateBanner = () => {
+  const { t } = useTranslation();
   const [needRefresh, setNeedRefresh] = useState(false);
   const wbRef = useRef(null);
 
@@ -33,22 +35,22 @@ const PwaUpdateBanner = () => {
       className="pos-card d-flex align-items-center gap-3"
       style={{
         position: "fixed",
-        right: 16,
+        insetInlineEnd: 16,
         bottom: 16,
         zIndex: 2000,
         padding: "12px 16px",
       }}
     >
-      <span style={{ fontSize: 13.5 }}>A new version of Easy POS is available.</span>
+      <span style={{ fontSize: 13.5 }}>{t("A new version of Easy POS is available.")}</span>
       <button
         type="button"
         className="pos-btn pos-btn-primary"
         onClick={() => wbRef.current?.messageSkipWaiting()}
       >
-        Reload
+        {t("Reload")}
       </button>
       <button type="button" className="pos-btn" onClick={() => setNeedRefresh(false)}>
-        Dismiss
+        {t("Dismiss")}
       </button>
     </div>
   );

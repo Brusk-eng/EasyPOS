@@ -1,7 +1,10 @@
+import { tLabel } from "../../i18n";
+import { useTranslation } from "react-i18next";
 import { useId } from "react";
 import FieldShell from "./FieldShell";
 
-/** options: Array<string | { label, value }> */
+/** options: Array<string | { label, value }> — option labels render through t(), so
+ * static options can pass English (marked with _t) and data values pass through as-is. */
 const SelectField = ({
   label,
   value,
@@ -16,6 +19,7 @@ const SelectField = ({
   className = "",
   ...rest
 }) => {
+  const { t } = useTranslation();
   const id = useId();
   const invalidClass = error ? "is-invalid" : "";
 
@@ -42,7 +46,7 @@ const SelectField = ({
         )}
         {normalized.map((opt) => (
           <option key={opt.value} value={opt.value}>
-            {opt.label}
+            {tLabel(t, opt.label)}
           </option>
         ))}
       </select>

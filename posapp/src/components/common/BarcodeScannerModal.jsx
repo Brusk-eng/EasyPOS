@@ -1,13 +1,16 @@
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import { BrowserMultiFormatReader } from "@zxing/browser";
 import Modal from "./Modal";
+import i18n from "../../i18n";
 
 // Camera-based barcode/QR scanner — reuses the device camera to decode a
 // code and hand it back to the caller, so any page can populate a field the
 // same way a physical hardware scanner would (see hooks/useBarcodeScanner
 // for the keyboard-wedge equivalent). Self-contained: owns the camera
 // stream/decoder lifecycle, caller only needs `open`/`onClose`/`onDetected`.
-const BarcodeScannerModal = ({ open, onClose, onDetected, title = "Scan barcode", subtitle }) => {
+const BarcodeScannerModal = ({ open, onClose, onDetected, title, subtitle }) => {
+  const { t } = useTranslation();
   const videoRef = useRef(null);
   const readerRef = useRef(null);
   const controlsRef = useRef(null);
@@ -37,10 +40,10 @@ const BarcodeScannerModal = ({ open, onClose, onDetected, title = "Scan barcode"
         if (cancelled) return;
         setError(
           err?.name === "NotAllowedError"
-            ? "Camera access was denied. Allow camera permission and try again."
+            ? i18n.t("Camera access was denied. Allow camera permission and try again.")
             : err?.name === "NotFoundError"
-              ? "No camera was found on this device."
-              : "Unable to start the camera.",
+              ? i18n.t("No camera was found on this device.")
+              : i18n.t("Unable to start the camera."),
         );
       });
 
@@ -54,7 +57,7 @@ const BarcodeScannerModal = ({ open, onClose, onDetected, title = "Scan barcode"
   if (!open) return null;
 
   return (
-    <Modal open={open} onClose={onClose} title={title} subtitle={subtitle} size="sm">
+    <Modal open={open} onClose={onClose} title={title ?? t("Scan barcode")} subtitle={subtitle} size="sm">
       {error ? (
         <div className="alert alert-danger py-2 mb-0" style={{ fontSize: 12.5 }}>
           {error}
@@ -74,7 +77,7 @@ const BarcodeScannerModal = ({ open, onClose, onDetected, title = "Scan barcode"
         </div>
       )}
       <p className="text-muted mt-2 mb-0" style={{ fontSize: 12.5 }}>
-        Point the camera at a barcode, QR code, or serial/batch label.
+        {t("Point the camera at a barcode, QR code, or serial/batch label.")}
       </p>
     </Modal>
   );

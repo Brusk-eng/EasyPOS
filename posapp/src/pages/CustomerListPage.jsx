@@ -1,3 +1,6 @@
+import i18n from "../i18n";
+import { _t } from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { fetchCustomers, fetchCustomerGroups, fetchTerritories } from "../api/Customer";
@@ -7,15 +10,15 @@ import NewCustomerModal from "../components/Customer/NewCustomerModal";
 const PAGE_SIZE = 20;
 
 const STATUS_FILTERS = [
-  { label: "All", value: "" },
-  { label: "Active", value: "Active" },
-  { label: "Inactive", value: "Inactive" },
+  { label: _t("All"), value: "" },
+  { label: _t("Active"), value: "Active" },
+  { label: _t("Inactive"), value: "Inactive" },
 ];
 
 const CUSTOMER_COLUMNS = [
   {
     key: "customer_name",
-    label: "Customer",
+    label: _t("Customer"),
     width: "1.4fr",
     render: (c) => (
       <div>
@@ -26,41 +29,42 @@ const CUSTOMER_COLUMNS = [
   },
   {
     key: "mobile_no",
-    label: "Mobile No",
+    label: _t("Mobile No"),
     width: "1fr",
     render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.mobile_no || "—"}</span>,
   },
   {
     key: "email_id",
-    label: "Email",
+    label: _t("Email"),
     width: "1.3fr",
     render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.email_id || "—"}</span>,
   },
   {
     key: "customer_group",
-    label: "Group",
+    label: _t("Group"),
     width: "0.9fr",
     render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.customer_group || "—"}</span>,
   },
   {
     key: "territory",
-    label: "Territory",
+    label: _t("Territory"),
     width: "0.9fr",
     render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.territory || "—"}</span>,
   },
   {
     key: "disabled",
-    label: "Status",
+    label: _t("Status"),
     width: "0.8fr",
     render: (c) => (
       <span className={c.disabled ? "pos-badge" : "pos-badge pos-badge-paid"}>
-        {c.disabled ? "Inactive" : "Active"}
+        {c.disabled ? i18n.t("Inactive") : i18n.t("Active")}
       </span>
     ),
   },
 ];
 
 const CustomerListPage = () => {
+  const { t } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -107,13 +111,13 @@ const CustomerListPage = () => {
 
   useEffect(() => {
     setTopbar({
-      title: "Customers",
+      title: _t("Customers"),
       searchValue: search,
       onSearchChange: (value) => {
         setPage(0);
         setSearch(value);
       },
-      searchPlaceholder: "Search customer, mobile or email",
+      searchPlaceholder: _t("Search customer, mobile or email"),
     });
   }, [setTopbar, search]);
 
@@ -145,7 +149,7 @@ const CustomerListPage = () => {
             onClick={() => setShowNewModal(true)}
           >
             <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-            New customer
+            {t("New customer")}
           </button>
         </div>
 
@@ -153,8 +157,8 @@ const CustomerListPage = () => {
           <div className="d-flex align-items-end gap-2">
             <div style={{ width: 180 }}>
               <SelectField
-                label="Customer Group"
-                placeholder="All groups"
+                label={t("Customer Group")}
+                placeholder={t("All groups")}
                 value={customerGroup}
                 onChange={resetToFirstPage(setCustomerGroup)}
                 options={customerGroups.map((g) => ({ label: g.name, value: g.name }))}
@@ -162,8 +166,8 @@ const CustomerListPage = () => {
             </div>
             <div style={{ width: 160 }}>
               <SelectField
-                label="Territory"
-                placeholder="All territories"
+                label={t("Territory")}
+                placeholder={t("All territories")}
                 value={territory}
                 onChange={resetToFirstPage(setTerritory)}
                 options={territories.map((t) => ({ label: t.name, value: t.name }))}
@@ -171,19 +175,19 @@ const CustomerListPage = () => {
             </div>
             <div style={{ width: 160 }}>
               <TextField
-                label="Mobile No"
+                label={t("Mobile No")}
                 value={mobileNo}
                 onChange={resetToFirstPage(setMobileNo)}
-                placeholder="Filter by mobile"
+                placeholder={t("Filter by mobile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 200 }}>
               <TextField
-                label="Email"
+                label={t("Email")}
                 value={emailId}
                 onChange={resetToFirstPage(setEmailId)}
-                placeholder="Filter by email"
+                placeholder={t("Filter by email")}
                 size="sm"
               />
             </div>
@@ -194,7 +198,7 @@ const CustomerListPage = () => {
                 style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
                 onClick={clearFilters}
               >
-                Clear filters
+                {t("Clear filters")}
               </button>
             )}
           </div>
@@ -206,7 +210,7 @@ const CustomerListPage = () => {
               columns={CUSTOMER_COLUMNS}
               rows={customers}
               loading={loading}
-              emptyMessage="No customers found"
+              emptyMessage={t("No customers found")}
               onRowClick={(c) => navigate(`/posapp/customers/${encodeURIComponent(c.name)}`)}
             />
           </div>

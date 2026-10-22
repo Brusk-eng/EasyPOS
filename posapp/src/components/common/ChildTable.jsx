@@ -1,3 +1,5 @@
+import { tLabel } from "../../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 
 // Grid for a child doctype table, shared by both read-only detail views
@@ -46,19 +48,20 @@ const ChildTable = ({
   columns,
   rows = [],
   rowKey = "name",
-  emptyMessage = "No rows",
+  emptyMessage,
   emptyDescription,
   footer,
   title,
   description,
   onAddRow,
-  addRowLabel = "+ Add row",
+  addRowLabel,
   addRowPosition = "top",
   loading = false,
   renderExpanded,
   rowError,
   onMoveRow,
 }) => {
+  const { t } = useTranslation();
   const [expandedKeys, setExpandedKeys] = useState(() => new Set());
   const scrollRef = useRef(null);
   const [showRightFade, setShowRightFade] = useState(false);
@@ -110,7 +113,7 @@ const ChildTable = ({
               style={{ height: 30, fontSize: 12, padding: "0 12px" }}
               onClick={onAddRow}
             >
-              {addRowLabel}
+              {addRowLabel ?? t("+ Add row")}
             </button>
           )}
         </div>
@@ -138,7 +141,7 @@ const ChildTable = ({
               {expandable && <span />}
               {columns.map((c) => (
                 <span key={c.key} style={{ textAlign: c.align }}>
-                  {c.label}
+                  {tLabel(t, c.label)}
                 </span>
               ))}
               {onMoveRow && <span />}
@@ -167,7 +170,7 @@ const ChildTable = ({
                 <div className="pos-ct-empty-icon">
                   <i className="bi bi-inbox" />
                 </div>
-                <div className="pos-ct-empty-title">{emptyMessage}</div>
+                <div className="pos-ct-empty-title">{emptyMessage ?? t("No rows")}</div>
                 {emptyDescription && <div className="pos-ct-empty-desc">{emptyDescription}</div>}
               </div>
             ) : (
@@ -194,7 +197,7 @@ const ChildTable = ({
                         // inconsistent vertical spot. Top-aligning keeps every cell
                         // anchored to the same baseline regardless of a sibling's height.
                         alignItems: "start",
-                        borderLeft: errorMsg ? "2px solid var(--color-danger-text)" : "2px solid transparent",
+                        borderInlineStart: errorMsg ? "2px solid var(--color-danger-text)" : "2px solid transparent",
                         borderBottom: isLast && !footer && !isOpen && !errorMsg ? "none" : "1px solid var(--color-border-faint)",
                       }}
                     >
@@ -203,7 +206,7 @@ const ChildTable = ({
                           type="button"
                           className={`pos-ct-expand-btn${isOpen ? " open" : ""}`}
                           onClick={() => toggleExpanded(key)}
-                          title={isOpen ? "Collapse" : "Expand"}
+                          title={isOpen ? t("Collapse") : t("Expand")}
                         >
                           <i className="bi bi-chevron-right" />
                         </button>
@@ -224,7 +227,7 @@ const ChildTable = ({
                             className="pos-btn-icon"
                             disabled={idx === 0}
                             onClick={() => onMoveRow(idx, "up")}
-                            title="Move up"
+                            title={t("Move up")}
                           >
                             <i className="bi bi-chevron-up" />
                           </button>
@@ -233,7 +236,7 @@ const ChildTable = ({
                             className="pos-btn-icon"
                             disabled={isLast}
                             onClick={() => onMoveRow(idx, "down")}
-                            title="Move down"
+                            title={t("Move down")}
                           >
                             <i className="bi bi-chevron-down" />
                           </button>
@@ -279,7 +282,7 @@ const ChildTable = ({
       {onAddRow && addRowPosition === "bottom" && (
         <button type="button" className="pos-ct-add-strip" onClick={onAddRow}>
           <i className="bi bi-plus-lg" />
-          {addRowLabel.replace(/^\+\s*/, "")}
+          {(addRowLabel ?? t("+ Add row")).replace(/^\+\s*/, "")}
         </button>
       )}
     </div>

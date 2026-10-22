@@ -1,60 +1,63 @@
+import { _t } from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useOutletContext, useSearchParams } from "react-router-dom";
 import usePOSSessionStore from "../store/posSessionStore";
 import { fetchInvoices } from "../api/InvoiceRegister";
 import { ListTable, FilterChips, Pagination, LinkField, TextField } from "../components/common";
-import { formatDate, invoiceStatusBadgeClass } from "../utils/format";
+import { formatDate, invoiceStatusBadgeClass, invoiceStatusLabel } from "../utils/format";
 import useCurrencyFormatter from "../hooks/useCurrencyFormatter";
 
 const PAGE_SIZE = 20;
 
 const STATUS_FILTERS = [
-  { label: "All", value: "" },
-  { label: "Paid", value: "Paid" },
-  { label: "Unpaid", value: "Unpaid" },
-  { label: "Overdue", value: "Overdue" },
+  { label: _t("All"), value: "" },
+  { label: _t("Paid"), value: "Paid" },
+  { label: _t("Unpaid"), value: "Unpaid" },
+  { label: _t("Overdue"), value: "Overdue" },
 ];
 
 const buildInvoiceColumns = (money) => [
   {
     key: "name",
-    label: "Invoice",
+    label: _t("Invoice"),
     width: "1fr",
     render: (inv) => <span style={{ fontFamily: "var(--font-mono)", color: "var(--color-text-secondary)" }}>{inv.name}</span>,
   },
   {
     key: "customer",
-    label: "Customer",
+    label: _t("Customer"),
     width: "1.4fr",
     render: (inv) => inv.customer_name || inv.customer,
   },
   {
     key: "posting_date",
-    label: "Date",
+    label: _t("Date"),
     width: "1fr",
     render: (inv) => <span style={{ color: "var(--color-text-muted)" }}>{formatDate(inv.posting_date)}</span>,
   },
   {
     key: "grand_total",
-    label: "Amount",
+    label: _t("Amount"),
     width: "0.9fr",
     render: (inv) => <span style={{ fontFamily: "var(--font-mono)" }}>{money(inv.grand_total, inv.currency)}</span>,
   },
   {
     key: "status",
-    label: "Status",
+    label: _t("Status"),
     width: "0.9fr",
-    render: (inv) => <span className={invoiceStatusBadgeClass(inv.status)}>{inv.status}</span>,
+    render: (inv) => <span className={invoiceStatusBadgeClass(inv.status)}>{invoiceStatusLabel(inv.status)}</span>,
   },
   {
     key: "pos_profile",
-    label: "Register",
+    label: _t("Register"),
     width: "0.9fr",
     render: (inv) => <span style={{ color: "var(--color-text-muted)" }}>{inv.pos_profile}</span>,
   },
 ];
 
 const InvoiceRegisterPage = () => {
+  const { t } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -128,10 +131,10 @@ const InvoiceRegisterPage = () => {
 
   useEffect(() => {
     setTopbar({
-      title: "Invoices",
+      title: _t("Invoices"),
       searchValue: search,
       onSearchChange: setSearch,
-      searchPlaceholder: "Search invoice or customer",
+      searchPlaceholder: _t("Search invoice or customer"),
     });
   }, [setTopbar, search]);
 
@@ -163,7 +166,7 @@ const InvoiceRegisterPage = () => {
             onClick={() => navigate("/posapp/terminal")}
           >
             <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-            New invoice
+            {t("New invoice")}
           </button>
         </div>
 
@@ -171,7 +174,7 @@ const InvoiceRegisterPage = () => {
           <div className="d-flex align-items-end gap-2">
             <div style={{ width: 220 }}>
               <LinkField
-                label="Customer"
+                label={t("Customer")}
                 doctype="Customer"
                 value={customer}
                 displayValue={customerName}
@@ -180,13 +183,13 @@ const InvoiceRegisterPage = () => {
                   setCustomer(docname ?? "");
                   setCustomerName(docname ? option?.label || option?.description || docname : "");
                 }}
-                placeholder="Filter by customer"
+                placeholder={t("Filter by customer")}
                 size="sm"
               />
             </div>
             <div style={{ width: 200 }}>
               <LinkField
-                label="POS Profile"
+                label={t("POS Profile")}
                 doctype="POS Profile"
                 value={posProfile}
                 onChange={(docname) => {
@@ -194,25 +197,25 @@ const InvoiceRegisterPage = () => {
                   setPosProfile(docname ?? "");
                   setPosProfileTouched(true);
                 }}
-                placeholder="Filter by POS Profile"
+                placeholder={t("Filter by POS Profile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 180 }}>
               <TextField
-                label="Mobile No"
+                label={t("Mobile No")}
                 value={mobileNo}
                 onChange={resetToFirstPage(setMobileNo)}
-                placeholder="Filter by mobile"
+                placeholder={t("Filter by mobile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 220 }}>
               <TextField
-                label="Email"
+                label={t("Email")}
                 value={email}
                 onChange={resetToFirstPage(setEmail)}
-                placeholder="Filter by email"
+                placeholder={t("Filter by email")}
                 size="sm"
               />
             </div>
@@ -223,7 +226,7 @@ const InvoiceRegisterPage = () => {
                 style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
                 onClick={clearFilters}
               >
-                Clear filters
+                {t("Clear filters")}
               </button>
             )}
           </div>
@@ -235,7 +238,7 @@ const InvoiceRegisterPage = () => {
               columns={columns}
               rows={visibleInvoices}
               loading={loading}
-              emptyMessage="No invoices found"
+              emptyMessage={t("No invoices found")}
               onRowClick={(inv) => navigate(`/posapp/invoices/${encodeURIComponent(inv.name)}`)}
               rowStyle={(inv) =>
                 inv.status?.startsWith("Overdue") ? { background: "var(--color-warning-bg-soft)" } : null

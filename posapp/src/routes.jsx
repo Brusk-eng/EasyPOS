@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import useAuthStore from "./store/authStore";
@@ -26,13 +27,14 @@ import ReportsPage from "./pages/ReportsPage";
 import CustomerDisplayPage from "./pages/CustomerDisplayPage";
 
 export function Spinner() {
+  const { t } = useTranslation();
   return (
     <div
       className="d-flex justify-content-center align-items-center"
       style={{ height: "100vh" }}
     >
       <div className="spinner-border text-primary" role="status">
-        <span className="visually-hidden">Loading...</span>
+        <span className="visually-hidden">{t("Loading...")}</span>
       </div>
     </div>
   );

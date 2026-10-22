@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useCallback, useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import ItemGroup from "../components/ItemGroup";
@@ -10,6 +11,7 @@ import useConnectivityStore from "../engine/connectivity";
 import useEngineSettingsStore from "../engine/settingsStore";
 
 const POSTerminalPage = () => {
+  const { t } = useTranslation();
   const { setTopbar } = useOutletContext();
   const [activeItemGroup, setActiveItemGroup] = useState("");
   const [searchText, setSearchText] = useState("");
@@ -25,13 +27,13 @@ const POSTerminalPage = () => {
 
   useEffect(() => {
     setTopbar({
-      title: "POS Terminal",
+      title: t("POS Terminal"),
       searchValue: searchText,
       onSearchChange: setSearchText,
-      searchPlaceholder: "Scan barcode/serial/batch or search items",
+      searchPlaceholder: t("Scan barcode/serial/batch or search items"),
       onScanClick: () => setShowCameraScanner(true),
     });
-  }, [searchText, setTopbar]);
+  }, [searchText, setTopbar, t]);
 
   // Lets a cashier scan straight into the item grid without clicking the
   // search box first — feeds the scanned code through the same searchText
@@ -56,7 +58,7 @@ const POSTerminalPage = () => {
           }}
         >
           <i className="bi bi-cloud-slash" />
-          Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected.
+          {t("Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected.")}
         </div>
       )}
 
@@ -79,7 +81,7 @@ const POSTerminalPage = () => {
         open={showCameraScanner}
         onClose={() => setShowCameraScanner(false)}
         onDetected={handleCameraDetected}
-        subtitle="Populates the item search field, same as a hardware scanner"
+        subtitle={t("Populates the item search field, same as a hardware scanner")}
       />
     </>
   );

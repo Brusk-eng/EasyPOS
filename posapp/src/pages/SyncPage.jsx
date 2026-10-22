@@ -1,3 +1,6 @@
+import { dateLocale } from "../utils/format";
+import i18n, { _t } from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useCallback, useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { ErrorAlert } from "../components/common";
@@ -8,32 +11,33 @@ import { SYNC_DOMAINS, getDomainCounts, getLastSyncedTimes, runFullSync } from "
 import { getPendingInvoices, pushPendingInvoices, retryOfflineInvoice } from "../engine/outbox";
 
 const formatSyncedAt = (iso) => {
-  if (!iso) return "Never";
+  if (!iso) return i18n.t("Never");
   const date = new Date(iso);
-  if (Number.isNaN(date.getTime())) return "Never";
+  if (Number.isNaN(date.getTime())) return i18n.t("Never");
   const diffMs = Date.now() - date.getTime();
   const diffMin = Math.round(diffMs / 60000);
-  if (diffMin < 1) return "Just now";
-  if (diffMin < 60) return `${diffMin}m ago`;
+  if (diffMin < 1) return i18n.t("Just now");
+  if (diffMin < 60) return i18n.t("{{n}}m ago", { n: diffMin });
   const diffHr = Math.round(diffMin / 60);
-  if (diffHr < 24) return `${diffHr}h ago`;
-  return date.toLocaleDateString();
+  if (diffHr < 24) return i18n.t("{{n}}h ago", { n: diffHr });
+  return date.toLocaleDateString(dateLocale());
 };
 
 const formatCreatedAt = (iso) => {
   if (!iso) return "";
   const date = new Date(iso);
-  return Number.isNaN(date.getTime()) ? "" : date.toLocaleString();
+  return Number.isNaN(date.getTime()) ? "" : date.toLocaleString(dateLocale());
 };
 
 const PENDING_STATUS_META = {
-  queued: { label: "Queued", cls: "bg-warning-subtle text-warning-emphasis" },
-  syncing: { label: "Syncing…", cls: "bg-primary-subtle text-primary" },
-  failed: { label: "Failed", cls: "bg-danger-subtle text-danger" },
-  synced: { label: "Synced", cls: "bg-success-subtle text-success" },
+  queued: { label: _t("Queued"), cls: "bg-warning-subtle text-warning-emphasis" },
+  syncing: { label: _t("Syncing…"), cls: "bg-primary-subtle text-primary" },
+  failed: { label: _t("Failed"), cls: "bg-danger-subtle text-danger" },
+  synced: { label: _t("Synced"), cls: "bg-success-subtle text-success" },
 };
 
 const SyncPage = () => {
+  const { t } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
   const posProfile = usePOSSessionStore((s) => s.posProfile);
@@ -52,7 +56,7 @@ const SyncPage = () => {
   const [invoiceError, setInvoiceError] = useState("");
 
   useEffect(() => {
-    setTopbar({ title: "Sync" });
+    setTopbar({ title: _t("Sync") });
   }, [setTopbar]);
 
   const refreshPendingInvoices = useCallback(() => {
@@ -69,7 +73,7 @@ const SyncPage = () => {
     try {
       await pushPendingInvoices();
     } catch (err) {
-      setInvoiceError(err?.message || "Push failed. Check your connection and try again.");
+      setInvoiceError(err?.message || t("Push failed. Check your connection and try again."));
     } finally {
       setPushingInvoices(false);
       refreshPendingInvoices();
@@ -81,7 +85,7 @@ const SyncPage = () => {
     setInvoiceError("");
     const result = await retryOfflineInvoice(offlineId);
     setRetryingId("");
-    if (!result?.ok) setInvoiceError(result?.error || "Retry failed.");
+    if (!result?.ok) setInvoiceError(result?.error || t("Retry failed."));
     refreshPendingInvoices();
   };
 
@@ -102,7 +106,7 @@ const SyncPage = () => {
       await runFullSync(posProfile);
       await refreshCacheState();
     } catch (err) {
-      setError(err?.message || "Sync failed. Check your connection and try again.");
+      setError(err?.message || t("Sync failed. Check your connection and try again."));
     } finally {
       setSyncing(false);
     }
@@ -115,23 +119,24 @@ const SyncPage = () => {
       <div className="d-flex align-items-center justify-content-between mb-3" style={{ flexShrink: 0 }}>
         <div>
           <div style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 16, color: "var(--color-text-primary)" }}>
-            Sync center
+            {t("Sync center")}
           </div>
           <div style={{ fontSize: 12, color: "var(--color-text-muted)", marginTop: 2 }}>
-            Master data cached for offline use. Fetch pulls the latest catalog, customers, and pricing from the server.
+            {t("Master data cached for offline use. Fetch pulls the latest catalog, customers, and pricing from the server.")}
           </div>
         </div>
         <div className={`pos-status-pill ${isOnline ? "success" : "danger"}`}>
           <span className="dot" />
-          {isOnline ? "Server connected" : "Offline"}
+          {isOnline ? t("Server connected") : t("Offline")}
         </div>
       </div>
 
       {!offlineModeEnabled && (
         <div className="pos-card mb-3" style={{ padding: "12px 16px", fontSize: 12.5, color: "var(--color-text-muted)" }}>
           <i className="bi bi-info-circle me-2" />
-          Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the
-          Terminal won't fall back to it while offline until it's turned on.
+          {t(
+            "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on.",
+          )}
         </div>
       )}
 
@@ -141,10 +146,10 @@ const SyncPage = () => {
         <div className="d-flex align-items-center justify-content-between mb-2">
           <div>
             <div style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 13.5, color: "var(--color-text-primary)" }}>
-              Pending Invoices
+              {t("Pending Invoices")}
             </div>
             <div style={{ fontSize: 11.5, color: "var(--color-text-muted)", marginTop: 2 }}>
-              Sales completed offline, queued locally until they reach ERPNext.
+              {t("Sales completed offline, queued locally until they reach ERPNext.")}
             </div>
           </div>
           <button
@@ -152,13 +157,13 @@ const SyncPage = () => {
             className="pos-btn pos-btn-primary"
             disabled={pushingInvoices || !isOnline || pendingInvoices.every((r) => r.status !== "queued")}
             onClick={runPushInvoices}
-            title={!isOnline ? "Reconnect to push queued invoices" : undefined}
+            title={!isOnline ? t("Reconnect to push queued invoices") : undefined}
           >
             <i
               className={`bi ${pushingInvoices ? "bi-arrow-repeat" : "bi-upload"}`}
               style={pushingInvoices ? { animation: "pos-spin 0.8s linear infinite" } : undefined}
             />
-            {pushingInvoices ? "Pushing…" : "Push now"}
+            {pushingInvoices ? t("Pushing…") : t("Push now")}
           </button>
         </div>
 
@@ -166,7 +171,7 @@ const SyncPage = () => {
 
         {pendingInvoices.length === 0 ? (
           <div className="text-muted" style={{ fontSize: 12, padding: "8px 0" }}>
-            Nothing queued — every offline sale on this device has synced.
+            {t("Nothing queued — every offline sale on this device has synced.")}
           </div>
         ) : (
           <div>
@@ -187,11 +192,11 @@ const SyncPage = () => {
                     {row.display_id}
                   </button>
                   <span className={`badge ${meta.cls}`} style={{ fontSize: 10 }}>
-                    {meta.label}
+                    {t(meta.label)}
                   </span>
                   {row.submit === false && (
                     <span className="badge bg-secondary-subtle text-secondary" style={{ fontSize: 10 }}>
-                      Draft
+                      {t("Draft")}
                     </span>
                   )}
                   <span style={{ fontSize: 11, color: "var(--color-text-faint)", flex: 1 }} title={row.error || undefined}>
@@ -205,7 +210,7 @@ const SyncPage = () => {
                       disabled={retryingId === row.offline_id}
                       onClick={() => retryOne(row.offline_id)}
                     >
-                      {retryingId === row.offline_id ? "Retrying…" : "Retry"}
+                      {retryingId === row.offline_id ? t("Retrying…") : t("Retry")}
                     </button>
                   )}
                 </div>
@@ -228,7 +233,7 @@ const SyncPage = () => {
               letterSpacing: "0.03em",
             }}
           >
-            MASTER DATA
+            {t("MASTER DATA")}
           </div>
           <div style={{ overflowY: "auto" }}>
             {SYNC_DOMAINS.map((d, idx) => {
@@ -246,8 +251,8 @@ const SyncPage = () => {
                     justifyContent: "space-between",
                     background: active ? "var(--color-primary-tint-soft)" : "transparent",
                     borderTop: idx === 0 ? "none" : "1px solid var(--color-border-faint)",
-                    borderLeft: active ? "3px solid var(--color-primary)" : "3px solid transparent",
-                    textAlign: "left",
+                    borderInlineStart: active ? "3px solid var(--color-primary)" : "3px solid transparent",
+                    textAlign: "start",
                     cursor: "pointer",
                   }}
                 >
@@ -258,7 +263,7 @@ const SyncPage = () => {
                       fontWeight: active ? 500 : 400,
                     }}
                   >
-                    {d.label}
+                    {t(d.label)}
                   </span>
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: "var(--color-text-faint)" }}>
                     {counts[d.key] ?? 0}
@@ -274,16 +279,17 @@ const SyncPage = () => {
           <div className="pos-card" style={{ padding: "18px 20px", flexShrink: 0 }}>
             <div className="d-flex align-items-center justify-content-between mb-1">
               <span style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 14, color: "var(--color-text-primary)" }}>
-                {selectedDomain?.label}
+                {selectedDomain?.label && t(selectedDomain.label)}
               </span>
               <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-text-faint)" }}>
-                Last synced {formatSyncedAt(lastSynced[selectedDomain?.key])}
+                {t("Last synced {{when}}", { when: formatSyncedAt(lastSynced[selectedDomain?.key]) })}
               </span>
             </div>
             <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 16px" }}>
-              {counts[selectedDomain?.key] ?? 0} record(s) cached locally. Master data is read-only offline — a Fetch
-              pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's
-              POS Profile).
+              {t(
+                "{{n}} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile).",
+                { n: counts[selectedDomain?.key] ?? 0 },
+              )}
             </p>
             <div className="d-flex" style={{ gap: 10 }}>
               <button
@@ -291,13 +297,13 @@ const SyncPage = () => {
                 className="pos-btn pos-btn-primary"
                 disabled={syncing || !posProfile}
                 onClick={runSync}
-                title={!posProfile ? "Open a shift before syncing" : undefined}
+                title={!posProfile ? t("Open a shift before syncing") : undefined}
               >
                 <i
                   className={`bi ${syncing ? "bi-arrow-repeat" : "bi-download"}`}
                   style={syncing ? { animation: "pos-spin 0.8s linear infinite" } : undefined}
                 />
-                {syncing ? "Fetching…" : "Fetch from server"}
+                {syncing ? t("Fetching…") : t("Fetch from server")}
               </button>
             </div>
           </div>
@@ -314,7 +320,7 @@ const SyncPage = () => {
                 flexShrink: 0,
               }}
             >
-              ALL DOMAINS
+              {t("ALL DOMAINS")}
             </div>
             <div style={{ overflowY: "auto" }}>
               {SYNC_DOMAINS.map((d, idx) => (
@@ -329,7 +335,7 @@ const SyncPage = () => {
                 >
                   <i className="bi bi-check-lg" style={{ color: "var(--color-success-icon)", fontSize: 15 }} />
                   <span style={{ fontSize: 12, color: "var(--color-text-primary)", flex: 1 }}>
-                    {d.label} — {counts[d.key] ?? 0} cached
+                    {t("{{label}} — {{n}} cached", { label: t(d.label), n: counts[d.key] ?? 0 })}
                   </span>
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-text-faint)" }}>
                     {formatSyncedAt(lastSynced[d.key])}

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Modal from "./Modal";
 
 // Generic Yes/No confirmation modal (destructive or neutral actions) — reuse
@@ -6,26 +7,27 @@ const ConfirmModal = ({
   open,
   onClose,
   onConfirm,
-  title = "Are you sure?",
+  title,
   message,
-  confirmLabel = "Yes",
-  cancelLabel = "No",
+  confirmLabel,
+  cancelLabel,
   danger = false,
   loading = false,
   error,
 }) => {
+  const { t } = useTranslation();
   if (!open) return null;
 
   return (
     <Modal
       open={open}
       onClose={onClose}
-      title={title}
+      title={title ?? t("Are you sure?")}
       size="sm"
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={onClose} disabled={loading}>
-            {cancelLabel}
+            {cancelLabel ?? t("No")}
           </button>
           <button
             type="button"
@@ -34,7 +36,7 @@ const ConfirmModal = ({
             disabled={loading}
           >
             {loading && <span className="spinner-border spinner-border-sm" role="status" />}
-            {confirmLabel}
+            {confirmLabel ?? t("Yes")}
           </button>
         </>
       }

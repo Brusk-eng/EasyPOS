@@ -1,3 +1,5 @@
+import { getServerMessage } from "../../utils/serverError";
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import {
   fetchCustomerAddresses,
@@ -29,6 +31,7 @@ const AddressContactSection = ({
   onPrimaryAddressChange,
   onPrimaryContactChange,
 }) => {
+  const { t } = useTranslation();
   const [addresses, setAddresses] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -75,7 +78,8 @@ const AddressContactSection = ({
       setDeleteTarget(null);
       reload();
     } catch (err) {
-      setDeleteError(err?.response?.data?.exc_type || `Failed to delete ${deleteTarget.type}`);
+      setDeleteError(getServerMessage(err) ||
+          (deleteTarget.type === "Address" ? t("Failed to delete Address") : t("Failed to delete Contact")));
     } finally {
       setDeleting(false);
     }
@@ -85,10 +89,10 @@ const AddressContactSection = ({
     return (
       <div className="pos-card mb-3 p-3 p-md-4">
         <h6 className="mb-2" style={{ fontSize: 13, fontWeight: 600 }}>
-          Address & Contact
+          {t("Address & Contact")}
         </h6>
         <p className="text-muted mb-0" style={{ fontSize: 13 }}>
-          Save the customer first to add addresses and contacts.
+          {t("Save the customer first to add addresses and contacts.")}
         </p>
       </div>
     );
@@ -97,13 +101,13 @@ const AddressContactSection = ({
   return (
     <div className="pos-card mb-3 p-3 p-md-4">
       <h6 className="mb-3" style={{ fontSize: 13, fontWeight: 600 }}>
-        Address & Contact
+        {t("Address & Contact")}
       </h6>
 
       <div className="row g-3 mb-3">
         <div className="col-6 col-md-4">
           <LinkField
-            label="Customer Primary Address"
+            label={t("Customer Primary Address")}
             doctype="Address"
             filters={linkedToCustomerFilters(customerName)}
             value={primaryAddress}
@@ -112,7 +116,7 @@ const AddressContactSection = ({
         </div>
         <div className="col-6 col-md-4">
           <LinkField
-            label="Customer Primary Contact"
+            label={t("Customer Primary Contact")}
             doctype="Contact"
             filters={linkedToCustomerFilters(customerName)}
             value={primaryContact}
@@ -124,18 +128,18 @@ const AddressContactSection = ({
       <div className="row g-3">
         <div className="col-12 col-md-6">
           <div className="d-flex align-items-center justify-content-between mb-2">
-            <span style={{ fontSize: 12.5, fontWeight: 600, color: "var(--color-text-muted)" }}>ADDRESSES</span>
+            <span style={{ fontSize: 12.5, fontWeight: 600, color: "var(--color-text-muted)" }}>{t("ADDRESSES")}</span>
             <button type="button" className="pos-btn pos-btn-secondary btn-sm" onClick={() => setAddressModal("new")}>
-              <i className="bi bi-plus-lg me-1" /> Add Address
+              <i className="bi bi-plus-lg me-1" /> {t("Add Address")}
             </button>
           </div>
           {loading ? (
             <div className="text-muted" style={{ fontSize: 13 }}>
-              Loading…
+              {t("Loading…")}
             </div>
           ) : addresses.length === 0 ? (
             <div className="text-muted" style={{ fontSize: 13 }}>
-              No addresses added
+              {t("No addresses added")}
             </div>
           ) : (
             addresses.map((row) => (
@@ -148,9 +152,9 @@ const AddressContactSection = ({
                   <div className="d-flex align-items-center gap-2 flex-wrap">
                     <strong className="text-break">{row.address_title || row.address_type}</strong>
                     <span className="pos-badge">{row.address_type}</span>
-                    {row.is_primary_address ? <span className="pos-badge pos-badge-paid">Primary</span> : null}
-                    {row.is_shipping_address ? <span className="pos-badge pos-badge-paid">Shipping</span> : null}
-                    {row.disabled ? <span className="pos-badge">Disabled</span> : null}
+                    {row.is_primary_address ? <span className="pos-badge pos-badge-paid">{t("Primary")}</span> : null}
+                    {row.is_shipping_address ? <span className="pos-badge pos-badge-paid">{t("Shipping")}</span> : null}
+                    {row.disabled ? <span className="pos-badge">{t("Disabled")}</span> : null}
                   </div>
                   <div className="text-muted text-break">
                     {[row.address_line1, row.address_line2, row.city, row.state, row.country]
@@ -177,18 +181,18 @@ const AddressContactSection = ({
 
         <div className="col-12 col-md-6">
           <div className="d-flex align-items-center justify-content-between mb-2">
-            <span style={{ fontSize: 12.5, fontWeight: 600, color: "var(--color-text-muted)" }}>CONTACTS</span>
+            <span style={{ fontSize: 12.5, fontWeight: 600, color: "var(--color-text-muted)" }}>{t("CONTACTS")}</span>
             <button type="button" className="pos-btn pos-btn-secondary btn-sm" onClick={() => setContactModal("new")}>
-              <i className="bi bi-plus-lg me-1" /> Add Contact
+              <i className="bi bi-plus-lg me-1" /> {t("Add Contact")}
             </button>
           </div>
           {loading ? (
             <div className="text-muted" style={{ fontSize: 13 }}>
-              Loading…
+              {t("Loading…")}
             </div>
           ) : contacts.length === 0 ? (
             <div className="text-muted" style={{ fontSize: 13 }}>
-              No contacts added
+              {t("No contacts added")}
             </div>
           ) : (
             contacts.map((row) => (
@@ -200,7 +204,7 @@ const AddressContactSection = ({
                 <div style={{ minWidth: 0 }}>
                   <div className="d-flex align-items-center gap-2 flex-wrap">
                     <strong className="text-break">{contactName(row)}</strong>
-                    {row.is_primary_contact ? <span className="pos-badge pos-badge-paid">Primary</span> : null}
+                    {row.is_primary_contact ? <span className="pos-badge pos-badge-paid">{t("Primary")}</span> : null}
                   </div>
                   <div className="text-muted text-break">
                     {[row.mobile_no || row.phone, row.email_id].filter(Boolean).join(" · ")}
@@ -255,9 +259,13 @@ const AddressContactSection = ({
           setDeleteError("");
         }}
         onConfirm={handleDelete}
-        title={`Delete ${deleteTarget?.type}?`}
-        message={`This will permanently delete this ${deleteTarget?.type?.toLowerCase()}.`}
-        confirmLabel="Delete"
+        title={deleteTarget?.type === "Address" ? t("Delete Address?") : t("Delete Contact?")}
+        message={
+          deleteTarget?.type === "Address"
+            ? t("This will permanently delete this address.")
+            : t("This will permanently delete this contact.")
+        }
+        confirmLabel={t("Delete")}
         danger
         loading={deleting}
         error={deleteError}
