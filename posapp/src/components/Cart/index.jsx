@@ -184,21 +184,32 @@ const Cart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [customer, openingDetail.company]);
 
-  const itemTotal = useMemo(
-    () => cartItems.reduce((sum, item) => sum + (item.amount ?? 0), 0),
-    [cartItems]
+  // Each line's `amount` is already qty × its discounted `rate` (cartStore.applyPricing),
+  // so their sum is the taxable net total — the same net_total ERPNext's
+  // calculate_taxes_and_totals computes on save, and what the Customer Display
+  // (useCustomerDisplayBroadcaster) already uses. Item discounts must not be
+  // subtracted from it again.
+  const netAfterItemDiscount = useMemo(
+    () => roundCurrency(cartItems.reduce((sum, item) => sum + (item.amount ?? 0), 0), currencyPrecision),
+    [cartItems, currencyPrecision]
   );
 
   // Item-level discounts are independent of the order-level discount below —
   // each item carries its own discount_amount (auto-applied, e.g. via pricing rules).
+  // discount_amount is per unit (price_list_rate − rate), so scale it by qty.
   const itemDiscountTotal = useMemo(
-    () => cartItems.reduce((sum, item) => sum + (item.discount_amount ?? 0), 0),
-    [cartItems]
+    () =>
+      roundCurrency(
+        cartItems.reduce((sum, item) => sum + (item.discount_amount ?? 0) * (item.qty ?? 0), 0),
+        currencyPrecision
+      ),
+    [cartItems, currencyPrecision]
   );
 
-  const netAfterItemDiscount = useMemo(
-    () => roundCurrency(itemTotal - itemDiscountTotal, currencyPrecision),
-    [itemTotal, itemDiscountTotal, currencyPrecision]
+  // Shown as the pre-discount subtotal, so Item Total − Item Discounts = net.
+  const itemTotal = useMemo(
+    () => roundCurrency(netAfterItemDiscount + itemDiscountTotal, currencyPrecision),
+    [netAfterItemDiscount, itemDiscountTotal, currencyPrecision]
   );
 
   // Order-level tax rows previewed from the POS Profile's taxes_and_charges
