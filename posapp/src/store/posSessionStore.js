@@ -97,7 +97,9 @@ const usePOSSessionStore = create((set, get) => ({
 		const currency = currencyContext?.currency || profile.currency || DEFAULT_CURRENCY;
 		set({
 			currencyCode: currency,
-			currencySymbol: currencyContext?.symbol || (currency === DEFAULT_CURRENCY ? DEFAULT_SYMBOL : currency),
+			currencySymbol:
+				currencyContext?.symbol ||
+				(currency === DEFAULT_CURRENCY ? DEFAULT_SYMBOL : currency),
 			numberFormat: currencyContext?.number_format || DEFAULT_NUMBER_FORMAT,
 			symbolOnRight: !!currencyContext?.symbol_on_right,
 			companyCurrency: currencyContext?.company_currency || currency,

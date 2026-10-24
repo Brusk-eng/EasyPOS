@@ -52,7 +52,11 @@ const useCustomerDisplayBroadcaster = () => {
 			totalTax,
 			discountAmount,
 			grandTotal,
-			currencyFormat: { symbol: currencySymbol, number_format: numberFormat, symbol_on_right: symbolOnRight },
+			currencyFormat: {
+				symbol: currencySymbol,
+				number_format: numberFormat,
+				symbol_on_right: symbolOnRight,
+			},
 			precision: currencyPrecision,
 		};
 	};

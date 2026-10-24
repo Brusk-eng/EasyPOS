@@ -83,9 +83,12 @@ def get_rate_factors(pos_profile: str | None) -> tuple[float, float]:
 
 
 def _currency_format(currency: str) -> dict:
-	row = frappe.get_cached_value(
-		"Currency", currency, ["symbol", "number_format", "symbol_on_right"], as_dict=True
-	) or frappe._dict()
+	row = (
+		frappe.get_cached_value(
+			"Currency", currency, ["symbol", "number_format", "symbol_on_right"], as_dict=True
+		)
+		or frappe._dict()
+	)
 	return {
 		"currency": currency,
 		"symbol": row.get("symbol") or currency,

@@ -22,13 +22,20 @@ export const fetchCurrencyFormats = async (currencies) => {
 	const missing = [...new Set(currencies.filter((c) => c && !formatCache.has(c)))];
 	if (missing.length) {
 		try {
-			const response = await engineGet("/api/method/easy_pos.api.currency.get_currency_formats", {
-				params: { currencies: JSON.stringify(missing) },
-			});
-			Object.entries(response.data.message ?? {}).forEach(([code, fmt]) => formatCache.set(code, fmt));
+			const response = await engineGet(
+				"/api/method/easy_pos.api.currency.get_currency_formats",
+				{
+					params: { currencies: JSON.stringify(missing) },
+				}
+			);
+			Object.entries(response.data.message ?? {}).forEach(([code, fmt]) =>
+				formatCache.set(code, fmt)
+			);
 		} catch (error) {
 			console.error(error);
 		}
 	}
-	return Object.fromEntries(currencies.filter((c) => formatCache.has(c)).map((c) => [c, formatCache.get(c)]));
+	return Object.fromEntries(
+		currencies.filter((c) => formatCache.has(c)).map((c) => [c, formatCache.get(c)])
+	);
 };

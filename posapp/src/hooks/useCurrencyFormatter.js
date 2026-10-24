@@ -19,11 +19,13 @@ const useCurrencyFormatter = (currencies = []) => {
 			number_format: s.numberFormat,
 			symbol_on_right: s.symbolOnRight,
 			precision: s.currencyPrecision,
-		})),
+		}))
 	);
 	const [formats, setFormats] = useState({});
 
-	const wanted = [...new Set(currencies.filter((c) => c && c !== session.currency))].sort().join(",");
+	const wanted = [...new Set(currencies.filter((c) => c && c !== session.currency))]
+		.sort()
+		.join(",");
 	useEffect(() => {
 		if (!wanted) return;
 		let cancelled = false;
@@ -41,10 +43,13 @@ const useCurrencyFormatter = (currencies = []) => {
 				const fmt =
 					!currency || currency === session.currency
 						? session
-						: formats[currency] ?? { symbol: `${currency} `, number_format: session.number_format };
+						: formats[currency] ?? {
+								symbol: `${currency} `,
+								number_format: session.number_format,
+						  };
 				return formatCurrency(value ?? 0, fmt, precision);
 			},
-		[session, formats],
+		[session, formats]
 	);
 };
 

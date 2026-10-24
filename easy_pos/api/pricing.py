@@ -214,7 +214,8 @@ def get_cart_pricing(
 			# fallback as easy_pos.api.item._get_rate_map for the item grid.
 			# standard_rate is in company currency.
 			price_list_rate = (
-				flt(frappe.get_cached_value("Item", item_code, "standard_rate")) / currency_ctx.conversion_rate
+				flt(frappe.get_cached_value("Item", item_code, "standard_rate"))
+				/ currency_ctx.conversion_rate
 			)
 
 		rate, discount_amount = _effective_rate(
