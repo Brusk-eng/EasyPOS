@@ -13,7 +13,6 @@ export const LANGUAGES = [
 	{ code: "cs", label: "Čeština", dir: "ltr" },
 	{ code: "da", label: "Dansk", dir: "ltr" },
 	{ code: "de", label: "Deutsch", dir: "ltr" },
-	{ code: "eo", label: "Esperanto", dir: "ltr" },
 	{ code: "es", label: "Español", dir: "ltr" },
 	{ code: "fa", label: "فارسی", dir: "rtl" },
 	{ code: "fr", label: "Français", dir: "ltr" },

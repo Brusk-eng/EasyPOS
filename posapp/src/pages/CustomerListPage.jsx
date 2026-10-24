@@ -1,4 +1,4 @@
-import { __, _t, useTranslation } from "../translation";
+import { __, _t, tData, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { fetchCustomers, fetchCustomerGroups, fetchTerritories } from "../api/Customer";
@@ -41,13 +41,13 @@ const CUSTOMER_COLUMNS = [
     key: "customer_group",
     label: _t("Group"),
     width: "0.9fr",
-    render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.customer_group || "—"}</span>,
+    render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.customer_group ? tData(c.customer_group) : "—"}</span>,
   },
   {
     key: "territory",
     label: _t("Territory"),
     width: "0.9fr",
-    render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.territory || "—"}</span>,
+    render: (c) => <span style={{ color: "var(--color-text-muted)" }}>{c.territory ? tData(c.territory) : "—"}</span>,
   },
   {
     key: "disabled",
@@ -159,7 +159,7 @@ const CustomerListPage = () => {
                 placeholder={__("All groups")}
                 value={customerGroup}
                 onChange={resetToFirstPage(setCustomerGroup)}
-                options={customerGroups.map((g) => ({ label: g.name, value: g.name }))}
+                options={customerGroups.map((g) => ({ label: tData(g.name), value: g.name }))}
               />
             </div>
             <div style={{ width: 160 }}>
@@ -168,7 +168,7 @@ const CustomerListPage = () => {
                 placeholder={__("All territories")}
                 value={territory}
                 onChange={resetToFirstPage(setTerritory)}
-                options={territories.map((t) => ({ label: t.name, value: t.name }))}
+                options={territories.map((t) => ({ label: tData(t.name), value: t.name }))}
               />
             </div>
             <div style={{ width: 160 }}>

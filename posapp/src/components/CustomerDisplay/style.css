@@ -48,7 +48,7 @@
 }
 
 .customer-display-item-name {
-  text-align: start;
+  text-align: match-parent; /* see .pos-item-name */
 }
 
 .customer-display-item-qty {

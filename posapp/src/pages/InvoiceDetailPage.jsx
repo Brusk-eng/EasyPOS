@@ -7,7 +7,7 @@ import { getPendingInvoices, retryOfflineInvoice } from "../engine/outbox";
 import usePOSSessionStore from "../store/posSessionStore";
 import { FormView, ConfirmModal, ErrorAlert } from "../components/common";
 import CreditNoteModal from "../components/Invoice/CreditNoteModal";
-import { formatDate, invoiceStatusBadgeClass, invoiceStatusLabel } from "../utils/format";
+import { chargeTypeLabel, formatDate, invoiceStatusBadgeClass, invoiceStatusLabel } from "../utils/format";
 import useEngineSettingsStore from "../engine/settingsStore";
 import useConnectivityStore from "../engine/connectivity";
 import useCurrencyFormatter from "../hooks/useCurrencyFormatter";
@@ -348,7 +348,7 @@ const InvoiceDetailPage = () => {
               type: "fields",
               title: _t("Additional Discount"),
               fields: [
-                { label: _t("Apply Discount On"), value: invoice.apply_discount_on },
+                { label: _t("Apply Discount On"), value: invoice.apply_discount_on ? __(invoice.apply_discount_on) : "" },
                 {
                   label: _t("Additional Discount Percentage"),
                   value: invoice.additional_discount_percentage ? `${invoice.additional_discount_percentage}%` : "",
@@ -368,7 +368,7 @@ const InvoiceDetailPage = () => {
               title: _t("Taxes and Charges"),
               columns: [
                 { key: "account_head", label: _t("Account Head"), width: "1.6fr" },
-                { key: "charge_type", label: _t("Type"), width: "1fr" },
+                { key: "charge_type", label: _t("Type"), width: "1fr", render: (r) => chargeTypeLabel(r.charge_type) },
                 { key: "rate", label: _t("Rate"), width: "0.7fr", align: "end" },
                 {
                   key: "tax_amount",

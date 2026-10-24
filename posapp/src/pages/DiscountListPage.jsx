@@ -28,7 +28,7 @@ const DISCOUNT_COLUMNS = [
     render: (r) => (
       <div>
         <div>{r.title || r.name}</div>
-        <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-text-faint)" }}>{r.apply_on || "—"}</div>
+        <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-text-faint)" }}>{r.apply_on ? __(r.apply_on) : "—"}</div>
       </div>
     ),
   },

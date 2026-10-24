@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Modal, ChildTable, ErrorAlert } from "../common";
 import { createCreditNote } from "../../api/Invoice";
 import { flt } from "../../utils/number";
+import { chargeTypeLabel } from "../../utils/format";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 
 // Item/tax rows are seeded from the original invoice on open and edited
@@ -196,7 +197,7 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
         emptyMessage={__("No taxes on this invoice")}
         columns={[
           { key: "account_head", label: _t("Account Head"), width: "1.8fr" },
-          { key: "charge_type", label: _t("Type"), width: "1.4fr" },
+          { key: "charge_type", label: _t("Type"), width: "1.4fr", render: (r) => chargeTypeLabel(r.charge_type) },
           {
             key: "rate",
             label: _t("Rate (%)"),

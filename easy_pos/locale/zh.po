@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 08:35+0553\n"
+"POT-Creation-Date: 2026-10-24 15:48+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: zh\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "+ Add row"
 msgstr "+ 添加行"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "1 item"
 msgstr "1 件商品"
 
-#: posapp/src/components/Cart/index.jsx:447
+#: posapp/src/components/Cart/index.jsx:458
 msgid "1 loyalty point available"
 msgstr "可用 1 个积分"
 
@@ -36,7 +36,7 @@ msgstr "可用 1 个积分"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:819
+#: posapp/src/components/Cart/index.jsx:830
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "此购物车中的赠品优惠需要联网才能计算——在重新连接之前，整个购物车的价格/折扣暂按标价计算。"
 
@@ -56,7 +56,7 @@ msgstr "地址"
 msgid "ALL DOMAINS"
 msgstr "全部数据域"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:198
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
 #: posapp/src/pages/InvoiceDetailPage.jsx:370
 msgid "Account Head"
 msgstr ""
@@ -87,6 +87,10 @@ msgstr ""
 #: posapp/src/pages/PriceListListPage.jsx:11
 #: posapp/src/pages/PriceListListPage.jsx:45
 msgid "Active"
+msgstr ""
+
+#: posapp/src/utils/format.js:43
+msgid "Actual"
 msgstr ""
 
 #: posapp/src/components/Customer/AddressContactSection.jsx:133
@@ -217,7 +221,7 @@ msgid "Amended From"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:46
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:219
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:220
 #: posapp/src/pages/DiscountDetailPage.jsx:778
 #: posapp/src/pages/InvoiceDetailPage.jsx:309
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
@@ -247,7 +251,7 @@ msgstr ""
 msgid "Applicable for Users"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:736
+#: posapp/src/components/Cart/index.jsx:747
 msgid "Apply"
 msgstr ""
 
@@ -289,7 +293,7 @@ msgstr "规则适用于商品分组 *"
 msgid "Apply Rule On Other"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:687
+#: posapp/src/components/Cart/index.jsx:698
 msgid "Apply on…"
 msgstr "适用于…"
 
@@ -338,7 +342,7 @@ msgstr "返回"
 msgid "Back to Invoices"
 msgstr "返回发票列表"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Balance Due"
 msgstr "应付余额"
 
@@ -346,7 +350,7 @@ msgstr "应付余额"
 msgid "Batch"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:626
+#: posapp/src/components/Cart/index.jsx:637
 msgid "Batch No"
 msgstr ""
 
@@ -373,7 +377,7 @@ msgstr "为从不停歇的零售团队打造。"
 msgid "Bundle Components"
 msgstr "组合商品明细"
 
-#: posapp/src/components/Cart/index.jsx:647
+#: posapp/src/components/Cart/index.jsx:658
 msgid "Bundle Contents"
 msgstr "组合商品内容"
 
@@ -418,8 +422,8 @@ msgstr ""
 #: posapp/src/components/Customer/AddressModal.jsx:77
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:346
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:117
+#: posapp/src/components/InvoicePay/index.jsx:353
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
@@ -432,7 +436,7 @@ msgstr "取消发票"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:28
+#: posapp/src/utils/format.js:33
 msgid "Cancelled"
 msgstr ""
 
@@ -448,7 +452,7 @@ msgstr "无法创建演示 POS 配置：未指定公司，且未设置默认公�
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "无法创建演示数据：未指定公司，且未设置默认公司。"
 
-#: posapp/src/components/Cart/index.jsx:473
+#: posapp/src/components/Cart/index.jsx:484
 msgid "Cart Items"
 msgstr "购物车商品"
 
@@ -459,7 +463,7 @@ msgstr "购物车商品"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:439
+#: posapp/src/components/InvoicePay/index.jsx:446
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "收银员输入应收金额；点击“完成付款”时会打开 {gateway} 支付页面。"
 
@@ -467,7 +471,7 @@ msgstr "收银员输入应收金额；点击“完成付款”时会打开 {gate
 msgid "Change Due"
 msgstr "找零"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Change to Return"
 msgstr "改为退货"
 
@@ -483,7 +487,7 @@ msgstr "选择选项以确定规格"
 msgid "City/Town"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:477
+#: posapp/src/components/Cart/index.jsx:488
 msgid "Clear all"
 msgstr "全部清除"
 
@@ -573,7 +577,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "公司和仓库为必填项"
 
-#: posapp/src/components/InvoicePay/index.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:369
 msgid "Complete Payment"
 msgstr "完成付款"
 
@@ -597,8 +601,12 @@ msgstr "配置等级、积分和兑换规则"
 msgid "Connected to the server"
 msgstr "已连接到服务器"
 
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Consolidated"
+msgstr ""
+
+#: posapp/src/pages/LoyaltyProgramListPage.jsx:29
+msgid "Conversion Factor"
 msgstr ""
 
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:256
@@ -643,7 +651,7 @@ msgstr "国家重复添加：{countries}"
 msgid "County"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:756
+#: posapp/src/components/Cart/index.jsx:767
 msgid "Coupon \"{code}\" applied"
 msgstr "已使用优惠券“{code}”"
 
@@ -651,7 +659,7 @@ msgstr "已使用优惠券“{code}”"
 msgid "Coupon Code Based"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:721
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Coupon code"
 msgstr "优惠券码"
 
@@ -659,8 +667,8 @@ msgstr "优惠券码"
 msgid "Create"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:110
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:120
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:111
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:121
 #: posapp/src/pages/InvoiceDetailPage.jsx:222
 msgid "Create Credit Note"
 msgstr "开具红字发票"
@@ -698,7 +706,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:27
+#: posapp/src/utils/format.js:32
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -733,8 +741,8 @@ msgstr "当前班次 · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
+#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -886,7 +894,7 @@ msgstr "禁用将总计自动分配到默认付款方式"
 msgid "Disabled"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:591
+#: posapp/src/components/Cart/index.jsx:602
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -946,7 +954,7 @@ msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
 msgid "Draft"
 msgstr ""
 
@@ -1049,7 +1057,7 @@ msgstr "启用离线模式"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:341
+#: posapp/src/components/InvoicePay/index.jsx:348
 msgid "Enter the amount received for each payment mode."
 msgstr "请输入每种付款方式的实收金额。"
 
@@ -1090,7 +1098,7 @@ msgstr ""
 msgid "Expiry Duration (days)"
 msgstr "有效期（天）"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:790
 msgid "FREE"
 msgstr "赠品"
 
@@ -1102,12 +1110,13 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "取消发票失败"
 
-#: posapp/src/components/InvoicePay/index.jsx:217
-#: posapp/src/components/InvoicePay/index.jsx:324
+#: posapp/src/components/InvoicePay/index.jsx:218
+#: posapp/src/components/InvoicePay/index.jsx:278
+#: posapp/src/components/InvoicePay/index.jsx:331
 msgid "Failed to complete payment"
 msgstr "完成付款失败"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:100
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:101
 msgid "Failed to create credit note"
 msgstr "开具红字发票失败"
 
@@ -1165,7 +1174,7 @@ msgstr "保存 POS 配置失败"
 msgid "Failed to save Price List"
 msgstr "保存价格表失败"
 
-#: posapp/src/components/Cart/index.jsx:315
+#: posapp/src/components/Cart/index.jsx:326
 msgid "Failed to save draft"
 msgstr "保存草稿失败"
 
@@ -1210,7 +1219,7 @@ msgstr "按邮箱筛选"
 msgid "Filter by mobile"
 msgstr "按手机号筛选"
 
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "即将完成——确认后小票将在此打印。"
 
@@ -1242,7 +1251,7 @@ msgstr ""
 msgid "Free Item UOM"
 msgstr "赠品单位"
 
-#: posapp/src/components/Cart/index.jsx:768
+#: posapp/src/components/Cart/index.jsx:779
 msgid "Free Items"
 msgstr "赠品"
 
@@ -1272,10 +1281,10 @@ msgstr "前往收银台"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:692
-#: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:182
-#: posapp/src/components/InvoicePay/index.jsx:371
+#: posapp/src/components/Cart/index.jsx:703
+#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/InvoicePay/index.jsx:183
+#: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
@@ -1357,7 +1366,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1396,7 +1405,7 @@ msgstr "离线时无法查看发票详情。请重新连接后重试。"
 msgid "Invoice not found."
 msgstr "未找到发票。"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:151
 msgid "Invoiced Qty"
 msgstr ""
 
@@ -1420,7 +1429,7 @@ msgstr ""
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:149
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
 #: posapp/src/engine/sync.js:8 posapp/src/pages/InvoiceDetailPage.jsx:277
 #: posapp/src/pages/ItemPriceDetailPage.jsx:183
 #: posapp/src/pages/ItemPriceListPage.jsx:19
@@ -1442,7 +1451,7 @@ msgstr "商品编码、单位、价格表和价格为必填项"
 msgid "Item Details"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:809
+#: posapp/src/components/Cart/index.jsx:820
 msgid "Item Discounts"
 msgstr "商品折扣"
 
@@ -1484,7 +1493,7 @@ msgstr ""
 msgid "Item Tax"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:788
+#: posapp/src/components/Cart/index.jsx:799
 msgid "Item Total"
 msgstr "商品合计"
 
@@ -1492,7 +1501,7 @@ msgstr "商品合计"
 msgid "Items"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:128
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:129
 msgid "Items to Return"
 msgstr "退货商品"
 
@@ -1530,7 +1539,7 @@ msgid "Letter Head"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:872
+#: posapp/src/components/Cart/index.jsx:883
 msgid "Load Draft"
 msgstr "载入草稿"
 
@@ -1542,7 +1551,7 @@ msgstr "正在加载规格…"
 msgid "Loading..."
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:650
+#: posapp/src/components/Cart/index.jsx:661
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
@@ -1571,11 +1580,11 @@ msgstr "会员计划已保存"
 msgid "Loyalty Programs"
 msgstr "会员计划"
 
-#: posapp/src/components/InvoicePay/index.jsx:471
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Loyalty Redeemed"
 msgstr "已兑换积分"
 
-#: posapp/src/components/InvoicePay/index.jsx:377
+#: posapp/src/components/InvoicePay/index.jsx:384
 msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
 msgstr "积分不能以 {currency} 兑换。ERPNext 只以公司币种（{company_currency}）兑换积分。"
 
@@ -1704,7 +1713,7 @@ msgstr ""
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:693
+#: posapp/src/components/Cart/index.jsx:704
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1757,7 +1766,7 @@ msgstr "新建 POS 配置"
 msgid "New Price List"
 msgstr "新建价格表"
 
-#: posapp/src/components/Cart/index.jsx:424
+#: posapp/src/components/Cart/index.jsx:435
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "新建客户"
@@ -1825,7 +1834,7 @@ msgstr "无组合商品明细"
 msgid "No camera was found on this device."
 msgstr "此设备上未找到相机。"
 
-#: posapp/src/components/Cart/index.jsx:652
+#: posapp/src/components/Cart/index.jsx:663
 msgid "No components"
 msgstr "无组成部分"
 
@@ -1886,7 +1895,7 @@ msgstr "无商品"
 msgid "No items added"
 msgstr "未添加商品"
 
-#: posapp/src/components/Cart/index.jsx:487
+#: posapp/src/components/Cart/index.jsx:498
 msgid "No items in cart"
 msgstr ""
 
@@ -1898,7 +1907,7 @@ msgstr "此分类下没有商品"
 msgid "No items match your search"
 msgstr "没有符合搜索条件的商品"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:134
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:135
 msgid "No items on this invoice"
 msgstr "此发票上没有商品"
 
@@ -1910,7 +1919,7 @@ msgstr "此期间没有售出商品。"
 msgid "No payment modes added"
 msgstr "未添加付款方式"
 
-#: posapp/src/components/InvoicePay/index.jsx:423
+#: posapp/src/components/InvoicePay/index.jsx:430
 msgid "No payment modes configured for this POS Profile."
 msgstr "此 POS 配置未设置付款方式。"
 
@@ -1958,7 +1967,7 @@ msgstr "暂无可报告的班次。在收银台开班后即可在此查看实时
 msgid "No taxes applied"
 msgstr "未应用税费"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:196
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:197
 msgid "No taxes on this invoice"
 msgstr "此发票无税费"
 
@@ -2011,13 +2020,29 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "此部署未启用离线模式（EasyPOS 设置）。数据仍会在下方缓存，但在启用之前，收银台离线时不会使用这些数据。"
 
-#: posapp/src/components/InvoicePay/index.jsx:178
+#: posapp/src/components/InvoicePay/index.jsx:179
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "离线——等待同步。同步后可在“发票”中重新打印。"
 
 #: posapp/src/pages/POSTerminalPage.jsx:61
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "离线——正在显示缓存的商品目录和价格。销售照常记录，重新连接后自动同步。"
+
+#: posapp/src/utils/format.js:47
+msgid "On Item Quantity"
+msgstr ""
+
+#: posapp/src/utils/format.js:44
+msgid "On Net Total"
+msgstr ""
+
+#: posapp/src/utils/format.js:45
+msgid "On Previous Row Amount"
+msgstr ""
+
+#: posapp/src/utils/format.js:46
+msgid "On Previous Row Total"
+msgstr ""
 
 #: posapp/src/pages/LoginPage.jsx:58
 msgid "One counter."
@@ -2048,7 +2073,7 @@ msgstr "仅显示这些商品分组中的商品。留空表示全部。"
 msgid "Open"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:402
+#: posapp/src/components/Cart/index.jsx:413
 msgid "Open Customer Display"
 msgstr "打开客显屏"
 
@@ -2094,11 +2119,11 @@ msgstr "正在打开…"
 msgid "Optional note"
 msgstr "备注（可选）"
 
-#: posapp/src/components/Cart/index.jsx:681
+#: posapp/src/components/Cart/index.jsx:692
 msgid "Order Discount"
 msgstr "整单折扣"
 
-#: posapp/src/components/Cart/index.jsx:828
+#: posapp/src/components/Cart/index.jsx:839
 msgid "Order Discount ({pct}%)"
 msgstr "整单折扣（{pct}%）"
 
@@ -2115,11 +2140,11 @@ msgstr ""
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2170,20 +2195,20 @@ msgstr "POS 收银台"
 msgid "Page {page} of {total}"
 msgstr "第 {page} 页，共 {total} 页"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:466
+#: posapp/src/components/InvoicePay/index.jsx:473
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:25
+#: posapp/src/utils/format.js:30
 msgid "Partly Paid"
 msgstr ""
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Partly Paid and Discounted"
 msgstr ""
 
@@ -2200,11 +2225,11 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:360
+#: posapp/src/components/InvoicePay/index.jsx:367
 msgid "Pay with {gateway}"
 msgstr "使用 {gateway} 付款"
 
-#: posapp/src/components/Cart/index.jsx:891
+#: posapp/src/components/Cart/index.jsx:902
 msgid "Pay {amount}"
 msgstr "支付 {amount}"
 
@@ -2222,7 +2247,7 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:415
+#: posapp/src/components/InvoicePay/index.jsx:422
 msgid "Payment Summary"
 msgstr "付款汇总"
 
@@ -2294,20 +2319,20 @@ msgstr ""
 msgid "Please Pay"
 msgstr "请付款"
 
-#: posapp/src/components/Cart/index.jsx:250
+#: posapp/src/components/Cart/index.jsx:261
 msgid "Please add at least one item to the cart"
 msgstr "请至少向购物车添加一件商品"
 
-#: posapp/src/components/InvoicePay/index.jsx:227
+#: posapp/src/components/InvoicePay/index.jsx:228
 msgid "Please add one or more items to the cart"
 msgstr "请向购物车添加一件或多件商品"
 
-#: posapp/src/components/InvoicePay/index.jsx:231
+#: posapp/src/components/InvoicePay/index.jsx:232
 msgid "Please enter an amount for at least one payment mode"
 msgstr "请至少为一种付款方式输入金额"
 
-#: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:223
+#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "请选择客户"
 
@@ -2529,8 +2554,8 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:566
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:170
+#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
 #: posapp/src/pages/InvoiceDetailPage.jsx:282
@@ -2541,11 +2566,11 @@ msgstr ""
 msgid "Rate"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:202
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:203
 msgid "Rate (%)"
 msgstr "税率 (%)"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:237
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:238
 msgid "Rate (%) applies to percentage-based charges; Amount applies to \"Actual\" charges. Totals are recalculated against the returned items when the credit note is created."
 msgstr "税率 (%) 适用于按百分比计算的费用；金额适用于“实际”费用。开具红字发票时，将按退货商品重新计算合计。"
 
@@ -2573,9 +2598,9 @@ msgstr "Razorpay 尚未配置。请先在 Razorpay 设置中完成配置。"
 msgid "Razorpay payment signature verification failed"
 msgstr "Razorpay 付款签名验证失败"
 
-#: posapp/src/components/InvoicePay/index.jsx:167
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:168
+#: posapp/src/components/InvoicePay/index.jsx:177
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Receipt"
 msgstr ""
 
@@ -2611,7 +2636,7 @@ msgstr ""
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:387
+#: posapp/src/components/InvoicePay/index.jsx:394
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "兑换积分（可用 {n}）"
 
@@ -2631,11 +2656,11 @@ msgstr ""
 msgid "Remember this device"
 msgstr "记住此设备"
 
-#: posapp/src/components/Cart/index.jsx:556
+#: posapp/src/components/Cart/index.jsx:567
 msgid "Remove"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:742
+#: posapp/src/components/Cart/index.jsx:753
 msgid "Remove coupon"
 msgstr "移除优惠券"
 
@@ -2664,7 +2689,7 @@ msgstr "重试同步"
 msgid "Retrying…"
 msgstr "正在重试…"
 
-#: posapp/src/utils/format.js:26
+#: posapp/src/utils/format.js:31
 msgid "Return"
 msgstr ""
 
@@ -2672,15 +2697,15 @@ msgstr ""
 msgid "Return Against"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:173
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:174
 msgid "Return Amount"
 msgstr "退货金额"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:153
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:154
 msgid "Return Qty"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:184
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:185
 msgid "Return Total"
 msgstr "退货合计"
 
@@ -2756,7 +2781,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:860
+#: posapp/src/components/Cart/index.jsx:871
 msgid "Save Draft"
 msgstr "保存草稿"
 
@@ -2764,7 +2789,7 @@ msgstr "保存草稿"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "请先保存客户，再添加地址和联系人。"
 
-#: posapp/src/components/Cart/index.jsx:855
+#: posapp/src/components/Cart/index.jsx:866
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2784,7 +2809,7 @@ msgstr "扫描条形码/序列号/批次或搜索商品"
 msgid "Scan with camera"
 msgstr "用相机扫描"
 
-#: posapp/src/components/Cart/index.jsx:544
+#: posapp/src/components/Cart/index.jsx:555
 msgid "Scan/add the item again to add another unit"
 msgstr "再次扫描/添加商品可再加一件"
 
@@ -2792,7 +2817,7 @@ msgstr "再次扫描/添加商品可再加一件"
 msgid "Search and pull a saved draft into the terminal"
 msgstr "搜索已保存的草稿并载入收银台"
 
-#: posapp/src/components/Cart/index.jsx:631
+#: posapp/src/components/Cart/index.jsx:642
 msgid "Search batch no"
 msgstr "搜索批次号"
 
@@ -2800,7 +2825,7 @@ msgstr "搜索批次号"
 msgid "Search customer, mobile or email"
 msgstr "搜索客户、手机号或邮箱"
 
-#: posapp/src/components/Cart/index.jsx:422
+#: posapp/src/components/Cart/index.jsx:433
 msgid "Search customer..."
 msgstr "搜索客户..."
 
@@ -2828,7 +2853,7 @@ msgstr "搜索配置或仓库"
 msgid "Search program name"
 msgstr "搜索计划名称"
 
-#: posapp/src/components/Cart/index.jsx:611
+#: posapp/src/components/Cart/index.jsx:622
 msgid "Search serial no"
 msgstr "搜索序列号"
 
@@ -2894,7 +2919,7 @@ msgstr "请先选择公司"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "为每个属性选择一个选项以确定规格。"
 
-#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:71
 msgid "Select at least one item to return"
 msgstr "请至少选择一件要退货的商品"
 
@@ -2932,7 +2957,7 @@ msgstr ""
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "如果“适用于”选择为 {field}，则必须勾选“销售”"
 
-#: posapp/src/components/Cart/index.jsx:606 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr ""
 
@@ -2968,7 +2993,7 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:394
+#: posapp/src/components/Cart/index.jsx:405
 msgid "Shopping Cart"
 msgstr ""
 
@@ -3014,11 +3039,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:29
+#: posapp/src/utils/format.js:34
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Submitting…"
 msgstr "正在提交…"
 
@@ -3090,11 +3115,11 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "系统将提示增加或减少数量或金额"
 
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:347
 msgid "Take Payment"
 msgstr "收款"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:499
 msgid "Tap an item to add it here"
 msgstr "点击商品即可添加到此处"
 
@@ -3108,11 +3133,11 @@ msgstr ""
 msgid "Tax ID"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:792
+#: posapp/src/components/Cart/index.jsx:803
 msgid "Taxes"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:191
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:192
 #: posapp/src/pages/InvoiceDetailPage.jsx:368
 #: posapp/src/pages/InvoiceDetailPage.jsx:394
 msgid "Taxes and Charges"
@@ -3139,11 +3164,11 @@ msgstr ""
 msgid "Thank You!"
 msgstr "谢谢惠顾！"
 
-#: posapp/src/components/InvoicePay/index.jsx:311
+#: posapp/src/components/InvoicePay/index.jsx:318
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "本次尝试失败——您可以在 {gateway} 窗口中换一种付款方式。"
 
-#: posapp/src/components/Cart/index.jsx:713
+#: posapp/src/components/Cart/index.jsx:724
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "此 POS 配置不允许手动修改折扣。"
 
@@ -3234,7 +3259,7 @@ msgstr ""
 msgid "Transactions"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:200
 #: posapp/src/pages/DiscountListPage.jsx:43
 #: posapp/src/pages/InvoiceDetailPage.jsx:371
 #: posapp/src/pages/ItemPriceListPage.jsx:53
@@ -3256,11 +3281,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "无法启动相机。"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3330,15 +3355,15 @@ msgstr "规格 {variant} 及其模板 {template} 不能同时添加到同一定�
 msgid "View all"
 msgstr "查看全部"
 
-#: posapp/src/components/Cart/index.jsx:463
+#: posapp/src/components/Cart/index.jsx:474
 msgid "View purchase history"
 msgstr "查看购买记录"
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Waiting for {gateway}…"
 msgstr "正在等待 {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/components/InvoicePay/index.jsx:180
 #: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "散客"
@@ -3434,19 +3459,19 @@ msgstr "表中未添加 {field}"
 msgid "{field} is required"
 msgstr "{field} 为必填项"
 
-#: posapp/src/components/InvoicePay/index.jsx:442
+#: posapp/src/components/InvoicePay/index.jsx:449
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} 尚未配置。"
 
-#: posapp/src/components/InvoicePay/index.jsx:437
+#: posapp/src/components/InvoicePay/index.jsx:444
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} 需要联网——离线时不可用。"
 
-#: posapp/src/components/InvoicePay/index.jsx:445
+#: posapp/src/components/InvoicePay/index.jsx:452
 msgid "{gateway} — offline"
 msgstr "{gateway} — 离线"
 
-#: posapp/src/components/InvoicePay/index.jsx:155
+#: posapp/src/components/InvoicePay/index.jsx:156
 msgid "{item} (Free)"
 msgstr "{item}（赠品）"
 
@@ -3467,11 +3492,11 @@ msgstr "{label} — {n} 张发票待同步"
 msgid "{n} invoices"
 msgstr "{n} 张发票"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "{n} items"
 msgstr "{n} 件商品"
 
-#: posapp/src/components/Cart/index.jsx:448
+#: posapp/src/components/Cart/index.jsx:459
 msgid "{n} loyalty points available"
 msgstr "可用 {n} 个积分"
 
@@ -3495,7 +3520,7 @@ msgstr "{n} 分钟前"
 msgid "{qty} left"
 msgstr "剩余 {qty}"
 
-#: posapp/src/components/Cart/index.jsx:521
+#: posapp/src/components/Cart/index.jsx:532
 msgid "{rate} each"
 msgstr "每件 {rate}"
 

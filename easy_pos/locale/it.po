@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 08:35+0553\n"
+"POT-Creation-Date: 2026-10-24 15:48+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: it\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "+ Add row"
 msgstr "+ Aggiungi riga"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "1 item"
 msgstr "1 articolo"
 
-#: posapp/src/components/Cart/index.jsx:447
+#: posapp/src/components/Cart/index.jsx:458
 msgid "1 loyalty point available"
 msgstr "1 punto fedeltà disponibile"
 
@@ -36,7 +36,7 @@ msgstr "1 punto fedeltà disponibile"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:819
+#: posapp/src/components/Cart/index.jsx:830
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "Un'offerta di articolo omaggio in questo carrello richiede una connessione — prezzi/sconti dell'intero carrello restano al prezzo di listino fino alla riconnessione."
 
@@ -56,7 +56,7 @@ msgstr "INDIRIZZI"
 msgid "ALL DOMAINS"
 msgstr "TUTTI I DOMINI"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:198
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
 #: posapp/src/pages/InvoiceDetailPage.jsx:370
 msgid "Account Head"
 msgstr ""
@@ -87,6 +87,10 @@ msgstr ""
 #: posapp/src/pages/PriceListListPage.jsx:11
 #: posapp/src/pages/PriceListListPage.jsx:45
 msgid "Active"
+msgstr ""
+
+#: posapp/src/utils/format.js:43
+msgid "Actual"
 msgstr ""
 
 #: posapp/src/components/Customer/AddressContactSection.jsx:133
@@ -217,7 +221,7 @@ msgid "Amended From"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:46
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:219
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:220
 #: posapp/src/pages/DiscountDetailPage.jsx:778
 #: posapp/src/pages/InvoiceDetailPage.jsx:309
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
@@ -247,7 +251,7 @@ msgstr ""
 msgid "Applicable for Users"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:736
+#: posapp/src/components/Cart/index.jsx:747
 msgid "Apply"
 msgstr ""
 
@@ -289,7 +293,7 @@ msgstr "Applica regola al gruppo articoli *"
 msgid "Apply Rule On Other"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:687
+#: posapp/src/components/Cart/index.jsx:698
 msgid "Apply on…"
 msgstr "Applica su…"
 
@@ -338,7 +342,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "Torna alle fatture"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Balance Due"
 msgstr "Saldo dovuto"
 
@@ -346,7 +350,7 @@ msgstr "Saldo dovuto"
 msgid "Batch"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:626
+#: posapp/src/components/Cart/index.jsx:637
 msgid "Batch No"
 msgstr ""
 
@@ -373,7 +377,7 @@ msgstr "Pensato per team retail che non si fermano mai."
 msgid "Bundle Components"
 msgstr "Componenti del kit"
 
-#: posapp/src/components/Cart/index.jsx:647
+#: posapp/src/components/Cart/index.jsx:658
 msgid "Bundle Contents"
 msgstr "Contenuto del kit"
 
@@ -418,8 +422,8 @@ msgstr ""
 #: posapp/src/components/Customer/AddressModal.jsx:77
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:346
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:117
+#: posapp/src/components/InvoicePay/index.jsx:353
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
@@ -432,7 +436,7 @@ msgstr "Annulla fattura"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:28
+#: posapp/src/utils/format.js:33
 msgid "Cancelled"
 msgstr ""
 
@@ -448,7 +452,7 @@ msgstr "Impossibile creare profili POS demo: nessuna azienda indicata e nessuna 
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "Impossibile creare dati demo: nessuna azienda indicata e nessuna azienda predefinita impostata."
 
-#: posapp/src/components/Cart/index.jsx:473
+#: posapp/src/components/Cart/index.jsx:484
 msgid "Cart Items"
 msgstr "Articoli nel carrello"
 
@@ -459,7 +463,7 @@ msgstr "Articoli nel carrello"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:439
+#: posapp/src/components/InvoicePay/index.jsx:446
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "Il cassiere inserisce l'importo da addebitare; al completamento del pagamento si apre un checkout {gateway}."
 
@@ -467,7 +471,7 @@ msgstr "Il cassiere inserisce l'importo da addebitare; al completamento del paga
 msgid "Change Due"
 msgstr "Resto dovuto"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Change to Return"
 msgstr "Trasforma in reso"
 
@@ -483,7 +487,7 @@ msgstr "Scegli le opzioni per selezionare una variante"
 msgid "City/Town"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:477
+#: posapp/src/components/Cart/index.jsx:488
 msgid "Clear all"
 msgstr "Cancella tutto"
 
@@ -573,7 +577,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "Azienda e magazzino sono obbligatori"
 
-#: posapp/src/components/InvoicePay/index.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:369
 msgid "Complete Payment"
 msgstr "Completa pagamento"
 
@@ -597,8 +601,12 @@ msgstr "Configura livelli, punti e regole di riscatto"
 msgid "Connected to the server"
 msgstr "Connesso al server"
 
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Consolidated"
+msgstr ""
+
+#: posapp/src/pages/LoyaltyProgramListPage.jsx:29
+msgid "Conversion Factor"
 msgstr ""
 
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:256
@@ -643,7 +651,7 @@ msgstr "Paese aggiunto più volte: {countries}"
 msgid "County"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:756
+#: posapp/src/components/Cart/index.jsx:767
 msgid "Coupon \"{code}\" applied"
 msgstr "Coupon «{code}» applicato"
 
@@ -651,7 +659,7 @@ msgstr "Coupon «{code}» applicato"
 msgid "Coupon Code Based"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:721
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Coupon code"
 msgstr "Codice coupon"
 
@@ -659,8 +667,8 @@ msgstr "Codice coupon"
 msgid "Create"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:110
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:120
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:111
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:121
 #: posapp/src/pages/InvoiceDetailPage.jsx:222
 msgid "Create Credit Note"
 msgstr "Crea nota di credito"
@@ -698,7 +706,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:27
+#: posapp/src/utils/format.js:32
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -733,8 +741,8 @@ msgstr "Turno attuale · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
+#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -886,7 +894,7 @@ msgstr "Disattiva l'impostazione automatica del totale sulla modalità di pagame
 msgid "Disabled"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:591
+#: posapp/src/components/Cart/index.jsx:602
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -946,7 +954,7 @@ msgstr "Non imporre la quantità dell'articolo omaggio"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
 msgid "Draft"
 msgstr ""
 
@@ -1049,7 +1057,7 @@ msgstr "Abilita modalità offline"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:341
+#: posapp/src/components/InvoicePay/index.jsx:348
 msgid "Enter the amount received for each payment mode."
 msgstr "Inserisci l'importo ricevuto per ogni modalità di pagamento."
 
@@ -1090,7 +1098,7 @@ msgstr ""
 msgid "Expiry Duration (days)"
 msgstr "Durata di validità (giorni)"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:790
 msgid "FREE"
 msgstr "OMAGGIO"
 
@@ -1102,12 +1110,13 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "Impossibile annullare la fattura"
 
-#: posapp/src/components/InvoicePay/index.jsx:217
-#: posapp/src/components/InvoicePay/index.jsx:324
+#: posapp/src/components/InvoicePay/index.jsx:218
+#: posapp/src/components/InvoicePay/index.jsx:278
+#: posapp/src/components/InvoicePay/index.jsx:331
 msgid "Failed to complete payment"
 msgstr "Impossibile completare il pagamento"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:100
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:101
 msgid "Failed to create credit note"
 msgstr "Impossibile creare la nota di credito"
 
@@ -1165,7 +1174,7 @@ msgstr "Impossibile salvare il profilo POS"
 msgid "Failed to save Price List"
 msgstr "Impossibile salvare il listino prezzi"
 
-#: posapp/src/components/Cart/index.jsx:315
+#: posapp/src/components/Cart/index.jsx:326
 msgid "Failed to save draft"
 msgstr "Impossibile salvare la bozza"
 
@@ -1210,7 +1219,7 @@ msgstr "Filtra per e-mail"
 msgid "Filter by mobile"
 msgstr "Filtra per cellulare"
 
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "Ultimi passaggi — la ricevuta verrà stampata qui appena confermata."
 
@@ -1242,7 +1251,7 @@ msgstr "Prezzo articolo omaggio"
 msgid "Free Item UOM"
 msgstr "UdM articolo omaggio"
 
-#: posapp/src/components/Cart/index.jsx:768
+#: posapp/src/components/Cart/index.jsx:779
 msgid "Free Items"
 msgstr "Articoli omaggio"
 
@@ -1272,10 +1281,10 @@ msgstr "Vai al terminale"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:692
-#: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:182
-#: posapp/src/components/InvoicePay/index.jsx:371
+#: posapp/src/components/Cart/index.jsx:703
+#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/InvoicePay/index.jsx:183
+#: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
@@ -1357,7 +1366,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1396,7 +1405,7 @@ msgstr "I dettagli della fattura non sono disponibili offline. Riconnettiti e ri
 msgid "Invoice not found."
 msgstr "Fattura non trovata."
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:151
 msgid "Invoiced Qty"
 msgstr "Qtà fatturata"
 
@@ -1420,7 +1429,7 @@ msgstr "È ricorsivo"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:149
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
 #: posapp/src/engine/sync.js:8 posapp/src/pages/InvoiceDetailPage.jsx:277
 #: posapp/src/pages/ItemPriceDetailPage.jsx:183
 #: posapp/src/pages/ItemPriceListPage.jsx:19
@@ -1442,7 +1451,7 @@ msgstr "Codice articolo, UdM, listino prezzi e prezzo sono obbligatori"
 msgid "Item Details"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:809
+#: posapp/src/components/Cart/index.jsx:820
 msgid "Item Discounts"
 msgstr "Sconti articolo"
 
@@ -1484,7 +1493,7 @@ msgstr ""
 msgid "Item Tax"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:788
+#: posapp/src/components/Cart/index.jsx:799
 msgid "Item Total"
 msgstr "Totale articoli"
 
@@ -1492,7 +1501,7 @@ msgstr "Totale articoli"
 msgid "Items"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:128
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:129
 msgid "Items to Return"
 msgstr "Articoli da rendere"
 
@@ -1530,7 +1539,7 @@ msgid "Letter Head"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:872
+#: posapp/src/components/Cart/index.jsx:883
 msgid "Load Draft"
 msgstr "Carica bozza"
 
@@ -1542,7 +1551,7 @@ msgstr "Caricamento varianti…"
 msgid "Loading..."
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:650
+#: posapp/src/components/Cart/index.jsx:661
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
@@ -1571,11 +1580,11 @@ msgstr "Programma fedeltà salvato correttamente"
 msgid "Loyalty Programs"
 msgstr "Programmi fedeltà"
 
-#: posapp/src/components/InvoicePay/index.jsx:471
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Loyalty Redeemed"
 msgstr "Fedeltà riscattata"
 
-#: posapp/src/components/InvoicePay/index.jsx:377
+#: posapp/src/components/InvoicePay/index.jsx:384
 msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
 msgstr "I punti fedeltà non possono essere riscattati in {currency}. ERPNext li riscatta solo nella valuta dell'azienda ({company_currency})."
 
@@ -1704,7 +1713,7 @@ msgstr ""
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:693
+#: posapp/src/components/Cart/index.jsx:704
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1757,7 +1766,7 @@ msgstr "Nuovo profilo POS"
 msgid "New Price List"
 msgstr "Nuovo listino prezzi"
 
-#: posapp/src/components/Cart/index.jsx:424
+#: posapp/src/components/Cart/index.jsx:435
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "Nuovo cliente"
@@ -1825,7 +1834,7 @@ msgstr "Nessun componente del kit"
 msgid "No camera was found on this device."
 msgstr "Nessuna fotocamera trovata su questo dispositivo."
 
-#: posapp/src/components/Cart/index.jsx:652
+#: posapp/src/components/Cart/index.jsx:663
 msgid "No components"
 msgstr "Nessun componente"
 
@@ -1886,7 +1895,7 @@ msgstr "Nessun articolo"
 msgid "No items added"
 msgstr "Nessun articolo aggiunto"
 
-#: posapp/src/components/Cart/index.jsx:487
+#: posapp/src/components/Cart/index.jsx:498
 msgid "No items in cart"
 msgstr "Nessun articolo nel carrello"
 
@@ -1898,7 +1907,7 @@ msgstr "Nessun articolo in questa categoria"
 msgid "No items match your search"
 msgstr "Nessun articolo corrisponde alla ricerca"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:134
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:135
 msgid "No items on this invoice"
 msgstr "Nessun articolo in questa fattura"
 
@@ -1910,7 +1919,7 @@ msgstr "Nessun articolo venduto in questo periodo."
 msgid "No payment modes added"
 msgstr "Nessuna modalità di pagamento aggiunta"
 
-#: posapp/src/components/InvoicePay/index.jsx:423
+#: posapp/src/components/InvoicePay/index.jsx:430
 msgid "No payment modes configured for this POS Profile."
 msgstr "Nessuna modalità di pagamento configurata per questo profilo POS."
 
@@ -1958,7 +1967,7 @@ msgstr "Ancora nessun turno da riportare. Apri un turno dal terminale per vedere
 msgid "No taxes applied"
 msgstr "Nessuna imposta applicata"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:196
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:197
 msgid "No taxes on this invoice"
 msgstr "Nessuna imposta su questa fattura"
 
@@ -2011,13 +2020,29 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "La modalità offline non è abilitata per questa installazione (Impostazioni EasyPOS). I dati continuano a essere memorizzati in cache qui sotto, ma il terminale non li userà offline finché non viene attivata."
 
-#: posapp/src/components/InvoicePay/index.jsx:178
+#: posapp/src/components/InvoicePay/index.jsx:179
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Offline — sincronizzazione in sospeso. Ristampa da Fatture dopo la sincronizzazione."
 
 #: posapp/src/pages/POSTerminalPage.jsx:61
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "Offline — catalogo e prezzi in cache. Le vendite vengono registrate e sincronizzate automaticamente alla riconnessione."
+
+#: posapp/src/utils/format.js:47
+msgid "On Item Quantity"
+msgstr ""
+
+#: posapp/src/utils/format.js:44
+msgid "On Net Total"
+msgstr ""
+
+#: posapp/src/utils/format.js:45
+msgid "On Previous Row Amount"
+msgstr ""
+
+#: posapp/src/utils/format.js:46
+msgid "On Previous Row Total"
+msgstr ""
 
 #: posapp/src/pages/LoginPage.jsx:58
 msgid "One counter."
@@ -2048,7 +2073,7 @@ msgstr "Mostra solo gli articoli di questi gruppi articoli. Lascia vuoto per tut
 msgid "Open"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:402
+#: posapp/src/components/Cart/index.jsx:413
 msgid "Open Customer Display"
 msgstr "Apri display cliente"
 
@@ -2094,11 +2119,11 @@ msgstr "Apertura…"
 msgid "Optional note"
 msgstr "Nota facoltativa"
 
-#: posapp/src/components/Cart/index.jsx:681
+#: posapp/src/components/Cart/index.jsx:692
 msgid "Order Discount"
 msgstr "Sconto ordine"
 
-#: posapp/src/components/Cart/index.jsx:828
+#: posapp/src/components/Cart/index.jsx:839
 msgid "Order Discount ({pct}%)"
 msgstr "Sconto ordine ({pct}%)"
 
@@ -2115,11 +2140,11 @@ msgstr "Esaurito"
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2170,20 +2195,20 @@ msgstr "Terminale POS"
 msgid "Page {page} of {total}"
 msgstr "Pagina {page} di {total}"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:466
+#: posapp/src/components/InvoicePay/index.jsx:473
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:25
+#: posapp/src/utils/format.js:30
 msgid "Partly Paid"
 msgstr "Parzialmente pagata"
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Partly Paid and Discounted"
 msgstr "Parzialmente pagata e scontata"
 
@@ -2200,11 +2225,11 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:360
+#: posapp/src/components/InvoicePay/index.jsx:367
 msgid "Pay with {gateway}"
 msgstr "Paga con {gateway}"
 
-#: posapp/src/components/Cart/index.jsx:891
+#: posapp/src/components/Cart/index.jsx:902
 msgid "Pay {amount}"
 msgstr "Paga {amount}"
 
@@ -2222,7 +2247,7 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:415
+#: posapp/src/components/InvoicePay/index.jsx:422
 msgid "Payment Summary"
 msgstr "Riepilogo pagamento"
 
@@ -2294,20 +2319,20 @@ msgstr ""
 msgid "Please Pay"
 msgstr "Si prega di pagare"
 
-#: posapp/src/components/Cart/index.jsx:250
+#: posapp/src/components/Cart/index.jsx:261
 msgid "Please add at least one item to the cart"
 msgstr "Aggiungi almeno un articolo al carrello"
 
-#: posapp/src/components/InvoicePay/index.jsx:227
+#: posapp/src/components/InvoicePay/index.jsx:228
 msgid "Please add one or more items to the cart"
 msgstr "Aggiungi uno o più articoli al carrello"
 
-#: posapp/src/components/InvoicePay/index.jsx:231
+#: posapp/src/components/InvoicePay/index.jsx:232
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Inserisci un importo per almeno una modalità di pagamento"
 
-#: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:223
+#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "Seleziona un cliente"
 
@@ -2529,8 +2554,8 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:566
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:170
+#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
 #: posapp/src/pages/InvoiceDetailPage.jsx:282
@@ -2541,11 +2566,11 @@ msgstr ""
 msgid "Rate"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:202
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:203
 msgid "Rate (%)"
 msgstr "Aliquota (%)"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:237
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:238
 msgid "Rate (%) applies to percentage-based charges; Amount applies to \"Actual\" charges. Totals are recalculated against the returned items when the credit note is created."
 msgstr "L'aliquota (%) si applica agli addebiti percentuali; l'importo agli addebiti «Effettivi». I totali vengono ricalcolati sugli articoli resi alla creazione della nota di credito."
 
@@ -2573,9 +2598,9 @@ msgstr "Razorpay non è configurato. Configuralo prima in Impostazioni Razorpay.
 msgid "Razorpay payment signature verification failed"
 msgstr "Verifica della firma del pagamento Razorpay non riuscita"
 
-#: posapp/src/components/InvoicePay/index.jsx:167
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:168
+#: posapp/src/components/InvoicePay/index.jsx:177
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Receipt"
 msgstr ""
 
@@ -2611,7 +2636,7 @@ msgstr "La qtà di ricorsione non può essere inferiore a 0"
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "Gli sconti ricorsivi con condizioni miste non sono supportati"
 
-#: posapp/src/components/InvoicePay/index.jsx:387
+#: posapp/src/components/InvoicePay/index.jsx:394
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "Riscatta punti fedeltà ({n} disponibili)"
 
@@ -2631,11 +2656,11 @@ msgstr ""
 msgid "Remember this device"
 msgstr "Ricorda questo dispositivo"
 
-#: posapp/src/components/Cart/index.jsx:556
+#: posapp/src/components/Cart/index.jsx:567
 msgid "Remove"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:742
+#: posapp/src/components/Cart/index.jsx:753
 msgid "Remove coupon"
 msgstr "Rimuovi coupon"
 
@@ -2664,7 +2689,7 @@ msgstr "Riprova sincronizzazione"
 msgid "Retrying…"
 msgstr "Nuovo tentativo…"
 
-#: posapp/src/utils/format.js:26
+#: posapp/src/utils/format.js:31
 msgid "Return"
 msgstr ""
 
@@ -2672,15 +2697,15 @@ msgstr ""
 msgid "Return Against"
 msgstr "Reso relativo a"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:173
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:174
 msgid "Return Amount"
 msgstr "Importo reso"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:153
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:154
 msgid "Return Qty"
 msgstr "Qtà resa"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:184
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:185
 msgid "Return Total"
 msgstr "Totale reso"
 
@@ -2756,7 +2781,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:860
+#: posapp/src/components/Cart/index.jsx:871
 msgid "Save Draft"
 msgstr "Salva bozza"
 
@@ -2764,7 +2789,7 @@ msgstr "Salva bozza"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "Salva prima il cliente per aggiungere indirizzi e contatti."
 
-#: posapp/src/components/Cart/index.jsx:855
+#: posapp/src/components/Cart/index.jsx:866
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2784,7 +2809,7 @@ msgstr "Scansiona codice a barre/serie/lotto o cerca articoli"
 msgid "Scan with camera"
 msgstr "Scansiona con fotocamera"
 
-#: posapp/src/components/Cart/index.jsx:544
+#: posapp/src/components/Cart/index.jsx:555
 msgid "Scan/add the item again to add another unit"
 msgstr "Scansiona/aggiungi di nuovo l'articolo per aggiungere un'altra unità"
 
@@ -2792,7 +2817,7 @@ msgstr "Scansiona/aggiungi di nuovo l'articolo per aggiungere un'altra unità"
 msgid "Search and pull a saved draft into the terminal"
 msgstr "Cerca una bozza salvata e caricala nel terminale"
 
-#: posapp/src/components/Cart/index.jsx:631
+#: posapp/src/components/Cart/index.jsx:642
 msgid "Search batch no"
 msgstr "Cerca n. lotto"
 
@@ -2800,7 +2825,7 @@ msgstr "Cerca n. lotto"
 msgid "Search customer, mobile or email"
 msgstr "Cerca cliente, cellulare o e-mail"
 
-#: posapp/src/components/Cart/index.jsx:422
+#: posapp/src/components/Cart/index.jsx:433
 msgid "Search customer..."
 msgstr "Cerca cliente..."
 
@@ -2828,7 +2853,7 @@ msgstr "Cerca profilo o magazzino"
 msgid "Search program name"
 msgstr "Cerca nome programma"
 
-#: posapp/src/components/Cart/index.jsx:611
+#: posapp/src/components/Cart/index.jsx:622
 msgid "Search serial no"
 msgstr "Cerca n. di serie"
 
@@ -2894,7 +2919,7 @@ msgstr "Seleziona prima un'azienda"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "Scegli un'opzione per ogni attributo per selezionare una variante."
 
-#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:71
 msgid "Select at least one item to return"
 msgstr "Seleziona almeno un articolo da rendere"
 
@@ -2932,7 +2957,7 @@ msgstr ""
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "Vendita deve essere selezionato se «Applicabile per» è impostato su {field}"
 
-#: posapp/src/components/Cart/index.jsx:606 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr ""
 
@@ -2968,7 +2993,7 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:394
+#: posapp/src/components/Cart/index.jsx:405
 msgid "Shopping Cart"
 msgstr ""
 
@@ -3014,11 +3039,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:29
+#: posapp/src/utils/format.js:34
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Submitting…"
 msgstr "Invio…"
 
@@ -3090,11 +3115,11 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "Il sistema avviserà di aumentare o diminuire quantità o importo"
 
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:347
 msgid "Take Payment"
 msgstr "Incassa"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:499
 msgid "Tap an item to add it here"
 msgstr "Tocca un articolo per aggiungerlo qui"
 
@@ -3108,11 +3133,11 @@ msgstr ""
 msgid "Tax ID"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:792
+#: posapp/src/components/Cart/index.jsx:803
 msgid "Taxes"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:191
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:192
 #: posapp/src/pages/InvoiceDetailPage.jsx:368
 #: posapp/src/pages/InvoiceDetailPage.jsx:394
 msgid "Taxes and Charges"
@@ -3139,11 +3164,11 @@ msgstr ""
 msgid "Thank You!"
 msgstr "Grazie!"
 
-#: posapp/src/components/InvoicePay/index.jsx:311
+#: posapp/src/components/InvoicePay/index.jsx:318
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Il tentativo non è riuscito — puoi provare un altro metodo di pagamento nella finestra di {gateway}."
 
-#: posapp/src/components/Cart/index.jsx:713
+#: posapp/src/components/Cart/index.jsx:724
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "Questo profilo POS non consente modifiche manuali degli sconti."
 
@@ -3234,7 +3259,7 @@ msgstr ""
 msgid "Transactions"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:200
 #: posapp/src/pages/DiscountListPage.jsx:43
 #: posapp/src/pages/InvoiceDetailPage.jsx:371
 #: posapp/src/pages/ItemPriceListPage.jsx:53
@@ -3256,11 +3281,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "Impossibile avviare la fotocamera."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3330,15 +3355,15 @@ msgstr "La variante {variant} e il suo modello {template} non possono essere agg
 msgid "View all"
 msgstr "Vedi tutto"
 
-#: posapp/src/components/Cart/index.jsx:463
+#: posapp/src/components/Cart/index.jsx:474
 msgid "View purchase history"
 msgstr "Vedi storico acquisti"
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Waiting for {gateway}…"
 msgstr "In attesa di {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/components/InvoicePay/index.jsx:180
 #: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "Cliente occasionale"
@@ -3434,19 +3459,19 @@ msgstr "{field} non è stato aggiunto nella tabella"
 msgid "{field} is required"
 msgstr "{field} è obbligatorio"
 
-#: posapp/src/components/InvoicePay/index.jsx:442
+#: posapp/src/components/InvoicePay/index.jsx:449
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} non è ancora configurato."
 
-#: posapp/src/components/InvoicePay/index.jsx:437
+#: posapp/src/components/InvoicePay/index.jsx:444
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} richiede una connessione — non disponibile offline."
 
-#: posapp/src/components/InvoicePay/index.jsx:445
+#: posapp/src/components/InvoicePay/index.jsx:452
 msgid "{gateway} — offline"
 msgstr "{gateway} — offline"
 
-#: posapp/src/components/InvoicePay/index.jsx:155
+#: posapp/src/components/InvoicePay/index.jsx:156
 msgid "{item} (Free)"
 msgstr "{item} (omaggio)"
 
@@ -3467,11 +3492,11 @@ msgstr "{label} — {n} fattura/e in attesa di sincronizzazione"
 msgid "{n} invoices"
 msgstr "{n} fatture"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "{n} items"
 msgstr "{n} articoli"
 
-#: posapp/src/components/Cart/index.jsx:448
+#: posapp/src/components/Cart/index.jsx:459
 msgid "{n} loyalty points available"
 msgstr "{n} punti fedeltà disponibili"
 
@@ -3495,7 +3520,7 @@ msgstr "{n} min fa"
 msgid "{qty} left"
 msgstr "{qty} rimasti"
 
-#: posapp/src/components/Cart/index.jsx:521
+#: posapp/src/components/Cart/index.jsx:532
 msgid "{rate} each"
 msgstr "{rate} cad."
 

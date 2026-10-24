@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 08:35+0553\n"
+"POT-Creation-Date: 2026-10-24 15:48+0553\n"
 "PO-Revision-Date: 2026-10-23 22:31+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: hi\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "+ Add row"
 msgstr "+ पंक्ति जोड़ें"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "1 item"
 msgstr "1 आइटम"
 
-#: posapp/src/components/Cart/index.jsx:447
+#: posapp/src/components/Cart/index.jsx:458
 msgid "1 loyalty point available"
 msgstr "1 लॉयल्टी पॉइंट उपलब्ध"
 
@@ -36,7 +36,7 @@ msgstr "1 लॉयल्टी पॉइंट उपलब्ध"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:819
+#: posapp/src/components/Cart/index.jsx:830
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "इस कार्ट के मुफ़्त-आइटम ऑफ़र के लिए कनेक्शन आवश्यक है — दोबारा कनेक्ट होने तक पूरे कार्ट की कीमतें/छूट सूची मूल्य पर रोकी गई हैं।"
 
@@ -56,7 +56,7 @@ msgstr "पते"
 msgid "ALL DOMAINS"
 msgstr "सभी डोमेन"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:198
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
 #: posapp/src/pages/InvoiceDetailPage.jsx:370
 msgid "Account Head"
 msgstr "खाता शीर्ष"
@@ -88,6 +88,10 @@ msgstr "लेखांकन आयाम"
 #: posapp/src/pages/PriceListListPage.jsx:45
 msgid "Active"
 msgstr "सक्रिय"
+
+#: posapp/src/utils/format.js:43
+msgid "Actual"
+msgstr "वास्तविक"
 
 #: posapp/src/components/Customer/AddressContactSection.jsx:133
 msgid "Add Address"
@@ -217,7 +221,7 @@ msgid "Amended From"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:46
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:219
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:220
 #: posapp/src/pages/DiscountDetailPage.jsx:778
 #: posapp/src/pages/InvoiceDetailPage.jsx:309
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
@@ -247,7 +251,7 @@ msgstr "देशों पर लागू"
 msgid "Applicable for Users"
 msgstr "उपयोगकर्ताओं पर लागू"
 
-#: posapp/src/components/Cart/index.jsx:736
+#: posapp/src/components/Cart/index.jsx:747
 msgid "Apply"
 msgstr "लागू करें"
 
@@ -289,7 +293,7 @@ msgstr "आइटम समूह पर नियम लागू करें 
 msgid "Apply Rule On Other"
 msgstr "अन्य पर नियम लागू करें"
 
-#: posapp/src/components/Cart/index.jsx:687
+#: posapp/src/components/Cart/index.jsx:698
 msgid "Apply on…"
 msgstr "किस पर लागू करें…"
 
@@ -338,7 +342,7 @@ msgstr "वापस"
 msgid "Back to Invoices"
 msgstr "इनवॉइस पर वापस"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Balance Due"
 msgstr "बकाया शेष"
 
@@ -346,7 +350,7 @@ msgstr "बकाया शेष"
 msgid "Batch"
 msgstr "बैच"
 
-#: posapp/src/components/Cart/index.jsx:626
+#: posapp/src/components/Cart/index.jsx:637
 msgid "Batch No"
 msgstr "बैच संख्या"
 
@@ -373,7 +377,7 @@ msgstr "उन रिटेल टीमों के लिए बना जो
 msgid "Bundle Components"
 msgstr "बंडल घटक"
 
-#: posapp/src/components/Cart/index.jsx:647
+#: posapp/src/components/Cart/index.jsx:658
 msgid "Bundle Contents"
 msgstr "बंडल की सामग्री"
 
@@ -418,8 +422,8 @@ msgstr "अभियान"
 #: posapp/src/components/Customer/AddressModal.jsx:77
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:346
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:117
+#: posapp/src/components/InvoicePay/index.jsx:353
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
@@ -432,23 +436,23 @@ msgstr "इनवॉइस रद्द करें"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:28
+#: posapp/src/utils/format.js:33
 msgid "Cancelled"
 msgstr "रद्द"
 
 #: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
-msgstr ""
+msgstr "क्रेडिट नोट के विरुद्ध क्रेडिट नोट नहीं बनाया जा सकता"
 
 #: easy_pos/setup/create_demo_pos_profiles.py:79
 msgid "Cannot create demo POS Profiles: no company was given and no default Company is set."
-msgstr ""
+msgstr "डेमो POS प्रोफ़ाइल नहीं बनाई जा सकतीं: कोई कंपनी नहीं दी गई और कोई डिफ़ॉल्ट कंपनी सेट नहीं है।"
 
 #: easy_pos/setup/create_demo_data.py:85
 msgid "Cannot create demo data: no company was given and no default Company is set."
-msgstr ""
+msgstr "डेमो डेटा नहीं बनाया जा सकता: कोई कंपनी नहीं दी गई और कोई डिफ़ॉल्ट कंपनी सेट नहीं है।"
 
-#: posapp/src/components/Cart/index.jsx:473
+#: posapp/src/components/Cart/index.jsx:484
 msgid "Cart Items"
 msgstr "कार्ट आइटम"
 
@@ -459,7 +463,7 @@ msgstr "कार्ट आइटम"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:439
+#: posapp/src/components/InvoicePay/index.jsx:446
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "कैशियर वसूली जाने वाली राशि दर्ज करता है; 'भुगतान पूरा करें' पर {gateway} चेकआउट खुलता है।"
 
@@ -467,7 +471,7 @@ msgstr "कैशियर वसूली जाने वाली राश�
 msgid "Change Due"
 msgstr "लौटाई जाने वाली राशि"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Change to Return"
 msgstr "लौटाने योग्य राशि"
 
@@ -483,7 +487,7 @@ msgstr "वेरिएंट चुनने के लिए विकल्�
 msgid "City/Town"
 msgstr "शहर/कस्बा"
 
-#: posapp/src/components/Cart/index.jsx:477
+#: posapp/src/components/Cart/index.jsx:488
 msgid "Clear all"
 msgstr "सब हटाएँ"
 
@@ -573,7 +577,7 @@ msgstr "कंपनी का नाम"
 msgid "Company and Warehouse are required"
 msgstr "कंपनी और गोदाम आवश्यक हैं"
 
-#: posapp/src/components/InvoicePay/index.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:369
 msgid "Complete Payment"
 msgstr "भुगतान पूरा करें"
 
@@ -597,9 +601,13 @@ msgstr "टियर, पॉइंट और रिडेम्पशन नि�
 msgid "Connected to the server"
 msgstr "सर्वर से जुड़ा है"
 
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Consolidated"
 msgstr "समेकित"
+
+#: posapp/src/pages/LoyaltyProgramListPage.jsx:29
+msgid "Conversion Factor"
+msgstr "रूपांतरण कारक"
 
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:256
 msgid "Conversion Factor (1 point = ? currency)"
@@ -643,7 +651,7 @@ msgstr "देश एक से अधिक बार जोड़ा गया
 msgid "County"
 msgstr "ज़िला"
 
-#: posapp/src/components/Cart/index.jsx:756
+#: posapp/src/components/Cart/index.jsx:767
 msgid "Coupon \"{code}\" applied"
 msgstr "कूपन \"{code}\" लागू किया गया"
 
@@ -651,16 +659,16 @@ msgstr "कूपन \"{code}\" लागू किया गया"
 msgid "Coupon Code Based"
 msgstr "कूपन कोड आधारित"
 
-#: posapp/src/components/Cart/index.jsx:721
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Coupon code"
 msgstr "कूपन कोड"
 
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:22
 msgid "Create"
-msgstr ""
+msgstr "बनाएँ"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:110
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:120
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:111
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:121
 #: posapp/src/pages/InvoiceDetailPage.jsx:222
 msgid "Create Credit Note"
 msgstr "क्रेडिट नोट बनाएँ"
@@ -672,7 +680,7 @@ msgstr "ग्राहक बनाएँ"
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:6
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:8
 msgid "Create Demo Data"
-msgstr ""
+msgstr "डेमो डेटा बनाएँ"
 
 #: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
@@ -680,11 +688,11 @@ msgstr "खाता बनाएँ"
 
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:45
 msgid "Created/updated {0} demo items priced against {1} for {2} (warehouse: {3}), {4} POS Profiles: {5}, and {6} Customers: {7}."
-msgstr ""
+msgstr "{2} के लिए {1} पर मूल्यित {0} डेमो आइटम बनाए/अपडेट किए गए (गोदाम: {3}), {4} POS प्रोफ़ाइल: {5}, और {6} ग्राहक: {7}।"
 
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:29
 msgid "Creating demo items..."
-msgstr ""
+msgstr "डेमो आइटम बनाए जा रहे हैं..."
 
 #: posapp/src/components/Customer/NewCustomerModal.jsx:70
 msgid "Creating…"
@@ -698,7 +706,7 @@ msgstr "क्रेडिट सीमा"
 msgid "Credit Limits"
 msgstr "क्रेडिट सीमाएँ"
 
-#: posapp/src/utils/format.js:27
+#: posapp/src/utils/format.js:32
 msgid "Credit Note Issued"
 msgstr "क्रेडिट नोट जारी"
 
@@ -733,8 +741,8 @@ msgstr "वर्तमान शिफ़्ट · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
+#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -846,11 +854,11 @@ msgstr "संपर्क हटाएँ?"
 
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:33
 msgid "Demo Data Created"
-msgstr ""
+msgstr "डेमो डेटा बन गया"
 
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.js:17
 msgid "Demo items (normal, serialized, batch-tracked, and a combo) with selling prices and opening stock, 5 POS Profiles showing off different features, and 5 demo Customers will be created for this company (a default warehouse is created too if it doesn't already have one)."
-msgstr ""
+msgstr "इस कंपनी के लिए बिक्री मूल्यों और प्रारंभिक स्टॉक वाले डेमो आइटम (सामान्य, सीरियल वाले, बैच-ट्रैक किए गए और एक कॉम्बो), अलग-अलग सुविधाएँ दिखाने वाली 5 POS प्रोफ़ाइल और 5 डेमो ग्राहक बनाए जाएँगे (डिफ़ॉल्ट गोदाम न होने पर वह भी बनाया जाएगा)।"
 
 #: posapp/src/components/Customer/ContactModal.jsx:111
 msgid "Department"
@@ -886,7 +894,7 @@ msgstr "कुल योग को डिफ़ॉल्ट भुगतान �
 msgid "Disabled"
 msgstr "अक्षम"
 
-#: posapp/src/components/Cart/index.jsx:591
+#: posapp/src/components/Cart/index.jsx:602
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -946,7 +954,7 @@ msgstr "मुफ़्त आइटम की मात्रा अनिव�
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
 msgid "Draft"
 msgstr "ड्राफ़्ट"
 
@@ -989,22 +997,22 @@ msgstr ""
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
 msgid "EASYPOS Settings"
-msgstr ""
+msgstr "EASYPOS सेटिंग्स"
 
 #. Name of a DocType
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 msgid "EP Closing Entry"
-msgstr ""
+msgstr "EP समापन प्रविष्टि"
 
 #. Name of a DocType
 #: easy_pos/easy_pos/doctype/ep_closing_entry_detail/ep_closing_entry_detail.json
 msgid "EP Closing Entry Detail"
-msgstr ""
+msgstr "EP समापन प्रविष्टि विवरण"
 
 #. Name of a DocType
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 msgid "EP Opening Entry"
-msgstr ""
+msgstr "EP प्रारंभिक प्रविष्टि"
 
 #: posapp/src/components/Customer/AddressModal.jsx:71
 msgid "Edit Address"
@@ -1043,13 +1051,13 @@ msgstr "ग्राहक डिस्प्ले सक्षम करें
 #. Label of a Check field in DocType 'EASYPOS Settings'
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.json
 msgid "Enable Offline Mode"
-msgstr ""
+msgstr "ऑफ़लाइन मोड सक्षम करें"
 
 #: posapp/src/pages/PriceListDetailPage.jsx:175
 msgid "Enabled"
 msgstr "सक्षम"
 
-#: posapp/src/components/InvoicePay/index.jsx:341
+#: posapp/src/components/InvoicePay/index.jsx:348
 msgid "Enter the amount received for each payment mode."
 msgstr "प्रत्येक भुगतान माध्यम के लिए प्राप्त राशि दर्ज करें।"
 
@@ -1090,7 +1098,7 @@ msgstr "व्यय खाता"
 msgid "Expiry Duration (days)"
 msgstr "समाप्ति अवधि (दिन)"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:790
 msgid "FREE"
 msgstr "मुफ़्त"
 
@@ -1102,12 +1110,13 @@ msgstr "विफल"
 msgid "Failed to cancel invoice"
 msgstr "इनवॉइस रद्द नहीं हो सका"
 
-#: posapp/src/components/InvoicePay/index.jsx:217
-#: posapp/src/components/InvoicePay/index.jsx:324
+#: posapp/src/components/InvoicePay/index.jsx:218
+#: posapp/src/components/InvoicePay/index.jsx:278
+#: posapp/src/components/InvoicePay/index.jsx:331
 msgid "Failed to complete payment"
 msgstr "भुगतान पूरा नहीं हो सका"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:100
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:101
 msgid "Failed to create credit note"
 msgstr "क्रेडिट नोट नहीं बन सका"
 
@@ -1165,7 +1174,7 @@ msgstr "POS प्रोफ़ाइल सहेजी नहीं जा स�
 msgid "Failed to save Price List"
 msgstr "मूल्य सूची सहेजी नहीं जा सकी"
 
-#: posapp/src/components/Cart/index.jsx:315
+#: posapp/src/components/Cart/index.jsx:326
 msgid "Failed to save draft"
 msgstr "ड्राफ़्ट सहेजा नहीं जा सका"
 
@@ -1210,7 +1219,7 @@ msgstr "ईमेल से फ़िल्टर करें"
 msgid "Filter by mobile"
 msgstr "मोबाइल से फ़िल्टर करें"
 
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "पूरा किया जा रहा है — पुष्टि होते ही आपकी रसीद यहाँ प्रिंट होगी।"
 
@@ -1242,7 +1251,7 @@ msgstr "मुफ़्त आइटम दर"
 msgid "Free Item UOM"
 msgstr "मुफ़्त आइटम UOM"
 
-#: posapp/src/components/Cart/index.jsx:768
+#: posapp/src/components/Cart/index.jsx:779
 msgid "Free Items"
 msgstr "मुफ़्त आइटम"
 
@@ -1272,10 +1281,10 @@ msgstr "टर्मिनल पर जाएँ"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:692
-#: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:182
-#: posapp/src/components/InvoicePay/index.jsx:371
+#: posapp/src/components/Cart/index.jsx:703
+#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/InvoicePay/index.jsx:183
+#: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
@@ -1357,7 +1366,7 @@ msgstr "व्यक्तिगत"
 msgid "Industry"
 msgstr "उद्योग"
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Internal Transfer"
 msgstr "आंतरिक स्थानांतरण"
 
@@ -1367,7 +1376,7 @@ msgstr "अमान्य शर्त अभिव्यक्ति"
 
 #: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
-msgstr ""
+msgstr "अमान्य कूपन कोड"
 
 #: posapp/src/components/Cart/index.jsx:167
 msgid "Invalid or expired coupon code"
@@ -1396,7 +1405,7 @@ msgstr "इनवॉइस विवरण ऑफ़लाइन उपलब्
 msgid "Invoice not found."
 msgstr "इनवॉइस नहीं मिला।"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:151
 msgid "Invoiced Qty"
 msgstr "इनवॉइस की गई मात्रा"
 
@@ -1420,7 +1429,7 @@ msgstr "पुनरावर्ती है"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:149
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
 #: posapp/src/engine/sync.js:8 posapp/src/pages/InvoiceDetailPage.jsx:277
 #: posapp/src/pages/ItemPriceDetailPage.jsx:183
 #: posapp/src/pages/ItemPriceListPage.jsx:19
@@ -1442,7 +1451,7 @@ msgstr "आइटम कोड, UOM, मूल्य सूची और दर 
 msgid "Item Details"
 msgstr "आइटम विवरण"
 
-#: posapp/src/components/Cart/index.jsx:809
+#: posapp/src/components/Cart/index.jsx:820
 msgid "Item Discounts"
 msgstr "आइटम छूट"
 
@@ -1484,7 +1493,7 @@ msgstr "आइटम मूल्य"
 msgid "Item Tax"
 msgstr "आइटम कर"
 
-#: posapp/src/components/Cart/index.jsx:788
+#: posapp/src/components/Cart/index.jsx:799
 msgid "Item Total"
 msgstr "आइटम कुल"
 
@@ -1492,7 +1501,7 @@ msgstr "आइटम कुल"
 msgid "Items"
 msgstr "आइटम"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:128
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:129
 msgid "Items to Return"
 msgstr "लौटाए जाने वाले आइटम"
 
@@ -1530,7 +1539,7 @@ msgid "Letter Head"
 msgstr "लेटर हेड"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:872
+#: posapp/src/components/Cart/index.jsx:883
 msgid "Load Draft"
 msgstr "ड्राफ़्ट लोड करें"
 
@@ -1542,7 +1551,7 @@ msgstr "वेरिएंट लोड हो रहे हैं…"
 msgid "Loading..."
 msgstr "लोड हो रहा है..."
 
-#: posapp/src/components/Cart/index.jsx:650
+#: posapp/src/components/Cart/index.jsx:661
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
@@ -1571,11 +1580,11 @@ msgstr "लॉयल्टी प्रोग्राम सफलतापू�
 msgid "Loyalty Programs"
 msgstr "लॉयल्टी प्रोग्राम"
 
-#: posapp/src/components/InvoicePay/index.jsx:471
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Loyalty Redeemed"
 msgstr "रिडीम किए गए लॉयल्टी पॉइंट"
 
-#: posapp/src/components/InvoicePay/index.jsx:377
+#: posapp/src/components/InvoicePay/index.jsx:384
 msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
 msgstr "{currency} में लॉयल्टी पॉइंट रिडीम नहीं किए जा सकते। ERPNext इन्हें केवल कंपनी की मुद्रा ({company_currency}) में रिडीम करता है।"
 
@@ -1614,7 +1623,7 @@ msgstr "बाज़ार खंड"
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
 msgid "Master Setup"
-msgstr ""
+msgstr "मास्टर सेटअप"
 
 #: posapp/src/pages/SyncPage.jsx:124
 msgid "Master data cached for offline use. Fetch pulls the latest catalog, customers, and pricing from the server."
@@ -1658,7 +1667,7 @@ msgstr "न्यूनतम कुल खर्च"
 
 #: easy_pos/api/currency.py:27
 msgid "Missing Exchange Rate"
-msgstr ""
+msgstr "विनिमय दर उपलब्ध नहीं"
 
 #: posapp/src/pages/DiscountDetailPage.jsx:426
 msgid "Mixed Conditions"
@@ -1704,7 +1713,7 @@ msgstr "मल्टीपल टियर प्रोग्राम"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:693
+#: posapp/src/components/Cart/index.jsx:704
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1757,7 +1766,7 @@ msgstr "नई POS प्रोफ़ाइल"
 msgid "New Price List"
 msgstr "नई मूल्य सूची"
 
-#: posapp/src/components/Cart/index.jsx:424
+#: posapp/src/components/Cart/index.jsx:435
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "नया ग्राहक"
@@ -1825,7 +1834,7 @@ msgstr "कोई बंडल घटक नहीं"
 msgid "No camera was found on this device."
 msgstr "इस डिवाइस पर कोई कैमरा नहीं मिला।"
 
-#: posapp/src/components/Cart/index.jsx:652
+#: posapp/src/components/Cart/index.jsx:663
 msgid "No components"
 msgstr "कोई घटक नहीं"
 
@@ -1863,7 +1872,7 @@ msgstr "कोई ड्राफ़्ट इनवॉइस नहीं म�
 
 #: easy_pos/api/currency.py:24
 msgid "No exchange rate found from {0} to {1}. Create a Currency Exchange record (For Selling) for this pair."
-msgstr ""
+msgstr "{0} से {1} की कोई विनिमय दर नहीं मिली। इस जोड़ी के लिए एक Currency Exchange रिकॉर्ड (बिक्री के लिए) बनाएँ।"
 
 #: posapp/src/pages/InvoiceRegisterPage.jsx:240
 msgid "No invoices found"
@@ -1886,7 +1895,7 @@ msgstr "कोई आइटम नहीं"
 msgid "No items added"
 msgstr "कोई आइटम नहीं जोड़ा गया"
 
-#: posapp/src/components/Cart/index.jsx:487
+#: posapp/src/components/Cart/index.jsx:498
 msgid "No items in cart"
 msgstr "कार्ट में कोई आइटम नहीं"
 
@@ -1898,7 +1907,7 @@ msgstr "इस श्रेणी में कोई आइटम नहीं"
 msgid "No items match your search"
 msgstr "आपकी खोज से कोई आइटम मेल नहीं खाता"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:134
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:135
 msgid "No items on this invoice"
 msgstr "इस इनवॉइस पर कोई आइटम नहीं"
 
@@ -1910,7 +1919,7 @@ msgstr "इस अवधि में कोई आइटम नहीं बि
 msgid "No payment modes added"
 msgstr "कोई भुगतान माध्यम नहीं जोड़ा गया"
 
-#: posapp/src/components/InvoicePay/index.jsx:423
+#: posapp/src/components/InvoicePay/index.jsx:430
 msgid "No payment modes configured for this POS Profile."
 msgstr "इस POS प्रोफ़ाइल के लिए कोई भुगतान माध्यम कॉन्फ़िगर नहीं है।"
 
@@ -1958,7 +1967,7 @@ msgstr "रिपोर्ट के लिए अभी कोई शिफ़�
 msgid "No taxes applied"
 msgstr "कोई कर लागू नहीं"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:196
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:197
 msgid "No taxes on this invoice"
 msgstr "इस इनवॉइस पर कोई कर नहीं"
 
@@ -2011,13 +2020,29 @@ msgstr "ऑफ़लाइन"
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "इस डिप्लॉयमेंट के लिए ऑफ़लाइन मोड सक्षम नहीं है (EasyPOS Settings)। डेटा बाद के लिए नीचे कैश होता रहता है, लेकिन इसे चालू किए बिना टर्मिनल ऑफ़लाइन होने पर इसका उपयोग नहीं करेगा।"
 
-#: posapp/src/components/InvoicePay/index.jsx:178
+#: posapp/src/components/InvoicePay/index.jsx:179
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "ऑफ़लाइन — सिंक लंबित। सिंक होने के बाद इनवॉइस से दोबारा प्रिंट करें।"
 
 #: posapp/src/pages/POSTerminalPage.jsx:61
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "ऑफ़लाइन — कैश किया गया कैटलॉग और मूल्य दिखाए जा रहे हैं। बिक्री दर्ज होती रहेगी और दोबारा कनेक्ट होने पर स्वतः सिंक हो जाएगी।"
+
+#: posapp/src/utils/format.js:47
+msgid "On Item Quantity"
+msgstr "आइटम मात्रा पर"
+
+#: posapp/src/utils/format.js:44
+msgid "On Net Total"
+msgstr "शुद्ध योग पर"
+
+#: posapp/src/utils/format.js:45
+msgid "On Previous Row Amount"
+msgstr "पिछली पंक्ति की राशि पर"
+
+#: posapp/src/utils/format.js:46
+msgid "On Previous Row Total"
+msgstr "पिछली पंक्ति के योग पर"
 
 #: posapp/src/pages/LoginPage.jsx:58
 msgid "One counter."
@@ -2033,7 +2058,7 @@ msgstr "ऑनलाइन"
 
 #: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
-msgstr ""
+msgstr "केवल सबमिट किए गए इनवॉइस को ही वापस किया जा सकता है"
 
 #: posapp/src/pages/POSProfileDetailPage.jsx:521
 msgid "Only show Customers of these Customer Groups. Leave empty for all."
@@ -2046,9 +2071,9 @@ msgstr "केवल इन आइटम समूहों के आइटम 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 msgid "Open"
-msgstr ""
+msgstr "खुला"
 
-#: posapp/src/components/Cart/index.jsx:402
+#: posapp/src/components/Cart/index.jsx:413
 msgid "Open Customer Display"
 msgstr "ग्राहक डिस्प्ले खोलें"
 
@@ -2071,12 +2096,12 @@ msgstr "प्रारंभिक"
 #. Label of a Currency field in DocType 'EP Closing Entry Detail'
 #: easy_pos/easy_pos/doctype/ep_closing_entry_detail/ep_closing_entry_detail.json
 msgid "Opening Amount"
-msgstr ""
+msgstr "प्रारंभिक राशि"
 
 #. Label of a Table field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 msgid "Opening Balance Details"
-msgstr ""
+msgstr "प्रारंभिक शेष का विवरण"
 
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
@@ -2094,11 +2119,11 @@ msgstr "खोला जा रहा है…"
 msgid "Optional note"
 msgstr "वैकल्पिक नोट"
 
-#: posapp/src/components/Cart/index.jsx:681
+#: posapp/src/components/Cart/index.jsx:692
 msgid "Order Discount"
 msgstr "ऑर्डर छूट"
 
-#: posapp/src/components/Cart/index.jsx:828
+#: posapp/src/components/Cart/index.jsx:839
 msgid "Order Discount ({pct}%)"
 msgstr "ऑर्डर छूट ({pct}%)"
 
@@ -2115,11 +2140,11 @@ msgstr "स्टॉक में नहीं"
 msgid "Outstanding Amount"
 msgstr "बकाया राशि"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
 msgid "Overdue"
 msgstr "अतिदेय"
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Overdue and Discounted"
 msgstr "अतिदेय और छूट प्राप्त"
 
@@ -2128,7 +2153,7 @@ msgstr "अतिदेय और छूट प्राप्त"
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
 msgid "POS Closing Entry"
-msgstr ""
+msgstr "POS समापन प्रविष्टि"
 
 #. Label of a Link field in DocType 'EP Closing Entry'
 #. Label of a Link in the EASYPOS Workspace
@@ -2170,20 +2195,20 @@ msgstr "POS टर्मिनल"
 msgid "Page {page} of {total}"
 msgstr "पृष्ठ {page} / {total}"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
 msgid "Paid"
 msgstr "भुगतान किया गया"
 
-#: posapp/src/components/InvoicePay/index.jsx:466
+#: posapp/src/components/InvoicePay/index.jsx:473
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr "भुगतान राशि"
 
-#: posapp/src/utils/format.js:25
+#: posapp/src/utils/format.js:30
 msgid "Partly Paid"
 msgstr "आंशिक भुगतान"
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Partly Paid and Discounted"
 msgstr "आंशिक भुगतान और छूट प्राप्त"
 
@@ -2200,11 +2225,11 @@ msgstr "पक्ष की जानकारी"
 msgid "Password"
 msgstr "पासवर्ड"
 
-#: posapp/src/components/InvoicePay/index.jsx:360
+#: posapp/src/components/InvoicePay/index.jsx:367
 msgid "Pay with {gateway}"
 msgstr "{gateway} से भुगतान करें"
 
-#: posapp/src/components/Cart/index.jsx:891
+#: posapp/src/components/Cart/index.jsx:902
 msgid "Pay {amount}"
 msgstr "{amount} भुगतान करें"
 
@@ -2219,10 +2244,10 @@ msgstr "भुगतान माध्यम"
 #. Label of a Table field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 msgid "Payment Reconciliation"
-msgstr ""
+msgstr "भुगतान मिलान"
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:415
+#: posapp/src/components/InvoicePay/index.jsx:422
 msgid "Payment Summary"
 msgstr "भुगतान सारांश"
 
@@ -2253,7 +2278,7 @@ msgstr "प्रतिशत"
 #. Label of a Section Break field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 msgid "Period Details"
-msgstr ""
+msgstr "अवधि विवरण"
 
 #. Label of a Datetime field in DocType 'EP Closing Entry'
 #. Label of a Date field in DocType 'EP Opening Entry'
@@ -2294,20 +2319,20 @@ msgstr "संयंत्र"
 msgid "Please Pay"
 msgstr "कृपया भुगतान करें"
 
-#: posapp/src/components/Cart/index.jsx:250
+#: posapp/src/components/Cart/index.jsx:261
 msgid "Please add at least one item to the cart"
 msgstr "कृपया कार्ट में कम से कम एक आइटम जोड़ें"
 
-#: posapp/src/components/InvoicePay/index.jsx:227
+#: posapp/src/components/InvoicePay/index.jsx:228
 msgid "Please add one or more items to the cart"
 msgstr "कृपया कार्ट में एक या अधिक आइटम जोड़ें"
 
-#: posapp/src/components/InvoicePay/index.jsx:231
+#: posapp/src/components/InvoicePay/index.jsx:232
 msgid "Please enter an amount for at least one payment mode"
 msgstr "कृपया कम से कम एक भुगतान माध्यम के लिए राशि दर्ज करें"
 
-#: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:223
+#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "कृपया ग्राहक चुनें"
 
@@ -2529,8 +2554,8 @@ msgstr "कतार में"
 msgid "Range"
 msgstr "अवधि"
 
-#: posapp/src/components/Cart/index.jsx:566
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:170
+#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
 #: posapp/src/pages/InvoiceDetailPage.jsx:282
@@ -2541,11 +2566,11 @@ msgstr "अवधि"
 msgid "Rate"
 msgstr "दर"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:202
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:203
 msgid "Rate (%)"
 msgstr "दर (%)"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:237
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:238
 msgid "Rate (%) applies to percentage-based charges; Amount applies to \"Actual\" charges. Totals are recalculated against the returned items when the credit note is created."
 msgstr "दर (%) प्रतिशत-आधारित शुल्कों पर लागू होती है; राशि \"Actual\" शुल्कों पर लागू होती है। क्रेडिट नोट बनाते समय कुल राशि लौटाए गए आइटम के आधार पर दोबारा गणना की जाती है।"
 
@@ -2567,15 +2592,15 @@ msgstr ""
 
 #: easy_pos/api/payment_gateways/razorpay.py:26
 msgid "Razorpay is not configured. Set it up under Razorpay Settings first."
-msgstr ""
+msgstr "Razorpay कॉन्फ़िगर नहीं है। पहले Razorpay Settings में इसे सेट करें।"
 
 #: easy_pos/api/payment_gateways/razorpay.py:61
 msgid "Razorpay payment signature verification failed"
-msgstr ""
+msgstr "Razorpay भुगतान हस्ताक्षर का सत्यापन विफल रहा"
 
-#: posapp/src/components/InvoicePay/index.jsx:167
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:168
+#: posapp/src/components/InvoicePay/index.jsx:177
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Receipt"
 msgstr "रसीद"
 
@@ -2611,7 +2636,7 @@ msgstr "पुनरावृत्ति मात्रा 0 से कम न
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "मिश्रित शर्त के साथ पुनरावर्ती छूट सिस्टम में समर्थित नहीं है"
 
-#: posapp/src/components/InvoicePay/index.jsx:387
+#: posapp/src/components/InvoicePay/index.jsx:394
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "लॉयल्टी पॉइंट रिडीम करें ({n} उपलब्ध)"
 
@@ -2631,11 +2656,11 @@ msgstr "रीलोड करें"
 msgid "Remember this device"
 msgstr "इस डिवाइस को याद रखें"
 
-#: posapp/src/components/Cart/index.jsx:556
+#: posapp/src/components/Cart/index.jsx:567
 msgid "Remove"
 msgstr "हटाएँ"
 
-#: posapp/src/components/Cart/index.jsx:742
+#: posapp/src/components/Cart/index.jsx:753
 msgid "Remove coupon"
 msgstr "कूपन हटाएँ"
 
@@ -2664,7 +2689,7 @@ msgstr "सिंक फिर से करें"
 msgid "Retrying…"
 msgstr "फिर से प्रयास हो रहा है…"
 
-#: posapp/src/utils/format.js:26
+#: posapp/src/utils/format.js:31
 msgid "Return"
 msgstr "रिटर्न"
 
@@ -2672,15 +2697,15 @@ msgstr "रिटर्न"
 msgid "Return Against"
 msgstr "इसके विरुद्ध रिटर्न"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:173
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:174
 msgid "Return Amount"
 msgstr "रिटर्न राशि"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:153
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:154
 msgid "Return Qty"
 msgstr "रिटर्न मात्रा"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:184
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:185
 msgid "Return Total"
 msgstr "रिटर्न कुल"
 
@@ -2756,7 +2781,7 @@ msgstr "वही आइटम"
 msgid "Save"
 msgstr "सहेजें"
 
-#: posapp/src/components/Cart/index.jsx:860
+#: posapp/src/components/Cart/index.jsx:871
 msgid "Save Draft"
 msgstr "ड्राफ़्ट सहेजें"
 
@@ -2764,7 +2789,7 @@ msgstr "ड्राफ़्ट सहेजें"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "पते और संपर्क जोड़ने के लिए पहले ग्राहक को सहेजें।"
 
-#: posapp/src/components/Cart/index.jsx:855
+#: posapp/src/components/Cart/index.jsx:866
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2784,7 +2809,7 @@ msgstr "बारकोड/सीरियल/बैच स्कैन कर�
 msgid "Scan with camera"
 msgstr "कैमरे से स्कैन करें"
 
-#: posapp/src/components/Cart/index.jsx:544
+#: posapp/src/components/Cart/index.jsx:555
 msgid "Scan/add the item again to add another unit"
 msgstr "एक और इकाई जोड़ने के लिए आइटम को फिर से स्कैन/जोड़ें"
 
@@ -2792,7 +2817,7 @@ msgstr "एक और इकाई जोड़ने के लिए आइट
 msgid "Search and pull a saved draft into the terminal"
 msgstr "सहेजा गया ड्राफ़्ट खोजें और टर्मिनल में लाएँ"
 
-#: posapp/src/components/Cart/index.jsx:631
+#: posapp/src/components/Cart/index.jsx:642
 msgid "Search batch no"
 msgstr "बैच संख्या खोजें"
 
@@ -2800,7 +2825,7 @@ msgstr "बैच संख्या खोजें"
 msgid "Search customer, mobile or email"
 msgstr "ग्राहक, मोबाइल या ईमेल खोजें"
 
-#: posapp/src/components/Cart/index.jsx:422
+#: posapp/src/components/Cart/index.jsx:433
 msgid "Search customer..."
 msgstr "ग्राहक खोजें..."
 
@@ -2828,7 +2853,7 @@ msgstr "प्रोफ़ाइल या गोदाम खोजें"
 msgid "Search program name"
 msgstr "प्रोग्राम का नाम खोजें"
 
-#: posapp/src/components/Cart/index.jsx:611
+#: posapp/src/components/Cart/index.jsx:622
 msgid "Search serial no"
 msgstr "सीरियल नंबर खोजें"
 
@@ -2894,7 +2919,7 @@ msgstr "पहले कंपनी चुनें"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "वेरिएंट चुनने के लिए हर विशेषता का एक विकल्प चुनें।"
 
-#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:71
 msgid "Select at least one item to return"
 msgstr "लौटाने के लिए कम से कम एक आइटम चुनें"
 
@@ -2932,7 +2957,7 @@ msgstr "बिक्री"
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "यदि 'किस पर लागू' में {field} चुना गया है, तो बिक्री चेक होनी चाहिए"
 
-#: posapp/src/components/Cart/index.jsx:606 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr "सीरियल नंबर"
 
@@ -2968,7 +2993,7 @@ msgstr "शिपिंग"
 msgid "Shop"
 msgstr "दुकान"
 
-#: posapp/src/components/Cart/index.jsx:394
+#: posapp/src/components/Cart/index.jsx:405
 msgid "Shopping Cart"
 msgstr "शॉपिंग कार्ट"
 
@@ -3014,11 +3039,11 @@ msgstr "राज्य/प्रांत"
 msgid "Status"
 msgstr "स्थिति"
 
-#: posapp/src/utils/format.js:29
+#: posapp/src/utils/format.js:34
 msgid "Submitted"
 msgstr "सबमिट किया गया"
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Submitting…"
 msgstr "सबमिट हो रहा है…"
 
@@ -3090,11 +3115,11 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "सिस्टम मात्रा या राशि बढ़ाने या घटाने की सूचना देगा"
 
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:347
 msgid "Take Payment"
 msgstr "भुगतान लें"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:499
 msgid "Tap an item to add it here"
 msgstr "यहाँ जोड़ने के लिए किसी आइटम पर टैप करें"
 
@@ -3108,11 +3133,11 @@ msgstr "कर श्रेणी"
 msgid "Tax ID"
 msgstr "कर आईडी"
 
-#: posapp/src/components/Cart/index.jsx:792
+#: posapp/src/components/Cart/index.jsx:803
 msgid "Taxes"
 msgstr "कर"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:191
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:192
 #: posapp/src/pages/InvoiceDetailPage.jsx:368
 #: posapp/src/pages/InvoiceDetailPage.jsx:394
 msgid "Taxes and Charges"
@@ -3139,17 +3164,17 @@ msgstr "क्षेत्र"
 msgid "Thank You!"
 msgstr "धन्यवाद!"
 
-#: posapp/src/components/InvoicePay/index.jsx:311
+#: posapp/src/components/InvoicePay/index.jsx:318
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "वह प्रयास विफल रहा — आप {gateway} विंडो में दूसरा भुगतान तरीका आज़मा सकते हैं।"
 
-#: posapp/src/components/Cart/index.jsx:713
+#: posapp/src/components/Cart/index.jsx:724
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "यह POS प्रोफ़ाइल मैन्युअल छूट बदलाव की अनुमति नहीं देती।"
 
 #: easy_pos/api/payment.py:44
 msgid "This invoice has already been finalized"
-msgstr ""
+msgstr "यह इनवॉइस पहले ही अंतिम रूप दे दिया गया है"
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
@@ -3234,7 +3259,7 @@ msgstr "लेनदेन"
 msgid "Transactions"
 msgstr "लेनदेन"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:200
 #: posapp/src/pages/DiscountListPage.jsx:43
 #: posapp/src/pages/InvoiceDetailPage.jsx:371
 #: posapp/src/pages/ItemPriceListPage.jsx:53
@@ -3250,17 +3275,17 @@ msgstr "प्रकार"
 #: posapp/src/pages/ItemPriceDetailPage.jsx:193
 #: posapp/src/pages/ItemPriceListPage.jsx:47
 msgid "UOM"
-msgstr ""
+msgstr "इकाई"
 
 #: posapp/src/components/common/BarcodeScannerModal.jsx:47
 msgid "Unable to start the camera."
 msgstr "कैमरा शुरू नहीं हो सका।"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
 msgid "Unpaid"
 msgstr "अदत्त"
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Unpaid and Discounted"
 msgstr "अदत्त और छूट प्राप्त"
 
@@ -3330,15 +3355,15 @@ msgstr "वेरिएंट {variant} और उसका टेम्पल�
 msgid "View all"
 msgstr "सभी देखें"
 
-#: posapp/src/components/Cart/index.jsx:463
+#: posapp/src/components/Cart/index.jsx:474
 msgid "View purchase history"
 msgstr "खरीद इतिहास देखें"
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Waiting for {gateway}…"
 msgstr "{gateway} की प्रतीक्षा…"
 
-#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/components/InvoicePay/index.jsx:180
 #: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "वॉक-इन"
@@ -3370,7 +3395,7 @@ msgstr "चेक होने पर, इस भुगतान माध्य
 #. Settings'
 #: easy_pos/easy_pos/doctype/easypos_settings/easypos_settings.json
 msgid "When enabled, the POS Terminal reads/writes from the local offline database instead of calling the server directly, and syncs changes back once online."
-msgstr ""
+msgstr "सक्षम होने पर, POS टर्मिनल सीधे सर्वर को कॉल करने के बजाय स्थानीय ऑफ़लाइन डेटाबेस से पढ़ता/लिखता है, और ऑनलाइन होने पर बदलावों को सिंक करता है।"
 
 #: posapp/src/pages/POSProfileDetailPage.jsx:425
 msgid "When set, Complete Payment opens this gateway's checkout for the amount entered instead of treating it as manually received. Configure the gateway's own credentials (e.g. Razorpay Settings) separately."
@@ -3434,19 +3459,19 @@ msgstr "{field} तालिका में नहीं जोड़ा गय
 msgid "{field} is required"
 msgstr "{field} आवश्यक है"
 
-#: posapp/src/components/InvoicePay/index.jsx:442
+#: posapp/src/components/InvoicePay/index.jsx:449
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} अभी कॉन्फ़िगर नहीं किया गया है।"
 
-#: posapp/src/components/InvoicePay/index.jsx:437
+#: posapp/src/components/InvoicePay/index.jsx:444
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} के लिए कनेक्शन आवश्यक है — ऑफ़लाइन रहते हुए उपलब्ध नहीं।"
 
-#: posapp/src/components/InvoicePay/index.jsx:445
+#: posapp/src/components/InvoicePay/index.jsx:452
 msgid "{gateway} — offline"
 msgstr "{gateway} — ऑफ़लाइन"
 
-#: posapp/src/components/InvoicePay/index.jsx:155
+#: posapp/src/components/InvoicePay/index.jsx:156
 msgid "{item} (Free)"
 msgstr "{item} (मुफ़्त)"
 
@@ -3467,11 +3492,11 @@ msgstr "{label} — {n} इनवॉइस सिंक के लिए लं�
 msgid "{n} invoices"
 msgstr "{n} इनवॉइस"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "{n} items"
 msgstr "{n} आइटम"
 
-#: posapp/src/components/Cart/index.jsx:448
+#: posapp/src/components/Cart/index.jsx:459
 msgid "{n} loyalty points available"
 msgstr "{n} लॉयल्टी पॉइंट उपलब्ध"
 
@@ -3495,7 +3520,7 @@ msgstr "{n} मिनट पहले"
 msgid "{qty} left"
 msgstr "{qty} शेष"
 
-#: posapp/src/components/Cart/index.jsx:521
+#: posapp/src/components/Cart/index.jsx:532
 msgid "{rate} each"
 msgstr "{rate} प्रति नग"
 

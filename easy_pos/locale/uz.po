@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 08:35+0553\n"
+"POT-Creation-Date: 2026-10-24 15:48+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: uz\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "+ Add row"
 msgstr "+ Qator qo‘shish"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "1 item"
 msgstr "1 ta mahsulot"
 
-#: posapp/src/components/Cart/index.jsx:447
+#: posapp/src/components/Cart/index.jsx:458
 msgid "1 loyalty point available"
 msgstr "1 ta sodiqlik bali mavjud"
 
@@ -36,7 +36,7 @@ msgstr "1 ta sodiqlik bali mavjud"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:819
+#: posapp/src/components/Cart/index.jsx:830
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "Ushbu savatdagi bepul mahsulot taklifi uchun ulanish kerak — qayta ulanguncha butun savat narxlari/chegirmalari ro‘yxat narxida qoladi."
 
@@ -56,7 +56,7 @@ msgstr "MANZILLAR"
 msgid "ALL DOMAINS"
 msgstr "BARCHA SOHALAR"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:198
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
 #: posapp/src/pages/InvoiceDetailPage.jsx:370
 msgid "Account Head"
 msgstr ""
@@ -87,6 +87,10 @@ msgstr ""
 #: posapp/src/pages/PriceListListPage.jsx:11
 #: posapp/src/pages/PriceListListPage.jsx:45
 msgid "Active"
+msgstr ""
+
+#: posapp/src/utils/format.js:43
+msgid "Actual"
 msgstr ""
 
 #: posapp/src/components/Customer/AddressContactSection.jsx:133
@@ -217,7 +221,7 @@ msgid "Amended From"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:46
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:219
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:220
 #: posapp/src/pages/DiscountDetailPage.jsx:778
 #: posapp/src/pages/InvoiceDetailPage.jsx:309
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
@@ -247,7 +251,7 @@ msgstr ""
 msgid "Applicable for Users"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:736
+#: posapp/src/components/Cart/index.jsx:747
 msgid "Apply"
 msgstr ""
 
@@ -289,7 +293,7 @@ msgstr "Qoidani mahsulot guruhiga qo‘llash *"
 msgid "Apply Rule On Other"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:687
+#: posapp/src/components/Cart/index.jsx:698
 msgid "Apply on…"
 msgstr "Qo‘llash…"
 
@@ -338,7 +342,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "Hisob-fakturalarga qaytish"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Balance Due"
 msgstr "Qolgan qarz"
 
@@ -346,7 +350,7 @@ msgstr "Qolgan qarz"
 msgid "Batch"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:626
+#: posapp/src/components/Cart/index.jsx:637
 msgid "Batch No"
 msgstr ""
 
@@ -373,7 +377,7 @@ msgstr "Hech qachon to‘xtamaydigan chakana savdo jamoalari uchun yaratilgan."
 msgid "Bundle Components"
 msgstr "To‘plam tarkibiy qismlari"
 
-#: posapp/src/components/Cart/index.jsx:647
+#: posapp/src/components/Cart/index.jsx:658
 msgid "Bundle Contents"
 msgstr "To‘plam tarkibi"
 
@@ -418,8 +422,8 @@ msgstr ""
 #: posapp/src/components/Customer/AddressModal.jsx:77
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:346
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:117
+#: posapp/src/components/InvoicePay/index.jsx:353
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
@@ -432,7 +436,7 @@ msgstr "Hisob-fakturani bekor qilish"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:28
+#: posapp/src/utils/format.js:33
 msgid "Cancelled"
 msgstr ""
 
@@ -448,7 +452,7 @@ msgstr "Demo POS profillarini yaratib bo‘lmadi: kompaniya ko‘rsatilmagan va 
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "Demo ma’lumotlarni yaratib bo‘lmadi: kompaniya ko‘rsatilmagan va standart kompaniya o‘rnatilmagan."
 
-#: posapp/src/components/Cart/index.jsx:473
+#: posapp/src/components/Cart/index.jsx:484
 msgid "Cart Items"
 msgstr "Savatdagi mahsulotlar"
 
@@ -459,7 +463,7 @@ msgstr "Savatdagi mahsulotlar"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:439
+#: posapp/src/components/InvoicePay/index.jsx:446
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "Kassir undiriladigan summani kiritadi; To‘lovni yakunlashda {gateway} to‘lov oynasi ochiladi."
 
@@ -467,7 +471,7 @@ msgstr "Kassir undiriladigan summani kiritadi; To‘lovni yakunlashda {gateway} 
 msgid "Change Due"
 msgstr "Qaytim"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Change to Return"
 msgstr "Qaytarishga o‘zgartirish"
 
@@ -483,7 +487,7 @@ msgstr "Variantni tanlash uchun parametrlarni tanlang"
 msgid "City/Town"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:477
+#: posapp/src/components/Cart/index.jsx:488
 msgid "Clear all"
 msgstr "Hammasini tozalash"
 
@@ -573,7 +577,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "Kompaniya va ombor majburiy"
 
-#: posapp/src/components/InvoicePay/index.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:369
 msgid "Complete Payment"
 msgstr "To‘lovni yakunlash"
 
@@ -597,8 +601,12 @@ msgstr "Darajalar, ballar va sarflash qoidalarini sozlang"
 msgid "Connected to the server"
 msgstr "Serverga ulandi"
 
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Consolidated"
+msgstr ""
+
+#: posapp/src/pages/LoyaltyProgramListPage.jsx:29
+msgid "Conversion Factor"
 msgstr ""
 
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:256
@@ -643,7 +651,7 @@ msgstr "Mamlakat bir necha marta qo‘shilgan: {countries}"
 msgid "County"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:756
+#: posapp/src/components/Cart/index.jsx:767
 msgid "Coupon \"{code}\" applied"
 msgstr "“{code}” kuponi qo‘llandi"
 
@@ -651,7 +659,7 @@ msgstr "“{code}” kuponi qo‘llandi"
 msgid "Coupon Code Based"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:721
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Coupon code"
 msgstr "Kupon kodi"
 
@@ -659,8 +667,8 @@ msgstr "Kupon kodi"
 msgid "Create"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:110
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:120
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:111
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:121
 #: posapp/src/pages/InvoiceDetailPage.jsx:222
 msgid "Create Credit Note"
 msgstr "Kredit-nota yaratish"
@@ -698,7 +706,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:27
+#: posapp/src/utils/format.js:32
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -733,8 +741,8 @@ msgstr "Joriy smena · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
+#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -886,7 +894,7 @@ msgstr "Umumiy summani standart to‘lov usuliga avtomatik biriktirishni o‘chi
 msgid "Disabled"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:591
+#: posapp/src/components/Cart/index.jsx:602
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -946,7 +954,7 @@ msgstr "Bepul mahsulot miqdorini majburlamaslik"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
 msgid "Draft"
 msgstr ""
 
@@ -1049,7 +1057,7 @@ msgstr "Oflayn rejimni yoqish"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:341
+#: posapp/src/components/InvoicePay/index.jsx:348
 msgid "Enter the amount received for each payment mode."
 msgstr "Har bir to‘lov usuli bo‘yicha olingan summani kiriting."
 
@@ -1090,7 +1098,7 @@ msgstr ""
 msgid "Expiry Duration (days)"
 msgstr "Amal qilish muddati (kun)"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:790
 msgid "FREE"
 msgstr "BEPUL"
 
@@ -1102,12 +1110,13 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "Hisob-fakturani bekor qilib bo‘lmadi"
 
-#: posapp/src/components/InvoicePay/index.jsx:217
-#: posapp/src/components/InvoicePay/index.jsx:324
+#: posapp/src/components/InvoicePay/index.jsx:218
+#: posapp/src/components/InvoicePay/index.jsx:278
+#: posapp/src/components/InvoicePay/index.jsx:331
 msgid "Failed to complete payment"
 msgstr "To‘lovni yakunlab bo‘lmadi"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:100
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:101
 msgid "Failed to create credit note"
 msgstr "Kredit-nota yaratib bo‘lmadi"
 
@@ -1165,7 +1174,7 @@ msgstr "POS profilini saqlab bo‘lmadi"
 msgid "Failed to save Price List"
 msgstr "Narxlar ro‘yxatini saqlab bo‘lmadi"
 
-#: posapp/src/components/Cart/index.jsx:315
+#: posapp/src/components/Cart/index.jsx:326
 msgid "Failed to save draft"
 msgstr "Qoralamani saqlab bo‘lmadi"
 
@@ -1210,7 +1219,7 @@ msgstr "Elektron pochta bo‘yicha filtrlash"
 msgid "Filter by mobile"
 msgstr "Mobil raqam bo‘yicha filtrlash"
 
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "Yakunlanmoqda — tasdiqlangach, chek shu yerda chop etiladi."
 
@@ -1242,7 +1251,7 @@ msgstr "Bepul mahsulot narxi"
 msgid "Free Item UOM"
 msgstr "Bepul mahsulot o‘lchov birligi"
 
-#: posapp/src/components/Cart/index.jsx:768
+#: posapp/src/components/Cart/index.jsx:779
 msgid "Free Items"
 msgstr "Bepul mahsulotlar"
 
@@ -1272,10 +1281,10 @@ msgstr "Terminalga o‘tish"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:692
-#: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:182
-#: posapp/src/components/InvoicePay/index.jsx:371
+#: posapp/src/components/Cart/index.jsx:703
+#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/InvoicePay/index.jsx:183
+#: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
@@ -1357,7 +1366,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1396,7 +1405,7 @@ msgstr "Hisob-faktura tafsilotlari oflayn mavjud emas. Qayta ulanib, yana urinib
 msgid "Invoice not found."
 msgstr "Hisob-faktura topilmadi."
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:151
 msgid "Invoiced Qty"
 msgstr "Hisob yozilgan miqdor"
 
@@ -1420,7 +1429,7 @@ msgstr "Takrorlanuvchi"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:149
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
 #: posapp/src/engine/sync.js:8 posapp/src/pages/InvoiceDetailPage.jsx:277
 #: posapp/src/pages/ItemPriceDetailPage.jsx:183
 #: posapp/src/pages/ItemPriceListPage.jsx:19
@@ -1442,7 +1451,7 @@ msgstr "Mahsulot kodi, o‘lchov birligi, narxlar ro‘yxati va narx majburiy"
 msgid "Item Details"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:809
+#: posapp/src/components/Cart/index.jsx:820
 msgid "Item Discounts"
 msgstr "Mahsulot chegirmalari"
 
@@ -1484,7 +1493,7 @@ msgstr ""
 msgid "Item Tax"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:788
+#: posapp/src/components/Cart/index.jsx:799
 msgid "Item Total"
 msgstr "Mahsulotlar jami"
 
@@ -1492,7 +1501,7 @@ msgstr "Mahsulotlar jami"
 msgid "Items"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:128
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:129
 msgid "Items to Return"
 msgstr "Qaytariladigan mahsulotlar"
 
@@ -1530,7 +1539,7 @@ msgid "Letter Head"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:872
+#: posapp/src/components/Cart/index.jsx:883
 msgid "Load Draft"
 msgstr "Qoralamani yuklash"
 
@@ -1542,7 +1551,7 @@ msgstr "Variantlar yuklanmoqda…"
 msgid "Loading..."
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:650
+#: posapp/src/components/Cart/index.jsx:661
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
@@ -1571,11 +1580,11 @@ msgstr "Sodiqlik dasturi saqlandi"
 msgid "Loyalty Programs"
 msgstr "Sodiqlik dasturlari"
 
-#: posapp/src/components/InvoicePay/index.jsx:471
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Loyalty Redeemed"
 msgstr "Sarflangan sodiqlik ballari"
 
-#: posapp/src/components/InvoicePay/index.jsx:377
+#: posapp/src/components/InvoicePay/index.jsx:384
 msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
 msgstr "Sodiqlik ballarini {currency}da sarflab bo‘lmaydi. ERPNext ularni faqat kompaniya valyutasida ({company_currency}) sarflaydi."
 
@@ -1704,7 +1713,7 @@ msgstr ""
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:693
+#: posapp/src/components/Cart/index.jsx:704
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1757,7 +1766,7 @@ msgstr "Yangi POS profili"
 msgid "New Price List"
 msgstr "Yangi narxlar ro‘yxati"
 
-#: posapp/src/components/Cart/index.jsx:424
+#: posapp/src/components/Cart/index.jsx:435
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "Yangi mijoz"
@@ -1825,7 +1834,7 @@ msgstr "To‘plam tarkibiy qismlari yo‘q"
 msgid "No camera was found on this device."
 msgstr "Ushbu qurilmada kamera topilmadi."
 
-#: posapp/src/components/Cart/index.jsx:652
+#: posapp/src/components/Cart/index.jsx:663
 msgid "No components"
 msgstr "Tarkibiy qismlar yo‘q"
 
@@ -1886,7 +1895,7 @@ msgstr "Mahsulotlar yo‘q"
 msgid "No items added"
 msgstr "Mahsulotlar qo‘shilmagan"
 
-#: posapp/src/components/Cart/index.jsx:487
+#: posapp/src/components/Cart/index.jsx:498
 msgid "No items in cart"
 msgstr "Savatda mahsulot yo‘q"
 
@@ -1898,7 +1907,7 @@ msgstr "Bu turkumda mahsulot yo‘q"
 msgid "No items match your search"
 msgstr "Qidiruvga mos mahsulot yo‘q"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:134
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:135
 msgid "No items on this invoice"
 msgstr "Bu hisob-fakturada mahsulot yo‘q"
 
@@ -1910,7 +1919,7 @@ msgstr "Bu davrda hech qanday mahsulot sotilmadi."
 msgid "No payment modes added"
 msgstr "To‘lov usullari qo‘shilmagan"
 
-#: posapp/src/components/InvoicePay/index.jsx:423
+#: posapp/src/components/InvoicePay/index.jsx:430
 msgid "No payment modes configured for this POS Profile."
 msgstr "Ushbu POS profili uchun to‘lov usullari sozlanmagan."
 
@@ -1958,7 +1967,7 @@ msgstr "Hozircha hisobot uchun smenalar yo‘q. Smena raqamlarini shu yerda jonl
 msgid "No taxes applied"
 msgstr "Soliqlar qo‘llanmagan"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:196
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:197
 msgid "No taxes on this invoice"
 msgstr "Bu hisob-fakturada soliqlar yo‘q"
 
@@ -2011,13 +2020,29 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "Ushbu o‘rnatma uchun oflayn rejim yoqilmagan (EasyPOS sozlamalari). Ma’lumotlar quyida keshlanishda davom etadi, lekin rejim yoqilmaguncha terminal oflaynda ulardan foydalanmaydi."
 
-#: posapp/src/components/InvoicePay/index.jsx:178
+#: posapp/src/components/InvoicePay/index.jsx:179
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Oflayn — sinxronlash kutilmoqda. Sinxronlangach, Hisob-fakturalardan qayta chop eting."
 
 #: posapp/src/pages/POSTerminalPage.jsx:61
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "Oflayn — keshdagi katalog va narxlar ko‘rsatilmoqda. Savdolar qayd etiladi va qayta ulanganda avtomatik sinxronlanadi."
+
+#: posapp/src/utils/format.js:47
+msgid "On Item Quantity"
+msgstr ""
+
+#: posapp/src/utils/format.js:44
+msgid "On Net Total"
+msgstr ""
+
+#: posapp/src/utils/format.js:45
+msgid "On Previous Row Amount"
+msgstr ""
+
+#: posapp/src/utils/format.js:46
+msgid "On Previous Row Total"
+msgstr ""
 
 #: posapp/src/pages/LoginPage.jsx:58
 msgid "One counter."
@@ -2048,7 +2073,7 @@ msgstr "Faqat ushbu mahsulot guruhlaridagi mahsulotlarni ko‘rsatish. Hammasi u
 msgid "Open"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:402
+#: posapp/src/components/Cart/index.jsx:413
 msgid "Open Customer Display"
 msgstr "Mijoz displeyini ochish"
 
@@ -2094,11 +2119,11 @@ msgstr "Ochilmoqda…"
 msgid "Optional note"
 msgstr "Ixtiyoriy izoh"
 
-#: posapp/src/components/Cart/index.jsx:681
+#: posapp/src/components/Cart/index.jsx:692
 msgid "Order Discount"
 msgstr "Buyurtma chegirmasi"
 
-#: posapp/src/components/Cart/index.jsx:828
+#: posapp/src/components/Cart/index.jsx:839
 msgid "Order Discount ({pct}%)"
 msgstr "Buyurtma chegirmasi ({pct}%)"
 
@@ -2115,11 +2140,11 @@ msgstr "Omborda yo‘q"
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2170,20 +2195,20 @@ msgstr "POS terminali"
 msgid "Page {page} of {total}"
 msgstr "{page}-sahifa, jami {total}"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:466
+#: posapp/src/components/InvoicePay/index.jsx:473
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:25
+#: posapp/src/utils/format.js:30
 msgid "Partly Paid"
 msgstr "Qisman to‘langan"
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Partly Paid and Discounted"
 msgstr "Qisman to‘langan va chegirmali"
 
@@ -2200,11 +2225,11 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:360
+#: posapp/src/components/InvoicePay/index.jsx:367
 msgid "Pay with {gateway}"
 msgstr "{gateway} orqali to‘lash"
 
-#: posapp/src/components/Cart/index.jsx:891
+#: posapp/src/components/Cart/index.jsx:902
 msgid "Pay {amount}"
 msgstr "{amount} to‘lash"
 
@@ -2222,7 +2247,7 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:415
+#: posapp/src/components/InvoicePay/index.jsx:422
 msgid "Payment Summary"
 msgstr "To‘lov xulosasi"
 
@@ -2294,20 +2319,20 @@ msgstr ""
 msgid "Please Pay"
 msgstr "Iltimos, to‘lang"
 
-#: posapp/src/components/Cart/index.jsx:250
+#: posapp/src/components/Cart/index.jsx:261
 msgid "Please add at least one item to the cart"
 msgstr "Savatga kamida bitta mahsulot qo‘shing"
 
-#: posapp/src/components/InvoicePay/index.jsx:227
+#: posapp/src/components/InvoicePay/index.jsx:228
 msgid "Please add one or more items to the cart"
 msgstr "Savatga bir yoki bir nechta mahsulot qo‘shing"
 
-#: posapp/src/components/InvoicePay/index.jsx:231
+#: posapp/src/components/InvoicePay/index.jsx:232
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Kamida bitta to‘lov usuli uchun summa kiriting"
 
-#: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:223
+#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "Mijozni tanlang"
 
@@ -2529,8 +2554,8 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:566
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:170
+#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
 #: posapp/src/pages/InvoiceDetailPage.jsx:282
@@ -2541,11 +2566,11 @@ msgstr ""
 msgid "Rate"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:202
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:203
 msgid "Rate (%)"
 msgstr "Stavka (%)"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:237
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:238
 msgid "Rate (%) applies to percentage-based charges; Amount applies to \"Actual\" charges. Totals are recalculated against the returned items when the credit note is created."
 msgstr "Stavka (%) foizli to‘lovlarga, summa esa “haqiqiy” to‘lovlarga qo‘llaniladi. Kredit-nota yaratilganda jami summalar qaytarilgan mahsulotlar bo‘yicha qayta hisoblanadi."
 
@@ -2573,9 +2598,9 @@ msgstr "Razorpay sozlanmagan. Avval uni Razorpay sozlamalarida sozlang."
 msgid "Razorpay payment signature verification failed"
 msgstr "Razorpay to‘lov imzosini tekshirib bo‘lmadi"
 
-#: posapp/src/components/InvoicePay/index.jsx:167
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:168
+#: posapp/src/components/InvoicePay/index.jsx:177
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Receipt"
 msgstr ""
 
@@ -2611,7 +2636,7 @@ msgstr "Takrorlash miqdori 0 dan kam bo‘lishi mumkin emas"
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "Aralash shartli takroriy chegirmalar qo‘llab-quvvatlanmaydi"
 
-#: posapp/src/components/InvoicePay/index.jsx:387
+#: posapp/src/components/InvoicePay/index.jsx:394
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "Sodiqlik ballarini sarflash ({n} ta mavjud)"
 
@@ -2631,11 +2656,11 @@ msgstr ""
 msgid "Remember this device"
 msgstr "Ushbu qurilmani eslab qolish"
 
-#: posapp/src/components/Cart/index.jsx:556
+#: posapp/src/components/Cart/index.jsx:567
 msgid "Remove"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:742
+#: posapp/src/components/Cart/index.jsx:753
 msgid "Remove coupon"
 msgstr "Kuponni olib tashlash"
 
@@ -2664,7 +2689,7 @@ msgstr "Sinxronlashni qayta urinish"
 msgid "Retrying…"
 msgstr "Qayta urinilmoqda…"
 
-#: posapp/src/utils/format.js:26
+#: posapp/src/utils/format.js:31
 msgid "Return"
 msgstr ""
 
@@ -2672,15 +2697,15 @@ msgstr ""
 msgid "Return Against"
 msgstr "Qaytarish asosi"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:173
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:174
 msgid "Return Amount"
 msgstr "Qaytarish summasi"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:153
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:154
 msgid "Return Qty"
 msgstr "Qaytarish miqdori"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:184
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:185
 msgid "Return Total"
 msgstr "Qaytarish jami"
 
@@ -2756,7 +2781,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:860
+#: posapp/src/components/Cart/index.jsx:871
 msgid "Save Draft"
 msgstr "Qoralamani saqlash"
 
@@ -2764,7 +2789,7 @@ msgstr "Qoralamani saqlash"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "Manzil va kontakt qo‘shish uchun avval mijozni saqlang."
 
-#: posapp/src/components/Cart/index.jsx:855
+#: posapp/src/components/Cart/index.jsx:866
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2784,7 +2809,7 @@ msgstr "Shtrix-kod/seriya/partiyani skanerlang yoki mahsulot qidiring"
 msgid "Scan with camera"
 msgstr "Kamera bilan skanerlash"
 
-#: posapp/src/components/Cart/index.jsx:544
+#: posapp/src/components/Cart/index.jsx:555
 msgid "Scan/add the item again to add another unit"
 msgstr "Yana bir dona qo‘shish uchun mahsulotni qayta skanerlang/qo‘shing"
 
@@ -2792,7 +2817,7 @@ msgstr "Yana bir dona qo‘shish uchun mahsulotni qayta skanerlang/qo‘shing"
 msgid "Search and pull a saved draft into the terminal"
 msgstr "Saqlangan qoralamani qidirib, terminalga yuklang"
 
-#: posapp/src/components/Cart/index.jsx:631
+#: posapp/src/components/Cart/index.jsx:642
 msgid "Search batch no"
 msgstr "Partiya raqamini qidirish"
 
@@ -2800,7 +2825,7 @@ msgstr "Partiya raqamini qidirish"
 msgid "Search customer, mobile or email"
 msgstr "Mijoz, mobil raqam yoki elektron pochtani qidirish"
 
-#: posapp/src/components/Cart/index.jsx:422
+#: posapp/src/components/Cart/index.jsx:433
 msgid "Search customer..."
 msgstr "Mijozni qidirish..."
 
@@ -2828,7 +2853,7 @@ msgstr "Profil yoki omborni qidirish"
 msgid "Search program name"
 msgstr "Dastur nomini qidirish"
 
-#: posapp/src/components/Cart/index.jsx:611
+#: posapp/src/components/Cart/index.jsx:622
 msgid "Search serial no"
 msgstr "Seriya raqamini qidirish"
 
@@ -2894,7 +2919,7 @@ msgstr "Avval kompaniyani tanlang"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "Variantni tanlash uchun har bir xususiyat bo‘yicha bitta parametr tanlang."
 
-#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:71
 msgid "Select at least one item to return"
 msgstr "Qaytarish uchun kamida bitta mahsulot tanlang"
 
@@ -2932,7 +2957,7 @@ msgstr ""
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "Agar “Qo‘llaniladi” {field} sifatida tanlangan bo‘lsa, Sotuv belgilanishi kerak"
 
-#: posapp/src/components/Cart/index.jsx:606 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr ""
 
@@ -2968,7 +2993,7 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:394
+#: posapp/src/components/Cart/index.jsx:405
 msgid "Shopping Cart"
 msgstr ""
 
@@ -3014,11 +3039,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:29
+#: posapp/src/utils/format.js:34
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Submitting…"
 msgstr "Yuborilmoqda…"
 
@@ -3090,11 +3115,11 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "Tizim miqdor yoki summani oshirish yoki kamaytirish haqida xabar beradi"
 
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:347
 msgid "Take Payment"
 msgstr "To‘lov qabul qilish"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:499
 msgid "Tap an item to add it here"
 msgstr "Bu yerga qo‘shish uchun mahsulotga teging"
 
@@ -3108,11 +3133,11 @@ msgstr ""
 msgid "Tax ID"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:792
+#: posapp/src/components/Cart/index.jsx:803
 msgid "Taxes"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:191
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:192
 #: posapp/src/pages/InvoiceDetailPage.jsx:368
 #: posapp/src/pages/InvoiceDetailPage.jsx:394
 msgid "Taxes and Charges"
@@ -3139,11 +3164,11 @@ msgstr ""
 msgid "Thank You!"
 msgstr "Rahmat!"
 
-#: posapp/src/components/InvoicePay/index.jsx:311
+#: posapp/src/components/InvoicePay/index.jsx:318
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Bu urinish muvaffaqiyatsiz bo‘ldi — {gateway} oynasida boshqa to‘lov usulini sinab ko‘rishingiz mumkin."
 
-#: posapp/src/components/Cart/index.jsx:713
+#: posapp/src/components/Cart/index.jsx:724
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "Ushbu POS profili chegirmani qo‘lda o‘zgartirishga ruxsat bermaydi."
 
@@ -3234,7 +3259,7 @@ msgstr ""
 msgid "Transactions"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:200
 #: posapp/src/pages/DiscountListPage.jsx:43
 #: posapp/src/pages/InvoiceDetailPage.jsx:371
 #: posapp/src/pages/ItemPriceListPage.jsx:53
@@ -3256,11 +3281,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "Kamerani ishga tushirib bo‘lmadi."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3330,15 +3355,15 @@ msgstr "{variant} varianti va uning {template} shablonini bitta narx qoidasiga b
 msgid "View all"
 msgstr "Hammasini ko‘rish"
 
-#: posapp/src/components/Cart/index.jsx:463
+#: posapp/src/components/Cart/index.jsx:474
 msgid "View purchase history"
 msgstr "Xaridlar tarixini ko‘rish"
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Waiting for {gateway}…"
 msgstr "{gateway} kutilmoqda…"
 
-#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/components/InvoicePay/index.jsx:180
 #: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "Tasodifiy mijoz"
@@ -3434,19 +3459,19 @@ msgstr "{field} jadvalga qo‘shilmagan"
 msgid "{field} is required"
 msgstr "{field} majburiy"
 
-#: posapp/src/components/InvoicePay/index.jsx:442
+#: posapp/src/components/InvoicePay/index.jsx:449
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} hali sozlanmagan."
 
-#: posapp/src/components/InvoicePay/index.jsx:437
+#: posapp/src/components/InvoicePay/index.jsx:444
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} ulanishni talab qiladi — oflayn mavjud emas."
 
-#: posapp/src/components/InvoicePay/index.jsx:445
+#: posapp/src/components/InvoicePay/index.jsx:452
 msgid "{gateway} — offline"
 msgstr "{gateway} — oflayn"
 
-#: posapp/src/components/InvoicePay/index.jsx:155
+#: posapp/src/components/InvoicePay/index.jsx:156
 msgid "{item} (Free)"
 msgstr "{item} (bepul)"
 
@@ -3467,11 +3492,11 @@ msgstr "{label} — {n} ta hisob-faktura sinxronlashni kutmoqda"
 msgid "{n} invoices"
 msgstr "{n} ta hisob-faktura"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "{n} items"
 msgstr "{n} ta mahsulot"
 
-#: posapp/src/components/Cart/index.jsx:448
+#: posapp/src/components/Cart/index.jsx:459
 msgid "{n} loyalty points available"
 msgstr "{n} ta sodiqlik bali mavjud"
 
@@ -3495,7 +3520,7 @@ msgstr "{n} daqiqa oldin"
 msgid "{qty} left"
 msgstr "{qty} ta qoldi"
 
-#: posapp/src/components/Cart/index.jsx:521
+#: posapp/src/components/Cart/index.jsx:532
 msgid "{rate} each"
 msgstr "har biri {rate}"
 

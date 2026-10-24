@@ -17,7 +17,7 @@ const CartView = ({ snapshot }) => {
       <div className="customer-display-items">
         {items.map((item, idx) => (
           <div className="customer-display-item-row" key={`${item.item_code}-${idx}`}>
-            <div className="customer-display-item-name">{item.item_code}</div>
+            <div className="customer-display-item-name" dir="auto">{item.item_code}</div>
             <div className="customer-display-item-qty">× {item.qty}</div>
             <div className="customer-display-item-amount">{formatAmount(item.amount, currencyFormat, precision)}</div>
           </div>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 08:35+0553\n"
+"POT-Creation-Date: 2026-10-24 15:48+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: ko\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "+ Add row"
 msgstr "+ 행 추가"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "1 item"
 msgstr "상품 1개"
 
-#: posapp/src/components/Cart/index.jsx:447
+#: posapp/src/components/Cart/index.jsx:458
 msgid "1 loyalty point available"
 msgstr "적립 포인트 1점 사용 가능"
 
@@ -36,7 +36,7 @@ msgstr "적립 포인트 1점 사용 가능"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:819
+#: posapp/src/components/Cart/index.jsx:830
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "이 장바구니의 무료 상품 혜택은 연결이 필요합니다 — 다시 연결될 때까지 장바구니 전체의 가격/할인은 정가로 보류됩니다."
 
@@ -56,7 +56,7 @@ msgstr "주소"
 msgid "ALL DOMAINS"
 msgstr "모든 영역"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:198
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
 #: posapp/src/pages/InvoiceDetailPage.jsx:370
 msgid "Account Head"
 msgstr ""
@@ -87,6 +87,10 @@ msgstr ""
 #: posapp/src/pages/PriceListListPage.jsx:11
 #: posapp/src/pages/PriceListListPage.jsx:45
 msgid "Active"
+msgstr ""
+
+#: posapp/src/utils/format.js:43
+msgid "Actual"
 msgstr ""
 
 #: posapp/src/components/Customer/AddressContactSection.jsx:133
@@ -217,7 +221,7 @@ msgid "Amended From"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:46
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:219
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:220
 #: posapp/src/pages/DiscountDetailPage.jsx:778
 #: posapp/src/pages/InvoiceDetailPage.jsx:309
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
@@ -247,7 +251,7 @@ msgstr ""
 msgid "Applicable for Users"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:736
+#: posapp/src/components/Cart/index.jsx:747
 msgid "Apply"
 msgstr ""
 
@@ -289,7 +293,7 @@ msgstr "품목 그룹에 규칙 적용 *"
 msgid "Apply Rule On Other"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:687
+#: posapp/src/components/Cart/index.jsx:698
 msgid "Apply on…"
 msgstr "적용 대상…"
 
@@ -338,7 +342,7 @@ msgstr "뒤로"
 msgid "Back to Invoices"
 msgstr "송장 목록으로"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Balance Due"
 msgstr "미결제 잔액"
 
@@ -346,7 +350,7 @@ msgstr "미결제 잔액"
 msgid "Batch"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:626
+#: posapp/src/components/Cart/index.jsx:637
 msgid "Batch No"
 msgstr ""
 
@@ -373,7 +377,7 @@ msgstr "멈추지 않는 리테일 팀을 위해 만들었습니다."
 msgid "Bundle Components"
 msgstr "세트 구성품"
 
-#: posapp/src/components/Cart/index.jsx:647
+#: posapp/src/components/Cart/index.jsx:658
 msgid "Bundle Contents"
 msgstr "세트 내용"
 
@@ -418,8 +422,8 @@ msgstr ""
 #: posapp/src/components/Customer/AddressModal.jsx:77
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:346
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:117
+#: posapp/src/components/InvoicePay/index.jsx:353
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
@@ -432,7 +436,7 @@ msgstr "송장 취소"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:28
+#: posapp/src/utils/format.js:33
 msgid "Cancelled"
 msgstr ""
 
@@ -448,7 +452,7 @@ msgstr "데모 POS 프로필을 만들 수 없습니다: 회사가 지정되지 
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "데모 데이터를 만들 수 없습니다: 회사가 지정되지 않았고 기본 회사도 설정되어 있지 않습니다."
 
-#: posapp/src/components/Cart/index.jsx:473
+#: posapp/src/components/Cart/index.jsx:484
 msgid "Cart Items"
 msgstr "장바구니 상품"
 
@@ -459,7 +463,7 @@ msgstr "장바구니 상품"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:439
+#: posapp/src/components/InvoicePay/index.jsx:446
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "계산원이 청구할 금액을 입력하면, 결제 완료 시 {gateway} 결제 창이 열립니다."
 
@@ -467,7 +471,7 @@ msgstr "계산원이 청구할 금액을 입력하면, 결제 완료 시 {gatewa
 msgid "Change Due"
 msgstr "거스름돈"
 
-#: posapp/src/components/InvoicePay/index.jsx:478
+#: posapp/src/components/InvoicePay/index.jsx:485
 msgid "Change to Return"
 msgstr "반품으로 변경"
 
@@ -483,7 +487,7 @@ msgstr "옵션을 선택해 변형을 고르세요"
 msgid "City/Town"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:477
+#: posapp/src/components/Cart/index.jsx:488
 msgid "Clear all"
 msgstr "모두 지우기"
 
@@ -573,7 +577,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "회사와 창고는 필수입니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:369
 msgid "Complete Payment"
 msgstr "결제 완료"
 
@@ -597,8 +601,12 @@ msgstr "등급, 포인트, 사용 규칙 설정"
 msgid "Connected to the server"
 msgstr "서버에 연결됨"
 
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Consolidated"
+msgstr ""
+
+#: posapp/src/pages/LoyaltyProgramListPage.jsx:29
+msgid "Conversion Factor"
 msgstr ""
 
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:256
@@ -643,7 +651,7 @@ msgstr "국가가 중복 추가됨: {countries}"
 msgid "County"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:756
+#: posapp/src/components/Cart/index.jsx:767
 msgid "Coupon \"{code}\" applied"
 msgstr "쿠폰 \"{code}\" 적용됨"
 
@@ -651,7 +659,7 @@ msgstr "쿠폰 \"{code}\" 적용됨"
 msgid "Coupon Code Based"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:721
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Coupon code"
 msgstr "쿠폰 코드"
 
@@ -659,8 +667,8 @@ msgstr "쿠폰 코드"
 msgid "Create"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:110
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:120
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:111
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:121
 #: posapp/src/pages/InvoiceDetailPage.jsx:222
 msgid "Create Credit Note"
 msgstr "대변 메모 생성"
@@ -698,7 +706,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:27
+#: posapp/src/utils/format.js:32
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -733,8 +741,8 @@ msgstr "현재 근무 · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
+#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -886,7 +894,7 @@ msgstr "총합계를 기본 결제 수단에 자동 지정하지 않음"
 msgid "Disabled"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:591
+#: posapp/src/components/Cart/index.jsx:602
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -946,7 +954,7 @@ msgstr "무료 상품 수량을 강제하지 않음"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
 msgid "Draft"
 msgstr ""
 
@@ -1049,7 +1057,7 @@ msgstr "오프라인 모드 사용"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:341
+#: posapp/src/components/InvoicePay/index.jsx:348
 msgid "Enter the amount received for each payment mode."
 msgstr "결제 수단별로 받은 금액을 입력하세요."
 
@@ -1090,7 +1098,7 @@ msgstr ""
 msgid "Expiry Duration (days)"
 msgstr "유효 기간(일)"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:790
 msgid "FREE"
 msgstr "무료"
 
@@ -1102,12 +1110,13 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "송장을 취소하지 못했습니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:217
-#: posapp/src/components/InvoicePay/index.jsx:324
+#: posapp/src/components/InvoicePay/index.jsx:218
+#: posapp/src/components/InvoicePay/index.jsx:278
+#: posapp/src/components/InvoicePay/index.jsx:331
 msgid "Failed to complete payment"
 msgstr "결제를 완료하지 못했습니다"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:100
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:101
 msgid "Failed to create credit note"
 msgstr "대변 메모를 만들지 못했습니다"
 
@@ -1165,7 +1174,7 @@ msgstr "POS 프로필을 저장하지 못했습니다"
 msgid "Failed to save Price List"
 msgstr "가격표를 저장하지 못했습니다"
 
-#: posapp/src/components/Cart/index.jsx:315
+#: posapp/src/components/Cart/index.jsx:326
 msgid "Failed to save draft"
 msgstr "임시 저장하지 못했습니다"
 
@@ -1210,7 +1219,7 @@ msgstr "이메일로 필터"
 msgid "Filter by mobile"
 msgstr "휴대폰으로 필터"
 
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "마무리 중 — 확인되면 영수증이 여기에서 인쇄됩니다."
 
@@ -1242,7 +1251,7 @@ msgstr "무료 상품 가격"
 msgid "Free Item UOM"
 msgstr "무료 상품 단위"
 
-#: posapp/src/components/Cart/index.jsx:768
+#: posapp/src/components/Cart/index.jsx:779
 msgid "Free Items"
 msgstr "무료 상품"
 
@@ -1272,10 +1281,10 @@ msgstr "단말기로 이동"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:692
-#: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:182
-#: posapp/src/components/InvoicePay/index.jsx:371
+#: posapp/src/components/Cart/index.jsx:703
+#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/InvoicePay/index.jsx:183
+#: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
@@ -1357,7 +1366,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1396,7 +1405,7 @@ msgstr "오프라인에서는 송장 상세 정보를 볼 수 없습니다. 다�
 msgid "Invoice not found."
 msgstr "송장을 찾을 수 없습니다."
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:151
 msgid "Invoiced Qty"
 msgstr "청구 수량"
 
@@ -1420,7 +1429,7 @@ msgstr "반복 적용"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:149
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:150
 #: posapp/src/engine/sync.js:8 posapp/src/pages/InvoiceDetailPage.jsx:277
 #: posapp/src/pages/ItemPriceDetailPage.jsx:183
 #: posapp/src/pages/ItemPriceListPage.jsx:19
@@ -1442,7 +1451,7 @@ msgstr "품목 코드, 단위, 가격표, 가격은 필수입니다"
 msgid "Item Details"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:809
+#: posapp/src/components/Cart/index.jsx:820
 msgid "Item Discounts"
 msgstr "상품 할인"
 
@@ -1484,7 +1493,7 @@ msgstr ""
 msgid "Item Tax"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:788
+#: posapp/src/components/Cart/index.jsx:799
 msgid "Item Total"
 msgstr "상품 합계"
 
@@ -1492,7 +1501,7 @@ msgstr "상품 합계"
 msgid "Items"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:128
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:129
 msgid "Items to Return"
 msgstr "반품할 상품"
 
@@ -1530,7 +1539,7 @@ msgid "Letter Head"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:872
+#: posapp/src/components/Cart/index.jsx:883
 msgid "Load Draft"
 msgstr "임시 저장 불러오기"
 
@@ -1542,7 +1551,7 @@ msgstr "변형 불러오는 중…"
 msgid "Loading..."
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:650
+#: posapp/src/components/Cart/index.jsx:661
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
@@ -1571,11 +1580,11 @@ msgstr "멤버십 프로그램이 저장되었습니다"
 msgid "Loyalty Programs"
 msgstr "멤버십 프로그램"
 
-#: posapp/src/components/InvoicePay/index.jsx:471
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Loyalty Redeemed"
 msgstr "사용한 포인트"
 
-#: posapp/src/components/InvoicePay/index.jsx:377
+#: posapp/src/components/InvoicePay/index.jsx:384
 msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
 msgstr "적립 포인트는 {currency}(으)로 사용할 수 없습니다. ERPNext는 회사 통화({company_currency})로만 포인트를 사용합니다."
 
@@ -1704,7 +1713,7 @@ msgstr ""
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:693
+#: posapp/src/components/Cart/index.jsx:704
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1757,7 +1766,7 @@ msgstr "새 POS 프로필"
 msgid "New Price List"
 msgstr "새 가격표"
 
-#: posapp/src/components/Cart/index.jsx:424
+#: posapp/src/components/Cart/index.jsx:435
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "새 고객"
@@ -1825,7 +1834,7 @@ msgstr "세트 구성품이 없습니다"
 msgid "No camera was found on this device."
 msgstr "이 기기에서 카메라를 찾을 수 없습니다."
 
-#: posapp/src/components/Cart/index.jsx:652
+#: posapp/src/components/Cart/index.jsx:663
 msgid "No components"
 msgstr "구성품 없음"
 
@@ -1886,7 +1895,7 @@ msgstr "상품 없음"
 msgid "No items added"
 msgstr "추가된 상품이 없습니다"
 
-#: posapp/src/components/Cart/index.jsx:487
+#: posapp/src/components/Cart/index.jsx:498
 msgid "No items in cart"
 msgstr "장바구니에 상품이 없습니다"
 
@@ -1898,7 +1907,7 @@ msgstr "이 분류에 상품이 없습니다"
 msgid "No items match your search"
 msgstr "검색과 일치하는 상품이 없습니다"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:134
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:135
 msgid "No items on this invoice"
 msgstr "이 송장에 상품이 없습니다"
 
@@ -1910,7 +1919,7 @@ msgstr "이 기간에 판매된 상품이 없습니다."
 msgid "No payment modes added"
 msgstr "추가된 결제 수단이 없습니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:423
+#: posapp/src/components/InvoicePay/index.jsx:430
 msgid "No payment modes configured for this POS Profile."
 msgstr "이 POS 프로필에 설정된 결제 수단이 없습니다."
 
@@ -1958,7 +1967,7 @@ msgstr "아직 보고할 근무가 없습니다. 단말기에서 근무를 시�
 msgid "No taxes applied"
 msgstr "적용된 세금 없음"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:196
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:197
 msgid "No taxes on this invoice"
 msgstr "이 송장에 세금이 없습니다"
 
@@ -2011,13 +2020,29 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "이 배포에서는 오프라인 모드가 꺼져 있습니다(EasyPOS 설정). 데이터는 아래에 계속 캐시되지만, 모드를 켜기 전까지 단말기는 오프라인일 때 이를 사용하지 않습니다."
 
-#: posapp/src/components/InvoicePay/index.jsx:178
+#: posapp/src/components/InvoicePay/index.jsx:179
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "오프라인 — 동기화 대기 중. 동기화 후 송장에서 다시 인쇄하세요."
 
 #: posapp/src/pages/POSTerminalPage.jsx:61
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "오프라인 — 캐시된 카탈로그와 가격을 표시 중입니다. 판매는 등록되고 다시 연결되면 자동으로 동기화됩니다."
+
+#: posapp/src/utils/format.js:47
+msgid "On Item Quantity"
+msgstr ""
+
+#: posapp/src/utils/format.js:44
+msgid "On Net Total"
+msgstr ""
+
+#: posapp/src/utils/format.js:45
+msgid "On Previous Row Amount"
+msgstr ""
+
+#: posapp/src/utils/format.js:46
+msgid "On Previous Row Total"
+msgstr ""
 
 #: posapp/src/pages/LoginPage.jsx:58
 msgid "One counter."
@@ -2048,7 +2073,7 @@ msgstr "이 품목 그룹의 상품만 표시합니다. 전체는 비워 두세�
 msgid "Open"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:402
+#: posapp/src/components/Cart/index.jsx:413
 msgid "Open Customer Display"
 msgstr "고객 디스플레이 열기"
 
@@ -2094,11 +2119,11 @@ msgstr "여는 중…"
 msgid "Optional note"
 msgstr "메모(선택)"
 
-#: posapp/src/components/Cart/index.jsx:681
+#: posapp/src/components/Cart/index.jsx:692
 msgid "Order Discount"
 msgstr "주문 할인"
 
-#: posapp/src/components/Cart/index.jsx:828
+#: posapp/src/components/Cart/index.jsx:839
 msgid "Order Discount ({pct}%)"
 msgstr "주문 할인({pct}%)"
 
@@ -2115,11 +2140,11 @@ msgstr "품절"
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2170,20 +2195,20 @@ msgstr "POS 단말기"
 msgid "Page {page} of {total}"
 msgstr "{total}페이지 중 {page}페이지"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:466
+#: posapp/src/components/InvoicePay/index.jsx:473
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:25
+#: posapp/src/utils/format.js:30
 msgid "Partly Paid"
 msgstr "부분 결제됨"
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Partly Paid and Discounted"
 msgstr "부분 결제 및 할인됨"
 
@@ -2200,11 +2225,11 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:360
+#: posapp/src/components/InvoicePay/index.jsx:367
 msgid "Pay with {gateway}"
 msgstr "{gateway}(으)로 결제"
 
-#: posapp/src/components/Cart/index.jsx:891
+#: posapp/src/components/Cart/index.jsx:902
 msgid "Pay {amount}"
 msgstr "{amount} 결제"
 
@@ -2222,7 +2247,7 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:415
+#: posapp/src/components/InvoicePay/index.jsx:422
 msgid "Payment Summary"
 msgstr "결제 요약"
 
@@ -2294,20 +2319,20 @@ msgstr ""
 msgid "Please Pay"
 msgstr "결제해 주세요"
 
-#: posapp/src/components/Cart/index.jsx:250
+#: posapp/src/components/Cart/index.jsx:261
 msgid "Please add at least one item to the cart"
 msgstr "장바구니에 상품을 하나 이상 추가하세요"
 
-#: posapp/src/components/InvoicePay/index.jsx:227
+#: posapp/src/components/InvoicePay/index.jsx:228
 msgid "Please add one or more items to the cart"
 msgstr "장바구니에 상품을 하나 이상 추가하세요"
 
-#: posapp/src/components/InvoicePay/index.jsx:231
+#: posapp/src/components/InvoicePay/index.jsx:232
 msgid "Please enter an amount for at least one payment mode"
 msgstr "결제 수단 하나 이상에 금액을 입력하세요"
 
-#: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:223
+#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "고객을 선택하세요"
 
@@ -2529,8 +2554,8 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:566
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:170
+#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
 #: posapp/src/pages/InvoiceDetailPage.jsx:282
@@ -2541,11 +2566,11 @@ msgstr ""
 msgid "Rate"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:202
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:203
 msgid "Rate (%)"
 msgstr "세율(%)"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:237
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:238
 msgid "Rate (%) applies to percentage-based charges; Amount applies to \"Actual\" charges. Totals are recalculated against the returned items when the credit note is created."
 msgstr "세율(%)은 비율 기반 비용에, 금액은 '실제' 비용에 적용됩니다. 대변 메모 생성 시 반품 상품 기준으로 합계가 다시 계산됩니다."
 
@@ -2573,9 +2598,9 @@ msgstr "Razorpay가 설정되지 않았습니다. 먼저 Razorpay 설정에서 �
 msgid "Razorpay payment signature verification failed"
 msgstr "Razorpay 결제 서명 확인에 실패했습니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:167
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:290
+#: posapp/src/components/InvoicePay/index.jsx:168
+#: posapp/src/components/InvoicePay/index.jsx:177
+#: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Receipt"
 msgstr ""
 
@@ -2611,7 +2636,7 @@ msgstr "반복 기준 수량은 0보다 작을 수 없습니다"
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "혼합 조건의 반복 할인은 지원되지 않습니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:387
+#: posapp/src/components/InvoicePay/index.jsx:394
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "적립 포인트 사용({n}점 사용 가능)"
 
@@ -2631,11 +2656,11 @@ msgstr ""
 msgid "Remember this device"
 msgstr "이 기기 기억하기"
 
-#: posapp/src/components/Cart/index.jsx:556
+#: posapp/src/components/Cart/index.jsx:567
 msgid "Remove"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:742
+#: posapp/src/components/Cart/index.jsx:753
 msgid "Remove coupon"
 msgstr "쿠폰 제거"
 
@@ -2664,7 +2689,7 @@ msgstr "동기화 재시도"
 msgid "Retrying…"
 msgstr "재시도 중…"
 
-#: posapp/src/utils/format.js:26
+#: posapp/src/utils/format.js:31
 msgid "Return"
 msgstr ""
 
@@ -2672,15 +2697,15 @@ msgstr ""
 msgid "Return Against"
 msgstr "원 송장"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:173
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:174
 msgid "Return Amount"
 msgstr "반품 금액"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:153
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:154
 msgid "Return Qty"
 msgstr "반품 수량"
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:184
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:185
 msgid "Return Total"
 msgstr "반품 합계"
 
@@ -2756,7 +2781,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:860
+#: posapp/src/components/Cart/index.jsx:871
 msgid "Save Draft"
 msgstr "임시 저장"
 
@@ -2764,7 +2789,7 @@ msgstr "임시 저장"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "주소와 연락처를 추가하려면 먼저 고객을 저장하세요."
 
-#: posapp/src/components/Cart/index.jsx:855
+#: posapp/src/components/Cart/index.jsx:866
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2784,7 +2809,7 @@ msgstr "바코드/일련번호/배치를 스캔하거나 상품을 검색하세�
 msgid "Scan with camera"
 msgstr "카메라로 스캔"
 
-#: posapp/src/components/Cart/index.jsx:544
+#: posapp/src/components/Cart/index.jsx:555
 msgid "Scan/add the item again to add another unit"
 msgstr "상품을 다시 스캔/추가하면 한 개가 더 추가됩니다"
 
@@ -2792,7 +2817,7 @@ msgstr "상품을 다시 스캔/추가하면 한 개가 더 추가됩니다"
 msgid "Search and pull a saved draft into the terminal"
 msgstr "저장된 임시 송장을 검색해 단말기로 불러오기"
 
-#: posapp/src/components/Cart/index.jsx:631
+#: posapp/src/components/Cart/index.jsx:642
 msgid "Search batch no"
 msgstr "배치 번호 검색"
 
@@ -2800,7 +2825,7 @@ msgstr "배치 번호 검색"
 msgid "Search customer, mobile or email"
 msgstr "고객, 휴대폰 또는 이메일 검색"
 
-#: posapp/src/components/Cart/index.jsx:422
+#: posapp/src/components/Cart/index.jsx:433
 msgid "Search customer..."
 msgstr "고객 검색..."
 
@@ -2828,7 +2853,7 @@ msgstr "프로필 또는 창고 검색"
 msgid "Search program name"
 msgstr "프로그램명 검색"
 
-#: posapp/src/components/Cart/index.jsx:611
+#: posapp/src/components/Cart/index.jsx:622
 msgid "Search serial no"
 msgstr "일련번호 검색"
 
@@ -2894,7 +2919,7 @@ msgstr "먼저 회사를 선택하세요"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "변형을 고르려면 각 속성의 옵션을 선택하세요."
 
-#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:71
 msgid "Select at least one item to return"
 msgstr "반품할 상품을 하나 이상 선택하세요"
 
@@ -2932,7 +2957,7 @@ msgstr ""
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "'적용 대상'이 {field}(으)로 선택된 경우 '판매'를 선택해야 합니다"
 
-#: posapp/src/components/Cart/index.jsx:606 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr ""
 
@@ -2968,7 +2993,7 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:394
+#: posapp/src/components/Cart/index.jsx:405
 msgid "Shopping Cart"
 msgstr ""
 
@@ -3014,11 +3039,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:29
+#: posapp/src/utils/format.js:34
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Submitting…"
 msgstr "제출 중…"
 
@@ -3090,11 +3115,11 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "시스템이 수량 또는 금액을 늘리거나 줄이도록 알려 줍니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:347
 msgid "Take Payment"
 msgstr "결제 받기"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:499
 msgid "Tap an item to add it here"
 msgstr "상품을 탭하면 여기에 추가됩니다"
 
@@ -3108,11 +3133,11 @@ msgstr ""
 msgid "Tax ID"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:792
+#: posapp/src/components/Cart/index.jsx:803
 msgid "Taxes"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:191
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:192
 #: posapp/src/pages/InvoiceDetailPage.jsx:368
 #: posapp/src/pages/InvoiceDetailPage.jsx:394
 msgid "Taxes and Charges"
@@ -3139,11 +3164,11 @@ msgstr ""
 msgid "Thank You!"
 msgstr "감사합니다!"
 
-#: posapp/src/components/InvoicePay/index.jsx:311
+#: posapp/src/components/InvoicePay/index.jsx:318
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "이번 시도는 실패했습니다 — {gateway} 창에서 다른 결제 수단을 시도할 수 있습니다."
 
-#: posapp/src/components/Cart/index.jsx:713
+#: posapp/src/components/Cart/index.jsx:724
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "이 POS 프로필은 할인을 수동으로 변경할 수 없습니다."
 
@@ -3234,7 +3259,7 @@ msgstr ""
 msgid "Transactions"
 msgstr ""
 
-#: posapp/src/components/Invoice/CreditNoteModal.jsx:199
+#: posapp/src/components/Invoice/CreditNoteModal.jsx:200
 #: posapp/src/pages/DiscountListPage.jsx:43
 #: posapp/src/pages/InvoiceDetailPage.jsx:371
 #: posapp/src/pages/ItemPriceListPage.jsx:53
@@ -3256,11 +3281,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "카메라를 시작할 수 없습니다."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3330,15 +3355,15 @@ msgstr "변형 {variant}과(와) 해당 템플릿 {template}을(를) 같은 가�
 msgid "View all"
 msgstr "모두 보기"
 
-#: posapp/src/components/Cart/index.jsx:463
+#: posapp/src/components/Cart/index.jsx:474
 msgid "View purchase history"
 msgstr "구매 내역 보기"
 
-#: posapp/src/components/InvoicePay/index.jsx:357
+#: posapp/src/components/InvoicePay/index.jsx:364
 msgid "Waiting for {gateway}…"
 msgstr "{gateway} 대기 중…"
 
-#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/components/InvoicePay/index.jsx:180
 #: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "일반 손님"
@@ -3434,19 +3459,19 @@ msgstr "{field}이(가) 표에 추가되지 않았습니다"
 msgid "{field} is required"
 msgstr "{field}은(는) 필수입니다"
 
-#: posapp/src/components/InvoicePay/index.jsx:442
+#: posapp/src/components/InvoicePay/index.jsx:449
 msgid "{gateway} is not configured yet."
 msgstr "{gateway}이(가) 아직 설정되지 않았습니다."
 
-#: posapp/src/components/InvoicePay/index.jsx:437
+#: posapp/src/components/InvoicePay/index.jsx:444
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway}은(는) 연결이 필요합니다 — 오프라인에서는 사용할 수 없습니다."
 
-#: posapp/src/components/InvoicePay/index.jsx:445
+#: posapp/src/components/InvoicePay/index.jsx:452
 msgid "{gateway} — offline"
 msgstr "{gateway} — 오프라인"
 
-#: posapp/src/components/InvoicePay/index.jsx:155
+#: posapp/src/components/InvoicePay/index.jsx:156
 msgid "{item} (Free)"
 msgstr "{item}(무료)"
 
@@ -3467,11 +3492,11 @@ msgstr "{label} — 동기화 대기 송장 {n}건"
 msgid "{n} invoices"
 msgstr "송장 {n}건"
 
-#: posapp/src/components/Cart/index.jsx:408
+#: posapp/src/components/Cart/index.jsx:419
 msgid "{n} items"
 msgstr "상품 {n}개"
 
-#: posapp/src/components/Cart/index.jsx:448
+#: posapp/src/components/Cart/index.jsx:459
 msgid "{n} loyalty points available"
 msgstr "적립 포인트 {n}점 사용 가능"
 
@@ -3495,7 +3520,7 @@ msgstr "{n}분 전"
 msgid "{qty} left"
 msgstr "{qty}개 남음"
 
-#: posapp/src/components/Cart/index.jsx:521
+#: posapp/src/components/Cart/index.jsx:532
 msgid "{rate} each"
 msgstr "개당 {rate}"
 

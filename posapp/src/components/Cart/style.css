@@ -118,6 +118,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: match-parent; /* see .pos-item-name */
 }
 
 .cart-line-meta {

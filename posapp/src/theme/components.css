@@ -1347,6 +1347,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  /* dir="auto" on the element lets an English name truncate at its own end in
+     RTL; match-parent keeps it aligned with the page instead of its own start. */
+  text-align: match-parent;
 }
 
 .pos-item-price-row {

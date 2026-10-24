@@ -54,7 +54,7 @@ const ItemCard = memo(({ item, qty, inCart, onAdd, onIncrement, onDecrement, mon
         {item.image ? <img src={item.image} alt={item.item_code} /> : <i className="bi bi-box-seam" />}
       </div>
 
-      <div className="pos-item-name" title={tData(item.item_name || item.item_code)}>
+      <div className="pos-item-name" dir="auto" title={tData(item.item_name || item.item_code)}>
         {tData(item.item_name || item.item_code)}
       </div>
 

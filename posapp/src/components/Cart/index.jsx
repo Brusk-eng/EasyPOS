@@ -525,7 +525,7 @@ const Cart = () => {
                           </div>
 
                           <div className="cart-line-info">
-                            <div className="cart-line-name" title={item.item_code}>
+                            <div className="cart-line-name" dir="auto" title={item.item_code}>
                               {item.item_code}
                             </div>
                             <div className="cart-line-meta">

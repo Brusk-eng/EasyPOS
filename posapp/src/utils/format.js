@@ -4,8 +4,18 @@ import { __, _t, getLanguage } from "../translation";
 // chosen language; amounts follow the currency (formatCurrency below).
 // Arabic and Persian keep Latin digits (-u-nu-latn) so dates match the amounts beside
 // them, which follow the currency's own number format.
-const DATE_LOCALES = { en: "en-US", hi: "hi-IN", ar: "ar-u-nu-latn", fa: "fa-u-nu-latn" };
-export const dateLocale = () => DATE_LOCALES[getLanguage()] || getLanguage() || "en-US";
+// Every locale is pinned to the Gregorian calendar (-u-ca-gregory) so dates match
+// ERPNext's posting dates; fa would otherwise show Solar Hijri and th the Buddhist era.
+const DATE_LOCALES = {
+	en: "en-US",
+	hi: "hi-IN",
+	ar: "ar-u-ca-gregory-nu-latn",
+	fa: "fa-u-ca-gregory-nu-latn",
+};
+export const dateLocale = () => {
+	const language = getLanguage() || "en";
+	return DATE_LOCALES[language] || `${language}-u-ca-gregory`;
+};
 
 export const formatDate = (value) => {
 	if (!value) return "";
@@ -33,6 +43,14 @@ _t("Partly Paid and Discounted");
 _t("Consolidated");
 _t("Internal Transfer");
 export const invoiceStatusLabel = (status) => (status ? __(status) : "");
+
+// Sales Taxes and Charges charge_type values (ERPNext's own), shown on tax rows.
+_t("Actual");
+_t("On Net Total");
+_t("On Previous Row Amount");
+_t("On Previous Row Total");
+_t("On Item Quantity");
+export const chargeTypeLabel = (chargeType) => (chargeType ? __(chargeType) : "");
 
 // Sales Invoice status -> pos-badge-* modifier class (see theme/components.css).
 export const invoiceStatusBadgeClass = (status) => {

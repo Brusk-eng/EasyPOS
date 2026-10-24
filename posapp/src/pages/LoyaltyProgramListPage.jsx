@@ -1,4 +1,4 @@
-import { _t, useTranslation } from "../translation";
+import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchLoyaltyPrograms } from "../api/LoyaltyProgram";
@@ -22,11 +22,11 @@ const PROGRAM_COLUMNS = [
     key: "loyalty_program_type",
     label: _t("Type"),
     width: "1.1fr",
-    render: (p) => <span style={{ color: "var(--color-text-muted)" }}>{p.loyalty_program_type}</span>,
+    render: (p) => <span style={{ color: "var(--color-text-muted)" }}>{p.loyalty_program_type ? __(p.loyalty_program_type) : "—"}</span>,
   },
   {
     key: "conversion_factor",
-    label: "1 Point =",
+    label: _t("Conversion Factor"),
     width: "0.8fr",
     align: "end",
     render: (p) => <span>{p.conversion_factor}</span>,
