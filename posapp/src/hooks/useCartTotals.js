@@ -19,13 +19,26 @@ const useCartTotals = () => {
 	const discount = useCartStore((s) => s.discountPercentage);
 
 	return useMemo(() => {
-		const itemTotal = cartItems.reduce((sum, item) => sum + (item.amount ?? 0), 0);
-		const itemDiscountTotal = cartItems.reduce(
-			(sum, item) => sum + (item.discount_amount ?? 0),
-			0
-		);
+		// Each line's `amount` is already qty × its discounted `rate`
+		// (cartStore.applyPricing), so their sum is the taxable net total — the
+		// same net_total ERPNext's calculate_taxes_and_totals computes on save, and
+		// what the Customer Display already uses. Item discounts must not be
+		// subtracted from it again.
 		const netAfterItemDiscount = roundCurrency(
-			itemTotal - itemDiscountTotal,
+			cartItems.reduce((sum, item) => sum + (item.amount ?? 0), 0),
+			currencyPrecision
+		);
+		// discount_amount is per unit (price_list_rate − rate), so scale it by qty.
+		const itemDiscountTotal = roundCurrency(
+			cartItems.reduce(
+				(sum, item) => sum + (item.discount_amount ?? 0) * (item.qty ?? 0),
+				0
+			),
+			currencyPrecision
+		);
+		// Shown as the pre-discount subtotal, so Item Total − Item Discounts = net.
+		const itemTotal = roundCurrency(
+			netAfterItemDiscount + itemDiscountTotal,
 			currencyPrecision
 		);
 		const { taxRows, totalTax, discountAmount, grandTotal } = computeCartTotals({

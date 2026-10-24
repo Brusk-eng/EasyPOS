@@ -100,7 +100,8 @@
   align-items: center;
   gap: 6px;
   background: transparent;
-  padding: 4px 6px 4px 4px;
+  padding-block: 4px;
+  padding-inline: 4px 6px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   transition: background 0.15s ease;
@@ -181,6 +182,19 @@
   color: var(--color-text-faint);
 }
 
+/* Selected entry (Topbar language menu) — primary-color "active" pattern,
+   readable in both themes (see the Dark Mode notes in CLAUDE.md). */
+.pos-user-menu-item.active,
+.pos-user-menu-item.active:hover,
+.pos-user-menu-item.active:focus {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.pos-user-menu-item.active i {
+  color: inherit;
+}
+
 .pos-user-menu-item-danger:hover,
 .pos-user-menu-item-danger:focus {
   background: var(--color-danger-bg);
@@ -238,7 +252,7 @@
 
 .pos-search i {
   position: absolute;
-  left: 9px;
+  inset-inline-start: 9px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -251,7 +265,7 @@
 .pos-search input {
   width: 100%;
   height: 30px;
-  padding-left: 28px;
+  padding-inline-start: 28px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   background: var(--color-bg);
@@ -262,12 +276,12 @@
 }
 
 .pos-search input.has-scan-btn {
-  padding-right: 40px;
+  padding-inline-end: 40px;
 }
 
 .pos-search-scan-btn {
   position: absolute;
-  right: 12px;
+  inset-inline-end: 12px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -628,6 +642,17 @@
   margin-bottom: 0;
 }
 
+/* Language switchers: 38 languages, so the login picker is a compact select
+   and the Topbar menu scrolls instead of running off-screen. */
+.pos-login-language .form-select {
+  width: auto;
+}
+
+.pos-language-menu {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
 /* NumberField: hide native spinner arrows, use the stepper UI instead */
 .pos-field input[type="number"]::-webkit-outer-spin-button,
 .pos-field input[type="number"]::-webkit-inner-spin-button {
@@ -650,7 +675,7 @@
 
 .pos-field-required {
   color: var(--color-danger-text);
-  margin-left: 2px;
+  margin-inline-start: 2px;
 }
 
 .pos-field-error {
@@ -813,9 +838,10 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  inset-inline-end: 0;
   width: 28px;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border-start-end-radius: var(--radius-md);
+  border-end-end-radius: var(--radius-md);
   background: linear-gradient(to left, var(--color-surface), transparent);
   pointer-events: none;
   opacity: 0;
@@ -862,7 +888,8 @@
 .pos-ct-expand-panel {
   background: var(--color-surface-alt);
   border-bottom: 1px solid var(--color-border-faint);
-  padding: 8px 14px 12px 44px;
+  padding-block: 8px 12px;
+  padding-inline: 44px 14px;
   font-size: 12px;
   color: var(--color-text-secondary);
 }
@@ -871,7 +898,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 14px 8px 16px;
+  padding-block: 4px 8px;
+  padding-inline: 16px 14px;
   font-size: 11px;
   color: var(--color-danger-text);
   background: var(--color-danger-bg-soft);
@@ -1013,8 +1041,8 @@
 .pos-link-dropdown {
   position: absolute;
   top: calc(100% + 4px);
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   z-index: 200;
   background: var(--color-surface);
   border: 1px solid var(--color-border-soft);
@@ -1027,7 +1055,7 @@
 
 .pos-link-option {
   width: 100%;
-  text-align: left;
+  text-align: start;
   background: none;
   border: none;
   border-radius: var(--radius-sm);
@@ -1264,7 +1292,7 @@
 .pos-item-check-badge {
   position: absolute;
   top: 6px;
-  right: 6px;
+  inset-inline-end: 6px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -1279,7 +1307,7 @@
 .pos-item-bundle-badge {
   position: absolute;
   top: 6px;
-  left: 6px;
+  inset-inline-start: 6px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -1319,6 +1347,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  /* dir="auto" on the element lets an English name truncate at its own end in
+     RTL; match-parent keeps it aligned with the page instead of its own start. */
+  text-align: match-parent;
 }
 
 .pos-item-price-row {
@@ -1416,7 +1447,7 @@
 
 .pos-input-group i {
   position: absolute;
-  left: 12px;
+  inset-inline-start: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-text-faint);
@@ -1426,7 +1457,7 @@
 .pos-input-group input {
   width: 100%;
   height: 42px;
-  padding-left: 38px;
+  padding-inline-start: 38px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border-input);
   background: var(--color-surface);
@@ -1445,7 +1476,7 @@
 .pos-toast-viewport {
   position: fixed;
   top: 16px;
-  right: 16px;
+  inset-inline-end: 16px;
   z-index: 2200;
   display: flex;
   flex-direction: column;
@@ -1457,7 +1488,7 @@
 @keyframes pos-toast-in {
   from {
     opacity: 0;
-    transform: translateX(16px);
+    transform: translateX(calc(16px * var(--pos-dir-sign, 1)));
   }
   to {
     opacity: 1;
@@ -1475,10 +1506,11 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 12px 12px 12px 14px;
+  padding-block: 12px;
+  padding-inline: 14px 12px;
   background: var(--color-surface);
   border: 1px solid var(--color-border-soft);
-  border-left: 3px solid var(--color-border);
+  border-inline-start: 3px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: 0 8px 20px rgba(16, 20, 28, 0.12);
   animation: pos-toast-in 0.2s ease;
@@ -1523,7 +1555,7 @@
 }
 
 .pos-toast-success {
-  border-left-color: var(--color-success-icon);
+  border-inline-start-color: var(--color-success-icon);
 }
 
 .pos-toast-success .pos-toast-icon {
@@ -1531,7 +1563,7 @@
 }
 
 .pos-toast-danger {
-  border-left-color: var(--color-danger-icon);
+  border-inline-start-color: var(--color-danger-icon);
 }
 
 .pos-toast-danger .pos-toast-icon {
@@ -1539,7 +1571,7 @@
 }
 
 .pos-toast-warning {
-  border-left-color: var(--color-warning-text-strong);
+  border-inline-start-color: var(--color-warning-text-strong);
 }
 
 .pos-toast-warning .pos-toast-icon {
@@ -1547,7 +1579,7 @@
 }
 
 .pos-toast-info {
-  border-left-color: var(--color-primary);
+  border-inline-start-color: var(--color-primary);
 }
 
 .pos-toast-info .pos-toast-icon {
@@ -2406,4 +2438,26 @@
 :root[data-theme="dark"] .pos-cart-bar-badge {
   background: var(--color-on-primary);
   color: var(--color-primary);
+}
+
+/* ── RTL (Arabic/Urdu/...; <html dir="rtl"> set by store/languageStore.js) ──
+   Layout spacing/positioning above uses logical properties, so it flips on
+   its own; these cover what logical properties can't: physical gradients,
+   the toast slide-in direction, and icons whose meaning is directional. */
+:root[dir="rtl"] {
+  --pos-dir-sign: -1;
+}
+
+:root[dir="rtl"] .pos-ct-fade-right {
+  background: linear-gradient(to right, var(--color-surface), transparent);
+}
+
+:root[dir="rtl"] .bi-arrow-left,
+:root[dir="rtl"] .bi-arrow-right,
+:root[dir="rtl"] .bi-chevron-left,
+:root[dir="rtl"] .bi-chevron-right,
+:root[dir="rtl"] .bi-box-arrow-right,
+:root[dir="rtl"] .bi-arrow-return-left {
+  display: inline-block;
+  transform: scaleX(-1);
 }

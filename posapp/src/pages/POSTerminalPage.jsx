@@ -10,8 +10,10 @@ import useBarcodeScanner from "../hooks/useBarcodeScanner";
 import { BarcodeScannerModal } from "../components/common";
 import useConnectivityStore from "../engine/connectivity";
 import useEngineSettingsStore from "../engine/settingsStore";
+import { useTranslation } from "../translation";
 
 const POSTerminalPage = () => {
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const [activeItemGroup, setActiveItemGroup] = useState("");
   const [searchText, setSearchText] = useState("");
@@ -29,13 +31,13 @@ const POSTerminalPage = () => {
 
   useEffect(() => {
     setTopbar({
-      title: "POS Terminal",
+      title: __("POS Terminal"),
       searchValue: searchText,
       onSearchChange: setSearchText,
-      searchPlaceholder: "Scan barcode/serial/batch or search items",
+      searchPlaceholder: __("Scan barcode/serial/batch or search items"),
       onScanClick: () => setShowCameraScanner(true),
     });
-  }, [searchText, setTopbar]);
+  }, [searchText, setTopbar, __]);
 
   // Lets a cashier scan straight into the item grid without clicking the
   // search box first — feeds the scanned code through the same searchText
@@ -70,7 +72,7 @@ const POSTerminalPage = () => {
           }}
         >
           <i className="bi bi-cloud-slash" />
-          Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected.
+          {__("Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected.")}
         </div>
       )}
 
@@ -96,7 +98,7 @@ const POSTerminalPage = () => {
             <button
               type="button"
               className="pos-icon-btn"
-              aria-label="Close cart"
+              aria-label={__("Close cart")}
               onClick={() => setCartOpen(false)}
             >
               <i className="bi bi-chevron-down" />
@@ -114,7 +116,7 @@ const POSTerminalPage = () => {
         open={showCameraScanner}
         onClose={() => setShowCameraScanner(false)}
         onDetected={handleCameraDetected}
-        subtitle="Populates the item search field, same as a hardware scanner"
+        subtitle={__("Populates the item search field, same as a hardware scanner")}
       />
     </>
   );

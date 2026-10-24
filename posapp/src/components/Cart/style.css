@@ -30,8 +30,8 @@
 .cart-header-bar {
   border-bottom: 1px solid var(--color-border-soft);
   background: var(--color-surface);
-  border-top-left-radius: var(--radius-lg);
-  border-top-right-radius: var(--radius-lg);
+  border-start-start-radius: var(--radius-lg);
+  border-start-end-radius: var(--radius-lg);
 }
 
 .cart-section-label {
@@ -118,6 +118,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: match-parent; /* see .pos-item-name */
 }
 
 .cart-line-meta {
@@ -175,7 +176,7 @@
   font-weight: 600;
   color: var(--color-text-primary);
   min-width: 56px;
-  text-align: right;
+  text-align: end;
 }
 
 .cart-line-remove {
@@ -202,7 +203,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  padding: 2px 12px 12px 54px;
+  padding-block: 2px 12px;
+  padding-inline: 54px 12px;
 }
 
 .cart-detail-label {
