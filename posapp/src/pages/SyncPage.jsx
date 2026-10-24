@@ -115,7 +115,7 @@ const SyncPage = () => {
 
   return (
     <div className="px-4 py-4" style={{ flex: 1, display: "flex", flexDirection: "column", minHeight: 0 }}>
-      <div className="d-flex align-items-center justify-content-between mb-3" style={{ flexShrink: 0 }}>
+      <div className="d-flex align-items-center justify-content-between mb-3 pos-sync-header" style={{ flexShrink: 0 }}>
         <div>
           <div style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 16, color: "var(--color-text-primary)" }}>
             {__("Sync center")}
@@ -142,7 +142,7 @@ const SyncPage = () => {
       <ErrorAlert message={error} />
 
       <div className="pos-card mb-3" style={{ padding: "14px 16px", flexShrink: 0 }}>
-        <div className="d-flex align-items-center justify-content-between mb-2">
+        <div className="d-flex align-items-center justify-content-between mb-2 pos-sync-header">
           <div>
             <div style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 13.5, color: "var(--color-text-primary)" }}>
               {__("Pending Invoices")}
@@ -219,9 +219,9 @@ const SyncPage = () => {
         )}
       </div>
 
-      <div style={{ flex: 1, display: "flex", gap: 16, minHeight: 0 }}>
+      <div className="pos-sync-split" style={{ flex: 1, display: "flex", gap: 16, minHeight: 0 }}>
         {/* Domain list */}
-        <div className="pos-card" style={{ width: 240, flexShrink: 0, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+        <div className="pos-card pos-sync-list" style={{ width: 240, flexShrink: 0, overflow: "hidden", display: "flex", flexDirection: "column" }}>
           <div
             style={{
               padding: "11px 14px",

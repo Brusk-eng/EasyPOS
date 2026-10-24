@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchProfiles } from "../api/POSProfile";
 import { fetchCompanies } from "../api/Company";
-import { ListTable, FilterChips, Pagination, SelectField } from "../components/common";
+import { ListTable, FilterChips, Pagination, SelectField, FilterBar } from "../components/common";
 
 const PAGE_SIZE = 20;
 
@@ -112,7 +112,7 @@ const POSProfileListPage = () => {
 
   return (
     <div className="d-flex flex-column flex-fill" style={{ minHeight: 0 }}>
-      <div className="d-flex align-items-center justify-content-between px-4 pt-3">
+      <div className="d-flex align-items-center justify-content-between px-4 pt-3 pos-list-toolbar">
         <FilterChips options={STATUS_FILTERS} value={status} onChange={resetToFirstPage(setStatus)} />
         <Link to="/posapp/pos-profile/new" className="pos-btn pos-btn-primary" style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}>
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
@@ -120,8 +120,7 @@ const POSProfileListPage = () => {
         </Link>
       </div>
 
-      <div className="px-4 pt-3">
-        <div className="d-flex align-items-end gap-2">
+      <FilterBar active={Boolean(hasActiveFilters)}>
           <div style={{ width: 220 }}>
             <SelectField
               label={__("Company")}
@@ -141,8 +140,8 @@ const POSProfileListPage = () => {
               {__("Clear filters")}
             </button>
           )}
-        </div>
-      </div>
+
+      </FilterBar>
 
       <div className="d-flex flex-column flex-fill px-4 pt-2 pb-4" style={{ minHeight: 0 }}>
         <div style={{ flex: 1, minHeight: 0 }}>

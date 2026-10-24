@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 15:48+0553\n"
+"POT-Creation-Date: 2026-10-24 22:43+0553\n"
 "PO-Revision-Date: 2026-10-23 22:31+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: ar\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.1\n"
 
-#: posapp/src/components/common/ChildTable.jsx:115
-#: posapp/src/components/common/ChildTable.jsx:284
+#: posapp/src/components/common/ChildTable.jsx:122
+#: posapp/src/components/common/ChildTable.jsx:329
 msgid "+ Add row"
 msgstr "+ إضافة صف"
 
-#: posapp/src/components/Cart/index.jsx:419
+#: posapp/src/components/Cart/index.jsx:372
 msgid "1 item"
 msgstr "صنف واحد"
 
-#: posapp/src/components/Cart/index.jsx:458
+#: posapp/src/components/Cart/index.jsx:411
 msgid "1 loyalty point available"
 msgstr "نقطة ولاء واحدة متاحة"
 
@@ -36,7 +36,7 @@ msgstr "نقطة ولاء واحدة متاحة"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:830
+#: posapp/src/components/Cart/index.jsx:783
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "يحتاج عرض الصنف المجاني في هذه السلة إلى اتصال — تم تعليق الأسعار والخصومات للسلة كاملة بسعر القائمة حتى إعادة الاتصال."
 
@@ -89,7 +89,7 @@ msgstr "الأبعاد المحاسبية"
 msgid "Active"
 msgstr "نشط"
 
-#: posapp/src/utils/format.js:43
+#: posapp/src/utils/format.js:48
 msgid "Actual"
 msgstr "فعلي"
 
@@ -176,19 +176,19 @@ msgstr "إعدادات متقدمة"
 msgid "All"
 msgstr "الكل"
 
-#: posapp/src/pages/POSProfileListPage.jsx:128
+#: posapp/src/pages/POSProfileListPage.jsx:127
 msgid "All companies"
 msgstr "كل الشركات"
 
-#: posapp/src/pages/CustomerListPage.jsx:159
+#: posapp/src/pages/CustomerListPage.jsx:158
 msgid "All groups"
 msgstr "كل المجموعات"
 
-#: posapp/src/pages/ItemPriceListPage.jsx:149
+#: posapp/src/pages/ItemPriceListPage.jsx:148
 msgid "All price lists"
 msgstr "كل قوائم الأسعار"
 
-#: posapp/src/pages/CustomerListPage.jsx:168
+#: posapp/src/pages/CustomerListPage.jsx:167
 msgid "All territories"
 msgstr "كل المناطق"
 
@@ -251,7 +251,7 @@ msgstr "ينطبق على الدول"
 msgid "Applicable for Users"
 msgstr "ينطبق على المستخدمين"
 
-#: posapp/src/components/Cart/index.jsx:747
+#: posapp/src/components/Cart/index.jsx:700
 msgid "Apply"
 msgstr "تطبيق"
 
@@ -293,7 +293,7 @@ msgstr "تطبيق القاعدة على مجموعة الأصناف *"
 msgid "Apply Rule On Other"
 msgstr "تطبيق القاعدة على آخر"
 
-#: posapp/src/components/Cart/index.jsx:698
+#: posapp/src/components/Cart/index.jsx:651
 msgid "Apply on…"
 msgstr "تطبيق على…"
 
@@ -350,7 +350,7 @@ msgstr "الرصيد المستحق"
 msgid "Batch"
 msgstr "دفعة"
 
-#: posapp/src/components/Cart/index.jsx:637
+#: posapp/src/components/Cart/index.jsx:590
 msgid "Batch No"
 msgstr "رقم الدفعة"
 
@@ -377,7 +377,7 @@ msgstr "مصمم لفرق البيع بالتجزئة التي لا تتوقف."
 msgid "Bundle Components"
 msgstr "مكونات الحزمة"
 
-#: posapp/src/components/Cart/index.jsx:658
+#: posapp/src/components/Cart/index.jsx:611
 msgid "Bundle Contents"
 msgstr "محتويات الحزمة"
 
@@ -436,7 +436,7 @@ msgstr "إلغاء الفاتورة"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Cancelled"
 msgstr "ملغاة"
 
@@ -452,7 +452,7 @@ msgstr "تعذّر إنشاء ملفات نقاط البيع التجريبية:
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "تعذّر إنشاء البيانات التجريبية: لم تُحدَّد شركة ولا توجد شركة افتراضية."
 
-#: posapp/src/components/Cart/index.jsx:484
+#: posapp/src/components/Cart/index.jsx:437
 msgid "Cart Items"
 msgstr "أصناف السلة"
 
@@ -487,19 +487,19 @@ msgstr "اختر الخيارات لتحديد المتغير"
 msgid "City/Town"
 msgstr "المدينة/البلدة"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:441
 msgid "Clear all"
 msgstr "مسح الكل"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:173
-#: posapp/src/pages/CustomerListPage.jsx:199
-#: posapp/src/pages/InvoiceRegisterPage.jsx:228
-#: posapp/src/pages/ItemPriceListPage.jsx:162
-#: posapp/src/pages/POSProfileListPage.jsx:141
+#: posapp/src/pages/CustomerListPage.jsx:198
+#: posapp/src/pages/InvoiceRegisterPage.jsx:227
+#: posapp/src/pages/ItemPriceListPage.jsx:161
+#: posapp/src/pages/POSProfileListPage.jsx:140
 msgid "Clear filters"
 msgstr "مسح عوامل التصفية"
 
-#: posapp/src/components/Items/index.jsx:92
+#: posapp/src/components/Items/index.jsx:94
 msgid "Click/scan the item again to add another unit"
 msgstr "انقر/امسح الصنف مرة أخرى لإضافة وحدة أخرى"
 
@@ -507,7 +507,12 @@ msgstr "انقر/امسح الصنف مرة أخرى لإضافة وحدة أخ�
 msgid "Close"
 msgstr "إغلاق"
 
+#: posapp/src/pages/POSTerminalPage.jsx:101
+msgid "Close cart"
+msgstr "إغلاق السلة"
+
 #: posapp/src/components/Topbar/index.jsx:112
+#: posapp/src/components/Topbar/index.jsx:188
 msgid "Close shift"
 msgstr "إغلاق الوردية"
 
@@ -537,7 +542,7 @@ msgstr ""
 msgid "Closing…"
 msgstr "جارٍ الإغلاق…"
 
-#: posapp/src/components/common/ChildTable.jsx:208
+#: posapp/src/components/common/ChildTable.jsx:252
 msgid "Collapse"
 msgstr "طي"
 
@@ -561,7 +566,7 @@ msgstr "قواعد التجميع (المستويات)"
 #: posapp/src/pages/DiscountDetailPage.jsx:760
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:152
 #: posapp/src/pages/POSProfileDetailPage.jsx:236
-#: posapp/src/pages/POSProfileListPage.jsx:127
+#: posapp/src/pages/POSProfileListPage.jsx:126
 msgid "Company"
 msgstr "الشركة"
 
@@ -601,7 +606,7 @@ msgstr "إعداد المستويات والنقاط وقواعد الاستبد
 msgid "Connected to the server"
 msgstr "متصل بالخادم"
 
-#: posapp/src/utils/format.js:38
+#: posapp/src/utils/format.js:43
 msgid "Consolidated"
 msgstr "موحّدة"
 
@@ -651,7 +656,7 @@ msgstr "تمت إضافة الدولة أكثر من مرة: {countries}"
 msgid "County"
 msgstr "المقاطعة"
 
-#: posapp/src/components/Cart/index.jsx:767
+#: posapp/src/components/Cart/index.jsx:720
 msgid "Coupon \"{code}\" applied"
 msgstr "تم تطبيق القسيمة \"{code}\""
 
@@ -659,7 +664,7 @@ msgstr "تم تطبيق القسيمة \"{code}\""
 msgid "Coupon Code Based"
 msgstr "يعتمد على رمز القسيمة"
 
-#: posapp/src/components/Cart/index.jsx:732
+#: posapp/src/components/Cart/index.jsx:685
 msgid "Coupon code"
 msgstr "رمز القسيمة"
 
@@ -706,7 +711,7 @@ msgstr "حد الائتمان"
 msgid "Credit Limits"
 msgstr "حدود الائتمان"
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Credit Note Issued"
 msgstr "تم إصدار إشعار دائن"
 
@@ -741,7 +746,7 @@ msgstr "الوردية الحالية · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/Cart/index.jsx:381
 #: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
@@ -749,7 +754,7 @@ msgstr "الوردية الحالية · {profile}"
 #: posapp/src/pages/DiscountDetailPage.jsx:664
 #: posapp/src/pages/InvoiceDetailPage.jsx:241
 #: posapp/src/pages/InvoiceRegisterPage.jsx:28
-#: posapp/src/pages/InvoiceRegisterPage.jsx:176
+#: posapp/src/pages/InvoiceRegisterPage.jsx:175
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
 #: posapp/src/pages/ReportsPage.jsx:373
@@ -763,7 +768,7 @@ msgstr "تفاصيل العميل"
 
 #: posapp/src/components/Customer/NewCustomerModal.jsx:98
 #: posapp/src/pages/CustomerDetailPage.jsx:183
-#: posapp/src/pages/CustomerListPage.jsx:158
+#: posapp/src/pages/CustomerListPage.jsx:157
 #: posapp/src/pages/DiscountDetailPage.jsx:99
 #: posapp/src/pages/DiscountDetailPage.jsx:670
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:169
@@ -810,11 +815,15 @@ msgstr "اسم العميل مطلوب"
 msgid "Customer saved successfully"
 msgstr "تم حفظ العميل بنجاح"
 
-#: posapp/src/components/Sidebar/index.jsx:12
+#: posapp/src/components/Sidebar/index.jsx:13
 #: posapp/src/pages/CustomerDetailPage.jsx:159
 #: posapp/src/pages/CustomerListPage.jsx:112
 msgid "Customers"
 msgstr "العملاء"
+
+#: posapp/src/components/Topbar/index.jsx:177
+msgid "Dark mode"
+msgstr "الوضع الداكن"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:40
 #: posapp/src/pages/InvoiceRegisterPage.jsx:34
@@ -894,7 +903,7 @@ msgstr "تعطيل تعيين الإجمالي الكلي تلقائيًا لط�
 msgid "Disabled"
 msgstr "معطّل"
 
-#: posapp/src/components/Cart/index.jsx:602
+#: posapp/src/components/Cart/index.jsx:555
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -933,7 +942,7 @@ msgstr "تم حفظ الخصم بنجاح"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Sidebar/index.jsx:16
+#: posapp/src/components/Sidebar/index.jsx:17
 #: posapp/src/pages/DiscountDetailPage.jsx:387
 #: posapp/src/pages/DiscountListPage.jsx:105
 msgid "Discounts"
@@ -952,9 +961,13 @@ msgstr "تجاهل"
 msgid "Don't Enforce Free Item Qty"
 msgstr "عدم فرض كمية الصنف المجاني"
 
+#: posapp/src/components/common/FilterBar.jsx:40
+msgid "Done"
+msgstr "تم"
+
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:31
 msgid "Draft"
 msgstr "مسودة"
 
@@ -1026,8 +1039,8 @@ msgstr "تعديل جهة الاتصال"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:121
 #: posapp/src/pages/CustomerDetailPage.jsx:211
 #: posapp/src/pages/CustomerListPage.jsx:36
-#: posapp/src/pages/CustomerListPage.jsx:185
-#: posapp/src/pages/InvoiceRegisterPage.jsx:214
+#: posapp/src/pages/CustomerListPage.jsx:184
+#: posapp/src/pages/InvoiceRegisterPage.jsx:213
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
@@ -1081,7 +1094,7 @@ msgstr "كل عملية بيع."
 msgid "Exchange Rate"
 msgstr "سعر الصرف"
 
-#: posapp/src/components/common/ChildTable.jsx:208
+#: posapp/src/components/common/ChildTable.jsx:252
 msgid "Expand"
 msgstr "توسيع"
 
@@ -1098,7 +1111,7 @@ msgstr "حساب المصروفات"
 msgid "Expiry Duration (days)"
 msgstr "مدة الانتهاء (بالأيام)"
 
-#: posapp/src/components/Cart/index.jsx:790
+#: posapp/src/components/Cart/index.jsx:743
 msgid "FREE"
 msgstr "مجاني"
 
@@ -1174,7 +1187,7 @@ msgstr "تعذّر حفظ ملف نقطة البيع"
 msgid "Failed to save Price List"
 msgstr "تعذّر حفظ قائمة الأسعار"
 
-#: posapp/src/components/Cart/index.jsx:326
+#: posapp/src/components/Cart/index.jsx:279
 msgid "Failed to save draft"
 msgstr "تعذّر حفظ المسودة"
 
@@ -1198,26 +1211,35 @@ msgstr "جلب من الخادم"
 msgid "Fetching…"
 msgstr "جارٍ الجلب…"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:199
+#: posapp/src/pages/InvoiceRegisterPage.jsx:198
 msgid "Filter by POS Profile"
 msgstr "تصفية حسب ملف نقطة البيع"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:144
-#: posapp/src/pages/InvoiceRegisterPage.jsx:185
+#: posapp/src/pages/InvoiceRegisterPage.jsx:184
 msgid "Filter by customer"
 msgstr "تصفية حسب العميل"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:162
-#: posapp/src/pages/CustomerListPage.jsx:188
-#: posapp/src/pages/InvoiceRegisterPage.jsx:217
+#: posapp/src/pages/CustomerListPage.jsx:187
+#: posapp/src/pages/InvoiceRegisterPage.jsx:216
 msgid "Filter by email"
 msgstr "تصفية حسب البريد الإلكتروني"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:153
-#: posapp/src/pages/CustomerListPage.jsx:179
-#: posapp/src/pages/InvoiceRegisterPage.jsx:208
+#: posapp/src/pages/CustomerListPage.jsx:178
+#: posapp/src/pages/InvoiceRegisterPage.jsx:207
 msgid "Filter by mobile"
 msgstr "تصفية حسب الجوال"
+
+#: posapp/src/components/common/FilterBar.jsx:29
+#: posapp/src/components/common/FilterBar.jsx:37
+msgid "Filters"
+msgstr "عوامل التصفية"
+
+#: posapp/src/components/common/FilterBar.jsx:30
+msgid "Filters applied"
+msgstr "تم تطبيق عوامل التصفية"
 
 #: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
@@ -1251,7 +1273,7 @@ msgstr "سعر الصنف المجاني"
 msgid "Free Item UOM"
 msgstr "وحدة قياس الصنف المجاني"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Free Items"
 msgstr "الأصناف المجانية"
 
@@ -1281,8 +1303,8 @@ msgstr "الذهاب إلى الطرفية"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:703
-#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/Cart/index.jsx:656
+#: posapp/src/components/Cart/index.jsx:801
 #: posapp/src/components/InvoicePay/index.jsx:183
 #: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
@@ -1303,7 +1325,7 @@ msgstr "المجموعة"
 msgid "Has Priority"
 msgstr "له أولوية"
 
-#: posapp/src/components/Items/index.jsx:48
+#: posapp/src/components/Items/index.jsx:50
 msgid "Has variants"
 msgstr "له متغيرات"
 
@@ -1366,7 +1388,7 @@ msgstr "فرد"
 msgid "Industry"
 msgstr "الصناعة"
 
-#: posapp/src/utils/format.js:39
+#: posapp/src/utils/format.js:44
 msgid "Internal Transfer"
 msgstr "تحويل داخلي"
 
@@ -1378,7 +1400,7 @@ msgstr "تعبير شرط غير صالح"
 msgid "Invalid coupon code"
 msgstr "رمز قسيمة غير صالح"
 
-#: posapp/src/components/Cart/index.jsx:167
+#: posapp/src/components/Cart/index.jsx:166
 msgid "Invalid or expired coupon code"
 msgstr "رمز قسيمة غير صالح أو منتهي"
 
@@ -1409,7 +1431,7 @@ msgstr "لم يتم العثور على الفاتورة."
 msgid "Invoiced Qty"
 msgstr "الكمية المفوترة"
 
-#: posapp/src/components/Sidebar/index.jsx:11
+#: posapp/src/components/Sidebar/index.jsx:12
 #: posapp/src/pages/InvoiceDetailPage.jsx:214
 #: posapp/src/pages/InvoiceRegisterPage.jsx:133
 msgid "Invoices"
@@ -1451,7 +1473,7 @@ msgstr "رمز الصنف ووحدة القياس وقائمة الأسعار و
 msgid "Item Details"
 msgstr "تفاصيل الصنف"
 
-#: posapp/src/components/Cart/index.jsx:820
+#: posapp/src/components/Cart/index.jsx:773
 msgid "Item Discounts"
 msgstr "خصومات الأصناف"
 
@@ -1483,7 +1505,7 @@ msgstr "سعر الصنف"
 msgid "Item Price saved successfully"
 msgstr "تم حفظ سعر الصنف بنجاح"
 
-#: posapp/src/components/Sidebar/index.jsx:14
+#: posapp/src/components/Sidebar/index.jsx:15
 #: posapp/src/pages/ItemPriceDetailPage.jsx:170
 #: posapp/src/pages/ItemPriceListPage.jsx:107
 msgid "Item Prices"
@@ -1493,7 +1515,7 @@ msgstr "أسعار الأصناف"
 msgid "Item Tax"
 msgstr "ضريبة الصنف"
 
-#: posapp/src/components/Cart/index.jsx:799
+#: posapp/src/components/Cart/index.jsx:752
 msgid "Item Total"
 msgstr "إجمالي الأصناف"
 
@@ -1538,8 +1560,12 @@ msgstr "اتركه فارغًا لجعل هذا الملف ينطبق على ك�
 msgid "Letter Head"
 msgstr "ترويسة الخطاب"
 
+#: posapp/src/components/Topbar/index.jsx:177
+msgid "Light mode"
+msgstr "الوضع الفاتح"
+
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:883
+#: posapp/src/components/Cart/index.jsx:836
 msgid "Load Draft"
 msgstr "تحميل مسودة"
 
@@ -1551,14 +1577,14 @@ msgstr "جارٍ تحميل المتغيرات…"
 msgid "Loading..."
 msgstr "جارٍ التحميل..."
 
-#: posapp/src/components/Cart/index.jsx:661
+#: posapp/src/components/Cart/index.jsx:614
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
 msgid "Loading…"
 msgstr "جارٍ التحميل…"
 
-#: posapp/src/components/Topbar/index.jsx:177
+#: posapp/src/components/Topbar/index.jsx:195
 msgid "Log out"
 msgstr "تسجيل الخروج"
 
@@ -1595,6 +1621,10 @@ msgstr "لا يمكن استبدال نقاط الولاء على فاتورة �
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
 msgstr "البيانات الرئيسية"
+
+#: posapp/src/components/Sidebar/index.jsx:126
+msgid "Main"
+msgstr "التنقل الرئيسي"
 
 #: posapp/src/pages/SettingsPage.jsx:15
 msgid "Manage cashier accounts and permissions"
@@ -1678,8 +1708,8 @@ msgstr "شروط مختلطة"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:114
 #: posapp/src/pages/CustomerDetailPage.jsx:208
 #: posapp/src/pages/CustomerListPage.jsx:30
-#: posapp/src/pages/CustomerListPage.jsx:176
-#: posapp/src/pages/InvoiceRegisterPage.jsx:205
+#: posapp/src/pages/CustomerListPage.jsx:175
+#: posapp/src/pages/InvoiceRegisterPage.jsx:204
 msgid "Mobile No"
 msgstr "رقم الجوال"
 
@@ -1695,15 +1725,20 @@ msgstr "طريقة الدفع"
 msgid "Modes of Payment"
 msgstr ""
 
+#: posapp/src/components/Sidebar/index.jsx:141
+#: posapp/src/components/Sidebar/index.jsx:145
+msgid "More"
+msgstr "المزيد"
+
 #: posapp/src/pages/CustomerDetailPage.jsx:360
 msgid "More Information"
 msgstr "مزيد من المعلومات"
 
-#: posapp/src/components/common/ChildTable.jsx:238
+#: posapp/src/components/common/ChildTable.jsx:282
 msgid "Move down"
 msgstr "تحريك للأسفل"
 
-#: posapp/src/components/common/ChildTable.jsx:229
+#: posapp/src/components/common/ChildTable.jsx:273
 msgid "Move up"
 msgstr "تحريك للأعلى"
 
@@ -1713,7 +1748,7 @@ msgstr "برنامج متعدد المستويات"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:704
+#: posapp/src/components/Cart/index.jsx:657
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1766,7 +1801,7 @@ msgstr "ملف نقطة بيع جديد"
 msgid "New Price List"
 msgstr "قائمة أسعار جديدة"
 
-#: posapp/src/components/Cart/index.jsx:435
+#: posapp/src/components/Cart/index.jsx:388
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "عميل جديد"
@@ -1814,7 +1849,7 @@ msgstr "لا"
 msgid "No Loyalty Programs found"
 msgstr "لم يتم العثور على برامج ولاء"
 
-#: posapp/src/pages/POSProfileListPage.jsx:153
+#: posapp/src/pages/POSProfileListPage.jsx:152
 msgid "No POS Profiles found"
 msgstr "لم يتم العثور على ملفات نقطة بيع"
 
@@ -1834,7 +1869,7 @@ msgstr "لا توجد مكونات للحزمة"
 msgid "No camera was found on this device."
 msgstr "لم يتم العثور على كاميرا في هذا الجهاز."
 
-#: posapp/src/components/Cart/index.jsx:663
+#: posapp/src/components/Cart/index.jsx:616
 msgid "No components"
 msgstr "لا توجد مكونات"
 
@@ -1858,7 +1893,7 @@ msgstr "لم يتم إعداد حدود ائتمان"
 msgid "No customer groups added"
 msgstr "لم تتم إضافة مجموعات عملاء"
 
-#: posapp/src/pages/CustomerListPage.jsx:211
+#: posapp/src/pages/CustomerListPage.jsx:210
 msgid "No customers found"
 msgstr "لم يتم العثور على عملاء"
 
@@ -1874,7 +1909,7 @@ msgstr "لم يتم العثور على مسودات فواتير"
 msgid "No exchange rate found from {0} to {1}. Create a Currency Exchange record (For Selling) for this pair."
 msgstr "لم يُعثر على سعر صرف من {0} إلى {1}. أنشئ سجل صرف عملات (Currency Exchange) للبيع لهذا الزوج."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:240
+#: posapp/src/pages/InvoiceRegisterPage.jsx:239
 msgid "No invoices found"
 msgstr "لم يتم العثور على فواتير"
 
@@ -1883,7 +1918,7 @@ msgstr "لم يتم العثور على فواتير"
 msgid "No item groups added"
 msgstr "لم تتم إضافة مجموعات أصناف"
 
-#: posapp/src/pages/ItemPriceListPage.jsx:174
+#: posapp/src/pages/ItemPriceListPage.jsx:173
 msgid "No item prices found"
 msgstr "لم يتم العثور على أسعار أصناف"
 
@@ -1895,15 +1930,15 @@ msgstr "لا توجد أصناف"
 msgid "No items added"
 msgstr "لم تتم إضافة أصناف"
 
-#: posapp/src/components/Cart/index.jsx:498
+#: posapp/src/components/Cart/index.jsx:451
 msgid "No items in cart"
 msgstr "لا توجد أصناف في السلة"
 
-#: posapp/src/components/Items/index.jsx:353
+#: posapp/src/components/Items/index.jsx:357
 msgid "No items in this category"
 msgstr "لا توجد أصناف في هذه الفئة"
 
-#: posapp/src/components/Items/index.jsx:353
+#: posapp/src/components/Items/index.jsx:357
 msgid "No items match your search"
 msgstr "لا توجد أصناف تطابق بحثك"
 
@@ -1943,11 +1978,12 @@ msgstr "لم يتم تسجيل مدفوعات في هذه الفترة."
 msgid "No price lists found"
 msgstr "لم يتم العثور على قوائم أسعار"
 
-#: posapp/src/components/common/ListTable.jsx:48
+#: posapp/src/components/common/ListTable.jsx:43
+#: posapp/src/components/common/ListTable.jsx:99
 msgid "No records found"
 msgstr "لم يتم العثور على سجلات"
 
-#: posapp/src/components/common/ChildTable.jsx:172
+#: posapp/src/components/common/ChildTable.jsx:216
 msgid "No rows"
 msgstr "لا توجد صفوف"
 
@@ -2024,23 +2060,23 @@ msgstr "وضع عدم الاتصال غير مفعّل لهذا النشر (Easy
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "غير متصل — بانتظار المزامنة. أعد الطباعة من الفواتير بعد المزامنة."
 
-#: posapp/src/pages/POSTerminalPage.jsx:61
+#: posapp/src/pages/POSTerminalPage.jsx:75
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "غير متصل — يتم عرض الكتالوج والأسعار المحفوظة. تُسجل المبيعات وتتم مزامنتها تلقائيًا عند إعادة الاتصال."
 
-#: posapp/src/utils/format.js:47
+#: posapp/src/utils/format.js:52
 msgid "On Item Quantity"
 msgstr "على كمية الصنف"
 
-#: posapp/src/utils/format.js:44
+#: posapp/src/utils/format.js:49
 msgid "On Net Total"
 msgstr "على صافي الإجمالي"
 
-#: posapp/src/utils/format.js:45
+#: posapp/src/utils/format.js:50
 msgid "On Previous Row Amount"
 msgstr "على مبلغ الصف السابق"
 
-#: posapp/src/utils/format.js:46
+#: posapp/src/utils/format.js:51
 msgid "On Previous Row Total"
 msgstr "على إجمالي الصف السابق"
 
@@ -2073,7 +2109,7 @@ msgstr "إظهار أصناف مجموعات الأصناف هذه فقط. ات�
 msgid "Open"
 msgstr "مفتوح"
 
-#: posapp/src/components/Cart/index.jsx:413
+#: posapp/src/components/Cart/index.jsx:366
 msgid "Open Customer Display"
 msgstr "فتح شاشة العميل"
 
@@ -2119,11 +2155,11 @@ msgstr "جارٍ الفتح…"
 msgid "Optional note"
 msgstr "ملاحظة اختيارية"
 
-#: posapp/src/components/Cart/index.jsx:692
+#: posapp/src/components/Cart/index.jsx:645
 msgid "Order Discount"
 msgstr "خصم الطلب"
 
-#: posapp/src/components/Cart/index.jsx:839
+#: posapp/src/components/Cart/index.jsx:792
 msgid "Order Discount ({pct}%)"
 msgstr "خصم الطلب ({pct}%)"
 
@@ -2132,7 +2168,7 @@ msgid "Other"
 msgstr "أخرى"
 
 #: posapp/src/components/Items/ItemVariantModal.jsx:159
-#: posapp/src/components/Items/index.jsx:75
+#: posapp/src/components/Items/index.jsx:77
 msgid "Out of stock"
 msgstr "نفد من المخزون"
 
@@ -2140,11 +2176,11 @@ msgstr "نفد من المخزون"
 msgid "Outstanding Amount"
 msgstr "المبلغ المستحق"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:34
 msgid "Overdue"
 msgstr "متأخرة"
 
-#: posapp/src/utils/format.js:36
+#: posapp/src/utils/format.js:41
 msgid "Overdue and Discounted"
 msgstr "متأخرة ومخصومة"
 
@@ -2172,7 +2208,7 @@ msgstr "قيد افتتاح نقطة البيع"
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
-#: posapp/src/pages/InvoiceRegisterPage.jsx:191
+#: posapp/src/pages/InvoiceRegisterPage.jsx:190
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
 msgid "POS Profile"
 msgstr "ملف نقطة البيع"
@@ -2181,13 +2217,13 @@ msgstr "ملف نقطة البيع"
 msgid "POS Profile saved successfully"
 msgstr "تم حفظ ملف نقطة البيع بنجاح"
 
-#: posapp/src/components/Sidebar/index.jsx:13
+#: posapp/src/components/Sidebar/index.jsx:14
 #: posapp/src/pages/POSProfileDetailPage.jsx:224
 #: posapp/src/pages/POSProfileListPage.jsx:90
 msgid "POS Profiles"
 msgstr "ملفات نقطة البيع"
 
-#: posapp/src/pages/POSTerminalPage.jsx:30
+#: posapp/src/pages/POSTerminalPage.jsx:34
 msgid "POS Terminal"
 msgstr "طرفية نقطة البيع"
 
@@ -2195,7 +2231,7 @@ msgstr "طرفية نقطة البيع"
 msgid "Page {page} of {total}"
 msgstr "الصفحة {page} من {total}"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:32
 msgid "Paid"
 msgstr "مدفوعة"
 
@@ -2204,11 +2240,11 @@ msgstr "مدفوعة"
 msgid "Paid Amount"
 msgstr "المبلغ المدفوع"
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Partly Paid"
 msgstr "مدفوعة جزئيًا"
 
-#: posapp/src/utils/format.js:37
+#: posapp/src/utils/format.js:42
 msgid "Partly Paid and Discounted"
 msgstr "مدفوعة جزئيًا ومخصومة"
 
@@ -2229,7 +2265,7 @@ msgstr "كلمة المرور"
 msgid "Pay with {gateway}"
 msgstr "الدفع عبر {gateway}"
 
-#: posapp/src/components/Cart/index.jsx:902
+#: posapp/src/components/Cart/index.jsx:855
 msgid "Pay {amount}"
 msgstr "ادفع {amount}"
 
@@ -2319,7 +2355,7 @@ msgstr "المصنع"
 msgid "Please Pay"
 msgstr "يرجى الدفع"
 
-#: posapp/src/components/Cart/index.jsx:261
+#: posapp/src/components/Cart/index.jsx:214
 msgid "Please add at least one item to the cart"
 msgstr "يرجى إضافة صنف واحد على الأقل إلى السلة"
 
@@ -2331,7 +2367,7 @@ msgstr "يرجى إضافة صنف أو أكثر إلى السلة"
 msgid "Please enter an amount for at least one payment mode"
 msgstr "يرجى إدخال مبلغ لطريقة دفع واحدة على الأقل"
 
-#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/Cart/index.jsx:210
 #: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "يرجى اختيار عميل"
@@ -2344,7 +2380,7 @@ msgstr "يرجى اختيار طريقة دفع افتراضية"
 msgid "Point the camera at a barcode, QR code, or serial/batch label."
 msgstr "وجّه الكاميرا نحو باركود أو رمز QR أو ملصق الرقم التسلسلي/الدفعة."
 
-#: posapp/src/pages/POSTerminalPage.jsx:84
+#: posapp/src/pages/POSTerminalPage.jsx:119
 msgid "Populates the item search field, same as a hardware scanner"
 msgstr "يملأ حقل البحث عن الأصناف، مثل الماسح الضوئي"
 
@@ -2395,7 +2431,7 @@ msgstr "نظام خصم السعر"
 #: posapp/src/engine/sync.js:11 posapp/src/pages/InvoiceDetailPage.jsx:258
 #: posapp/src/pages/ItemPriceDetailPage.jsx:207
 #: posapp/src/pages/ItemPriceListPage.jsx:30
-#: posapp/src/pages/ItemPriceListPage.jsx:148
+#: posapp/src/pages/ItemPriceListPage.jsx:147
 #: posapp/src/pages/POSProfileDetailPage.jsx:630
 #: posapp/src/pages/POSProfileListPage.jsx:36
 #: posapp/src/pages/PriceListDetailPage.jsx:69
@@ -2424,7 +2460,7 @@ msgstr "يجب أن تنطبق قائمة الأسعار على الشراء أ�
 msgid "Price List saved successfully"
 msgstr "تم حفظ قائمة الأسعار بنجاح"
 
-#: posapp/src/components/Sidebar/index.jsx:15
+#: posapp/src/components/Sidebar/index.jsx:16
 #: posapp/src/pages/PriceListDetailPage.jsx:155
 #: posapp/src/pages/PriceListListPage.jsx:81
 msgid "Price Lists"
@@ -2480,7 +2516,7 @@ msgstr "الأولوية إلزامية"
 msgid "Product"
 msgstr "المنتج"
 
-#: posapp/src/components/Items/index.jsx:42
+#: posapp/src/components/Items/index.jsx:44
 msgid "Product Bundle"
 msgstr "حزمة منتجات"
 
@@ -2554,7 +2590,7 @@ msgstr "في قائمة الانتظار"
 msgid "Range"
 msgstr "فترة"
 
-#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Cart/index.jsx:530
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
@@ -2656,11 +2692,11 @@ msgstr "إعادة التحميل"
 msgid "Remember this device"
 msgstr "تذكر هذا الجهاز"
 
-#: posapp/src/components/Cart/index.jsx:567
+#: posapp/src/components/Cart/index.jsx:520
 msgid "Remove"
 msgstr "إزالة"
 
-#: posapp/src/components/Cart/index.jsx:753
+#: posapp/src/components/Cart/index.jsx:706
 msgid "Remove coupon"
 msgstr "إزالة القسيمة"
 
@@ -2668,7 +2704,7 @@ msgstr "إزالة القسيمة"
 msgid "Remove row"
 msgstr "إزالة الصف"
 
-#: posapp/src/components/Sidebar/index.jsx:18
+#: posapp/src/components/Sidebar/index.jsx:19
 #: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr "التقارير"
@@ -2689,7 +2725,7 @@ msgstr "إعادة المزامنة"
 msgid "Retrying…"
 msgstr "جارٍ إعادة المحاولة…"
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Return"
 msgstr "مرتجع"
 
@@ -2781,7 +2817,7 @@ msgstr "نفس الصنف"
 msgid "Save"
 msgstr "حفظ"
 
-#: posapp/src/components/Cart/index.jsx:871
+#: posapp/src/components/Cart/index.jsx:824
 msgid "Save Draft"
 msgstr "حفظ كمسودة"
 
@@ -2789,7 +2825,7 @@ msgstr "حفظ كمسودة"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "احفظ العميل أولًا لإضافة العناوين وجهات الاتصال."
 
-#: posapp/src/components/Cart/index.jsx:866
+#: posapp/src/components/Cart/index.jsx:819
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2800,7 +2836,7 @@ msgstr "جارٍ الحفظ…"
 msgid "Scan barcode"
 msgstr "مسح الباركود"
 
-#: posapp/src/pages/POSTerminalPage.jsx:33
+#: posapp/src/pages/POSTerminalPage.jsx:37
 msgid "Scan barcode/serial/batch or search items"
 msgstr "امسح الباركود/الرقم التسلسلي/الدفعة أو ابحث عن الأصناف"
 
@@ -2809,7 +2845,7 @@ msgstr "امسح الباركود/الرقم التسلسلي/الدفعة أو 
 msgid "Scan with camera"
 msgstr "المسح بالكاميرا"
 
-#: posapp/src/components/Cart/index.jsx:555
+#: posapp/src/components/Cart/index.jsx:508
 msgid "Scan/add the item again to add another unit"
 msgstr "امسح/أضف الصنف مرة أخرى لإضافة وحدة أخرى"
 
@@ -2817,7 +2853,7 @@ msgstr "امسح/أضف الصنف مرة أخرى لإضافة وحدة أخر�
 msgid "Search and pull a saved draft into the terminal"
 msgstr "ابحث عن مسودة محفوظة واسحبها إلى الطرفية"
 
-#: posapp/src/components/Cart/index.jsx:642
+#: posapp/src/components/Cart/index.jsx:595
 msgid "Search batch no"
 msgstr "البحث عن رقم الدفعة"
 
@@ -2825,7 +2861,7 @@ msgstr "البحث عن رقم الدفعة"
 msgid "Search customer, mobile or email"
 msgstr "البحث عن عميل أو جوال أو بريد إلكتروني"
 
-#: posapp/src/components/Cart/index.jsx:433
+#: posapp/src/components/Cart/index.jsx:386
 msgid "Search customer..."
 msgstr "البحث عن عميل..."
 
@@ -2853,7 +2889,7 @@ msgstr "البحث عن ملف أو مستودع"
 msgid "Search program name"
 msgstr "البحث عن اسم البرنامج"
 
-#: posapp/src/components/Cart/index.jsx:622
+#: posapp/src/components/Cart/index.jsx:575
 msgid "Search serial no"
 msgstr "البحث عن الرقم التسلسلي"
 
@@ -2862,7 +2898,7 @@ msgstr "البحث عن الرقم التسلسلي"
 msgid "Search..."
 msgstr "بحث..."
 
-#: posapp/src/components/Items/index.jsx:347
+#: posapp/src/components/Items/index.jsx:351
 msgid "Searching…"
 msgstr "جارٍ البحث…"
 
@@ -2931,7 +2967,7 @@ msgstr "اختر الشركة"
 msgid "Select customer group"
 msgstr "اختر مجموعة العملاء"
 
-#: posapp/src/components/Items/index.jsx:64
+#: posapp/src/components/Items/index.jsx:66
 msgid "Select options"
 msgstr "اختر الخيارات"
 
@@ -2957,7 +2993,7 @@ msgstr "البيع"
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "يجب تحديد البيع إذا تم اختيار 'ينطبق على' كـ {field}"
 
-#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:570 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr "الرقم التسلسلي"
 
@@ -2971,7 +3007,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Sidebar/index.jsx:19
+#: posapp/src/components/Sidebar/index.jsx:20
 #: posapp/src/pages/SettingsPage.jsx:25
 msgid "Settings"
 msgstr "الإعدادات"
@@ -2993,7 +3029,7 @@ msgstr "الشحن"
 msgid "Shop"
 msgstr "المتجر"
 
-#: posapp/src/components/Cart/index.jsx:405
+#: posapp/src/components/Cart/index.jsx:358
 msgid "Shopping Cart"
 msgstr "سلة التسوق"
 
@@ -3039,7 +3075,7 @@ msgstr "الولاية/المحافظة"
 msgid "Status"
 msgstr "الحالة"
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Submitted"
 msgstr "مُرسلة"
 
@@ -3074,7 +3110,7 @@ msgstr "التبديل إلى الوضع الداكن"
 msgid "Switch to light mode"
 msgstr "التبديل إلى الوضع الفاتح"
 
-#: posapp/src/components/Sidebar/index.jsx:17 posapp/src/pages/SyncPage.jsx:58
+#: posapp/src/components/Sidebar/index.jsx:18 posapp/src/pages/SyncPage.jsx:58
 msgid "Sync"
 msgstr "المزامنة"
 
@@ -3119,7 +3155,7 @@ msgstr "سيُنبّه النظام لزيادة أو تقليل الكمية أ
 msgid "Take Payment"
 msgstr "تحصيل الدفع"
 
-#: posapp/src/components/Cart/index.jsx:499
+#: posapp/src/components/Cart/index.jsx:452
 msgid "Tap an item to add it here"
 msgstr "اضغط على صنف لإضافته هنا"
 
@@ -3133,7 +3169,7 @@ msgstr "فئة الضريبة"
 msgid "Tax ID"
 msgstr "الرقم الضريبي"
 
-#: posapp/src/components/Cart/index.jsx:803
+#: posapp/src/components/Cart/index.jsx:756
 msgid "Taxes"
 msgstr "الضرائب"
 
@@ -3143,7 +3179,7 @@ msgstr "الضرائب"
 msgid "Taxes and Charges"
 msgstr "الضرائب والرسوم"
 
-#: posapp/src/components/Sidebar/index.jsx:10
+#: posapp/src/components/Sidebar/index.jsx:11
 msgid "Terminal"
 msgstr "الطرفية"
 
@@ -3154,7 +3190,7 @@ msgstr "الشروط والأحكام"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:106
 #: posapp/src/pages/CustomerDetailPage.jsx:193
 #: posapp/src/pages/CustomerListPage.jsx:48
-#: posapp/src/pages/CustomerListPage.jsx:167
+#: posapp/src/pages/CustomerListPage.jsx:166
 #: posapp/src/pages/DiscountDetailPage.jsx:99
 #: posapp/src/pages/DiscountDetailPage.jsx:680
 msgid "Territory"
@@ -3168,7 +3204,7 @@ msgstr "شكرًا لك!"
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "فشلت تلك المحاولة — يمكنك تجربة طريقة دفع أخرى في نافذة {gateway}."
 
-#: posapp/src/components/Cart/index.jsx:724
+#: posapp/src/components/Cart/index.jsx:677
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "ملف نقطة البيع هذا لا يسمح بتغيير الخصم يدويًا."
 
@@ -3281,11 +3317,11 @@ msgstr "وحدة القياس"
 msgid "Unable to start the camera."
 msgstr "تعذّر تشغيل الكاميرا."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:33
 msgid "Unpaid"
 msgstr "غير مدفوعة"
 
-#: posapp/src/utils/format.js:35
+#: posapp/src/utils/format.js:40
 msgid "Unpaid and Discounted"
 msgstr "غير مدفوعة ومخصومة"
 
@@ -3355,7 +3391,11 @@ msgstr "لا يمكن إضافة المتغير {variant} وقالبه {template
 msgid "View all"
 msgstr "عرض الكل"
 
-#: posapp/src/components/Cart/index.jsx:474
+#: posapp/src/components/Cart/CartBar.jsx:20
+msgid "View cart"
+msgstr "عرض السلة"
+
+#: posapp/src/components/Cart/index.jsx:427
 msgid "View purchase history"
 msgstr "عرض سجل المشتريات"
 
@@ -3475,7 +3515,7 @@ msgstr "{gateway} — غير متصل"
 msgid "{item} (Free)"
 msgstr "{item} (مجاني)"
 
-#: posapp/src/components/Sidebar/index.jsx:66
+#: posapp/src/components/Sidebar/index.jsx:75
 #: posapp/src/pages/SettingsPage.jsx:43
 msgid "{label} — coming soon"
 msgstr "{label} — قريبًا"
@@ -3484,7 +3524,7 @@ msgstr "{label} — قريبًا"
 msgid "{label} — {n} cached"
 msgstr "{label} — {n} محفوظة مؤقتًا"
 
-#: posapp/src/components/Sidebar/index.jsx:79
+#: posapp/src/components/Sidebar/index.jsx:88
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — {n} فاتورة بانتظار المزامنة"
 
@@ -3492,11 +3532,11 @@ msgstr "{label} — {n} فاتورة بانتظار المزامنة"
 msgid "{n} invoices"
 msgstr "{n} فواتير"
 
-#: posapp/src/components/Cart/index.jsx:419
+#: posapp/src/components/Cart/index.jsx:372
 msgid "{n} items"
 msgstr "{n} أصناف"
 
-#: posapp/src/components/Cart/index.jsx:459
+#: posapp/src/components/Cart/index.jsx:412
 msgid "{n} loyalty points available"
 msgstr "{n} نقاط ولاء متاحة"
 
@@ -3516,11 +3556,11 @@ msgstr "قبل {n} ساعة"
 msgid "{n}m ago"
 msgstr "قبل {n} دقيقة"
 
-#: posapp/src/components/Items/index.jsx:75
+#: posapp/src/components/Items/index.jsx:77
 msgid "{qty} left"
 msgstr "متبقٍ {qty}"
 
-#: posapp/src/components/Cart/index.jsx:532
+#: posapp/src/components/Cart/index.jsx:485
 msgid "{rate} each"
 msgstr "{rate} للوحدة"
 

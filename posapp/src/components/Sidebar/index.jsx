@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BottomSheet from "../common/BottomSheet";
 import { Link, useLocation } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 import { getPendingInvoiceCount } from "../../engine/outbox";
@@ -7,15 +8,15 @@ import { _t, useTranslation } from "../../translation";
 const PENDING_COUNT_POLL_MS = 15000;
 
 const NAV_ITEMS = [
-  { icon: "bi-display", label: _t("Terminal"), to: "/posapp/terminal" },
-  { icon: "bi-receipt", label: _t("Invoices"), to: "/posapp/invoices" },
-  { icon: "bi-people", label: _t("Customers"), to: "/posapp/customers" },
+  { icon: "bi-display", label: _t("Terminal"), to: "/posapp/terminal", primary: true },
+  { icon: "bi-receipt", label: _t("Invoices"), to: "/posapp/invoices", primary: true },
+  { icon: "bi-people", label: _t("Customers"), to: "/posapp/customers", primary: true },
   { icon: "bi-shop", label: _t("POS Profiles"), to: "/posapp/pos-profile" },
   { icon: "bi-tag", label: _t("Item Prices"), to: "/posapp/item-price" },
   { icon: "bi-list-ul", label: _t("Price Lists"), to: "/posapp/price-list" },
   { icon: "bi-percent", label: _t("Discounts"), to: "/posapp/discounts" },
   { icon: "bi-arrow-repeat", label: _t("Sync"), to: "/posapp/sync" },
-  { icon: "bi-bar-chart", label: _t("Reports"), to: "/posapp/reports" },
+  { icon: "bi-bar-chart", label: _t("Reports"), to: "/posapp/reports", primary: true },
   { icon: "bi-gear", label: _t("Settings"), to: "/posapp/settings" },
 ];
 
@@ -50,7 +51,15 @@ const Sidebar = () => {
     };
   }, []);
 
+  const [moreOpen, setMoreOpen] = useState(false);
+  const isActive = (item) => (item.activePrefixes ?? [item.to]).some((p) => location.pathname.startsWith(p));
+  const primaryItems = NAV_ITEMS.filter((i) => i.primary);
+  const moreItems = NAV_ITEMS.filter((i) => !i.primary);
+  const moreActive = moreItems.some(isActive);
+  const syncBadge = (item) => item.to === "/posapp/sync" && pendingInvoiceCount > 0;
+
   return (
+    <>
     <div className="pos-sidebar">
       <div className="pos-sidebar-logo">
         <i className="bi bi-display" />
@@ -112,6 +121,44 @@ const Sidebar = () => {
 
       <div className="pos-avatar">{getInitials(fullName)}</div>
     </div>
+
+    {/* Phones (< 640px): the rail is hidden and these destinations move to a bottom tab bar. */}
+    <nav className="pos-bottom-nav" aria-label={__("Main")}>
+      {primaryItems.map((item) => (
+        <Link key={item.label} to={item.to} className={`pos-bottom-nav-item${isActive(item) ? " active" : ""}`}>
+          <i className={`bi ${item.icon}`} />
+          <span>{__(item.label)}</span>
+        </Link>
+      ))}
+      <button
+        type="button"
+        className={`pos-bottom-nav-item${moreActive ? " active" : ""}`}
+        onClick={() => setMoreOpen(true)}
+        aria-haspopup="dialog"
+      >
+        <i className="bi bi-grid" />
+        {pendingInvoiceCount > 0 && <span className="pos-bottom-nav-dot" />}
+        <span>{__("More")}</span>
+      </button>
+    </nav>
+
+    <BottomSheet open={moreOpen} onClose={() => setMoreOpen(false)} title={__("More")}>
+      <div className="pos-sheet-grid">
+        {moreItems.map((item) => (
+          <Link
+            key={item.label}
+            to={item.to}
+            className={`pos-sheet-tile${isActive(item) ? " active" : ""}`}
+            onClick={() => setMoreOpen(false)}
+          >
+            <i className={`bi ${item.icon}`} />
+            <span>{__(item.label)}</span>
+            {syncBadge(item) && <span className="pos-sheet-tile-badge">{pendingInvoiceCount > 99 ? "99+" : pendingInvoiceCount}</span>}
+          </Link>
+        ))}
+      </div>
+    </BottomSheet>
+    </>
   );
 };
 

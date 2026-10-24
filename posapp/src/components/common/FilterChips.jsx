@@ -5,7 +5,7 @@ import { tLabel, useTranslation } from "../../translation";
 const FilterChips = ({ options, value, onChange }) => {
   const { __ } = useTranslation();
   return (
-    <div className="d-flex gap-2">
+    <div className="d-flex gap-2 pos-chip-row">
       {options.map((opt) => (
         <span
           key={opt.value}

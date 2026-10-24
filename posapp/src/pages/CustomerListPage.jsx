@@ -2,7 +2,7 @@ import { __, _t, tData, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { fetchCustomers, fetchCustomerGroups, fetchTerritories } from "../api/Customer";
-import { ListTable, FilterChips, Pagination, SelectField, TextField } from "../components/common";
+import { ListTable, FilterChips, Pagination, SelectField, TextField, FilterBar } from "../components/common";
 import NewCustomerModal from "../components/Customer/NewCustomerModal";
 
 const PAGE_SIZE = 20;
@@ -138,7 +138,7 @@ const CustomerListPage = () => {
   return (
     <>
       <div className="d-flex flex-column flex-fill" style={{ minHeight: 0 }}>
-        <div className="d-flex align-items-center justify-content-between px-4 pt-3">
+        <div className="d-flex align-items-center justify-content-between px-4 pt-3 pos-list-toolbar">
           <FilterChips options={STATUS_FILTERS} value={status} onChange={resetToFirstPage(setStatus)} />
           <button
             type="button"
@@ -151,8 +151,7 @@ const CustomerListPage = () => {
           </button>
         </div>
 
-        <div className="px-4 pt-3">
-          <div className="d-flex align-items-end gap-2">
+        <FilterBar active={Boolean(hasActiveFilters)}>
             <div style={{ width: 180 }}>
               <SelectField
                 label={__("Customer Group")}
@@ -199,8 +198,8 @@ const CustomerListPage = () => {
                 {__("Clear filters")}
               </button>
             )}
-          </div>
-        </div>
+
+        </FilterBar>
 
         <div className="d-flex flex-column flex-fill px-4 pt-2 pb-4" style={{ minHeight: 0 }}>
           <div style={{ flex: 1, minHeight: 0 }}>

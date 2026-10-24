@@ -6,8 +6,10 @@ import useCartStore from "../../store/cartStore";
 import usePOSSessionStore from "../../store/posSessionStore";
 import ItemVariantModal from "./ItemVariantModal";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const CARD_HEIGHT = 150; // actual card content is ~138.5px tall — must exceed that or virtualized rows overlap
+const CARD_HEIGHT_MOBILE = 172; // phones get 40px stepper buttons (touch targets), ~14px taller content
 const CARD_MIN_WIDTH = 150; // px, includes gap — drives responsive column count
 const GRID_GAP = 10;
 const SEARCH_DEBOUNCE_MS = 300;
@@ -104,6 +106,8 @@ const ItemCard = memo(({ item, qty, inCart, onAdd, onIncrement, onDecrement, mon
 // ── Main component ─────────────────────────────────────────────────────────
 const Items = ({ selectedGroup, searchText = "", onSearchResolved }) => {
   const { __ } = useTranslation();
+  const isMobile = useIsMobile();
+  const cardHeight = isMobile ? CARD_HEIGHT_MOBILE : CARD_HEIGHT;
   const [items, setItems] = useState([]);
   const [itemQty, setItemQty] = useState({});
   const [containerWidth, setContainerWidth] = useState(0);
@@ -325,7 +329,7 @@ const Items = ({ selectedGroup, searchText = "", onSearchResolved }) => {
 
   const { visibleRange, totalHeight, onScroll } = useVirtualScroll({
     totalRows: rows.length,
-    rowHeight: CARD_HEIGHT,
+    rowHeight: cardHeight,
     containerRef,
   });
 
@@ -362,9 +366,9 @@ const Items = ({ selectedGroup, searchText = "", onSearchResolved }) => {
                 key={rowIndex}
                 style={{
                   position: "absolute",
-                  top: rowIndex * CARD_HEIGHT,
+                  top: rowIndex * cardHeight,
                   width: "100%",
-                  height: CARD_HEIGHT,
+                  height: cardHeight,
                   display: "grid",
                   gridTemplateColumns: `repeat(${columns}, 1fr)`,
                   gap: GRID_GAP,

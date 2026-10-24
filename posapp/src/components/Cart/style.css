@@ -20,7 +20,7 @@
 /* Fixed right-hand cart panel from tablet width up — scales down smoothly
    instead of snapping to full-width, so the terminal keeps its two-pane
    layout on iPad-class devices instead of squashing the items grid. */
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .cart-section {
     width: clamp(340px, 30vw, 380px);
     flex: 0 0 clamp(340px, 30vw, 380px);
@@ -298,4 +298,110 @@
 .cart-grand-total span:last-child {
   font-family: var(--font-mono);
   font-size: 20px;
+}
+
+/* Phone cart sheet (< 640px): the whole body scrolls as one column so the
+   customer/discount/coupon blocks can't squeeze the line list to a sliver, and
+   the totals + Pay actions stay pinned to the bottom. */
+@media (max-width: 639.98px), (max-height: 500px) and (orientation: landscape) {
+  .cart-section-card .card-body {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .cart-section-card .card-body > * {
+    flex-shrink: 0;
+  }
+
+  .cart-section-card .cart-items-section {
+    flex: none !important;
+  }
+
+  .cart-section-card .cart-lines-scroll {
+    flex: none !important;
+    overflow: visible !important;
+  }
+
+  .cart-section-card .cart-totals {
+    margin-top: auto;
+  }
+
+  .cart-section-card .cart-actions {
+    /* Bootstrap's .position-relative utility is !important, hence the override */
+    position: sticky !important;
+    bottom: 0;
+    z-index: 2;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border-faint);
+  }
+
+  /* Two-row line: [icon | name + rate | remove] over [ qty | amount ] */
+  .cart-line {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 6px;
+  }
+
+  .cart-line-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: start;
+  }
+
+  .cart-line-info {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .cart-line-name {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .cart-line-remove {
+    grid-column: 3;
+    grid-row: 1;
+    width: 36px;
+    height: 36px;
+  }
+
+  .cart-line-qty {
+    grid-column: 2;
+    grid-row: 2;
+    gap: 10px;
+  }
+
+  .cart-line-qty button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .cart-line-qty span {
+    font-size: 14px;
+    min-width: 24px;
+  }
+
+  .cart-line-amount {
+    grid-column: 3;
+    grid-row: 2;
+    font-size: 14px;
+  }
+
+  .cart-line-detail {
+    padding: 2px 12px 12px;
+  }
+}
+
+/* Landscape phones are wider than 640px, so the tablet rule above would pin
+   the cart to a 340-380px column inside the sheet; let it fill the sheet. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .cart-section {
+    width: 100%;
+    flex: 1 1 auto;
+  }
 }

@@ -88,7 +88,7 @@ const LoyaltyProgramListPage = () => {
 
   return (
     <div className="d-flex flex-column flex-fill" style={{ minHeight: 0 }}>
-      <div className="d-flex align-items-center justify-content-end px-4 pt-3">
+      <div className="d-flex align-items-center justify-content-end px-4 pt-3 pos-list-toolbar">
         <Link to="/posapp/loyalty-program/new" className="pos-btn pos-btn-primary" style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}>
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
           {__("New program")}

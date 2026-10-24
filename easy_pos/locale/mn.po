@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 15:48+0553\n"
+"POT-Creation-Date: 2026-10-24 22:43+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: mn\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.1\n"
 
-#: posapp/src/components/common/ChildTable.jsx:115
-#: posapp/src/components/common/ChildTable.jsx:284
+#: posapp/src/components/common/ChildTable.jsx:122
+#: posapp/src/components/common/ChildTable.jsx:329
 msgid "+ Add row"
 msgstr "+ Мөр нэмэх"
 
-#: posapp/src/components/Cart/index.jsx:419
+#: posapp/src/components/Cart/index.jsx:372
 msgid "1 item"
 msgstr "1 бараа"
 
-#: posapp/src/components/Cart/index.jsx:458
+#: posapp/src/components/Cart/index.jsx:411
 msgid "1 loyalty point available"
 msgstr "1 урамшууллын оноо байна"
 
@@ -36,7 +36,7 @@ msgstr "1 урамшууллын оноо байна"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:830
+#: posapp/src/components/Cart/index.jsx:783
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "Энэ сагсан дахь үнэгүй барааны санал холболт шаарддаг — дахин холбогдох хүртэл сагсны бүх үнэ/хөнгөлөлт үнийн жагсаалтын үнээр түр үлдэнэ."
 
@@ -89,7 +89,7 @@ msgstr "Нягтлан бодох хэмжигдэхүүнүүд"
 msgid "Active"
 msgstr "Идэвхтэй"
 
-#: posapp/src/utils/format.js:43
+#: posapp/src/utils/format.js:48
 msgid "Actual"
 msgstr ""
 
@@ -176,19 +176,19 @@ msgstr "Нарийвчилсан тохиргоо"
 msgid "All"
 msgstr "Бүгд"
 
-#: posapp/src/pages/POSProfileListPage.jsx:128
+#: posapp/src/pages/POSProfileListPage.jsx:127
 msgid "All companies"
 msgstr "Бүх компани"
 
-#: posapp/src/pages/CustomerListPage.jsx:159
+#: posapp/src/pages/CustomerListPage.jsx:158
 msgid "All groups"
 msgstr "Бүх бүлэг"
 
-#: posapp/src/pages/ItemPriceListPage.jsx:149
+#: posapp/src/pages/ItemPriceListPage.jsx:148
 msgid "All price lists"
 msgstr "Бүх үнийн жагсаалт"
 
-#: posapp/src/pages/CustomerListPage.jsx:168
+#: posapp/src/pages/CustomerListPage.jsx:167
 msgid "All territories"
 msgstr "Бүх нутаг дэвсгэр"
 
@@ -251,7 +251,7 @@ msgstr "Хамаарах улсууд"
 msgid "Applicable for Users"
 msgstr "Хамаарах хэрэглэгчид"
 
-#: posapp/src/components/Cart/index.jsx:747
+#: posapp/src/components/Cart/index.jsx:700
 msgid "Apply"
 msgstr "Хэрэглэх"
 
@@ -293,7 +293,7 @@ msgstr "Дүрмийг барааны бүлэгт хэрэглэх *"
 msgid "Apply Rule On Other"
 msgstr "Дүрмийг бусдад хэрэглэх"
 
-#: posapp/src/components/Cart/index.jsx:698
+#: posapp/src/components/Cart/index.jsx:651
 msgid "Apply on…"
 msgstr "Хэрэглэх…"
 
@@ -350,7 +350,7 @@ msgstr "Төлөх үлдэгдэл"
 msgid "Batch"
 msgstr "Багц"
 
-#: posapp/src/components/Cart/index.jsx:637
+#: posapp/src/components/Cart/index.jsx:590
 msgid "Batch No"
 msgstr "Багцын дугаар"
 
@@ -377,7 +377,7 @@ msgstr "Хэзээ ч зогсдоггүй жижиглэнгийн багууд
 msgid "Bundle Components"
 msgstr "Багцын бүрэлдэхүүн"
 
-#: posapp/src/components/Cart/index.jsx:658
+#: posapp/src/components/Cart/index.jsx:611
 msgid "Bundle Contents"
 msgstr "Багцын агуулга"
 
@@ -436,7 +436,7 @@ msgstr "Нэхэмжлэх цуцлах"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Cancelled"
 msgstr "Цуцлагдсан"
 
@@ -452,7 +452,7 @@ msgstr "Туршилтын POS профайл үүсгэх боломжгүй: �
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "Туршилтын өгөгдөл үүсгэх боломжгүй: компани өгөгдөөгүй, анхдагч компани тохируулаагүй байна."
 
-#: posapp/src/components/Cart/index.jsx:484
+#: posapp/src/components/Cart/index.jsx:437
 msgid "Cart Items"
 msgstr "Сагсан дахь бараа"
 
@@ -487,19 +487,19 @@ msgstr "Хувилбар сонгохын тулд сонголтуудыг со
 msgid "City/Town"
 msgstr "Хот/Тосгон"
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:441
 msgid "Clear all"
 msgstr "Бүгдийг арилгах"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:173
-#: posapp/src/pages/CustomerListPage.jsx:199
-#: posapp/src/pages/InvoiceRegisterPage.jsx:228
-#: posapp/src/pages/ItemPriceListPage.jsx:162
-#: posapp/src/pages/POSProfileListPage.jsx:141
+#: posapp/src/pages/CustomerListPage.jsx:198
+#: posapp/src/pages/InvoiceRegisterPage.jsx:227
+#: posapp/src/pages/ItemPriceListPage.jsx:161
+#: posapp/src/pages/POSProfileListPage.jsx:140
 msgid "Clear filters"
 msgstr "Шүүлтүүрийг арилгах"
 
-#: posapp/src/components/Items/index.jsx:92
+#: posapp/src/components/Items/index.jsx:94
 msgid "Click/scan the item again to add another unit"
 msgstr "Дахин нэг ширхэг нэмэхийн тулд барааг дахин дарж/уншуулна уу"
 
@@ -507,7 +507,12 @@ msgstr "Дахин нэг ширхэг нэмэхийн тулд барааг д
 msgid "Close"
 msgstr "Хаах"
 
+#: posapp/src/pages/POSTerminalPage.jsx:101
+msgid "Close cart"
+msgstr ""
+
 #: posapp/src/components/Topbar/index.jsx:112
+#: posapp/src/components/Topbar/index.jsx:188
 msgid "Close shift"
 msgstr "Ээлж хаах"
 
@@ -537,7 +542,7 @@ msgstr "Хаалтын дүн"
 msgid "Closing…"
 msgstr "Хааж байна…"
 
-#: posapp/src/components/common/ChildTable.jsx:208
+#: posapp/src/components/common/ChildTable.jsx:252
 msgid "Collapse"
 msgstr "Хураах"
 
@@ -561,7 +566,7 @@ msgstr "Цуглуулах дүрэм (түвшин)"
 #: posapp/src/pages/DiscountDetailPage.jsx:760
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:152
 #: posapp/src/pages/POSProfileDetailPage.jsx:236
-#: posapp/src/pages/POSProfileListPage.jsx:127
+#: posapp/src/pages/POSProfileListPage.jsx:126
 msgid "Company"
 msgstr "Компани"
 
@@ -601,7 +606,7 @@ msgstr "Түвшин, оноо, зарцуулах дүрмийг тохируу
 msgid "Connected to the server"
 msgstr "Сервертэй холбогдлоо"
 
-#: posapp/src/utils/format.js:38
+#: posapp/src/utils/format.js:43
 msgid "Consolidated"
 msgstr "Нэгтгэсэн"
 
@@ -651,7 +656,7 @@ msgstr "Улс нэгээс олон удаа нэмэгдсэн: {countries}"
 msgid "County"
 msgstr "Аймаг/Дүүрэг"
 
-#: posapp/src/components/Cart/index.jsx:767
+#: posapp/src/components/Cart/index.jsx:720
 msgid "Coupon \"{code}\" applied"
 msgstr "\"{code}\" купон хэрэглэгдлээ"
 
@@ -659,7 +664,7 @@ msgstr "\"{code}\" купон хэрэглэгдлээ"
 msgid "Coupon Code Based"
 msgstr "Купон кодонд суурилсан"
 
-#: posapp/src/components/Cart/index.jsx:732
+#: posapp/src/components/Cart/index.jsx:685
 msgid "Coupon code"
 msgstr "Купон код"
 
@@ -706,7 +711,7 @@ msgstr "Зээлийн хязгаар"
 msgid "Credit Limits"
 msgstr "Зээлийн хязгаарууд"
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Credit Note Issued"
 msgstr "Кредит нэхэмжлэх гаргасан"
 
@@ -741,7 +746,7 @@ msgstr "Одоогийн ээлж · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/Cart/index.jsx:381
 #: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
@@ -749,7 +754,7 @@ msgstr "Одоогийн ээлж · {profile}"
 #: posapp/src/pages/DiscountDetailPage.jsx:664
 #: posapp/src/pages/InvoiceDetailPage.jsx:241
 #: posapp/src/pages/InvoiceRegisterPage.jsx:28
-#: posapp/src/pages/InvoiceRegisterPage.jsx:176
+#: posapp/src/pages/InvoiceRegisterPage.jsx:175
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
 #: posapp/src/pages/ReportsPage.jsx:373
@@ -763,7 +768,7 @@ msgstr "Харилцагчийн дэлгэрэнгүй"
 
 #: posapp/src/components/Customer/NewCustomerModal.jsx:98
 #: posapp/src/pages/CustomerDetailPage.jsx:183
-#: posapp/src/pages/CustomerListPage.jsx:158
+#: posapp/src/pages/CustomerListPage.jsx:157
 #: posapp/src/pages/DiscountDetailPage.jsx:99
 #: posapp/src/pages/DiscountDetailPage.jsx:670
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:169
@@ -810,11 +815,15 @@ msgstr "Харилцагчийн нэр заавал шаардлагатай"
 msgid "Customer saved successfully"
 msgstr "Харилцагч амжилттай хадгалагдлаа"
 
-#: posapp/src/components/Sidebar/index.jsx:12
+#: posapp/src/components/Sidebar/index.jsx:13
 #: posapp/src/pages/CustomerDetailPage.jsx:159
 #: posapp/src/pages/CustomerListPage.jsx:112
 msgid "Customers"
 msgstr "Харилцагчид"
+
+#: posapp/src/components/Topbar/index.jsx:177
+msgid "Dark mode"
+msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:40
 #: posapp/src/pages/InvoiceRegisterPage.jsx:34
@@ -894,7 +903,7 @@ msgstr "Нийт дүнг анхдагч төлбөрийн хэлбэрт ав�
 msgid "Disabled"
 msgstr "Идэвхгүй"
 
-#: posapp/src/components/Cart/index.jsx:602
+#: posapp/src/components/Cart/index.jsx:555
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -933,7 +942,7 @@ msgstr "Хөнгөлөлт амжилттай хадгалагдлаа"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Sidebar/index.jsx:16
+#: posapp/src/components/Sidebar/index.jsx:17
 #: posapp/src/pages/DiscountDetailPage.jsx:387
 #: posapp/src/pages/DiscountListPage.jsx:105
 msgid "Discounts"
@@ -952,9 +961,13 @@ msgstr "Хаах"
 msgid "Don't Enforce Free Item Qty"
 msgstr "Үнэгүй барааны тоог албадахгүй"
 
+#: posapp/src/components/common/FilterBar.jsx:40
+msgid "Done"
+msgstr ""
+
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:31
 msgid "Draft"
 msgstr "Ноорог"
 
@@ -1026,8 +1039,8 @@ msgstr "Холбоо барих засах"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:121
 #: posapp/src/pages/CustomerDetailPage.jsx:211
 #: posapp/src/pages/CustomerListPage.jsx:36
-#: posapp/src/pages/CustomerListPage.jsx:185
-#: posapp/src/pages/InvoiceRegisterPage.jsx:214
+#: posapp/src/pages/CustomerListPage.jsx:184
+#: posapp/src/pages/InvoiceRegisterPage.jsx:213
 msgid "Email"
 msgstr "И-мэйл"
 
@@ -1081,7 +1094,7 @@ msgstr "Борлуулалт бүр."
 msgid "Exchange Rate"
 msgstr "Ханш"
 
-#: posapp/src/components/common/ChildTable.jsx:208
+#: posapp/src/components/common/ChildTable.jsx:252
 msgid "Expand"
 msgstr "Дэлгэх"
 
@@ -1098,7 +1111,7 @@ msgstr "Зардлын данс"
 msgid "Expiry Duration (days)"
 msgstr "Хүчинтэй хугацаа (өдөр)"
 
-#: posapp/src/components/Cart/index.jsx:790
+#: posapp/src/components/Cart/index.jsx:743
 msgid "FREE"
 msgstr "ҮНЭГҮЙ"
 
@@ -1174,7 +1187,7 @@ msgstr "POS профайл хадгалж чадсангүй"
 msgid "Failed to save Price List"
 msgstr "Үнийн жагсаалт хадгалж чадсангүй"
 
-#: posapp/src/components/Cart/index.jsx:326
+#: posapp/src/components/Cart/index.jsx:279
 msgid "Failed to save draft"
 msgstr "Ноорог хадгалж чадсангүй"
 
@@ -1198,26 +1211,35 @@ msgstr "Серверээс татах"
 msgid "Fetching…"
 msgstr "Татаж байна…"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:199
+#: posapp/src/pages/InvoiceRegisterPage.jsx:198
 msgid "Filter by POS Profile"
 msgstr "POS профайлаар шүүх"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:144
-#: posapp/src/pages/InvoiceRegisterPage.jsx:185
+#: posapp/src/pages/InvoiceRegisterPage.jsx:184
 msgid "Filter by customer"
 msgstr "Харилцагчаар шүүх"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:162
-#: posapp/src/pages/CustomerListPage.jsx:188
-#: posapp/src/pages/InvoiceRegisterPage.jsx:217
+#: posapp/src/pages/CustomerListPage.jsx:187
+#: posapp/src/pages/InvoiceRegisterPage.jsx:216
 msgid "Filter by email"
 msgstr "И-мэйлээр шүүх"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:153
-#: posapp/src/pages/CustomerListPage.jsx:179
-#: posapp/src/pages/InvoiceRegisterPage.jsx:208
+#: posapp/src/pages/CustomerListPage.jsx:178
+#: posapp/src/pages/InvoiceRegisterPage.jsx:207
 msgid "Filter by mobile"
 msgstr "Гар утсаар шүүх"
+
+#: posapp/src/components/common/FilterBar.jsx:29
+#: posapp/src/components/common/FilterBar.jsx:37
+msgid "Filters"
+msgstr ""
+
+#: posapp/src/components/common/FilterBar.jsx:30
+msgid "Filters applied"
+msgstr ""
 
 #: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
@@ -1251,7 +1273,7 @@ msgstr "Үнэгүй барааны үнэ"
 msgid "Free Item UOM"
 msgstr "Үнэгүй барааны хэмжих нэгж"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Free Items"
 msgstr "Үнэгүй бараанууд"
 
@@ -1281,8 +1303,8 @@ msgstr "Терминал руу очих"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:703
-#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/Cart/index.jsx:656
+#: posapp/src/components/Cart/index.jsx:801
 #: posapp/src/components/InvoicePay/index.jsx:183
 #: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
@@ -1303,7 +1325,7 @@ msgstr "Бүлэг"
 msgid "Has Priority"
 msgstr "Тэргүүлэх эрэмбэтэй"
 
-#: posapp/src/components/Items/index.jsx:48
+#: posapp/src/components/Items/index.jsx:50
 msgid "Has variants"
 msgstr "Хувилбартай"
 
@@ -1366,7 +1388,7 @@ msgstr "Хувь хүн"
 msgid "Industry"
 msgstr "Салбар"
 
-#: posapp/src/utils/format.js:39
+#: posapp/src/utils/format.js:44
 msgid "Internal Transfer"
 msgstr "Дотоод шилжүүлэг"
 
@@ -1378,7 +1400,7 @@ msgstr "Нөхцөлийн илэрхийлэл буруу"
 msgid "Invalid coupon code"
 msgstr "Купон код буруу"
 
-#: posapp/src/components/Cart/index.jsx:167
+#: posapp/src/components/Cart/index.jsx:166
 msgid "Invalid or expired coupon code"
 msgstr "Купон код буруу эсвэл хугацаа дууссан"
 
@@ -1409,7 +1431,7 @@ msgstr "Нэхэмжлэх олдсонгүй."
 msgid "Invoiced Qty"
 msgstr "Нэхэмжилсэн тоо"
 
-#: posapp/src/components/Sidebar/index.jsx:11
+#: posapp/src/components/Sidebar/index.jsx:12
 #: posapp/src/pages/InvoiceDetailPage.jsx:214
 #: posapp/src/pages/InvoiceRegisterPage.jsx:133
 msgid "Invoices"
@@ -1451,7 +1473,7 @@ msgstr "Барааны код, хэмжих нэгж, үнийн жагсаал�
 msgid "Item Details"
 msgstr "Барааны дэлгэрэнгүй"
 
-#: posapp/src/components/Cart/index.jsx:820
+#: posapp/src/components/Cart/index.jsx:773
 msgid "Item Discounts"
 msgstr "Барааны хөнгөлөлт"
 
@@ -1483,7 +1505,7 @@ msgstr "Барааны үнэ"
 msgid "Item Price saved successfully"
 msgstr "Барааны үнэ амжилттай хадгалагдлаа"
 
-#: posapp/src/components/Sidebar/index.jsx:14
+#: posapp/src/components/Sidebar/index.jsx:15
 #: posapp/src/pages/ItemPriceDetailPage.jsx:170
 #: posapp/src/pages/ItemPriceListPage.jsx:107
 msgid "Item Prices"
@@ -1493,7 +1515,7 @@ msgstr "Барааны үнүүд"
 msgid "Item Tax"
 msgstr "Барааны татвар"
 
-#: posapp/src/components/Cart/index.jsx:799
+#: posapp/src/components/Cart/index.jsx:752
 msgid "Item Total"
 msgstr "Барааны нийт"
 
@@ -1538,8 +1560,12 @@ msgstr "Энэ профайлыг бүх хэрэглэгчид хамааруу
 msgid "Letter Head"
 msgstr "Хэвлэмэл толгой"
 
+#: posapp/src/components/Topbar/index.jsx:177
+msgid "Light mode"
+msgstr ""
+
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:883
+#: posapp/src/components/Cart/index.jsx:836
 msgid "Load Draft"
 msgstr "Ноорог ачаалах"
 
@@ -1551,14 +1577,14 @@ msgstr "Хувилбаруудыг ачаалж байна…"
 msgid "Loading..."
 msgstr "Ачаалж байна..."
 
-#: posapp/src/components/Cart/index.jsx:661
+#: posapp/src/components/Cart/index.jsx:614
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
 msgid "Loading…"
 msgstr "Ачаалж байна…"
 
-#: posapp/src/components/Topbar/index.jsx:177
+#: posapp/src/components/Topbar/index.jsx:195
 msgid "Log out"
 msgstr "Гарах"
 
@@ -1595,6 +1621,10 @@ msgstr "{0} нэхэмжлэх дээр урамшууллын оноо зарц
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
 msgstr "ҮНДСЭН ӨГӨГДӨЛ"
+
+#: posapp/src/components/Sidebar/index.jsx:126
+msgid "Main"
+msgstr ""
 
 #: posapp/src/pages/SettingsPage.jsx:15
 msgid "Manage cashier accounts and permissions"
@@ -1678,8 +1708,8 @@ msgstr "Холимог нөхцөл"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:114
 #: posapp/src/pages/CustomerDetailPage.jsx:208
 #: posapp/src/pages/CustomerListPage.jsx:30
-#: posapp/src/pages/CustomerListPage.jsx:176
-#: posapp/src/pages/InvoiceRegisterPage.jsx:205
+#: posapp/src/pages/CustomerListPage.jsx:175
+#: posapp/src/pages/InvoiceRegisterPage.jsx:204
 msgid "Mobile No"
 msgstr "Гар утасны дугаар"
 
@@ -1695,15 +1725,20 @@ msgstr "Төлбөрийн хэлбэр"
 msgid "Modes of Payment"
 msgstr "Төлбөрийн хэлбэрүүд"
 
+#: posapp/src/components/Sidebar/index.jsx:141
+#: posapp/src/components/Sidebar/index.jsx:145
+msgid "More"
+msgstr ""
+
 #: posapp/src/pages/CustomerDetailPage.jsx:360
 msgid "More Information"
 msgstr "Нэмэлт мэдээлэл"
 
-#: posapp/src/components/common/ChildTable.jsx:238
+#: posapp/src/components/common/ChildTable.jsx:282
 msgid "Move down"
 msgstr "Доош зөөх"
 
-#: posapp/src/components/common/ChildTable.jsx:229
+#: posapp/src/components/common/ChildTable.jsx:273
 msgid "Move up"
 msgstr "Дээш зөөх"
 
@@ -1713,7 +1748,7 @@ msgstr "Олон түвшинтэй хөтөлбөр"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:704
+#: posapp/src/components/Cart/index.jsx:657
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1766,7 +1801,7 @@ msgstr "Шинэ POS профайл"
 msgid "New Price List"
 msgstr "Шинэ үнийн жагсаалт"
 
-#: posapp/src/components/Cart/index.jsx:435
+#: posapp/src/components/Cart/index.jsx:388
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "Шинэ харилцагч"
@@ -1814,7 +1849,7 @@ msgstr "Үгүй"
 msgid "No Loyalty Programs found"
 msgstr "Урамшууллын хөтөлбөр олдсонгүй"
 
-#: posapp/src/pages/POSProfileListPage.jsx:153
+#: posapp/src/pages/POSProfileListPage.jsx:152
 msgid "No POS Profiles found"
 msgstr "POS профайл олдсонгүй"
 
@@ -1834,7 +1869,7 @@ msgstr "Багцын бүрэлдэхүүн байхгүй"
 msgid "No camera was found on this device."
 msgstr "Энэ төхөөрөмж дээр камер олдсонгүй."
 
-#: posapp/src/components/Cart/index.jsx:663
+#: posapp/src/components/Cart/index.jsx:616
 msgid "No components"
 msgstr "Бүрэлдэхүүн байхгүй"
 
@@ -1858,7 +1893,7 @@ msgstr "Зээлийн хязгаар тохируулаагүй"
 msgid "No customer groups added"
 msgstr "Харилцагчийн бүлэг нэмэгдээгүй"
 
-#: posapp/src/pages/CustomerListPage.jsx:211
+#: posapp/src/pages/CustomerListPage.jsx:210
 msgid "No customers found"
 msgstr "Харилцагч олдсонгүй"
 
@@ -1874,7 +1909,7 @@ msgstr "Ноорог нэхэмжлэх олдсонгүй"
 msgid "No exchange rate found from {0} to {1}. Create a Currency Exchange record (For Selling) for this pair."
 msgstr "{0}-ээс {1} рүү ханш олдсонгүй. Энэ хосод валют солилцооны бичлэг (борлуулалтад) үүсгэнэ үү."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:240
+#: posapp/src/pages/InvoiceRegisterPage.jsx:239
 msgid "No invoices found"
 msgstr "Нэхэмжлэх олдсонгүй"
 
@@ -1883,7 +1918,7 @@ msgstr "Нэхэмжлэх олдсонгүй"
 msgid "No item groups added"
 msgstr "Барааны бүлэг нэмэгдээгүй"
 
-#: posapp/src/pages/ItemPriceListPage.jsx:174
+#: posapp/src/pages/ItemPriceListPage.jsx:173
 msgid "No item prices found"
 msgstr "Барааны үнэ олдсонгүй"
 
@@ -1895,15 +1930,15 @@ msgstr "Бараа байхгүй"
 msgid "No items added"
 msgstr "Бараа нэмэгдээгүй"
 
-#: posapp/src/components/Cart/index.jsx:498
+#: posapp/src/components/Cart/index.jsx:451
 msgid "No items in cart"
 msgstr "Сагсанд бараа байхгүй"
 
-#: posapp/src/components/Items/index.jsx:353
+#: posapp/src/components/Items/index.jsx:357
 msgid "No items in this category"
 msgstr "Энэ ангилалд бараа байхгүй"
 
-#: posapp/src/components/Items/index.jsx:353
+#: posapp/src/components/Items/index.jsx:357
 msgid "No items match your search"
 msgstr "Хайлтад тохирох бараа байхгүй"
 
@@ -1943,11 +1978,12 @@ msgstr "Энэ хугацаанд төлбөр бүртгэгдээгүй."
 msgid "No price lists found"
 msgstr "Үнийн жагсаалт олдсонгүй"
 
-#: posapp/src/components/common/ListTable.jsx:48
+#: posapp/src/components/common/ListTable.jsx:43
+#: posapp/src/components/common/ListTable.jsx:99
 msgid "No records found"
 msgstr "Бичлэг олдсонгүй"
 
-#: posapp/src/components/common/ChildTable.jsx:172
+#: posapp/src/components/common/ChildTable.jsx:216
 msgid "No rows"
 msgstr "Мөр байхгүй"
 
@@ -2024,23 +2060,23 @@ msgstr "Энэ суулгацад офлайн горим идэвхжээгүй
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Офлайн — синк хүлээж байна. Синк хийгдсэний дараа Нэхэмжлэхээс дахин хэвлэнэ үү."
 
-#: posapp/src/pages/POSTerminalPage.jsx:61
+#: posapp/src/pages/POSTerminalPage.jsx:75
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "Офлайн — кэшлэсэн каталог, үнийг харуулж байна. Борлуулалт бүртгэгдэж, дахин холбогдмогц автоматаар синк хийгдэнэ."
 
-#: posapp/src/utils/format.js:47
+#: posapp/src/utils/format.js:52
 msgid "On Item Quantity"
 msgstr ""
 
-#: posapp/src/utils/format.js:44
+#: posapp/src/utils/format.js:49
 msgid "On Net Total"
 msgstr ""
 
-#: posapp/src/utils/format.js:45
+#: posapp/src/utils/format.js:50
 msgid "On Previous Row Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:46
+#: posapp/src/utils/format.js:51
 msgid "On Previous Row Total"
 msgstr ""
 
@@ -2073,7 +2109,7 @@ msgstr "Зөвхөн эдгээр барааны бүлгийн барааг х�
 msgid "Open"
 msgstr "Нээх"
 
-#: posapp/src/components/Cart/index.jsx:413
+#: posapp/src/components/Cart/index.jsx:366
 msgid "Open Customer Display"
 msgstr "Харилцагчийн дэлгэц нээх"
 
@@ -2119,11 +2155,11 @@ msgstr "Нээж байна…"
 msgid "Optional note"
 msgstr "Нэмэлт тэмдэглэл"
 
-#: posapp/src/components/Cart/index.jsx:692
+#: posapp/src/components/Cart/index.jsx:645
 msgid "Order Discount"
 msgstr "Захиалгын хөнгөлөлт"
 
-#: posapp/src/components/Cart/index.jsx:839
+#: posapp/src/components/Cart/index.jsx:792
 msgid "Order Discount ({pct}%)"
 msgstr "Захиалгын хөнгөлөлт ({pct}%)"
 
@@ -2132,7 +2168,7 @@ msgid "Other"
 msgstr "Бусад"
 
 #: posapp/src/components/Items/ItemVariantModal.jsx:159
-#: posapp/src/components/Items/index.jsx:75
+#: posapp/src/components/Items/index.jsx:77
 msgid "Out of stock"
 msgstr "Дууссан"
 
@@ -2140,11 +2176,11 @@ msgstr "Дууссан"
 msgid "Outstanding Amount"
 msgstr "Үлдэгдэл төлбөр"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:34
 msgid "Overdue"
 msgstr "Хугацаа хэтэрсэн"
 
-#: posapp/src/utils/format.js:36
+#: posapp/src/utils/format.js:41
 msgid "Overdue and Discounted"
 msgstr "Хугацаа хэтэрсэн, хөнгөлөлттэй"
 
@@ -2172,7 +2208,7 @@ msgstr "POS нээлтийн бичилт"
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
-#: posapp/src/pages/InvoiceRegisterPage.jsx:191
+#: posapp/src/pages/InvoiceRegisterPage.jsx:190
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
 msgid "POS Profile"
 msgstr "POS профайл"
@@ -2181,13 +2217,13 @@ msgstr "POS профайл"
 msgid "POS Profile saved successfully"
 msgstr "POS профайл амжилттай хадгалагдлаа"
 
-#: posapp/src/components/Sidebar/index.jsx:13
+#: posapp/src/components/Sidebar/index.jsx:14
 #: posapp/src/pages/POSProfileDetailPage.jsx:224
 #: posapp/src/pages/POSProfileListPage.jsx:90
 msgid "POS Profiles"
 msgstr "POS профайлууд"
 
-#: posapp/src/pages/POSTerminalPage.jsx:30
+#: posapp/src/pages/POSTerminalPage.jsx:34
 msgid "POS Terminal"
 msgstr "POS терминал"
 
@@ -2195,7 +2231,7 @@ msgstr "POS терминал"
 msgid "Page {page} of {total}"
 msgstr "{total}-ийн {page}-р хуудас"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:32
 msgid "Paid"
 msgstr "Төлөгдсөн"
 
@@ -2204,11 +2240,11 @@ msgstr "Төлөгдсөн"
 msgid "Paid Amount"
 msgstr "Төлсөн дүн"
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Partly Paid"
 msgstr "Хэсэгчлэн төлөгдсөн"
 
-#: posapp/src/utils/format.js:37
+#: posapp/src/utils/format.js:42
 msgid "Partly Paid and Discounted"
 msgstr "Хэсэгчлэн төлөгдсөн, хөнгөлөлттэй"
 
@@ -2229,7 +2265,7 @@ msgstr "Нууц үг"
 msgid "Pay with {gateway}"
 msgstr "{gateway}-ээр төлөх"
 
-#: posapp/src/components/Cart/index.jsx:902
+#: posapp/src/components/Cart/index.jsx:855
 msgid "Pay {amount}"
 msgstr "{amount} төлөх"
 
@@ -2319,7 +2355,7 @@ msgstr "Үйлдвэр"
 msgid "Please Pay"
 msgstr "Төлнө үү"
 
-#: posapp/src/components/Cart/index.jsx:261
+#: posapp/src/components/Cart/index.jsx:214
 msgid "Please add at least one item to the cart"
 msgstr "Сагсанд дор хаяж нэг бараа нэмнэ үү"
 
@@ -2331,7 +2367,7 @@ msgstr "Сагсанд нэг буюу хэд хэдэн бараа нэмнэ �
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Дор хаяж нэг төлбөрийн хэлбэрт дүн оруулна уу"
 
-#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/Cart/index.jsx:210
 #: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "Харилцагч сонгоно уу"
@@ -2344,7 +2380,7 @@ msgstr "Анхдагч төлбөрийн хэлбэр сонгоно уу"
 msgid "Point the camera at a barcode, QR code, or serial/batch label."
 msgstr "Камераа баркод, QR код эсвэл сери/багцын шошго руу чиглүүлнэ үү."
 
-#: posapp/src/pages/POSTerminalPage.jsx:84
+#: posapp/src/pages/POSTerminalPage.jsx:119
 msgid "Populates the item search field, same as a hardware scanner"
 msgstr "Барааны хайлтын талбарыг тоног төхөөрөмжийн уншигч шиг бөглөнө"
 
@@ -2395,7 +2431,7 @@ msgstr "Үнийн хөнгөлөлтийн схем"
 #: posapp/src/engine/sync.js:11 posapp/src/pages/InvoiceDetailPage.jsx:258
 #: posapp/src/pages/ItemPriceDetailPage.jsx:207
 #: posapp/src/pages/ItemPriceListPage.jsx:30
-#: posapp/src/pages/ItemPriceListPage.jsx:148
+#: posapp/src/pages/ItemPriceListPage.jsx:147
 #: posapp/src/pages/POSProfileDetailPage.jsx:630
 #: posapp/src/pages/POSProfileListPage.jsx:36
 #: posapp/src/pages/PriceListDetailPage.jsx:69
@@ -2424,7 +2460,7 @@ msgstr "Үнийн жагсаалт нь худалдан авалт эсвэл 
 msgid "Price List saved successfully"
 msgstr "Үнийн жагсаалт амжилттай хадгалагдлаа"
 
-#: posapp/src/components/Sidebar/index.jsx:15
+#: posapp/src/components/Sidebar/index.jsx:16
 #: posapp/src/pages/PriceListDetailPage.jsx:155
 #: posapp/src/pages/PriceListListPage.jsx:81
 msgid "Price Lists"
@@ -2480,7 +2516,7 @@ msgstr "Тэргүүлэх эрэмбэ заавал шаардлагатай"
 msgid "Product"
 msgstr "Бүтээгдэхүүн"
 
-#: posapp/src/components/Items/index.jsx:42
+#: posapp/src/components/Items/index.jsx:44
 msgid "Product Bundle"
 msgstr "Бүтээгдэхүүний багц"
 
@@ -2554,7 +2590,7 @@ msgstr "Дараалалд"
 msgid "Range"
 msgstr "Хүрээ"
 
-#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Cart/index.jsx:530
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
@@ -2656,11 +2692,11 @@ msgstr "Дахин ачаалах"
 msgid "Remember this device"
 msgstr "Энэ төхөөрөмжийг санах"
 
-#: posapp/src/components/Cart/index.jsx:567
+#: posapp/src/components/Cart/index.jsx:520
 msgid "Remove"
 msgstr "Хасах"
 
-#: posapp/src/components/Cart/index.jsx:753
+#: posapp/src/components/Cart/index.jsx:706
 msgid "Remove coupon"
 msgstr "Купон хасах"
 
@@ -2668,7 +2704,7 @@ msgstr "Купон хасах"
 msgid "Remove row"
 msgstr "Мөр хасах"
 
-#: posapp/src/components/Sidebar/index.jsx:18
+#: posapp/src/components/Sidebar/index.jsx:19
 #: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr "Тайлангууд"
@@ -2689,7 +2725,7 @@ msgstr "Синкийг дахин оролдох"
 msgid "Retrying…"
 msgstr "Дахин оролдож байна…"
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Return"
 msgstr "Буцаалт"
 
@@ -2781,7 +2817,7 @@ msgstr "Ижил бараа"
 msgid "Save"
 msgstr "Хадгалах"
 
-#: posapp/src/components/Cart/index.jsx:871
+#: posapp/src/components/Cart/index.jsx:824
 msgid "Save Draft"
 msgstr "Ноорог хадгалах"
 
@@ -2789,7 +2825,7 @@ msgstr "Ноорог хадгалах"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "Хаяг, холбоо барих нэмэхийн тулд эхлээд харилцагчийг хадгална уу."
 
-#: posapp/src/components/Cart/index.jsx:866
+#: posapp/src/components/Cart/index.jsx:819
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2800,7 +2836,7 @@ msgstr "Хадгалж байна…"
 msgid "Scan barcode"
 msgstr "Баркод уншуулах"
 
-#: posapp/src/pages/POSTerminalPage.jsx:33
+#: posapp/src/pages/POSTerminalPage.jsx:37
 msgid "Scan barcode/serial/batch or search items"
 msgstr "Баркод/сери/багц уншуулах эсвэл бараа хайх"
 
@@ -2809,7 +2845,7 @@ msgstr "Баркод/сери/багц уншуулах эсвэл бараа х
 msgid "Scan with camera"
 msgstr "Камераар уншуулах"
 
-#: posapp/src/components/Cart/index.jsx:555
+#: posapp/src/components/Cart/index.jsx:508
 msgid "Scan/add the item again to add another unit"
 msgstr "Дахин нэг ширхэг нэмэхийн тулд барааг дахин уншуулж/нэмнэ үү"
 
@@ -2817,7 +2853,7 @@ msgstr "Дахин нэг ширхэг нэмэхийн тулд барааг д
 msgid "Search and pull a saved draft into the terminal"
 msgstr "Хадгалсан ноорог хайж терминал руу ачаалах"
 
-#: posapp/src/components/Cart/index.jsx:642
+#: posapp/src/components/Cart/index.jsx:595
 msgid "Search batch no"
 msgstr "Багцын дугаар хайх"
 
@@ -2825,7 +2861,7 @@ msgstr "Багцын дугаар хайх"
 msgid "Search customer, mobile or email"
 msgstr "Харилцагч, гар утас эсвэл и-мэйл хайх"
 
-#: posapp/src/components/Cart/index.jsx:433
+#: posapp/src/components/Cart/index.jsx:386
 msgid "Search customer..."
 msgstr "Харилцагч хайх..."
 
@@ -2853,7 +2889,7 @@ msgstr "Профайл эсвэл агуулах хайх"
 msgid "Search program name"
 msgstr "Хөтөлбөрийн нэр хайх"
 
-#: posapp/src/components/Cart/index.jsx:622
+#: posapp/src/components/Cart/index.jsx:575
 msgid "Search serial no"
 msgstr "Серийн дугаар хайх"
 
@@ -2862,7 +2898,7 @@ msgstr "Серийн дугаар хайх"
 msgid "Search..."
 msgstr "Хайх..."
 
-#: posapp/src/components/Items/index.jsx:347
+#: posapp/src/components/Items/index.jsx:351
 msgid "Searching…"
 msgstr "Хайж байна…"
 
@@ -2931,7 +2967,7 @@ msgstr "Компани сонгох"
 msgid "Select customer group"
 msgstr "Харилцагчийн бүлэг сонгох"
 
-#: posapp/src/components/Items/index.jsx:64
+#: posapp/src/components/Items/index.jsx:66
 msgid "Select options"
 msgstr "Сонголтууд сонгох"
 
@@ -2957,7 +2993,7 @@ msgstr "Борлуулалт"
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "\"Хамаарах\" нь {field} гэж сонгогдсон бол Борлуулалтыг тэмдэглэх ёстой"
 
-#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:570 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr "Серийн дугаар"
 
@@ -2971,7 +3007,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Sidebar/index.jsx:19
+#: posapp/src/components/Sidebar/index.jsx:20
 #: posapp/src/pages/SettingsPage.jsx:25
 msgid "Settings"
 msgstr "Тохиргоо"
@@ -2993,7 +3029,7 @@ msgstr "Хүргэлт"
 msgid "Shop"
 msgstr "Дэлгүүр"
 
-#: posapp/src/components/Cart/index.jsx:405
+#: posapp/src/components/Cart/index.jsx:358
 msgid "Shopping Cart"
 msgstr "Худалдааны сагс"
 
@@ -3039,7 +3075,7 @@ msgstr "Муж/Аймаг"
 msgid "Status"
 msgstr "Төлөв"
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Submitted"
 msgstr "Илгээсэн"
 
@@ -3074,7 +3110,7 @@ msgstr "Харанхуй горим руу шилжих"
 msgid "Switch to light mode"
 msgstr "Гэрэл горим руу шилжих"
 
-#: posapp/src/components/Sidebar/index.jsx:17 posapp/src/pages/SyncPage.jsx:58
+#: posapp/src/components/Sidebar/index.jsx:18 posapp/src/pages/SyncPage.jsx:58
 msgid "Sync"
 msgstr "Синк"
 
@@ -3119,7 +3155,7 @@ msgstr "Систем тоо эсвэл дүнг нэмэх, хасахыг мэ�
 msgid "Take Payment"
 msgstr "Төлбөр авах"
 
-#: posapp/src/components/Cart/index.jsx:499
+#: posapp/src/components/Cart/index.jsx:452
 msgid "Tap an item to add it here"
 msgstr "Энд нэмэхийн тулд бараа дээр дарна уу"
 
@@ -3133,7 +3169,7 @@ msgstr "Татварын ангилал"
 msgid "Tax ID"
 msgstr "Татвар төлөгчийн дугаар"
 
-#: posapp/src/components/Cart/index.jsx:803
+#: posapp/src/components/Cart/index.jsx:756
 msgid "Taxes"
 msgstr "Татвар"
 
@@ -3143,7 +3179,7 @@ msgstr "Татвар"
 msgid "Taxes and Charges"
 msgstr "Татвар ба төлбөр"
 
-#: posapp/src/components/Sidebar/index.jsx:10
+#: posapp/src/components/Sidebar/index.jsx:11
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -3154,7 +3190,7 @@ msgstr "Нөхцөл ба болзол"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:106
 #: posapp/src/pages/CustomerDetailPage.jsx:193
 #: posapp/src/pages/CustomerListPage.jsx:48
-#: posapp/src/pages/CustomerListPage.jsx:167
+#: posapp/src/pages/CustomerListPage.jsx:166
 #: posapp/src/pages/DiscountDetailPage.jsx:99
 #: posapp/src/pages/DiscountDetailPage.jsx:680
 msgid "Territory"
@@ -3168,7 +3204,7 @@ msgstr "Баярлалаа!"
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Тэр оролдлого амжилтгүй боллоо — {gateway} цонхонд өөр төлбөрийн аргыг туршиж болно."
 
-#: posapp/src/components/Cart/index.jsx:724
+#: posapp/src/components/Cart/index.jsx:677
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "Энэ POS профайл хөнгөлөлтийг гараар өөрчлөхийг зөвшөөрдөггүй."
 
@@ -3281,11 +3317,11 @@ msgstr "Хэмжих нэгж"
 msgid "Unable to start the camera."
 msgstr "Камерыг эхлүүлж чадсангүй."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:33
 msgid "Unpaid"
 msgstr "Төлөгдөөгүй"
 
-#: posapp/src/utils/format.js:35
+#: posapp/src/utils/format.js:40
 msgid "Unpaid and Discounted"
 msgstr "Төлөгдөөгүй, хөнгөлөлттэй"
 
@@ -3355,7 +3391,11 @@ msgstr "{variant} хувилбар болон түүний загвар {templat
 msgid "View all"
 msgstr "Бүгдийг харах"
 
-#: posapp/src/components/Cart/index.jsx:474
+#: posapp/src/components/Cart/CartBar.jsx:20
+msgid "View cart"
+msgstr ""
+
+#: posapp/src/components/Cart/index.jsx:427
 msgid "View purchase history"
 msgstr "Худалдан авалтын түүх харах"
 
@@ -3475,7 +3515,7 @@ msgstr "{gateway} — офлайн"
 msgid "{item} (Free)"
 msgstr "{item} (Үнэгүй)"
 
-#: posapp/src/components/Sidebar/index.jsx:66
+#: posapp/src/components/Sidebar/index.jsx:75
 #: posapp/src/pages/SettingsPage.jsx:43
 msgid "{label} — coming soon"
 msgstr "{label} — удахгүй"
@@ -3484,7 +3524,7 @@ msgstr "{label} — удахгүй"
 msgid "{label} — {n} cached"
 msgstr "{label} — {n} кэшлэсэн"
 
-#: posapp/src/components/Sidebar/index.jsx:79
+#: posapp/src/components/Sidebar/index.jsx:88
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — синк хүлээж буй {n} нэхэмжлэх"
 
@@ -3492,11 +3532,11 @@ msgstr "{label} — синк хүлээж буй {n} нэхэмжлэх"
 msgid "{n} invoices"
 msgstr "{n} нэхэмжлэх"
 
-#: posapp/src/components/Cart/index.jsx:419
+#: posapp/src/components/Cart/index.jsx:372
 msgid "{n} items"
 msgstr "{n} бараа"
 
-#: posapp/src/components/Cart/index.jsx:459
+#: posapp/src/components/Cart/index.jsx:412
 msgid "{n} loyalty points available"
 msgstr "{n} урамшууллын оноо байна"
 
@@ -3516,11 +3556,11 @@ msgstr "{n} цагийн өмнө"
 msgid "{n}m ago"
 msgstr "{n} минутын өмнө"
 
-#: posapp/src/components/Items/index.jsx:75
+#: posapp/src/components/Items/index.jsx:77
 msgid "{qty} left"
 msgstr "{qty} үлдсэн"
 
-#: posapp/src/components/Cart/index.jsx:532
+#: posapp/src/components/Cart/index.jsx:485
 msgid "{rate} each"
 msgstr "нэг бүр {rate}"
 

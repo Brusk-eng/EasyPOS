@@ -2,7 +2,7 @@ import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchItemPrices, fetchPriceListOptions } from "../api/ItemPrice";
-import { ListTable, FilterChips, Pagination, SelectField } from "../components/common";
+import { ListTable, FilterChips, Pagination, SelectField, FilterBar } from "../components/common";
 import { formatDate } from "../utils/format";
 
 const PAGE_SIZE = 20;
@@ -129,7 +129,7 @@ const ItemPriceListPage = () => {
 
   return (
     <div className="d-flex flex-column flex-fill" style={{ minHeight: 0 }}>
-      <div className="d-flex align-items-center justify-content-between px-4 pt-3">
+      <div className="d-flex align-items-center justify-content-between px-4 pt-3 pos-list-toolbar">
         <FilterChips options={TYPE_FILTERS} value={type} onChange={resetToFirstPage(setType)} />
         <Link
           to="/posapp/item-price/new"
@@ -141,8 +141,7 @@ const ItemPriceListPage = () => {
         </Link>
       </div>
 
-      <div className="px-4 pt-3">
-        <div className="d-flex align-items-end gap-2">
+      <FilterBar active={Boolean(hasActiveFilters)}>
           <div style={{ width: 220 }}>
             <SelectField
               label={__("Price List")}
@@ -162,8 +161,8 @@ const ItemPriceListPage = () => {
               {__("Clear filters")}
             </button>
           )}
-        </div>
-      </div>
+
+      </FilterBar>
 
       <div className="d-flex flex-column flex-fill px-4 pt-2 pb-4" style={{ minHeight: 0 }}>
         <div style={{ flex: 1, minHeight: 0 }}>

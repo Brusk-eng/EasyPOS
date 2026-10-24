@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-24 15:48+0553\n"
+"POT-Creation-Date: 2026-10-24 22:43+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: id\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.1\n"
 
-#: posapp/src/components/common/ChildTable.jsx:115
-#: posapp/src/components/common/ChildTable.jsx:284
+#: posapp/src/components/common/ChildTable.jsx:122
+#: posapp/src/components/common/ChildTable.jsx:329
 msgid "+ Add row"
 msgstr "+ Tambah baris"
 
-#: posapp/src/components/Cart/index.jsx:419
+#: posapp/src/components/Cart/index.jsx:372
 msgid "1 item"
 msgstr "1 barang"
 
-#: posapp/src/components/Cart/index.jsx:458
+#: posapp/src/components/Cart/index.jsx:411
 msgid "1 loyalty point available"
 msgstr "1 poin loyalitas tersedia"
 
@@ -36,7 +36,7 @@ msgstr "1 poin loyalitas tersedia"
 msgid "<span class=\"h4\">EASYPOS</span>"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:830
+#: posapp/src/components/Cart/index.jsx:783
 msgid "A free-item offer in this cart needs a connection to resolve — pricing/discounts for this whole cart are on hold at list price until reconnected."
 msgstr "Penawaran barang gratis di keranjang ini memerlukan koneksi — harga/diskon untuk seluruh keranjang ditahan pada harga daftar sampai tersambung kembali."
 
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: posapp/src/utils/format.js:43
+#: posapp/src/utils/format.js:48
 msgid "Actual"
 msgstr ""
 
@@ -176,19 +176,19 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: posapp/src/pages/POSProfileListPage.jsx:128
+#: posapp/src/pages/POSProfileListPage.jsx:127
 msgid "All companies"
 msgstr "Semua perusahaan"
 
-#: posapp/src/pages/CustomerListPage.jsx:159
+#: posapp/src/pages/CustomerListPage.jsx:158
 msgid "All groups"
 msgstr "Semua grup"
 
-#: posapp/src/pages/ItemPriceListPage.jsx:149
+#: posapp/src/pages/ItemPriceListPage.jsx:148
 msgid "All price lists"
 msgstr "Semua daftar harga"
 
-#: posapp/src/pages/CustomerListPage.jsx:168
+#: posapp/src/pages/CustomerListPage.jsx:167
 msgid "All territories"
 msgstr "Semua wilayah"
 
@@ -251,7 +251,7 @@ msgstr ""
 msgid "Applicable for Users"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:747
+#: posapp/src/components/Cart/index.jsx:700
 msgid "Apply"
 msgstr ""
 
@@ -293,7 +293,7 @@ msgstr "Terapkan aturan pada grup barang *"
 msgid "Apply Rule On Other"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:698
+#: posapp/src/components/Cart/index.jsx:651
 msgid "Apply on…"
 msgstr "Terapkan pada…"
 
@@ -350,7 +350,7 @@ msgstr "Sisa tagihan"
 msgid "Batch"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:637
+#: posapp/src/components/Cart/index.jsx:590
 msgid "Batch No"
 msgstr ""
 
@@ -377,7 +377,7 @@ msgstr "Dibuat untuk tim ritel yang tak pernah berhenti."
 msgid "Bundle Components"
 msgstr "Komponen paket"
 
-#: posapp/src/components/Cart/index.jsx:658
+#: posapp/src/components/Cart/index.jsx:611
 msgid "Bundle Contents"
 msgstr "Isi paket"
 
@@ -436,7 +436,7 @@ msgstr "Batalkan faktur"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:33
+#: posapp/src/utils/format.js:38
 msgid "Cancelled"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr "Tidak dapat membuat profil POS demo: perusahaan tidak diberikan dan peru
 msgid "Cannot create demo data: no company was given and no default Company is set."
 msgstr "Tidak dapat membuat data demo: perusahaan tidak diberikan dan perusahaan default belum diatur."
 
-#: posapp/src/components/Cart/index.jsx:484
+#: posapp/src/components/Cart/index.jsx:437
 msgid "Cart Items"
 msgstr "Barang di keranjang"
 
@@ -487,19 +487,19 @@ msgstr "Pilih opsi untuk memilih varian"
 msgid "City/Town"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:488
+#: posapp/src/components/Cart/index.jsx:441
 msgid "Clear all"
 msgstr "Hapus semua"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:173
-#: posapp/src/pages/CustomerListPage.jsx:199
-#: posapp/src/pages/InvoiceRegisterPage.jsx:228
-#: posapp/src/pages/ItemPriceListPage.jsx:162
-#: posapp/src/pages/POSProfileListPage.jsx:141
+#: posapp/src/pages/CustomerListPage.jsx:198
+#: posapp/src/pages/InvoiceRegisterPage.jsx:227
+#: posapp/src/pages/ItemPriceListPage.jsx:161
+#: posapp/src/pages/POSProfileListPage.jsx:140
 msgid "Clear filters"
 msgstr ""
 
-#: posapp/src/components/Items/index.jsx:92
+#: posapp/src/components/Items/index.jsx:94
 msgid "Click/scan the item again to add another unit"
 msgstr "Klik/pindai barang lagi untuk menambah satu unit"
 
@@ -507,7 +507,12 @@ msgstr "Klik/pindai barang lagi untuk menambah satu unit"
 msgid "Close"
 msgstr ""
 
+#: posapp/src/pages/POSTerminalPage.jsx:101
+msgid "Close cart"
+msgstr ""
+
 #: posapp/src/components/Topbar/index.jsx:112
+#: posapp/src/components/Topbar/index.jsx:188
 msgid "Close shift"
 msgstr "Tutup shift"
 
@@ -537,7 +542,7 @@ msgstr ""
 msgid "Closing…"
 msgstr "Menutup…"
 
-#: posapp/src/components/common/ChildTable.jsx:208
+#: posapp/src/components/common/ChildTable.jsx:252
 msgid "Collapse"
 msgstr ""
 
@@ -561,7 +566,7 @@ msgstr "Aturan pengumpulan (tingkat)"
 #: posapp/src/pages/DiscountDetailPage.jsx:760
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:152
 #: posapp/src/pages/POSProfileDetailPage.jsx:236
-#: posapp/src/pages/POSProfileListPage.jsx:127
+#: posapp/src/pages/POSProfileListPage.jsx:126
 msgid "Company"
 msgstr ""
 
@@ -601,7 +606,7 @@ msgstr "Atur tingkat, poin, dan aturan penukaran"
 msgid "Connected to the server"
 msgstr "Terhubung ke server"
 
-#: posapp/src/utils/format.js:38
+#: posapp/src/utils/format.js:43
 msgid "Consolidated"
 msgstr ""
 
@@ -651,7 +656,7 @@ msgstr "Negara ditambahkan lebih dari sekali: {countries}"
 msgid "County"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:767
+#: posapp/src/components/Cart/index.jsx:720
 msgid "Coupon \"{code}\" applied"
 msgstr "Kupon \"{code}\" diterapkan"
 
@@ -659,7 +664,7 @@ msgstr "Kupon \"{code}\" diterapkan"
 msgid "Coupon Code Based"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:732
+#: posapp/src/components/Cart/index.jsx:685
 msgid "Coupon code"
 msgstr "Kode kupon"
 
@@ -706,7 +711,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:32
+#: posapp/src/utils/format.js:37
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -741,7 +746,7 @@ msgstr "Shift saat ini · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
-#: posapp/src/components/Cart/index.jsx:428
+#: posapp/src/components/Cart/index.jsx:381
 #: posapp/src/components/InvoicePay/index.jsx:180 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
@@ -749,7 +754,7 @@ msgstr "Shift saat ini · {profile}"
 #: posapp/src/pages/DiscountDetailPage.jsx:664
 #: posapp/src/pages/InvoiceDetailPage.jsx:241
 #: posapp/src/pages/InvoiceRegisterPage.jsx:28
-#: posapp/src/pages/InvoiceRegisterPage.jsx:176
+#: posapp/src/pages/InvoiceRegisterPage.jsx:175
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
 #: posapp/src/pages/ReportsPage.jsx:373
@@ -763,7 +768,7 @@ msgstr ""
 
 #: posapp/src/components/Customer/NewCustomerModal.jsx:98
 #: posapp/src/pages/CustomerDetailPage.jsx:183
-#: posapp/src/pages/CustomerListPage.jsx:158
+#: posapp/src/pages/CustomerListPage.jsx:157
 #: posapp/src/pages/DiscountDetailPage.jsx:99
 #: posapp/src/pages/DiscountDetailPage.jsx:670
 #: posapp/src/pages/LoyaltyProgramDetailPage.jsx:169
@@ -810,10 +815,14 @@ msgstr "Nama pelanggan wajib diisi"
 msgid "Customer saved successfully"
 msgstr "Pelanggan berhasil disimpan"
 
-#: posapp/src/components/Sidebar/index.jsx:12
+#: posapp/src/components/Sidebar/index.jsx:13
 #: posapp/src/pages/CustomerDetailPage.jsx:159
 #: posapp/src/pages/CustomerListPage.jsx:112
 msgid "Customers"
+msgstr ""
+
+#: posapp/src/components/Topbar/index.jsx:177
+msgid "Dark mode"
 msgstr ""
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:40
@@ -894,7 +903,7 @@ msgstr "Nonaktifkan pengaturan otomatis total akhir ke cara pembayaran default"
 msgid "Disabled"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:602
+#: posapp/src/components/Cart/index.jsx:555
 #: posapp/src/components/CustomerDisplay/CartView.jsx:34
 #: posapp/src/pages/DiscountDetailPage.jsx:137
 #: posapp/src/pages/DiscountListPage.jsx:37
@@ -933,7 +942,7 @@ msgstr "Diskon berhasil disimpan"
 
 #. Label of a Link in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Sidebar/index.jsx:16
+#: posapp/src/components/Sidebar/index.jsx:17
 #: posapp/src/pages/DiscountDetailPage.jsx:387
 #: posapp/src/pages/DiscountListPage.jsx:105
 msgid "Discounts"
@@ -952,9 +961,13 @@ msgstr ""
 msgid "Don't Enforce Free Item Qty"
 msgstr ""
 
+#: posapp/src/components/common/FilterBar.jsx:40
+msgid "Done"
+msgstr ""
+
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:26
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:31
 msgid "Draft"
 msgstr ""
 
@@ -1026,8 +1039,8 @@ msgstr "Edit kontak"
 #: posapp/src/components/Customer/NewCustomerModal.jsx:121
 #: posapp/src/pages/CustomerDetailPage.jsx:211
 #: posapp/src/pages/CustomerListPage.jsx:36
-#: posapp/src/pages/CustomerListPage.jsx:185
-#: posapp/src/pages/InvoiceRegisterPage.jsx:214
+#: posapp/src/pages/CustomerListPage.jsx:184
+#: posapp/src/pages/InvoiceRegisterPage.jsx:213
 msgid "Email"
 msgstr ""
 
@@ -1081,7 +1094,7 @@ msgstr "Setiap penjualan."
 msgid "Exchange Rate"
 msgstr ""
 
-#: posapp/src/components/common/ChildTable.jsx:208
+#: posapp/src/components/common/ChildTable.jsx:252
 msgid "Expand"
 msgstr ""
 
@@ -1098,7 +1111,7 @@ msgstr ""
 msgid "Expiry Duration (days)"
 msgstr "Masa berlaku (hari)"
 
-#: posapp/src/components/Cart/index.jsx:790
+#: posapp/src/components/Cart/index.jsx:743
 msgid "FREE"
 msgstr "GRATIS"
 
@@ -1174,7 +1187,7 @@ msgstr "Gagal menyimpan profil POS"
 msgid "Failed to save Price List"
 msgstr "Gagal menyimpan daftar harga"
 
-#: posapp/src/components/Cart/index.jsx:326
+#: posapp/src/components/Cart/index.jsx:279
 msgid "Failed to save draft"
 msgstr "Gagal menyimpan draf"
 
@@ -1198,26 +1211,35 @@ msgstr "Ambil dari server"
 msgid "Fetching…"
 msgstr "Mengambil…"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:199
+#: posapp/src/pages/InvoiceRegisterPage.jsx:198
 msgid "Filter by POS Profile"
 msgstr "Filter berdasarkan profil POS"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:144
-#: posapp/src/pages/InvoiceRegisterPage.jsx:185
+#: posapp/src/pages/InvoiceRegisterPage.jsx:184
 msgid "Filter by customer"
 msgstr "Filter berdasarkan pelanggan"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:162
-#: posapp/src/pages/CustomerListPage.jsx:188
-#: posapp/src/pages/InvoiceRegisterPage.jsx:217
+#: posapp/src/pages/CustomerListPage.jsx:187
+#: posapp/src/pages/InvoiceRegisterPage.jsx:216
 msgid "Filter by email"
 msgstr "Filter berdasarkan email"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:153
-#: posapp/src/pages/CustomerListPage.jsx:179
-#: posapp/src/pages/InvoiceRegisterPage.jsx:208
+#: posapp/src/pages/CustomerListPage.jsx:178
+#: posapp/src/pages/InvoiceRegisterPage.jsx:207
 msgid "Filter by mobile"
 msgstr "Filter berdasarkan ponsel"
+
+#: posapp/src/components/common/FilterBar.jsx:29
+#: posapp/src/components/common/FilterBar.jsx:37
+msgid "Filters"
+msgstr ""
+
+#: posapp/src/components/common/FilterBar.jsx:30
+msgid "Filters applied"
+msgstr ""
 
 #: posapp/src/components/InvoicePay/index.jsx:297
 msgid "Finishing up — your receipt will print here once it's confirmed."
@@ -1251,7 +1273,7 @@ msgstr ""
 msgid "Free Item UOM"
 msgstr "Satuan barang gratis"
 
-#: posapp/src/components/Cart/index.jsx:779
+#: posapp/src/components/Cart/index.jsx:732
 msgid "Free Items"
 msgstr "Barang gratis"
 
@@ -1281,8 +1303,8 @@ msgstr "Ke terminal"
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:703
-#: posapp/src/components/Cart/index.jsx:848
+#: posapp/src/components/Cart/index.jsx:656
+#: posapp/src/components/Cart/index.jsx:801
 #: posapp/src/components/InvoicePay/index.jsx:183
 #: posapp/src/components/InvoicePay/index.jsx:378
 #: posapp/src/pages/DiscountDetailPage.jsx:815
@@ -1303,7 +1325,7 @@ msgstr ""
 msgid "Has Priority"
 msgstr ""
 
-#: posapp/src/components/Items/index.jsx:48
+#: posapp/src/components/Items/index.jsx:50
 msgid "Has variants"
 msgstr "Memiliki varian"
 
@@ -1366,7 +1388,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:39
+#: posapp/src/utils/format.js:44
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1378,7 +1400,7 @@ msgstr ""
 msgid "Invalid coupon code"
 msgstr "Kode kupon tidak valid"
 
-#: posapp/src/components/Cart/index.jsx:167
+#: posapp/src/components/Cart/index.jsx:166
 msgid "Invalid or expired coupon code"
 msgstr "Kode kupon tidak valid atau kedaluwarsa"
 
@@ -1409,7 +1431,7 @@ msgstr "Faktur tidak ditemukan."
 msgid "Invoiced Qty"
 msgstr ""
 
-#: posapp/src/components/Sidebar/index.jsx:11
+#: posapp/src/components/Sidebar/index.jsx:12
 #: posapp/src/pages/InvoiceDetailPage.jsx:214
 #: posapp/src/pages/InvoiceRegisterPage.jsx:133
 msgid "Invoices"
@@ -1451,7 +1473,7 @@ msgstr "Kode barang, satuan, daftar harga, dan harga wajib diisi"
 msgid "Item Details"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:820
+#: posapp/src/components/Cart/index.jsx:773
 msgid "Item Discounts"
 msgstr "Diskon barang"
 
@@ -1483,7 +1505,7 @@ msgstr ""
 msgid "Item Price saved successfully"
 msgstr "Harga barang berhasil disimpan"
 
-#: posapp/src/components/Sidebar/index.jsx:14
+#: posapp/src/components/Sidebar/index.jsx:15
 #: posapp/src/pages/ItemPriceDetailPage.jsx:170
 #: posapp/src/pages/ItemPriceListPage.jsx:107
 msgid "Item Prices"
@@ -1493,7 +1515,7 @@ msgstr ""
 msgid "Item Tax"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:799
+#: posapp/src/components/Cart/index.jsx:752
 msgid "Item Total"
 msgstr "Total barang"
 
@@ -1538,8 +1560,12 @@ msgstr "Biarkan kosong agar profil ini berlaku untuk semua pengguna."
 msgid "Letter Head"
 msgstr ""
 
+#: posapp/src/components/Topbar/index.jsx:177
+msgid "Light mode"
+msgstr ""
+
 #: posapp/src/components/Cart/DraftPickerModal.jsx:129
-#: posapp/src/components/Cart/index.jsx:883
+#: posapp/src/components/Cart/index.jsx:836
 msgid "Load Draft"
 msgstr "Muat draf"
 
@@ -1551,14 +1577,14 @@ msgstr "Memuat varian…"
 msgid "Loading..."
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:661
+#: posapp/src/components/Cart/index.jsx:614
 #: posapp/src/components/Customer/AddressContactSection.jsx:138
 #: posapp/src/components/Customer/AddressContactSection.jsx:191
 #: posapp/src/pages/InvoiceDetailPage.jsx:135
 msgid "Loading…"
 msgstr "Memuat…"
 
-#: posapp/src/components/Topbar/index.jsx:177
+#: posapp/src/components/Topbar/index.jsx:195
 msgid "Log out"
 msgstr ""
 
@@ -1595,6 +1621,10 @@ msgstr "Poin loyalitas tidak dapat ditukar pada faktur {0}. ERPNext hanya menuka
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
 msgstr "DATA MASTER"
+
+#: posapp/src/components/Sidebar/index.jsx:126
+msgid "Main"
+msgstr ""
 
 #: posapp/src/pages/SettingsPage.jsx:15
 msgid "Manage cashier accounts and permissions"
@@ -1678,8 +1708,8 @@ msgstr ""
 #: posapp/src/components/Customer/NewCustomerModal.jsx:114
 #: posapp/src/pages/CustomerDetailPage.jsx:208
 #: posapp/src/pages/CustomerListPage.jsx:30
-#: posapp/src/pages/CustomerListPage.jsx:176
-#: posapp/src/pages/InvoiceRegisterPage.jsx:205
+#: posapp/src/pages/CustomerListPage.jsx:175
+#: posapp/src/pages/InvoiceRegisterPage.jsx:204
 msgid "Mobile No"
 msgstr ""
 
@@ -1695,15 +1725,20 @@ msgstr ""
 msgid "Modes of Payment"
 msgstr ""
 
+#: posapp/src/components/Sidebar/index.jsx:141
+#: posapp/src/components/Sidebar/index.jsx:145
+msgid "More"
+msgstr ""
+
 #: posapp/src/pages/CustomerDetailPage.jsx:360
 msgid "More Information"
 msgstr ""
 
-#: posapp/src/components/common/ChildTable.jsx:238
+#: posapp/src/components/common/ChildTable.jsx:282
 msgid "Move down"
 msgstr "Pindah ke bawah"
 
-#: posapp/src/components/common/ChildTable.jsx:229
+#: posapp/src/components/common/ChildTable.jsx:273
 msgid "Move up"
 msgstr "Pindah ke atas"
 
@@ -1713,7 +1748,7 @@ msgstr ""
 
 #. Label of a Currency field in DocType 'EP Closing Entry'
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
-#: posapp/src/components/Cart/index.jsx:704
+#: posapp/src/components/Cart/index.jsx:657
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:325
 #: posapp/src/pages/InvoiceDetailPage.jsx:398
@@ -1766,7 +1801,7 @@ msgstr "Profil POS baru"
 msgid "New Price List"
 msgstr "Daftar harga baru"
 
-#: posapp/src/components/Cart/index.jsx:435
+#: posapp/src/components/Cart/index.jsx:388
 #: posapp/src/pages/CustomerListPage.jsx:150
 msgid "New customer"
 msgstr "Pelanggan baru"
@@ -1814,7 +1849,7 @@ msgstr ""
 msgid "No Loyalty Programs found"
 msgstr "Tidak ada program loyalitas"
 
-#: posapp/src/pages/POSProfileListPage.jsx:153
+#: posapp/src/pages/POSProfileListPage.jsx:152
 msgid "No POS Profiles found"
 msgstr "Tidak ada profil POS"
 
@@ -1834,7 +1869,7 @@ msgstr "Tidak ada komponen paket"
 msgid "No camera was found on this device."
 msgstr "Tidak ada kamera di perangkat ini."
 
-#: posapp/src/components/Cart/index.jsx:663
+#: posapp/src/components/Cart/index.jsx:616
 msgid "No components"
 msgstr "Tidak ada komponen"
 
@@ -1858,7 +1893,7 @@ msgstr "Belum ada batas kredit yang diatur"
 msgid "No customer groups added"
 msgstr "Belum ada grup pelanggan"
 
-#: posapp/src/pages/CustomerListPage.jsx:211
+#: posapp/src/pages/CustomerListPage.jsx:210
 msgid "No customers found"
 msgstr "Tidak ada pelanggan"
 
@@ -1874,7 +1909,7 @@ msgstr "Tidak ada faktur draf"
 msgid "No exchange rate found from {0} to {1}. Create a Currency Exchange record (For Selling) for this pair."
 msgstr "Kurs dari {0} ke {1} tidak ditemukan. Buat catatan Penukaran Mata Uang (untuk penjualan) untuk pasangan ini."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:240
+#: posapp/src/pages/InvoiceRegisterPage.jsx:239
 msgid "No invoices found"
 msgstr "Tidak ada faktur"
 
@@ -1883,7 +1918,7 @@ msgstr "Tidak ada faktur"
 msgid "No item groups added"
 msgstr "Belum ada grup barang"
 
-#: posapp/src/pages/ItemPriceListPage.jsx:174
+#: posapp/src/pages/ItemPriceListPage.jsx:173
 msgid "No item prices found"
 msgstr "Tidak ada harga barang"
 
@@ -1895,15 +1930,15 @@ msgstr "Tidak ada barang"
 msgid "No items added"
 msgstr "Belum ada barang"
 
-#: posapp/src/components/Cart/index.jsx:498
+#: posapp/src/components/Cart/index.jsx:451
 msgid "No items in cart"
 msgstr ""
 
-#: posapp/src/components/Items/index.jsx:353
+#: posapp/src/components/Items/index.jsx:357
 msgid "No items in this category"
 msgstr "Tidak ada barang dalam kategori ini"
 
-#: posapp/src/components/Items/index.jsx:353
+#: posapp/src/components/Items/index.jsx:357
 msgid "No items match your search"
 msgstr "Tidak ada barang yang cocok dengan pencarian Anda"
 
@@ -1943,11 +1978,12 @@ msgstr "Tidak ada pembayaran tercatat pada periode ini."
 msgid "No price lists found"
 msgstr "Tidak ada daftar harga"
 
-#: posapp/src/components/common/ListTable.jsx:48
+#: posapp/src/components/common/ListTable.jsx:43
+#: posapp/src/components/common/ListTable.jsx:99
 msgid "No records found"
 msgstr ""
 
-#: posapp/src/components/common/ChildTable.jsx:172
+#: posapp/src/components/common/ChildTable.jsx:216
 msgid "No rows"
 msgstr "Tidak ada baris"
 
@@ -2024,23 +2060,23 @@ msgstr "Mode offline tidak diaktifkan untuk instalasi ini (Pengaturan EasyPOS). 
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Offline — menunggu sinkronisasi. Cetak ulang dari Faktur setelah disinkronkan."
 
-#: posapp/src/pages/POSTerminalPage.jsx:61
+#: posapp/src/pages/POSTerminalPage.jsx:75
 msgid "Offline — showing cached catalog and pricing. Sales ring up and sync automatically once reconnected."
 msgstr "Offline — menampilkan katalog dan harga dari cache. Penjualan tetap dicatat dan disinkronkan otomatis setelah tersambung kembali."
 
-#: posapp/src/utils/format.js:47
+#: posapp/src/utils/format.js:52
 msgid "On Item Quantity"
 msgstr ""
 
-#: posapp/src/utils/format.js:44
+#: posapp/src/utils/format.js:49
 msgid "On Net Total"
 msgstr ""
 
-#: posapp/src/utils/format.js:45
+#: posapp/src/utils/format.js:50
 msgid "On Previous Row Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:46
+#: posapp/src/utils/format.js:51
 msgid "On Previous Row Total"
 msgstr ""
 
@@ -2073,7 +2109,7 @@ msgstr "Hanya tampilkan barang dari grup ini. Biarkan kosong untuk semua."
 msgid "Open"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:413
+#: posapp/src/components/Cart/index.jsx:366
 msgid "Open Customer Display"
 msgstr "Buka layar pelanggan"
 
@@ -2119,11 +2155,11 @@ msgstr "Membuka…"
 msgid "Optional note"
 msgstr "Catatan opsional"
 
-#: posapp/src/components/Cart/index.jsx:692
+#: posapp/src/components/Cart/index.jsx:645
 msgid "Order Discount"
 msgstr "Diskon pesanan"
 
-#: posapp/src/components/Cart/index.jsx:839
+#: posapp/src/components/Cart/index.jsx:792
 msgid "Order Discount ({pct}%)"
 msgstr "Diskon pesanan ({pct}%)"
 
@@ -2132,7 +2168,7 @@ msgid "Other"
 msgstr ""
 
 #: posapp/src/components/Items/ItemVariantModal.jsx:159
-#: posapp/src/components/Items/index.jsx:75
+#: posapp/src/components/Items/index.jsx:77
 msgid "Out of stock"
 msgstr ""
 
@@ -2140,11 +2176,11 @@ msgstr ""
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:29
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:34
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:36
+#: posapp/src/utils/format.js:41
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2172,7 +2208,7 @@ msgstr ""
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
 #: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
-#: posapp/src/pages/InvoiceRegisterPage.jsx:191
+#: posapp/src/pages/InvoiceRegisterPage.jsx:190
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
 msgid "POS Profile"
 msgstr ""
@@ -2181,13 +2217,13 @@ msgstr ""
 msgid "POS Profile saved successfully"
 msgstr "Profil POS berhasil disimpan"
 
-#: posapp/src/components/Sidebar/index.jsx:13
+#: posapp/src/components/Sidebar/index.jsx:14
 #: posapp/src/pages/POSProfileDetailPage.jsx:224
 #: posapp/src/pages/POSProfileListPage.jsx:90
 msgid "POS Profiles"
 msgstr "Profil POS"
 
-#: posapp/src/pages/POSTerminalPage.jsx:30
+#: posapp/src/pages/POSTerminalPage.jsx:34
 msgid "POS Terminal"
 msgstr "Terminal POS"
 
@@ -2195,7 +2231,7 @@ msgstr "Terminal POS"
 msgid "Page {page} of {total}"
 msgstr "Halaman {page} dari {total}"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:27
+#: posapp/src/pages/InvoiceRegisterPage.jsx:14 posapp/src/utils/format.js:32
 msgid "Paid"
 msgstr ""
 
@@ -2204,11 +2240,11 @@ msgstr ""
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:30
+#: posapp/src/utils/format.js:35
 msgid "Partly Paid"
 msgstr ""
 
-#: posapp/src/utils/format.js:37
+#: posapp/src/utils/format.js:42
 msgid "Partly Paid and Discounted"
 msgstr ""
 
@@ -2229,7 +2265,7 @@ msgstr ""
 msgid "Pay with {gateway}"
 msgstr "Bayar dengan {gateway}"
 
-#: posapp/src/components/Cart/index.jsx:902
+#: posapp/src/components/Cart/index.jsx:855
 msgid "Pay {amount}"
 msgstr "Bayar {amount}"
 
@@ -2319,7 +2355,7 @@ msgstr ""
 msgid "Please Pay"
 msgstr "Silakan bayar"
 
-#: posapp/src/components/Cart/index.jsx:261
+#: posapp/src/components/Cart/index.jsx:214
 msgid "Please add at least one item to the cart"
 msgstr "Tambahkan setidaknya satu barang ke keranjang"
 
@@ -2331,7 +2367,7 @@ msgstr "Tambahkan satu atau beberapa barang ke keranjang"
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Masukkan jumlah untuk setidaknya satu cara pembayaran"
 
-#: posapp/src/components/Cart/index.jsx:257
+#: posapp/src/components/Cart/index.jsx:210
 #: posapp/src/components/InvoicePay/index.jsx:224
 msgid "Please select a customer"
 msgstr "Pilih pelanggan"
@@ -2344,7 +2380,7 @@ msgstr ""
 msgid "Point the camera at a barcode, QR code, or serial/batch label."
 msgstr "Arahkan kamera ke barcode, kode QR, atau label seri/batch."
 
-#: posapp/src/pages/POSTerminalPage.jsx:84
+#: posapp/src/pages/POSTerminalPage.jsx:119
 msgid "Populates the item search field, same as a hardware scanner"
 msgstr "Mengisi kolom pencarian barang, sama seperti pemindai fisik"
 
@@ -2395,7 +2431,7 @@ msgstr ""
 #: posapp/src/engine/sync.js:11 posapp/src/pages/InvoiceDetailPage.jsx:258
 #: posapp/src/pages/ItemPriceDetailPage.jsx:207
 #: posapp/src/pages/ItemPriceListPage.jsx:30
-#: posapp/src/pages/ItemPriceListPage.jsx:148
+#: posapp/src/pages/ItemPriceListPage.jsx:147
 #: posapp/src/pages/POSProfileDetailPage.jsx:630
 #: posapp/src/pages/POSProfileListPage.jsx:36
 #: posapp/src/pages/PriceListDetailPage.jsx:69
@@ -2424,7 +2460,7 @@ msgstr ""
 msgid "Price List saved successfully"
 msgstr "Daftar harga berhasil disimpan"
 
-#: posapp/src/components/Sidebar/index.jsx:15
+#: posapp/src/components/Sidebar/index.jsx:16
 #: posapp/src/pages/PriceListDetailPage.jsx:155
 #: posapp/src/pages/PriceListListPage.jsx:81
 msgid "Price Lists"
@@ -2480,7 +2516,7 @@ msgstr ""
 msgid "Product"
 msgstr ""
 
-#: posapp/src/components/Items/index.jsx:42
+#: posapp/src/components/Items/index.jsx:44
 msgid "Product Bundle"
 msgstr ""
 
@@ -2554,7 +2590,7 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:577
+#: posapp/src/components/Cart/index.jsx:530
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:171
 #: posapp/src/pages/DiscountDetailPage.jsx:806
 #: posapp/src/pages/DiscountDetailPage.jsx:821
@@ -2656,11 +2692,11 @@ msgstr ""
 msgid "Remember this device"
 msgstr "Ingat perangkat ini"
 
-#: posapp/src/components/Cart/index.jsx:567
+#: posapp/src/components/Cart/index.jsx:520
 msgid "Remove"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:753
+#: posapp/src/components/Cart/index.jsx:706
 msgid "Remove coupon"
 msgstr "Hapus kupon"
 
@@ -2668,7 +2704,7 @@ msgstr "Hapus kupon"
 msgid "Remove row"
 msgstr "Hapus baris"
 
-#: posapp/src/components/Sidebar/index.jsx:18
+#: posapp/src/components/Sidebar/index.jsx:19
 #: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
@@ -2689,7 +2725,7 @@ msgstr "Coba sinkronkan lagi"
 msgid "Retrying…"
 msgstr "Mencoba lagi…"
 
-#: posapp/src/utils/format.js:31
+#: posapp/src/utils/format.js:36
 msgid "Return"
 msgstr ""
 
@@ -2781,7 +2817,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:871
+#: posapp/src/components/Cart/index.jsx:824
 msgid "Save Draft"
 msgstr "Simpan draf"
 
@@ -2789,7 +2825,7 @@ msgstr "Simpan draf"
 msgid "Save the customer first to add addresses and contacts."
 msgstr "Simpan pelanggan terlebih dahulu untuk menambah alamat dan kontak."
 
-#: posapp/src/components/Cart/index.jsx:866
+#: posapp/src/components/Cart/index.jsx:819
 #: posapp/src/components/Customer/AddressModal.jsx:83
 #: posapp/src/components/Customer/ContactModal.jsx:80
 #: posapp/src/components/common/SaveButton.jsx:25
@@ -2800,7 +2836,7 @@ msgstr "Menyimpan…"
 msgid "Scan barcode"
 msgstr "Pindai barcode"
 
-#: posapp/src/pages/POSTerminalPage.jsx:33
+#: posapp/src/pages/POSTerminalPage.jsx:37
 msgid "Scan barcode/serial/batch or search items"
 msgstr "Pindai barcode/seri/batch atau cari barang"
 
@@ -2809,7 +2845,7 @@ msgstr "Pindai barcode/seri/batch atau cari barang"
 msgid "Scan with camera"
 msgstr "Pindai dengan kamera"
 
-#: posapp/src/components/Cart/index.jsx:555
+#: posapp/src/components/Cart/index.jsx:508
 msgid "Scan/add the item again to add another unit"
 msgstr "Pindai/tambah barang lagi untuk menambah satu unit"
 
@@ -2817,7 +2853,7 @@ msgstr "Pindai/tambah barang lagi untuk menambah satu unit"
 msgid "Search and pull a saved draft into the terminal"
 msgstr "Cari draf tersimpan dan muat ke terminal"
 
-#: posapp/src/components/Cart/index.jsx:642
+#: posapp/src/components/Cart/index.jsx:595
 msgid "Search batch no"
 msgstr "Cari no. batch"
 
@@ -2825,7 +2861,7 @@ msgstr "Cari no. batch"
 msgid "Search customer, mobile or email"
 msgstr "Cari pelanggan, ponsel, atau email"
 
-#: posapp/src/components/Cart/index.jsx:433
+#: posapp/src/components/Cart/index.jsx:386
 msgid "Search customer..."
 msgstr "Cari pelanggan..."
 
@@ -2853,7 +2889,7 @@ msgstr "Cari profil atau gudang"
 msgid "Search program name"
 msgstr "Cari nama program"
 
-#: posapp/src/components/Cart/index.jsx:622
+#: posapp/src/components/Cart/index.jsx:575
 msgid "Search serial no"
 msgstr "Cari no. seri"
 
@@ -2862,7 +2898,7 @@ msgstr "Cari no. seri"
 msgid "Search..."
 msgstr ""
 
-#: posapp/src/components/Items/index.jsx:347
+#: posapp/src/components/Items/index.jsx:351
 msgid "Searching…"
 msgstr "Mencari…"
 
@@ -2931,7 +2967,7 @@ msgstr "Pilih perusahaan"
 msgid "Select customer group"
 msgstr "Pilih grup pelanggan"
 
-#: posapp/src/components/Items/index.jsx:64
+#: posapp/src/components/Items/index.jsx:66
 msgid "Select options"
 msgstr "Pilih opsi"
 
@@ -2957,7 +2993,7 @@ msgstr ""
 msgid "Selling must be checked, if Applicable For is selected as {field}"
 msgstr "Penjualan harus dicentang jika 'Berlaku untuk' dipilih sebagai {field}"
 
-#: posapp/src/components/Cart/index.jsx:617 posapp/src/engine/sync.js:19
+#: posapp/src/components/Cart/index.jsx:570 posapp/src/engine/sync.js:19
 msgid "Serial No"
 msgstr ""
 
@@ -2971,7 +3007,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Sidebar/index.jsx:19
+#: posapp/src/components/Sidebar/index.jsx:20
 #: posapp/src/pages/SettingsPage.jsx:25
 msgid "Settings"
 msgstr ""
@@ -2993,7 +3029,7 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:405
+#: posapp/src/components/Cart/index.jsx:358
 msgid "Shopping Cart"
 msgstr ""
 
@@ -3039,7 +3075,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:34
+#: posapp/src/utils/format.js:39
 msgid "Submitted"
 msgstr ""
 
@@ -3074,7 +3110,7 @@ msgstr "Beralih ke mode gelap"
 msgid "Switch to light mode"
 msgstr "Beralih ke mode terang"
 
-#: posapp/src/components/Sidebar/index.jsx:17 posapp/src/pages/SyncPage.jsx:58
+#: posapp/src/components/Sidebar/index.jsx:18 posapp/src/pages/SyncPage.jsx:58
 msgid "Sync"
 msgstr ""
 
@@ -3119,7 +3155,7 @@ msgstr "Sistem akan memberi tahu untuk menambah atau mengurangi jumlah atau nomi
 msgid "Take Payment"
 msgstr "Terima pembayaran"
 
-#: posapp/src/components/Cart/index.jsx:499
+#: posapp/src/components/Cart/index.jsx:452
 msgid "Tap an item to add it here"
 msgstr "Ketuk barang untuk menambahkannya di sini"
 
@@ -3133,7 +3169,7 @@ msgstr ""
 msgid "Tax ID"
 msgstr ""
 
-#: posapp/src/components/Cart/index.jsx:803
+#: posapp/src/components/Cart/index.jsx:756
 msgid "Taxes"
 msgstr ""
 
@@ -3143,7 +3179,7 @@ msgstr ""
 msgid "Taxes and Charges"
 msgstr ""
 
-#: posapp/src/components/Sidebar/index.jsx:10
+#: posapp/src/components/Sidebar/index.jsx:11
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -3154,7 +3190,7 @@ msgstr ""
 #: posapp/src/components/Customer/NewCustomerModal.jsx:106
 #: posapp/src/pages/CustomerDetailPage.jsx:193
 #: posapp/src/pages/CustomerListPage.jsx:48
-#: posapp/src/pages/CustomerListPage.jsx:167
+#: posapp/src/pages/CustomerListPage.jsx:166
 #: posapp/src/pages/DiscountDetailPage.jsx:99
 #: posapp/src/pages/DiscountDetailPage.jsx:680
 msgid "Territory"
@@ -3168,7 +3204,7 @@ msgstr "Terima kasih!"
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Percobaan itu gagal — Anda dapat mencoba cara pembayaran lain di jendela {gateway}."
 
-#: posapp/src/components/Cart/index.jsx:724
+#: posapp/src/components/Cart/index.jsx:677
 msgid "This POS Profile doesn't allow manual discount changes."
 msgstr "Profil POS ini tidak mengizinkan perubahan diskon manual."
 
@@ -3281,11 +3317,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "Tidak dapat memulai kamera."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:28
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:33
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:35
+#: posapp/src/utils/format.js:40
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3355,7 +3391,11 @@ msgstr "Varian {variant} dan templatnya {template} tidak dapat ditambahkan bersa
 msgid "View all"
 msgstr "Lihat semua"
 
-#: posapp/src/components/Cart/index.jsx:474
+#: posapp/src/components/Cart/CartBar.jsx:20
+msgid "View cart"
+msgstr ""
+
+#: posapp/src/components/Cart/index.jsx:427
 msgid "View purchase history"
 msgstr "Lihat riwayat pembelian"
 
@@ -3475,7 +3515,7 @@ msgstr "{gateway} — offline"
 msgid "{item} (Free)"
 msgstr "{item} (Gratis)"
 
-#: posapp/src/components/Sidebar/index.jsx:66
+#: posapp/src/components/Sidebar/index.jsx:75
 #: posapp/src/pages/SettingsPage.jsx:43
 msgid "{label} — coming soon"
 msgstr "{label} — segera hadir"
@@ -3484,7 +3524,7 @@ msgstr "{label} — segera hadir"
 msgid "{label} — {n} cached"
 msgstr "{label} — {n} di cache"
 
-#: posapp/src/components/Sidebar/index.jsx:79
+#: posapp/src/components/Sidebar/index.jsx:88
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — {n} faktur menunggu sinkronisasi"
 
@@ -3492,11 +3532,11 @@ msgstr "{label} — {n} faktur menunggu sinkronisasi"
 msgid "{n} invoices"
 msgstr "{n} faktur"
 
-#: posapp/src/components/Cart/index.jsx:419
+#: posapp/src/components/Cart/index.jsx:372
 msgid "{n} items"
 msgstr "{n} barang"
 
-#: posapp/src/components/Cart/index.jsx:459
+#: posapp/src/components/Cart/index.jsx:412
 msgid "{n} loyalty points available"
 msgstr "{n} poin loyalitas tersedia"
 
@@ -3516,11 +3556,11 @@ msgstr "{n} jam lalu"
 msgid "{n}m ago"
 msgstr "{n} mnt lalu"
 
-#: posapp/src/components/Items/index.jsx:75
+#: posapp/src/components/Items/index.jsx:77
 msgid "{qty} left"
 msgstr "Sisa {qty}"
 
-#: posapp/src/components/Cart/index.jsx:532
+#: posapp/src/components/Cart/index.jsx:485
 msgid "{rate} each"
 msgstr "{rate} per unit"
 

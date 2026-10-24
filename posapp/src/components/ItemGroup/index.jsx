@@ -32,7 +32,7 @@ const ItemGroup = ({ selectedGroup, onChangeGroup }) => {
   }, [allowedGroups, selectedGroup]);
 
   return (
-    <div style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 2 }}>
+    <div className="pos-category-row" style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 2 }}>
       <div
         className={`pos-category-chip ${selectedGroup === "" ? "active" : ""}`}
         onClick={() => onChangeGroup("")}

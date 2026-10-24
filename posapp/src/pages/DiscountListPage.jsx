@@ -121,7 +121,7 @@ const DiscountListPage = () => {
 
   return (
     <div className="d-flex flex-column flex-fill" style={{ minHeight: 0 }}>
-      <div className="d-flex align-items-center justify-content-between px-4 pt-3">
+      <div className="d-flex align-items-center justify-content-between px-4 pt-3 pos-list-toolbar">
         <FilterChips options={STATUS_FILTERS} value={status} onChange={resetToFirstPage(setStatus)} />
         <button
           type="button"

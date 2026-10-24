@@ -1,5 +1,5 @@
 import { tData, useTranslation } from "../../translation";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { postDraftInvoice, fetchInvoice } from "../../api/Invoice";
@@ -17,14 +17,14 @@ import NewCustomerModal from "../Customer/NewCustomerModal";
 import DraftPickerModal from "./DraftPickerModal";
 import { LinkField, TextField, SelectField, NumberField, CurrencyField, AlertModal } from "../common";
 import { roundCurrency } from "../../utils/number";
-import { computeCartTotals } from "../../utils/tax";
 import useCustomerDisplayBroadcaster from "../../hooks/useCustomerDisplayBroadcaster";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
+import useCartTotals from "../../hooks/useCartTotals";
 import { getServerMessage } from "../../utils/serverError";
 
 const PRICING_DEBOUNCE_MS = 400;
 
-const Cart = () => {
+const Cart = ({ onSaleComplete }) => {
   const { __ } = useTranslation();
   const navigate = useNavigate();
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
@@ -33,7 +33,6 @@ const Cart = () => {
   const money = useCurrencyFormatter();
   const currencyPrecision = usePOSSessionStore((s) => s.currencyPrecision);
   const floatPrecision = usePOSSessionStore((s) => s.floatPrecision);
-  const taxTemplateRows = usePOSSessionStore((s) => s.taxTemplateRows);
   const posProfile = usePOSSessionStore((s) => s.posProfile);
   const pricingRules = usePOSSessionStore((s) => s.pricingRules);
   const warehouse = usePOSSessionStore((s) => s.warehouse);
@@ -188,53 +187,7 @@ const Cart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [customer, openingDetail.company]);
 
-  // Each line's `amount` is already qty × its discounted `rate` (cartStore.applyPricing),
-  // so their sum is the taxable net total — the same net_total ERPNext's
-  // calculate_taxes_and_totals computes on save, and what the Customer Display
-  // (useCustomerDisplayBroadcaster) already uses. Item discounts must not be
-  // subtracted from it again.
-  const netAfterItemDiscount = useMemo(
-    () => roundCurrency(cartItems.reduce((sum, item) => sum + (item.amount ?? 0), 0), currencyPrecision),
-    [cartItems, currencyPrecision]
-  );
-
-  // Item-level discounts are independent of the order-level discount below —
-  // each item carries its own discount_amount (auto-applied, e.g. via pricing rules).
-  // discount_amount is per unit (price_list_rate − rate), so scale it by qty.
-  const itemDiscountTotal = useMemo(
-    () =>
-      roundCurrency(
-        cartItems.reduce((sum, item) => sum + (item.discount_amount ?? 0) * (item.qty ?? 0), 0),
-        currencyPrecision
-      ),
-    [cartItems, currencyPrecision]
-  );
-
-  // Shown as the pre-discount subtotal, so Item Total − Item Discounts = net.
-  const itemTotal = useMemo(
-    () => roundCurrency(netAfterItemDiscount + itemDiscountTotal, currencyPrecision),
-    [netAfterItemDiscount, itemDiscountTotal, currencyPrecision]
-  );
-
-  // Order-level tax rows previewed from the POS Profile's taxes_and_charges
-  // template, plus the additional order discount's effect on them — mirrors
-  // erpnext.controllers.taxes_and_totals (calculate_taxes + apply_discount_amount):
-  // the discount is distributed pro-rata across items and tax is recomputed
-  // on the reduced total, not just subtracted from the post-tax grand total.
-  // Item-wise rate overrides come from each cart item's item_tax_rate (see
-  // easy_pos.api.item._get_item_tax_map).
-  const { taxRows, totalTax: totalTaxAmount, discountAmount, grandTotal } = useMemo(
-    () =>
-      computeCartTotals({
-        items: cartItems,
-        taxTemplateRows,
-        netTotal: netAfterItemDiscount,
-        discountOn,
-        discountPercentage: discount,
-        precision: currencyPrecision,
-      }),
-    [cartItems, taxTemplateRows, netAfterItemDiscount, discountOn, discount, currencyPrecision]
-  );
+  const { itemTotal, itemDiscountTotal, taxRows, totalTax: totalTaxAmount, discountAmount, grandTotal } = useCartTotals();
 
   const formatAmount = (value) => money(value);
 
@@ -409,7 +362,7 @@ const Cart = () => {
             {customerDisplayEnabled && (
               <button
                 type="button"
-                className="btn btn-link btn-sm p-0"
+                className="btn btn-link btn-sm p-0 pos-hide-mobile"
                 title={__("Open Customer Display")}
                 onClick={openCustomerDisplay}
               >
@@ -477,7 +430,7 @@ const Cart = () => {
           </div>
 
           {/* ── Cart Items ── */}
-          <div className="d-flex flex-column" style={{ flex: 1, minHeight: 0 }}>
+          <div className="d-flex flex-column cart-items-section" style={{ flex: 1, minHeight: 0 }}>
 
             {/* Toolbar */}
             <div className="d-flex align-items-center justify-content-between px-3 pt-2 pb-1">
@@ -491,7 +444,7 @@ const Cart = () => {
             </div>
 
             {/* List */}
-            <div className="overflow-auto" style={{ flex: 1, minHeight: 0 }}>
+            <div className="overflow-auto cart-lines-scroll" style={{ flex: 1, minHeight: 0 }}>
               {cartItems.length === 0 ? (
                 <div className="d-flex flex-column align-items-center justify-content-center text-muted gap-2 py-5">
                   <i className="bi bi-cart-x" style={{ fontSize: 28, opacity: 0.3 }} />
@@ -851,7 +804,7 @@ const Cart = () => {
           </div>
 
           {/* ── Actions ── */}
-          <div className="px-3 pb-3 pt-1 position-relative">
+          <div className="px-3 pb-3 pt-1 position-relative cart-actions">
             <div className="row g-2 mb-2">
               <div className="col-6">
                 <button
@@ -911,7 +864,10 @@ const Cart = () => {
           onClose={() => setPayInvoice(false)}
           grandTotal={grandTotal}
           taxes={taxRows}
-          onComplete={sendInvoiceComplete}
+          onComplete={(details) => {
+            sendInvoiceComplete(details);
+            onSaleComplete?.();
+          }}
         />
       )}
 
