@@ -2461,3 +2461,22 @@
   display: inline-block;
   transform: scaleX(-1);
 }
+
+/* Long translations (found by the language sweep): labels may wrap inside
+   their box instead of overflowing it. */
+@media (max-width: 639.98px), (max-height: 500px) and (orientation: landscape) {
+  .pos-bottom-nav-item > span {
+    max-width: 100%;
+    line-height: 1.15;
+    text-align: center;
+    overflow-wrap: anywhere;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pos-stat-label {
+    overflow-wrap: anywhere;
+  }
+}
