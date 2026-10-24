@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-23 22:37+0553\n"
+"POT-Creation-Date: 2026-10-24 08:35+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: eo\n"
@@ -44,7 +44,7 @@ msgstr "Senpaga-vara oferto en ĉi tiu ĉaro bezonas konekton — prezoj/rabatoj
 msgid "A new version of Easy POS is available."
 msgstr "Nova versio de Easy POS disponeblas."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:119
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:132
 msgid "A shift needs to be open before you can ring up sales."
 msgstr "Deĵoro devas esti malfermita antaŭ ol registri vendojn."
 
@@ -223,7 +223,7 @@ msgstr ""
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
 #: posapp/src/pages/InvoiceDetailPage.jsx:411
 #: posapp/src/pages/InvoiceRegisterPage.jsx:40
-#: posapp/src/pages/ReportsPage.jsx:363
+#: posapp/src/pages/ReportsPage.jsx:374
 msgid "Amount"
 msgstr "Sumo"
 
@@ -326,7 +326,7 @@ msgstr "Aŭtomate aldoni filtritan varon al la ĉaro"
 msgid "Automatically Calculated"
 msgstr "Aŭtomate kalkulita"
 
-#: posapp/src/pages/ReportsPage.jsx:206
+#: posapp/src/pages/ReportsPage.jsx:217
 msgid "Avg ticket"
 msgstr "Meza kvitanco"
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "Reen al fakturoj"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Balance Due"
 msgstr "Restanta ŝuldo"
 
@@ -419,9 +419,9 @@ msgstr ""
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:346
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:124
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
 msgstr ""
 
@@ -432,11 +432,11 @@ msgstr "Nuligi fakturon"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:28
 msgid "Cancelled"
 msgstr ""
 
-#: easy_pos/api/pos.py:377
+#: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
 msgstr "Ne eblas krei kreditnoton kontraŭ kreditnoto"
 
@@ -459,7 +459,7 @@ msgstr "Varoj en la ĉaro"
 msgid "Cashier"
 msgstr "Kasisto"
 
-#: posapp/src/components/InvoicePay/index.jsx:424
+#: posapp/src/components/InvoicePay/index.jsx:439
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "La kasisto enigas la sumon por pagigi; ĉe Fini pagon malfermiĝas pago per {gateway}."
 
@@ -467,7 +467,7 @@ msgstr "La kasisto enigas la sumon por pagigi; ĉe Fini pagon malfermiĝas pago 
 msgid "Change Due"
 msgstr "Restmono"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Change to Return"
 msgstr "Ŝanĝi al redono"
 
@@ -551,7 +551,7 @@ msgstr "Kolektoreguloj (niveloj)"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: posapp/src/components/Customer/NewCustomerModal.jsx:94
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:157
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:171
 #: posapp/src/pages/CustomerDetailPage.jsx:178
 #: posapp/src/pages/CustomerDetailPage.jsx:303
 #: posapp/src/pages/DiscountDetailPage.jsx:760
@@ -573,7 +573,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "Firmao kaj deponejo estas devigaj"
 
-#: posapp/src/components/InvoicePay/index.jsx:356
+#: posapp/src/components/InvoicePay/index.jsx:362
 msgid "Complete Payment"
 msgstr "Fini pagon"
 
@@ -597,7 +597,7 @@ msgstr "Agordi nivelojn, poentojn kaj elspezregulojn"
 msgid "Connected to the server"
 msgstr "Konektita al la servilo"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:33
 msgid "Consolidated"
 msgstr "Kunigita"
 
@@ -610,7 +610,7 @@ msgstr "Konvertofaktoro (1 poento = ? valuto)"
 msgid "Cost Center"
 msgstr "Kostocentro"
 
-#: posapp/src/pages/ReportsPage.jsx:118
+#: posapp/src/pages/ReportsPage.jsx:122
 msgid "Could not load report data."
 msgstr "Ne eblis ŝargi raportajn datumojn."
 
@@ -618,7 +618,7 @@ msgstr "Ne eblis ŝargi raportajn datumojn."
 msgid "Could not reach the server to sync."
 msgstr "Ne eblis atingi la servilon por sinkronigi."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:62
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:74
 msgid "Could not resolve this profile's currency."
 msgstr "Ne eblis determini la valuton de ĉi tiu profilo."
 
@@ -674,7 +674,7 @@ msgstr "Krei klienton"
 msgid "Create Demo Data"
 msgstr "Krei demonstrajn datumojn"
 
-#: posapp/src/pages/LoginPage.jsx:177
+#: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
 msgstr "Krei konton"
 
@@ -698,7 +698,7 @@ msgstr "Kreditlimo"
 msgid "Credit Limits"
 msgstr "Kreditlimoj"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:27
 msgid "Credit Note Issued"
 msgstr "Kreditnoto eldonita"
 
@@ -706,7 +706,7 @@ msgstr "Kreditnoto eldonita"
 msgid "Credit limit is already defined for one of the selected Companies"
 msgstr "Kreditlimo jam estas difinita por unu el la elektitaj firmaoj"
 
-#: posapp/src/pages/ReportsPage.jsx:332
+#: posapp/src/pages/ReportsPage.jsx:343
 msgid "Credit notes"
 msgstr "Kreditnotoj"
 
@@ -727,14 +727,14 @@ msgstr "La valuto devas esti la sama kiel la valuto de la prezlisto: {currency}"
 msgid "Current"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:77
+#: posapp/src/pages/ReportsPage.jsx:80
 msgid "Current shift · {profile}"
 msgstr "Nuna deĵoro · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
 #: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:173 posapp/src/engine/sync.js:10
+#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -744,7 +744,7 @@ msgstr "Nuna deĵoro · {profile}"
 #: posapp/src/pages/InvoiceRegisterPage.jsx:176
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Customer"
 msgstr "Kliento"
 
@@ -911,7 +911,7 @@ msgstr "Rabata sumo"
 msgid "Discount Percentage"
 msgstr "Rabata procento"
 
-#: posapp/src/pages/ReportsPage.jsx:323
+#: posapp/src/pages/ReportsPage.jsx:334
 msgid "Discount given"
 msgstr "Donita rabato"
 
@@ -931,7 +931,7 @@ msgstr "Rabato sukcese konservita"
 msgid "Discounts"
 msgstr "Rabatoj"
 
-#: posapp/src/pages/ReportsPage.jsx:319
+#: posapp/src/pages/ReportsPage.jsx:330
 msgid "Discounts and returns"
 msgstr "Rabatoj kaj redonoj"
 
@@ -946,7 +946,7 @@ msgstr "Ne devigi kvanton de senpaga varo"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:22
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
 msgid "Draft"
 msgstr ""
 
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Email Notification"
 msgstr "Retpoŝta sciigo"
 
-#: posapp/src/pages/LoginPage.jsx:117
+#: posapp/src/pages/LoginPage.jsx:112
 msgid "Email or username"
 msgstr "Retpoŝto aŭ uzantnomo"
 
@@ -1049,15 +1049,15 @@ msgstr "Ŝalti eksterretan reĝimon"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:335
+#: posapp/src/components/InvoicePay/index.jsx:341
 msgid "Enter the amount received for each payment mode."
 msgstr "Enigu la ricevitan sumon por ĉiu pagmaniero."
 
-#: posapp/src/pages/LoginPage.jsx:128
+#: posapp/src/pages/LoginPage.jsx:123
 msgid "Enter your password"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:106
+#: posapp/src/pages/LoginPage.jsx:101
 msgid "Enter your workstation credentials to start a shift."
 msgstr "Enigu la ensalutilojn de via laborstacio por komenci deĵoron."
 
@@ -1102,8 +1102,8 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "Malsukcesis nuligi la fakturon"
 
-#: posapp/src/components/InvoicePay/index.jsx:211
-#: posapp/src/components/InvoicePay/index.jsx:318
+#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:324
 msgid "Failed to complete payment"
 msgstr "Malsukcesis fini la pagon"
 
@@ -1128,8 +1128,8 @@ msgstr "Malsukcesis forigi la kontakton"
 msgid "Failed to load Razorpay checkout"
 msgstr "Malsukcesis ŝargi la Razorpay-pagon"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:105
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:109
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:122
 msgid "Failed to open till"
 msgstr "Malsukcesis malfermi la kason"
 
@@ -1210,7 +1210,7 @@ msgstr "Filtri laŭ retpoŝto"
 msgid "Filter by mobile"
 msgstr "Filtri laŭ poŝtelefono"
 
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "Finante — via kvitanco presiĝos ĉi tie, tuj kiam ĝi estos konfirmita."
 
@@ -1226,7 +1226,7 @@ msgstr "Por prezlisto"
 msgid "For the 'Apply Rule On Other' condition the field {field} is mandatory"
 msgstr "Por la kondiĉo “Apliki regulon al alia” la kampo {field} estas deviga"
 
-#: posapp/src/pages/LoginPage.jsx:148
+#: posapp/src/pages/LoginPage.jsx:143
 msgid "Forgot password?"
 msgstr "Ĉu vi forgesis la pasvorton?"
 
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "Give free item for every N quantity"
 msgstr "Doni senpagan varon por ĉiuj N unuoj"
 
-#: posapp/src/pages/ReportsPage.jsx:188
+#: posapp/src/pages/ReportsPage.jsx:199
 msgid "Go to Terminal"
 msgstr "Iri al la terminalo"
 
@@ -1274,15 +1274,15 @@ msgstr "Iri al la terminalo"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: posapp/src/components/Cart/index.jsx:692
 #: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:365
+#: posapp/src/components/InvoicePay/index.jsx:182
+#: posapp/src/components/InvoicePay/index.jsx:371
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
 msgid "Grand Total"
 msgstr "Ĝenerala sumo"
 
-#: posapp/src/pages/ReportsPage.jsx:198
+#: posapp/src/pages/ReportsPage.jsx:209
 msgid "Gross sales"
 msgstr "Malneta vendo"
 
@@ -1310,7 +1310,7 @@ msgstr "Kaŝi bildojn"
 msgid "Hide Unavailable Items"
 msgstr "Kaŝi nedisponeblajn varojn"
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Hide password"
 msgstr "Kaŝi pasvorton"
 
@@ -1357,7 +1357,7 @@ msgstr "Individuo"
 msgid "Industry"
 msgstr "Industrio"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:34
 msgid "Internal Transfer"
 msgstr "Interna transigo"
 
@@ -1365,7 +1365,7 @@ msgstr "Interna transigo"
 msgid "Invalid condition expression"
 msgstr "Nevalida kondiĉa esprimo"
 
-#: easy_pos/api/pricing.py:57 easy_pos/api/pricing.py:168
+#: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
 msgstr "Nevalida kuponkodo"
 
@@ -1380,7 +1380,7 @@ msgstr ""
 #: posapp/src/components/Cart/DraftPickerModal.jsx:15
 #: posapp/src/pages/InvoiceDetailPage.jsx:106
 #: posapp/src/pages/InvoiceRegisterPage.jsx:22
-#: posapp/src/pages/ReportsPage.jsx:358
+#: posapp/src/pages/ReportsPage.jsx:369
 msgid "Invoice"
 msgstr "Fakturo"
 
@@ -1501,7 +1501,7 @@ msgid "Just now"
 msgstr "Ĵus"
 
 #: posapp/src/components/Topbar/index.jsx:122
-#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:90
+#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:93
 msgid "Language"
 msgstr ""
 
@@ -1571,9 +1571,17 @@ msgstr "Fidelprogramo sukcese konservita"
 msgid "Loyalty Programs"
 msgstr "Fidelprogramoj"
 
-#: posapp/src/components/InvoicePay/index.jsx:456
+#: posapp/src/components/InvoicePay/index.jsx:471
 msgid "Loyalty Redeemed"
 msgstr "Elspezitaj fidelpoentoj"
+
+#: posapp/src/components/InvoicePay/index.jsx:377
+msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
+msgstr "Fidelpoentoj ne povas esti elspezitaj en {currency}. ERPNext elspezas ilin nur en la valuto de la firmao ({company_currency})."
+
+#: easy_pos/api/pos.py:275
+msgid "Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+msgstr "Fidelpoentoj ne povas esti elspezitaj sur fakturo en {0}. ERPNext elspezas ilin nur en la valuto de la firmao ({1})."
 
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
@@ -1704,7 +1712,7 @@ msgstr "Plurnivela programo"
 msgid "Net Total"
 msgstr "Neta sumo"
 
-#: posapp/src/pages/ReportsPage.jsx:199
+#: posapp/src/pages/ReportsPage.jsx:210
 msgid "Net sales"
 msgstr "Neta vendo"
 
@@ -1758,7 +1766,7 @@ msgstr "Nova kliento"
 msgid "New discount"
 msgstr "Nova rabato"
 
-#: posapp/src/pages/LoginPage.jsx:172
+#: posapp/src/pages/LoginPage.jsx:167
 msgid "New here"
 msgstr "Nova ĉi tie"
 
@@ -1894,7 +1902,7 @@ msgstr "Neniu varo kongruas kun via serĉo"
 msgid "No items on this invoice"
 msgstr "Neniuj varoj en ĉi tiu fakturo"
 
-#: posapp/src/pages/ReportsPage.jsx:314
+#: posapp/src/pages/ReportsPage.jsx:325
 msgid "No items sold in this period."
 msgstr "Neniuj varoj venditaj en ĉi tiu periodo."
 
@@ -1902,11 +1910,11 @@ msgstr "Neniuj varoj venditaj en ĉi tiu periodo."
 msgid "No payment modes added"
 msgstr "Neniuj pagmanieroj aldonitaj"
 
-#: posapp/src/components/InvoicePay/index.jsx:408
+#: posapp/src/components/InvoicePay/index.jsx:423
 msgid "No payment modes configured for this POS Profile."
 msgstr "Neniuj pagmanieroj agorditaj por ĉi tiu POS-profilo."
 
-#: posapp/src/pages/ReportsPage.jsx:241
+#: posapp/src/pages/ReportsPage.jsx:252
 msgid "No payment modes configured."
 msgstr "Neniuj pagmanieroj agorditaj."
 
@@ -1918,7 +1926,7 @@ msgstr "Neniuj pagmanieroj trovitaj por ĉi tiu deĵoro."
 msgid "No payments"
 msgstr "Neniuj pagoj"
 
-#: posapp/src/pages/ReportsPage.jsx:258
+#: posapp/src/pages/ReportsPage.jsx:269
 msgid "No payments recorded in this period."
 msgstr "Neniuj pagoj registritaj en ĉi tiu periodo."
 
@@ -1934,7 +1942,7 @@ msgstr "Neniuj registroj trovitaj"
 msgid "No rows"
 msgstr "Neniuj vicoj"
 
-#: posapp/src/pages/ReportsPage.jsx:281
+#: posapp/src/pages/ReportsPage.jsx:292
 msgid "No sales in this period."
 msgstr "Neniuj vendoj en ĉi tiu periodo."
 
@@ -1942,7 +1950,7 @@ msgstr "Neniuj vendoj en ĉi tiu periodo."
 msgid "No shift open"
 msgstr "Neniu malfermita deĵoro"
 
-#: posapp/src/pages/ReportsPage.jsx:185
+#: posapp/src/pages/ReportsPage.jsx:196
 msgid "No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here."
 msgstr "Ankoraŭ neniuj deĵoroj por raporti. Malfermu deĵoron de la terminalo por vidi ĉi tie vivajn deĵorajn ciferojn."
 
@@ -1958,7 +1966,7 @@ msgstr "Neniuj impostoj en ĉi tiu fakturo"
 msgid "No tiers added"
 msgstr "Neniuj niveloj aldonitaj"
 
-#: posapp/src/pages/ReportsPage.jsx:354
+#: posapp/src/pages/ReportsPage.jsx:365
 msgid "No transactions in this period."
 msgstr "Neniuj transakcioj en ĉi tiu periodo."
 
@@ -2003,7 +2011,7 @@ msgstr "Eksterrete"
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "Eksterreta reĝimo ne estas ŝaltita por ĉi tiu instalaĵo (EasyPOS-agordoj). Datumoj plu kaŝmemoriĝas sube, sed la terminalo ne uzos ilin eksterrete ĝis la reĝimo estos ŝaltita."
 
-#: posapp/src/components/InvoicePay/index.jsx:172
+#: posapp/src/components/InvoicePay/index.jsx:178
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Eksterrete — atendas sinkronigon. Represu el Fakturoj post sinkronigo."
 
@@ -2023,7 +2031,7 @@ msgstr "Unu ensaluto po kasisto, unu registro po deĵoro"
 msgid "Online"
 msgstr "Enrete"
 
-#: easy_pos/api/pos.py:375
+#: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
 msgstr "Nur sendita fakturo povas esti redonita"
 
@@ -2048,11 +2056,11 @@ msgstr "Malfermi klientan ekranon"
 msgid "Open a shift before syncing"
 msgstr "Malfermu deĵoron antaŭ sinkronigo"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:139
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:152
 msgid "Open till"
 msgstr "Malfermi kason"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
 msgid "Open your till"
 msgstr "Malfermu vian kason"
 
@@ -2070,15 +2078,15 @@ msgstr "Malferma sumo"
 msgid "Opening Balance Details"
 msgstr "Detaloj de komenca saldo"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:148
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
 msgstr "Malfermi deĵoron postulas interretan konekton — stoko kaj prezoj de la elektita profilo devas esti determinitaj vive. Rekonektiĝu por malfermi vian kason."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:177
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:191
 msgid "Opening balance"
 msgstr "Komenca saldo"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:136
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:149
 msgid "Opening…"
 msgstr "Malfermante…"
 
@@ -2107,11 +2115,11 @@ msgstr "Elĉerpita"
 msgid "Outstanding Amount"
 msgstr "Restanta sumo"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
 msgid "Overdue"
 msgstr "Posttempa"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:31
 msgid "Overdue and Discounted"
 msgstr "Posttempa kaj rabatita"
 
@@ -2137,7 +2145,7 @@ msgstr "POS-malferma registro"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:166
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
 #: posapp/src/pages/InvoiceRegisterPage.jsx:191
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
@@ -2166,16 +2174,16 @@ msgstr "Paĝo {page} el {total}"
 msgid "Paid"
 msgstr "Pagita"
 
-#: posapp/src/components/InvoicePay/index.jsx:451
+#: posapp/src/components/InvoicePay/index.jsx:466
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr "Pagita sumo"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:25
 msgid "Partly Paid"
 msgstr "Parte pagita"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:32
 msgid "Partly Paid and Discounted"
 msgstr "Parte pagita kaj rabatita"
 
@@ -2188,11 +2196,11 @@ msgstr "Partnereco"
 msgid "Party Information"
 msgstr "Informoj pri partio"
 
-#: posapp/src/pages/LoginPage.jsx:127
+#: posapp/src/pages/LoginPage.jsx:122
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:354
+#: posapp/src/components/InvoicePay/index.jsx:360
 msgid "Pay with {gateway}"
 msgstr "Pagi per {gateway}"
 
@@ -2214,11 +2222,11 @@ msgid "Payment Reconciliation"
 msgstr "Pagrekonciliado"
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:400
+#: posapp/src/components/InvoicePay/index.jsx:415
 msgid "Payment Summary"
 msgstr "Pagresumo"
 
-#: posapp/src/pages/ReportsPage.jsx:247
+#: posapp/src/pages/ReportsPage.jsx:258
 msgid "Payment method breakdown"
 msgstr "Disdivido laŭ pagmaniero"
 
@@ -2290,16 +2298,16 @@ msgstr "Bonvolu pagi"
 msgid "Please add at least one item to the cart"
 msgstr "Bonvolu aldoni almenaŭ unu varon al la ĉaro"
 
-#: posapp/src/components/InvoicePay/index.jsx:221
+#: posapp/src/components/InvoicePay/index.jsx:227
 msgid "Please add one or more items to the cart"
 msgstr "Bonvolu aldoni unu aŭ plurajn varojn al la ĉaro"
 
-#: posapp/src/components/InvoicePay/index.jsx:225
+#: posapp/src/components/InvoicePay/index.jsx:231
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Bonvolu enigi sumon por almenaŭ unu pagmaniero"
 
 #: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:223
 msgid "Please select a customer"
 msgstr "Bonvolu elekti klienton"
 
@@ -2565,9 +2573,9 @@ msgstr "Razorpay ne estas agordita. Unue agordu ĝin en Razorpay-agordoj."
 msgid "Razorpay payment signature verification failed"
 msgstr "Kontrolo de la subskribo de Razorpay-pago malsukcesis"
 
-#: posapp/src/components/InvoicePay/index.jsx:161
-#: posapp/src/components/InvoicePay/index.jsx:170
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:167
+#: posapp/src/components/InvoicePay/index.jsx:176
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Receipt"
 msgstr "Kvitanco"
 
@@ -2575,7 +2583,7 @@ msgstr "Kvitanco"
 msgid "Receipt Delivery"
 msgstr "Livero de kvitanco"
 
-#: posapp/src/pages/ReportsPage.jsx:344
+#: posapp/src/pages/ReportsPage.jsx:355
 msgid "Recent transactions"
 msgstr "Lastatempaj transakcioj"
 
@@ -2583,7 +2591,7 @@ msgstr "Lastatempaj transakcioj"
 msgid "Reconnect to close your shift"
 msgstr "Rekonektiĝu por fermi vian deĵoron"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:144
 msgid "Reconnect to open a shift"
 msgstr "Rekonektiĝu por malfermi deĵoron"
 
@@ -2603,7 +2611,7 @@ msgstr "Ripetkvanto ne povas esti malpli ol 0"
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "Ripetiĝaj rabatoj kun miksitaj kondiĉoj ne estas subtenataj"
 
-#: posapp/src/components/InvoicePay/index.jsx:372
+#: posapp/src/components/InvoicePay/index.jsx:387
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "Elspezi fidelpoentojn ({n} disponeblaj)"
 
@@ -2619,7 +2627,7 @@ msgstr "Registriĝi"
 msgid "Reload"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:142
+#: posapp/src/pages/LoginPage.jsx:137
 msgid "Remember this device"
 msgstr "Memori ĉi tiun aparaton"
 
@@ -2636,7 +2644,7 @@ msgid "Remove row"
 msgstr "Forigi vicon"
 
 #: posapp/src/components/Sidebar/index.jsx:18
-#: posapp/src/pages/ReportsPage.jsx:98 posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
 
@@ -2656,7 +2664,7 @@ msgstr "Reprovi sinkronigon"
 msgid "Retrying…"
 msgstr "Reprovante…"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:26
 msgid "Return"
 msgstr "Redono"
 
@@ -2700,7 +2708,7 @@ msgstr "Priskribo de regulo"
 msgid "SMS Notification"
 msgstr "SMS-sciigo"
 
-#: posapp/src/pages/ReportsPage.jsx:136
+#: posapp/src/pages/ReportsPage.jsx:140
 msgid "Sales"
 msgstr "Vendo"
 
@@ -2730,11 +2738,11 @@ msgstr "Ŝablono de vendaj impostoj kaj kostoj"
 msgid "Sales completed offline, queued locally until they reach ERPNext."
 msgstr "Vendoj finitaj eksterrete, en loka vico ĝis ili atingos ERPNext."
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by day"
 msgstr "Vendotendenco · po tago"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by hour"
 msgstr "Vendotendenco · po horo"
 
@@ -2862,7 +2870,7 @@ msgstr "Elekti vargrupon"
 msgid "Select Mode"
 msgstr "Elekti manieron"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:167
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:181
 msgid "Select POS profile"
 msgstr "Elekti POS-profilon"
 
@@ -2886,11 +2894,11 @@ msgstr "Unue elektu firmaon"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "Elektu opcion por ĉiu atributo por elekti varianton."
 
-#: easy_pos/api/pos.py:400 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
 msgid "Select at least one item to return"
 msgstr "Elektu almenaŭ unu varon por redoni"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:158
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:172
 msgid "Select company"
 msgstr "Elekti firmaon"
 
@@ -2947,7 +2955,7 @@ msgstr ""
 msgid "Shift"
 msgstr "Deĵoro"
 
-#: posapp/src/pages/ReportsPage.jsx:214
+#: posapp/src/pages/ReportsPage.jsx:225
 msgid "Shift summary"
 msgstr "Resumo de deĵoro"
 
@@ -2964,11 +2972,11 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr "Aĉetĉaro"
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Show password"
 msgstr "Montri pasvorton"
 
-#: posapp/src/pages/LoginPage.jsx:104 posapp/src/pages/LoginPage.jsx:164
+#: posapp/src/pages/LoginPage.jsx:99 posapp/src/pages/LoginPage.jsx:159
 msgid "Sign in"
 msgstr "Ensaluti"
 
@@ -2976,7 +2984,7 @@ msgstr "Ensaluti"
 msgid "Sign in to open your till and start ringing up sales."
 msgstr "Ensalutu por malfermi vian kason kaj komenci vendi."
 
-#: posapp/src/pages/LoginPage.jsx:160
+#: posapp/src/pages/LoginPage.jsx:155
 msgid "Signing in…"
 msgstr "Ensalutante…"
 
@@ -3006,11 +3014,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:29
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Submitting…"
 msgstr "Sendante…"
 
@@ -3082,7 +3090,7 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "La sistemo sciigos pliigi aŭ malpliigi la kvanton aŭ sumon"
 
-#: posapp/src/components/InvoicePay/index.jsx:334
+#: posapp/src/components/InvoicePay/index.jsx:340
 msgid "Take Payment"
 msgstr "Ricevi pagon"
 
@@ -3131,7 +3139,7 @@ msgstr "Teritorio"
 msgid "Thank You!"
 msgstr "Dankon!"
 
-#: posapp/src/components/InvoicePay/index.jsx:305
+#: posapp/src/components/InvoicePay/index.jsx:311
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Tiu provo malsukcesis — vi povas provi alian pagmanieron en la fenestro de {gateway}."
 
@@ -3146,6 +3154,10 @@ msgstr "Ĉi tiu fakturo jam estas finigita"
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
 msgstr "Ĉi tiu eksterreta vendo ne plu estas en la loka vico de ĉi tiu aparato."
+
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:65
+msgid "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings."
+msgstr "Ĉi tiu profilo vendas en {currency}, sed la valuto de la firmao estas {company_currency}. La unua vendo al nova kliento malsukcesos ĝis 'Allow multi-currency invoices against single party account' estos ŝaltita en Accounts Settings."
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:158
 msgid "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below."
@@ -3192,7 +3204,7 @@ msgstr ""
 msgid "Toggle dark mode"
 msgstr "Baskuligi malhelan reĝimon"
 
-#: posapp/src/pages/ReportsPage.jsx:290
+#: posapp/src/pages/ReportsPage.jsx:301
 msgid "Top selling items"
 msgstr "Plej venditaj varoj"
 
@@ -3218,7 +3230,7 @@ msgstr "Transakcio"
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/pages/ReportsPage.jsx:203
+#: posapp/src/pages/ReportsPage.jsx:214
 msgid "Transactions"
 msgstr "Transakcioj"
 
@@ -3244,11 +3256,11 @@ msgstr "Unuo"
 msgid "Unable to start the camera."
 msgstr "Ne eblas startigi la fotilon."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
 msgid "Unpaid"
 msgstr "Nepagita"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:30
 msgid "Unpaid and Discounted"
 msgstr "Nepagita kaj rabatita"
 
@@ -3314,7 +3326,7 @@ msgstr ""
 msgid "Variant {variant} and its template {template} cannot both be added to the same Pricing Rule"
 msgstr "La varianto {variant} kaj ĝia ŝablono {template} ne povas ambaŭ esti aldonitaj al la sama preza regulo"
 
-#: posapp/src/pages/ReportsPage.jsx:349
+#: posapp/src/pages/ReportsPage.jsx:360
 msgid "View all"
 msgstr "Vidi ĉion"
 
@@ -3322,12 +3334,12 @@ msgstr "Vidi ĉion"
 msgid "View purchase history"
 msgstr "Vidi aĉethistorion"
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Waiting for {gateway}…"
 msgstr "Atendante {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:173
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "Preterpasanta kliento"
 
@@ -3394,7 +3406,7 @@ msgstr "Vi povas elekti nur unu pagmanieron kiel defaŭltan"
 msgid "Your order will appear here shortly."
 msgstr "Via mendo baldaŭ aperos ĉi tie."
 
-#: posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:155
 msgid "Your sales, shift, and payment summary"
 msgstr "Resumo de viaj vendoj, deĵoro kaj pagoj"
 
@@ -3410,7 +3422,7 @@ msgstr "ekz. Arĝento"
 msgid "e.g. customer@example.com"
 msgstr "ekz. kliento@example.com"
 
-#: easy_pos/api/pos.py:500
+#: easy_pos/api/pos.py:515
 msgid "opening_entry is required for shift scope"
 msgstr ""
 
@@ -3422,19 +3434,19 @@ msgstr "{field} ne estas aldonita en la tabelo"
 msgid "{field} is required"
 msgstr "{field} estas deviga"
 
-#: posapp/src/components/InvoicePay/index.jsx:427
+#: posapp/src/components/InvoicePay/index.jsx:442
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} ankoraŭ ne estas agordita."
 
-#: posapp/src/components/InvoicePay/index.jsx:422
+#: posapp/src/components/InvoicePay/index.jsx:437
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} bezonas konekton — ne disponebla eksterrete."
 
-#: posapp/src/components/InvoicePay/index.jsx:430
+#: posapp/src/components/InvoicePay/index.jsx:445
 msgid "{gateway} — offline"
 msgstr "{gateway} — eksterrete"
 
-#: posapp/src/components/InvoicePay/index.jsx:149
+#: posapp/src/components/InvoicePay/index.jsx:155
 msgid "{item} (Free)"
 msgstr "{item} (senpage)"
 
@@ -3451,7 +3463,7 @@ msgstr "{label} — {n} kaŝmemorigitaj"
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — {n} fakturo(j) atendas sinkronigon"
 
-#: posapp/src/pages/ReportsPage.jsx:327
+#: posapp/src/pages/ReportsPage.jsx:338
 msgid "{n} invoices"
 msgstr "{n} fakturoj"
 
@@ -3467,7 +3479,7 @@ msgstr "{n} fidelpoentoj disponeblaj"
 msgid "{n} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile)."
 msgstr "{n} registro(j) loke kaŝmemorigitaj. Bazaj datumoj estas nurlegeblaj eksterrete — “Preni” elŝutas samtempe freŝan momentfoton de ĉiuj domajnoj (ili estas determinitaj kune por la POS-profilo de la nuna deĵoro)."
 
-#: posapp/src/pages/ReportsPage.jsx:336
+#: posapp/src/pages/ReportsPage.jsx:347
 msgid "{n} returns"
 msgstr "{n} redonoj"
 

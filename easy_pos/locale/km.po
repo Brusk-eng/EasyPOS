@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-23 22:37+0553\n"
+"POT-Creation-Date: 2026-10-24 08:35+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: km\n"
@@ -44,7 +44,7 @@ msgstr "ការផ្ដល់ជូនទំនិញឥតគិតថ្ល
 msgid "A new version of Easy POS is available."
 msgstr "មានកំណែថ្មីរបស់ Easy POS។"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:119
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:132
 msgid "A shift needs to be open before you can ring up sales."
 msgstr "ត្រូវបើកវេនជាមុនសិន ទើបអាចកត់ត្រាការលក់បាន។"
 
@@ -223,7 +223,7 @@ msgstr ""
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
 #: posapp/src/pages/InvoiceDetailPage.jsx:411
 #: posapp/src/pages/InvoiceRegisterPage.jsx:40
-#: posapp/src/pages/ReportsPage.jsx:363
+#: posapp/src/pages/ReportsPage.jsx:374
 msgid "Amount"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr "បន្ថែមទំនិញដែលបានត្រងទៅរ
 msgid "Automatically Calculated"
 msgstr "គណនាដោយស្វ័យប្រវត្តិ"
 
-#: posapp/src/pages/ReportsPage.jsx:206
+#: posapp/src/pages/ReportsPage.jsx:217
 msgid "Avg ticket"
 msgstr "វិក្កយបត្រមធ្យម"
 
@@ -338,7 +338,7 @@ msgstr "ថយក្រោយ"
 msgid "Back to Invoices"
 msgstr "ត្រឡប់ទៅវិក្កយបត្រ"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Balance Due"
 msgstr "សមតុល្យត្រូវបង់"
 
@@ -419,9 +419,9 @@ msgstr ""
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:346
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:124
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
 msgstr ""
 
@@ -432,11 +432,11 @@ msgstr "បោះបង់វិក្កយបត្រ"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:28
 msgid "Cancelled"
 msgstr ""
 
-#: easy_pos/api/pos.py:377
+#: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
 msgstr "មិនអាចបង្កើតកំណត់ត្រាឥណទានលើកំណត់ត្រាឥណទានបានទេ"
 
@@ -459,7 +459,7 @@ msgstr "ទំនិញក្នុងរទេះ"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:424
+#: posapp/src/components/InvoicePay/index.jsx:439
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "អ្នកគិតលុយបញ្ចូលចំនួនទឹកប្រាក់ត្រូវគិត ពេលបញ្ចប់ការបង់ប្រាក់ ទំព័របង់ប្រាក់ {gateway} នឹងបើក។"
 
@@ -467,7 +467,7 @@ msgstr "អ្នកគិតលុយបញ្ចូលចំនួនទឹក
 msgid "Change Due"
 msgstr "ប្រាក់អាប់"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Change to Return"
 msgstr "ប្ដូរទៅជាការប្ដូរយកវិញ"
 
@@ -551,7 +551,7 @@ msgstr "ច្បាប់ប្រមូលពិន្ទុ (កម្រិ�
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: posapp/src/components/Customer/NewCustomerModal.jsx:94
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:157
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:171
 #: posapp/src/pages/CustomerDetailPage.jsx:178
 #: posapp/src/pages/CustomerDetailPage.jsx:303
 #: posapp/src/pages/DiscountDetailPage.jsx:760
@@ -573,7 +573,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "ក្រុមហ៊ុន និងឃ្លាំង គឺចាំបាច់"
 
-#: posapp/src/components/InvoicePay/index.jsx:356
+#: posapp/src/components/InvoicePay/index.jsx:362
 msgid "Complete Payment"
 msgstr "បញ្ចប់ការបង់ប្រាក់"
 
@@ -597,7 +597,7 @@ msgstr "កំណត់កម្រិត ពិន្ទុ និងច្ប�
 msgid "Connected to the server"
 msgstr "បានតភ្ជាប់ទៅម៉ាស៊ីនមេ"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:33
 msgid "Consolidated"
 msgstr ""
 
@@ -610,7 +610,7 @@ msgstr "មេគុណបម្លែង (1 ពិន្ទុ = ? រូបិ
 msgid "Cost Center"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:118
+#: posapp/src/pages/ReportsPage.jsx:122
 msgid "Could not load report data."
 msgstr "មិនអាចផ្ទុកទិន្នន័យរបាយការណ៍បានទេ។"
 
@@ -618,7 +618,7 @@ msgstr "មិនអាចផ្ទុកទិន្នន័យរបាយក
 msgid "Could not reach the server to sync."
 msgstr "មិនអាចភ្ជាប់ទៅម៉ាស៊ីនមេដើម្បីធ្វើសមកាលកម្មបានទេ។"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:62
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:74
 msgid "Could not resolve this profile's currency."
 msgstr "មិនអាចកំណត់រូបិយប័ណ្ណរបស់ប្រវត្តិរូបនេះបានទេ។"
 
@@ -674,7 +674,7 @@ msgstr ""
 msgid "Create Demo Data"
 msgstr "បង្កើតទិន្នន័យសាកល្បង"
 
-#: posapp/src/pages/LoginPage.jsx:177
+#: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
 msgstr "បង្កើតគណនី"
 
@@ -698,7 +698,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:27
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -706,7 +706,7 @@ msgstr ""
 msgid "Credit limit is already defined for one of the selected Companies"
 msgstr "ក្រុមហ៊ុនមួយក្នុងចំណោមក្រុមហ៊ុនដែលបានជ្រើស មានកំណត់ដែនកំណត់ឥណទានរួចហើយ"
 
-#: posapp/src/pages/ReportsPage.jsx:332
+#: posapp/src/pages/ReportsPage.jsx:343
 msgid "Credit notes"
 msgstr "កំណត់ត្រាឥណទាន"
 
@@ -727,14 +727,14 @@ msgstr "រូបិយប័ណ្ណត្រូវតែដូចរូបិ
 msgid "Current"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:77
+#: posapp/src/pages/ReportsPage.jsx:80
 msgid "Current shift · {profile}"
 msgstr "វេនបច្ចុប្បន្ន · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
 #: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:173 posapp/src/engine/sync.js:10
+#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -744,7 +744,7 @@ msgstr "វេនបច្ចុប្បន្ន · {profile}"
 #: posapp/src/pages/InvoiceRegisterPage.jsx:176
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Customer"
 msgstr ""
 
@@ -911,7 +911,7 @@ msgstr "ចំនួនបញ្ចុះតម្លៃ"
 msgid "Discount Percentage"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:323
+#: posapp/src/pages/ReportsPage.jsx:334
 msgid "Discount given"
 msgstr "ការបញ្ចុះតម្លៃដែលបានផ្ដល់"
 
@@ -931,7 +931,7 @@ msgstr "បានរក្សាទុកការបញ្ចុះតម្ល
 msgid "Discounts"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:319
+#: posapp/src/pages/ReportsPage.jsx:330
 msgid "Discounts and returns"
 msgstr "ការបញ្ចុះតម្លៃ និងការប្ដូរយកវិញ"
 
@@ -946,7 +946,7 @@ msgstr "កុំបង្ខំបរិមាណទំនិញឥតគិត
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:22
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
 msgid "Draft"
 msgstr ""
 
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Email Notification"
 msgstr "ការជូនដំណឹងតាមអ៊ីមែល"
 
-#: posapp/src/pages/LoginPage.jsx:117
+#: posapp/src/pages/LoginPage.jsx:112
 msgid "Email or username"
 msgstr "អ៊ីមែល ឬឈ្មោះអ្នកប្រើ"
 
@@ -1049,15 +1049,15 @@ msgstr "បើករបៀបក្រៅបណ្ដាញ"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:335
+#: posapp/src/components/InvoicePay/index.jsx:341
 msgid "Enter the amount received for each payment mode."
 msgstr "បញ្ចូលចំនួនទឹកប្រាក់ដែលបានទទួលសម្រាប់វិធីបង់ប្រាក់នីមួយៗ។"
 
-#: posapp/src/pages/LoginPage.jsx:128
+#: posapp/src/pages/LoginPage.jsx:123
 msgid "Enter your password"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:106
+#: posapp/src/pages/LoginPage.jsx:101
 msgid "Enter your workstation credentials to start a shift."
 msgstr "បញ្ចូលព័ត៌មានចូលប្រើរបស់ស្ថានីយការងារ ដើម្បីចាប់ផ្ដើមវេន។"
 
@@ -1102,8 +1102,8 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "មិនអាចបោះបង់វិក្កយបត្របានទេ"
 
-#: posapp/src/components/InvoicePay/index.jsx:211
-#: posapp/src/components/InvoicePay/index.jsx:318
+#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:324
 msgid "Failed to complete payment"
 msgstr "មិនអាចបញ្ចប់ការបង់ប្រាក់បានទេ"
 
@@ -1128,8 +1128,8 @@ msgstr "មិនអាចលុបទំនាក់ទំនងបានទេ
 msgid "Failed to load Razorpay checkout"
 msgstr "មិនអាចផ្ទុកទំព័របង់ប្រាក់ Razorpay បានទេ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:105
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:109
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:122
 msgid "Failed to open till"
 msgstr "មិនអាចបើកកន្លែងគិតលុយបានទេ"
 
@@ -1210,7 +1210,7 @@ msgstr "ត្រងតាមអ៊ីមែល"
 msgid "Filter by mobile"
 msgstr "ត្រងតាមលេខទូរស័ព្ទ"
 
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "កំពុងបញ្ចប់ — បង្កាន់ដៃនឹងបោះពុម្ពនៅទីនេះ ពេលត្រូវបានបញ្ជាក់។"
 
@@ -1226,7 +1226,7 @@ msgstr ""
 msgid "For the 'Apply Rule On Other' condition the field {field} is mandatory"
 msgstr "សម្រាប់លក្ខខណ្ឌ \"អនុវត្តច្បាប់លើផ្សេងទៀត\" វាល {field} គឺចាំបាច់"
 
-#: posapp/src/pages/LoginPage.jsx:148
+#: posapp/src/pages/LoginPage.jsx:143
 msgid "Forgot password?"
 msgstr "ភ្លេចពាក្យសម្ងាត់?"
 
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "Give free item for every N quantity"
 msgstr "ផ្ដល់ទំនិញឥតគិតថ្លៃមួយ រាល់ N ឯកតា"
 
-#: posapp/src/pages/ReportsPage.jsx:188
+#: posapp/src/pages/ReportsPage.jsx:199
 msgid "Go to Terminal"
 msgstr "ទៅកាន់ស្ថានីយ"
 
@@ -1274,15 +1274,15 @@ msgstr "ទៅកាន់ស្ថានីយ"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: posapp/src/components/Cart/index.jsx:692
 #: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:365
+#: posapp/src/components/InvoicePay/index.jsx:182
+#: posapp/src/components/InvoicePay/index.jsx:371
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
 msgid "Grand Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:198
+#: posapp/src/pages/ReportsPage.jsx:209
 msgid "Gross sales"
 msgstr "ការលក់សរុប"
 
@@ -1310,7 +1310,7 @@ msgstr "លាក់រូបភាព"
 msgid "Hide Unavailable Items"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Hide password"
 msgstr "លាក់ពាក្យសម្ងាត់"
 
@@ -1357,7 +1357,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:34
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1365,7 +1365,7 @@ msgstr ""
 msgid "Invalid condition expression"
 msgstr ""
 
-#: easy_pos/api/pricing.py:57 easy_pos/api/pricing.py:168
+#: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
 msgstr "លេខកូដគូប៉ុងមិនត្រឹមត្រូវ"
 
@@ -1380,7 +1380,7 @@ msgstr ""
 #: posapp/src/components/Cart/DraftPickerModal.jsx:15
 #: posapp/src/pages/InvoiceDetailPage.jsx:106
 #: posapp/src/pages/InvoiceRegisterPage.jsx:22
-#: posapp/src/pages/ReportsPage.jsx:358
+#: posapp/src/pages/ReportsPage.jsx:369
 msgid "Invoice"
 msgstr ""
 
@@ -1501,7 +1501,7 @@ msgid "Just now"
 msgstr "អម្បាញ់មិញ"
 
 #: posapp/src/components/Topbar/index.jsx:122
-#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:90
+#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:93
 msgid "Language"
 msgstr ""
 
@@ -1571,9 +1571,17 @@ msgstr "បានរក្សាទុកកម្មវិធីភក្ដី
 msgid "Loyalty Programs"
 msgstr "កម្មវិធីភក្ដីភាព"
 
-#: posapp/src/components/InvoicePay/index.jsx:456
+#: posapp/src/components/InvoicePay/index.jsx:471
 msgid "Loyalty Redeemed"
 msgstr "ពិន្ទុភក្ដីភាពបានប្ដូរ"
+
+#: posapp/src/components/InvoicePay/index.jsx:377
+msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
+msgstr "មិនអាចប្ដូរពិន្ទុភក្ដីភាពជា {currency} បានទេ។ ERPNext ប្ដូរវាតែជារូបិយប័ណ្ណរបស់ក្រុមហ៊ុន ({company_currency}) ប៉ុណ្ណោះ។"
+
+#: easy_pos/api/pos.py:275
+msgid "Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+msgstr "មិនអាចប្ដូរពិន្ទុភក្ដីភាពលើវិក្កយបត្រ {0} បានទេ។ ERPNext ប្ដូរវាតែជារូបិយប័ណ្ណរបស់ក្រុមហ៊ុន ({1}) ប៉ុណ្ណោះ។"
 
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
@@ -1704,7 +1712,7 @@ msgstr ""
 msgid "Net Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:199
+#: posapp/src/pages/ReportsPage.jsx:210
 msgid "Net sales"
 msgstr "ការលក់សុទ្ធ"
 
@@ -1758,7 +1766,7 @@ msgstr "អតិថិជនថ្មី"
 msgid "New discount"
 msgstr "ការបញ្ចុះតម្លៃថ្មី"
 
-#: posapp/src/pages/LoginPage.jsx:172
+#: posapp/src/pages/LoginPage.jsx:167
 msgid "New here"
 msgstr "ថ្មីនៅទីនេះ"
 
@@ -1894,7 +1902,7 @@ msgstr "គ្មានទំនិញត្រូវនឹងការស្វ
 msgid "No items on this invoice"
 msgstr "គ្មានទំនិញក្នុងវិក្កយបត្រនេះ"
 
-#: posapp/src/pages/ReportsPage.jsx:314
+#: posapp/src/pages/ReportsPage.jsx:325
 msgid "No items sold in this period."
 msgstr "គ្មានទំនិញលក់បានក្នុងរយៈពេលនេះទេ។"
 
@@ -1902,11 +1910,11 @@ msgstr "គ្មានទំនិញលក់បានក្នុងរយៈ
 msgid "No payment modes added"
 msgstr "មិនទាន់បន្ថែមវិធីបង់ប្រាក់"
 
-#: posapp/src/components/InvoicePay/index.jsx:408
+#: posapp/src/components/InvoicePay/index.jsx:423
 msgid "No payment modes configured for this POS Profile."
 msgstr "មិនទាន់កំណត់វិធីបង់ប្រាក់សម្រាប់ប្រវត្តិរូប POS នេះទេ។"
 
-#: posapp/src/pages/ReportsPage.jsx:241
+#: posapp/src/pages/ReportsPage.jsx:252
 msgid "No payment modes configured."
 msgstr "មិនទាន់កំណត់វិធីបង់ប្រាក់។"
 
@@ -1918,7 +1926,7 @@ msgstr "រកមិនឃើញវិធីបង់ប្រាក់សម្
 msgid "No payments"
 msgstr "គ្មានការបង់ប្រាក់"
 
-#: posapp/src/pages/ReportsPage.jsx:258
+#: posapp/src/pages/ReportsPage.jsx:269
 msgid "No payments recorded in this period."
 msgstr "គ្មានការបង់ប្រាក់ត្រូវបានកត់ត្រាក្នុងរយៈពេលនេះទេ។"
 
@@ -1934,7 +1942,7 @@ msgstr ""
 msgid "No rows"
 msgstr "គ្មានជួរ"
 
-#: posapp/src/pages/ReportsPage.jsx:281
+#: posapp/src/pages/ReportsPage.jsx:292
 msgid "No sales in this period."
 msgstr "គ្មានការលក់ក្នុងរយៈពេលនេះទេ។"
 
@@ -1942,7 +1950,7 @@ msgstr "គ្មានការលក់ក្នុងរយៈពេលនេ
 msgid "No shift open"
 msgstr "គ្មានវេនបើក"
 
-#: posapp/src/pages/ReportsPage.jsx:185
+#: posapp/src/pages/ReportsPage.jsx:196
 msgid "No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here."
 msgstr "មិនទាន់មានវេនសម្រាប់រាយការណ៍ទេ។ បើកវេនពីស្ថានីយ ដើម្បីមើលតួលេខវេនផ្ទាល់នៅទីនេះ។"
 
@@ -1958,7 +1966,7 @@ msgstr "វិក្កយបត្រនេះគ្មានពន្ធ"
 msgid "No tiers added"
 msgstr "មិនទាន់បន្ថែមកម្រិត"
 
-#: posapp/src/pages/ReportsPage.jsx:354
+#: posapp/src/pages/ReportsPage.jsx:365
 msgid "No transactions in this period."
 msgstr "គ្មានប្រតិបត្តិការក្នុងរយៈពេលនេះទេ។"
 
@@ -2003,7 +2011,7 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "របៀបក្រៅបណ្ដាញមិនត្រូវបានបើកសម្រាប់ការដំឡើងនេះទេ (ការកំណត់ EasyPOS)។ ទិន្នន័យនៅតែត្រូវបានរក្សាទុកក្នុងឃ្លាំងសម្ងាត់ខាងក្រោម ប៉ុន្តែស្ថានីយនឹងមិនប្រើវាពេលក្រៅបណ្ដាញទេ រហូតដល់បើករបៀបនេះ។"
 
-#: posapp/src/components/InvoicePay/index.jsx:172
+#: posapp/src/components/InvoicePay/index.jsx:178
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "ក្រៅបណ្ដាញ — រង់ចាំសមកាលកម្ម។ បោះពុម្ពឡើងវិញពីវិក្កយបត្រ បន្ទាប់ពីធ្វើសមកាលកម្ម។"
 
@@ -2023,7 +2031,7 @@ msgstr "ការចូលមួយក្នុងមួយអ្នកគិត
 msgid "Online"
 msgstr ""
 
-#: easy_pos/api/pos.py:375
+#: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
 msgstr "អាចប្ដូរយកវិញបានតែវិក្កយបត្រដែលបានដាក់ស្នើប៉ុណ្ណោះ"
 
@@ -2048,11 +2056,11 @@ msgstr "បើកអេក្រង់សម្រាប់អតិថិជន
 msgid "Open a shift before syncing"
 msgstr "បើកវេនមុនពេលធ្វើសមកាលកម្ម"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:139
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:152
 msgid "Open till"
 msgstr "បើកកន្លែងគិតលុយ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
 msgid "Open your till"
 msgstr "បើកកន្លែងគិតលុយរបស់អ្នក"
 
@@ -2070,15 +2078,15 @@ msgstr ""
 msgid "Opening Balance Details"
 msgstr ""
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:148
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
 msgstr "ការបើកវេនត្រូវការអ៊ីនធឺណិត — ស្តុក និងតម្លៃនៃប្រវត្តិរូបដែលបានជ្រើសត្រូវកំណត់ផ្ទាល់។ សូមតភ្ជាប់ឡើងវិញ ដើម្បីបើកកន្លែងគិតលុយ។"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:177
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:191
 msgid "Opening balance"
 msgstr "សមតុល្យដើម"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:136
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:149
 msgid "Opening…"
 msgstr "កំពុងបើក…"
 
@@ -2107,11 +2115,11 @@ msgstr "អស់ស្តុក"
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:31
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2137,7 +2145,7 @@ msgstr ""
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:166
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
 #: posapp/src/pages/InvoiceRegisterPage.jsx:191
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
@@ -2166,16 +2174,16 @@ msgstr "ទំព័រ {page} នៃ {total}"
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:451
+#: posapp/src/components/InvoicePay/index.jsx:466
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:25
 msgid "Partly Paid"
 msgstr "បានបង់មួយផ្នែក"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:32
 msgid "Partly Paid and Discounted"
 msgstr "បានបង់មួយផ្នែក និងបានបញ្ចុះតម្លៃ"
 
@@ -2188,11 +2196,11 @@ msgstr "ភាពជាដៃគូ"
 msgid "Party Information"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:127
+#: posapp/src/pages/LoginPage.jsx:122
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:354
+#: posapp/src/components/InvoicePay/index.jsx:360
 msgid "Pay with {gateway}"
 msgstr "បង់តាម {gateway}"
 
@@ -2214,11 +2222,11 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:400
+#: posapp/src/components/InvoicePay/index.jsx:415
 msgid "Payment Summary"
 msgstr "សង្ខេបការបង់ប្រាក់"
 
-#: posapp/src/pages/ReportsPage.jsx:247
+#: posapp/src/pages/ReportsPage.jsx:258
 msgid "Payment method breakdown"
 msgstr "ការបែងចែកតាមវិធីបង់ប្រាក់"
 
@@ -2290,16 +2298,16 @@ msgstr "សូមបង់ប្រាក់"
 msgid "Please add at least one item to the cart"
 msgstr "សូមបន្ថែមទំនិញយ៉ាងហោចណាស់មួយទៅរទេះ"
 
-#: posapp/src/components/InvoicePay/index.jsx:221
+#: posapp/src/components/InvoicePay/index.jsx:227
 msgid "Please add one or more items to the cart"
 msgstr "សូមបន្ថែមទំនិញមួយ ឬច្រើនទៅរទេះ"
 
-#: posapp/src/components/InvoicePay/index.jsx:225
+#: posapp/src/components/InvoicePay/index.jsx:231
 msgid "Please enter an amount for at least one payment mode"
 msgstr "សូមបញ្ចូលចំនួនទឹកប្រាក់សម្រាប់វិធីបង់ប្រាក់យ៉ាងហោចណាស់មួយ"
 
 #: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:223
 msgid "Please select a customer"
 msgstr "សូមជ្រើសអតិថិជន"
 
@@ -2565,9 +2573,9 @@ msgstr "Razorpay មិនទាន់បានកំណត់រចនាសម
 msgid "Razorpay payment signature verification failed"
 msgstr "ការផ្ទៀងផ្ទាត់ហត្ថលេខាការបង់ប្រាក់ Razorpay បរាជ័យ"
 
-#: posapp/src/components/InvoicePay/index.jsx:161
-#: posapp/src/components/InvoicePay/index.jsx:170
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:167
+#: posapp/src/components/InvoicePay/index.jsx:176
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Receipt"
 msgstr ""
 
@@ -2575,7 +2583,7 @@ msgstr ""
 msgid "Receipt Delivery"
 msgstr "ការផ្ញើបង្កាន់ដៃ"
 
-#: posapp/src/pages/ReportsPage.jsx:344
+#: posapp/src/pages/ReportsPage.jsx:355
 msgid "Recent transactions"
 msgstr "ប្រតិបត្តិការថ្មីៗ"
 
@@ -2583,7 +2591,7 @@ msgstr "ប្រតិបត្តិការថ្មីៗ"
 msgid "Reconnect to close your shift"
 msgstr "តភ្ជាប់ឡើងវិញ ដើម្បីបិទវេន"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:144
 msgid "Reconnect to open a shift"
 msgstr "តភ្ជាប់ឡើងវិញ ដើម្បីបើកវេន"
 
@@ -2603,7 +2611,7 @@ msgstr "បរិមាណធ្វើឡើងវិញមិនអាចតិ
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "ប្រព័ន្ធមិនគាំទ្រការបញ្ចុះតម្លៃធ្វើឡើងវិញដែលមានលក្ខខណ្ឌចម្រុះទេ"
 
-#: posapp/src/components/InvoicePay/index.jsx:372
+#: posapp/src/components/InvoicePay/index.jsx:387
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "ប្ដូរពិន្ទុភក្ដីភាព (មាន {n})"
 
@@ -2619,7 +2627,7 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:142
+#: posapp/src/pages/LoginPage.jsx:137
 msgid "Remember this device"
 msgstr "ចងចាំឧបករណ៍នេះ"
 
@@ -2636,7 +2644,7 @@ msgid "Remove row"
 msgstr "ដកជួរចេញ"
 
 #: posapp/src/components/Sidebar/index.jsx:18
-#: posapp/src/pages/ReportsPage.jsx:98 posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
 
@@ -2656,7 +2664,7 @@ msgstr "ព្យាយាមធ្វើសមកាលកម្មម្ដង
 msgid "Retrying…"
 msgstr "កំពុងព្យាយាមម្ដងទៀត…"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:26
 msgid "Return"
 msgstr ""
 
@@ -2700,7 +2708,7 @@ msgstr ""
 msgid "SMS Notification"
 msgstr "ការជូនដំណឹងតាម SMS"
 
-#: posapp/src/pages/ReportsPage.jsx:136
+#: posapp/src/pages/ReportsPage.jsx:140
 msgid "Sales"
 msgstr ""
 
@@ -2730,11 +2738,11 @@ msgstr ""
 msgid "Sales completed offline, queued locally until they reach ERPNext."
 msgstr "ការលក់ដែលបានបញ្ចប់ពេលក្រៅបណ្ដាញ ស្ថិតក្នុងជួររង់ចាំមូលដ្ឋាន រហូតដល់ទៅដល់ ERPNext។"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by day"
 msgstr "និន្នាការលក់ · តាមថ្ងៃ"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by hour"
 msgstr "និន្នាការលក់ · តាមម៉ោង"
 
@@ -2862,7 +2870,7 @@ msgstr "ជ្រើសក្រុមទំនិញ"
 msgid "Select Mode"
 msgstr "ជ្រើសវិធី"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:167
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:181
 msgid "Select POS profile"
 msgstr "ជ្រើសប្រវត្តិរូប POS"
 
@@ -2886,11 +2894,11 @@ msgstr "ជ្រើសក្រុមហ៊ុនជាមុនសិន"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "ជ្រើសជម្រើសមួយសម្រាប់លក្ខណៈនីមួយៗ ដើម្បីជ្រើសវ៉ារ្យ៉ង់។"
 
-#: easy_pos/api/pos.py:400 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
 msgid "Select at least one item to return"
 msgstr "ជ្រើសទំនិញយ៉ាងហោចណាស់មួយដើម្បីប្ដូរយកវិញ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:158
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:172
 msgid "Select company"
 msgstr "ជ្រើសក្រុមហ៊ុន"
 
@@ -2947,7 +2955,7 @@ msgstr ""
 msgid "Shift"
 msgstr "វេន"
 
-#: posapp/src/pages/ReportsPage.jsx:214
+#: posapp/src/pages/ReportsPage.jsx:225
 msgid "Shift summary"
 msgstr "សង្ខេបវេន"
 
@@ -2964,11 +2972,11 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Show password"
 msgstr "បង្ហាញពាក្យសម្ងាត់"
 
-#: posapp/src/pages/LoginPage.jsx:104 posapp/src/pages/LoginPage.jsx:164
+#: posapp/src/pages/LoginPage.jsx:99 posapp/src/pages/LoginPage.jsx:159
 msgid "Sign in"
 msgstr "ចូល"
 
@@ -2976,7 +2984,7 @@ msgstr "ចូល"
 msgid "Sign in to open your till and start ringing up sales."
 msgstr "ចូល ដើម្បីបើកកន្លែងគិតលុយ ហើយចាប់ផ្ដើមលក់។"
 
-#: posapp/src/pages/LoginPage.jsx:160
+#: posapp/src/pages/LoginPage.jsx:155
 msgid "Signing in…"
 msgstr "កំពុងចូល…"
 
@@ -3006,11 +3014,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:29
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Submitting…"
 msgstr "កំពុងដាក់ស្នើ…"
 
@@ -3082,7 +3090,7 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "ប្រព័ន្ធនឹងជូនដំណឹងឱ្យបង្កើន ឬបន្ថយបរិមាណ ឬចំនួនទឹកប្រាក់"
 
-#: posapp/src/components/InvoicePay/index.jsx:334
+#: posapp/src/components/InvoicePay/index.jsx:340
 msgid "Take Payment"
 msgstr "ទទួលការបង់ប្រាក់"
 
@@ -3131,7 +3139,7 @@ msgstr ""
 msgid "Thank You!"
 msgstr "សូមអរគុណ!"
 
-#: posapp/src/components/InvoicePay/index.jsx:305
+#: posapp/src/components/InvoicePay/index.jsx:311
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "ការព្យាយាមនោះបរាជ័យ — អ្នកអាចសាកវិធីបង់ប្រាក់ផ្សេងក្នុងបង្អួច {gateway}។"
 
@@ -3146,6 +3154,10 @@ msgstr "វិក្កយបត្រនេះត្រូវបានបញ្
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
 msgstr "ការលក់ក្រៅបណ្ដាញនេះលែងស្ថិតក្នុងជួររង់ចាំមូលដ្ឋាននៃឧបករណ៍នេះទៀតហើយ។"
+
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:65
+msgid "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings."
+msgstr "ប្រវត្តិរូបនេះលក់ជា {currency} ប៉ុន្តែរូបិយប័ណ្ណរបស់ក្រុមហ៊ុនគឺ {company_currency}។ ការលក់លើកដំបូងទៅអតិថិជនថ្មីនឹងបរាជ័យ រហូតដល់បើក 'Allow multi-currency invoices against single party account' ក្នុង Accounts Settings។"
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:158
 msgid "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below."
@@ -3192,7 +3204,7 @@ msgstr ""
 msgid "Toggle dark mode"
 msgstr "បិទ/បើករបៀបងងឹត"
 
-#: posapp/src/pages/ReportsPage.jsx:290
+#: posapp/src/pages/ReportsPage.jsx:301
 msgid "Top selling items"
 msgstr "ទំនិញលក់ដាច់បំផុត"
 
@@ -3218,7 +3230,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/pages/ReportsPage.jsx:203
+#: posapp/src/pages/ReportsPage.jsx:214
 msgid "Transactions"
 msgstr ""
 
@@ -3244,11 +3256,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "មិនអាចចាប់ផ្ដើមកាមេរ៉ាបានទេ។"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:30
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3314,7 +3326,7 @@ msgstr ""
 msgid "Variant {variant} and its template {template} cannot both be added to the same Pricing Rule"
 msgstr "វ៉ារ្យ៉ង់ {variant} និងគំរូ {template} របស់វា មិនអាចបន្ថែមទាំងពីរទៅក្នុងច្បាប់តម្លៃតែមួយបានទេ"
 
-#: posapp/src/pages/ReportsPage.jsx:349
+#: posapp/src/pages/ReportsPage.jsx:360
 msgid "View all"
 msgstr "មើលទាំងអស់"
 
@@ -3322,12 +3334,12 @@ msgstr "មើលទាំងអស់"
 msgid "View purchase history"
 msgstr "មើលប្រវត្តិទិញ"
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Waiting for {gateway}…"
 msgstr "កំពុងរង់ចាំ {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:173
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "អតិថិជនឆ្លងកាត់"
 
@@ -3394,7 +3406,7 @@ msgstr ""
 msgid "Your order will appear here shortly."
 msgstr "ការបញ្ជាទិញរបស់អ្នកនឹងបង្ហាញនៅទីនេះឆាប់ៗ។"
 
-#: posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:155
 msgid "Your sales, shift, and payment summary"
 msgstr "សង្ខេបការលក់ វេន និងការបង់ប្រាក់របស់អ្នក"
 
@@ -3410,7 +3422,7 @@ msgstr "ឧ. ប្រាក់"
 msgid "e.g. customer@example.com"
 msgstr "ឧ. customer@example.com"
 
-#: easy_pos/api/pos.py:500
+#: easy_pos/api/pos.py:515
 msgid "opening_entry is required for shift scope"
 msgstr ""
 
@@ -3422,19 +3434,19 @@ msgstr "{field} មិនត្រូវបានបន្ថែមក្នុ�
 msgid "{field} is required"
 msgstr "{field} គឺចាំបាច់"
 
-#: posapp/src/components/InvoicePay/index.jsx:427
+#: posapp/src/components/InvoicePay/index.jsx:442
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} មិនទាន់បានកំណត់រចនាសម្ព័ន្ធនៅឡើយ។"
 
-#: posapp/src/components/InvoicePay/index.jsx:422
+#: posapp/src/components/InvoicePay/index.jsx:437
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} ត្រូវការការតភ្ជាប់ — មិនអាចប្រើពេលក្រៅបណ្ដាញទេ។"
 
-#: posapp/src/components/InvoicePay/index.jsx:430
+#: posapp/src/components/InvoicePay/index.jsx:445
 msgid "{gateway} — offline"
 msgstr "{gateway} — ក្រៅបណ្ដាញ"
 
-#: posapp/src/components/InvoicePay/index.jsx:149
+#: posapp/src/components/InvoicePay/index.jsx:155
 msgid "{item} (Free)"
 msgstr "{item} (ឥតគិតថ្លៃ)"
 
@@ -3451,7 +3463,7 @@ msgstr "{label} — បានរក្សាទុក {n}"
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — វិក្កយបត្រ {n} រង់ចាំសមកាលកម្ម"
 
-#: posapp/src/pages/ReportsPage.jsx:327
+#: posapp/src/pages/ReportsPage.jsx:338
 msgid "{n} invoices"
 msgstr "វិក្កយបត្រ {n}"
 
@@ -3467,7 +3479,7 @@ msgstr "មានពិន្ទុភក្ដីភាព {n}"
 msgid "{n} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile)."
 msgstr "កំណត់ត្រា {n} ត្រូវបានរក្សាទុកក្នុងឃ្លាំងសម្ងាត់មូលដ្ឋាន។ ទិន្នន័យមេជាប្រភេទអានតែប៉ុណ្ណោះពេលក្រៅបណ្ដាញ — \"ទាញ\" នឹងទាញយករូបភាពថ្មីនៃផ្នែកទាំងអស់ក្នុងពេលតែមួយ (វាត្រូវបានកំណត់រួមគ្នាសម្រាប់ប្រវត្តិរូប POS នៃវេនបច្ចុប្បន្ន)។"
 
-#: posapp/src/pages/ReportsPage.jsx:336
+#: posapp/src/pages/ReportsPage.jsx:347
 msgid "{n} returns"
 msgstr "ការប្ដូរយកវិញ {n}"
 

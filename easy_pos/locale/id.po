@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-23 22:37+0553\n"
+"POT-Creation-Date: 2026-10-24 08:35+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: id\n"
@@ -44,7 +44,7 @@ msgstr "Penawaran barang gratis di keranjang ini memerlukan koneksi — harga/di
 msgid "A new version of Easy POS is available."
 msgstr "Versi baru Easy POS tersedia."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:119
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:132
 msgid "A shift needs to be open before you can ring up sales."
 msgstr "Shift harus dibuka sebelum Anda dapat mencatat penjualan."
 
@@ -223,7 +223,7 @@ msgstr ""
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
 #: posapp/src/pages/InvoiceDetailPage.jsx:411
 #: posapp/src/pages/InvoiceRegisterPage.jsx:40
-#: posapp/src/pages/ReportsPage.jsx:363
+#: posapp/src/pages/ReportsPage.jsx:374
 msgid "Amount"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr ""
 msgid "Automatically Calculated"
 msgstr "Dihitung otomatis"
 
-#: posapp/src/pages/ReportsPage.jsx:206
+#: posapp/src/pages/ReportsPage.jsx:217
 msgid "Avg ticket"
 msgstr "Rata-rata transaksi"
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "Kembali ke faktur"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Balance Due"
 msgstr "Sisa tagihan"
 
@@ -419,9 +419,9 @@ msgstr ""
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:346
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:124
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
 msgstr ""
 
@@ -432,11 +432,11 @@ msgstr "Batalkan faktur"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:28
 msgid "Cancelled"
 msgstr ""
 
-#: easy_pos/api/pos.py:377
+#: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
 msgstr "Tidak dapat membuat nota kredit atas nota kredit"
 
@@ -459,7 +459,7 @@ msgstr "Barang di keranjang"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:424
+#: posapp/src/components/InvoicePay/index.jsx:439
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "Kasir memasukkan jumlah yang akan ditagih; checkout {gateway} terbuka saat Selesaikan pembayaran."
 
@@ -467,7 +467,7 @@ msgstr "Kasir memasukkan jumlah yang akan ditagih; checkout {gateway} terbuka sa
 msgid "Change Due"
 msgstr "Kembalian"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Change to Return"
 msgstr "Ubah menjadi retur"
 
@@ -551,7 +551,7 @@ msgstr "Aturan pengumpulan (tingkat)"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: posapp/src/components/Customer/NewCustomerModal.jsx:94
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:157
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:171
 #: posapp/src/pages/CustomerDetailPage.jsx:178
 #: posapp/src/pages/CustomerDetailPage.jsx:303
 #: posapp/src/pages/DiscountDetailPage.jsx:760
@@ -573,7 +573,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "Perusahaan dan gudang wajib diisi"
 
-#: posapp/src/components/InvoicePay/index.jsx:356
+#: posapp/src/components/InvoicePay/index.jsx:362
 msgid "Complete Payment"
 msgstr "Selesaikan pembayaran"
 
@@ -597,7 +597,7 @@ msgstr "Atur tingkat, poin, dan aturan penukaran"
 msgid "Connected to the server"
 msgstr "Terhubung ke server"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:33
 msgid "Consolidated"
 msgstr ""
 
@@ -610,7 +610,7 @@ msgstr "Faktor konversi (1 poin = ? mata uang)"
 msgid "Cost Center"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:118
+#: posapp/src/pages/ReportsPage.jsx:122
 msgid "Could not load report data."
 msgstr "Tidak dapat memuat data laporan."
 
@@ -618,7 +618,7 @@ msgstr "Tidak dapat memuat data laporan."
 msgid "Could not reach the server to sync."
 msgstr "Tidak dapat menghubungi server untuk sinkronisasi."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:62
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:74
 msgid "Could not resolve this profile's currency."
 msgstr "Tidak dapat menentukan mata uang profil ini."
 
@@ -674,7 +674,7 @@ msgstr ""
 msgid "Create Demo Data"
 msgstr "Buat data demo"
 
-#: posapp/src/pages/LoginPage.jsx:177
+#: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
 msgstr "Buat akun"
 
@@ -698,7 +698,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:27
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -706,7 +706,7 @@ msgstr ""
 msgid "Credit limit is already defined for one of the selected Companies"
 msgstr "Batas kredit sudah ditetapkan untuk salah satu perusahaan yang dipilih"
 
-#: posapp/src/pages/ReportsPage.jsx:332
+#: posapp/src/pages/ReportsPage.jsx:343
 msgid "Credit notes"
 msgstr "Nota kredit"
 
@@ -727,14 +727,14 @@ msgstr "Mata uang harus sama dengan mata uang daftar harga: {currency}"
 msgid "Current"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:77
+#: posapp/src/pages/ReportsPage.jsx:80
 msgid "Current shift · {profile}"
 msgstr "Shift saat ini · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
 #: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:173 posapp/src/engine/sync.js:10
+#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -744,7 +744,7 @@ msgstr "Shift saat ini · {profile}"
 #: posapp/src/pages/InvoiceRegisterPage.jsx:176
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Customer"
 msgstr ""
 
@@ -911,7 +911,7 @@ msgstr "Jml diskon"
 msgid "Discount Percentage"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:323
+#: posapp/src/pages/ReportsPage.jsx:334
 msgid "Discount given"
 msgstr "Diskon diberikan"
 
@@ -931,7 +931,7 @@ msgstr "Diskon berhasil disimpan"
 msgid "Discounts"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:319
+#: posapp/src/pages/ReportsPage.jsx:330
 msgid "Discounts and returns"
 msgstr "Diskon dan retur"
 
@@ -946,7 +946,7 @@ msgstr ""
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:22
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
 msgid "Draft"
 msgstr ""
 
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Email Notification"
 msgstr "Notifikasi email"
 
-#: posapp/src/pages/LoginPage.jsx:117
+#: posapp/src/pages/LoginPage.jsx:112
 msgid "Email or username"
 msgstr "Email atau nama pengguna"
 
@@ -1049,15 +1049,15 @@ msgstr "Aktifkan mode offline"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:335
+#: posapp/src/components/InvoicePay/index.jsx:341
 msgid "Enter the amount received for each payment mode."
 msgstr "Masukkan jumlah yang diterima untuk setiap cara pembayaran."
 
-#: posapp/src/pages/LoginPage.jsx:128
+#: posapp/src/pages/LoginPage.jsx:123
 msgid "Enter your password"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:106
+#: posapp/src/pages/LoginPage.jsx:101
 msgid "Enter your workstation credentials to start a shift."
 msgstr "Masukkan kredensial workstation Anda untuk memulai shift."
 
@@ -1102,8 +1102,8 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "Gagal membatalkan faktur"
 
-#: posapp/src/components/InvoicePay/index.jsx:211
-#: posapp/src/components/InvoicePay/index.jsx:318
+#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:324
 msgid "Failed to complete payment"
 msgstr "Gagal menyelesaikan pembayaran"
 
@@ -1128,8 +1128,8 @@ msgstr "Gagal menghapus kontak"
 msgid "Failed to load Razorpay checkout"
 msgstr "Gagal memuat checkout Razorpay"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:105
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:109
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:122
 msgid "Failed to open till"
 msgstr "Gagal membuka kasir"
 
@@ -1210,7 +1210,7 @@ msgstr "Filter berdasarkan email"
 msgid "Filter by mobile"
 msgstr "Filter berdasarkan ponsel"
 
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "Menyelesaikan — struk Anda akan dicetak di sini setelah dikonfirmasi."
 
@@ -1226,7 +1226,7 @@ msgstr ""
 msgid "For the 'Apply Rule On Other' condition the field {field} is mandatory"
 msgstr "Untuk kondisi 'Terapkan aturan pada lainnya', kolom {field} wajib diisi"
 
-#: posapp/src/pages/LoginPage.jsx:148
+#: posapp/src/pages/LoginPage.jsx:143
 msgid "Forgot password?"
 msgstr "Lupa kata sandi?"
 
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "Give free item for every N quantity"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:188
+#: posapp/src/pages/ReportsPage.jsx:199
 msgid "Go to Terminal"
 msgstr "Ke terminal"
 
@@ -1274,15 +1274,15 @@ msgstr "Ke terminal"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: posapp/src/components/Cart/index.jsx:692
 #: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:365
+#: posapp/src/components/InvoicePay/index.jsx:182
+#: posapp/src/components/InvoicePay/index.jsx:371
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
 msgid "Grand Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:198
+#: posapp/src/pages/ReportsPage.jsx:209
 msgid "Gross sales"
 msgstr "Penjualan kotor"
 
@@ -1310,7 +1310,7 @@ msgstr ""
 msgid "Hide Unavailable Items"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Hide password"
 msgstr "Sembunyikan kata sandi"
 
@@ -1357,7 +1357,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:34
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1365,7 +1365,7 @@ msgstr ""
 msgid "Invalid condition expression"
 msgstr ""
 
-#: easy_pos/api/pricing.py:57 easy_pos/api/pricing.py:168
+#: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
 msgstr "Kode kupon tidak valid"
 
@@ -1380,7 +1380,7 @@ msgstr ""
 #: posapp/src/components/Cart/DraftPickerModal.jsx:15
 #: posapp/src/pages/InvoiceDetailPage.jsx:106
 #: posapp/src/pages/InvoiceRegisterPage.jsx:22
-#: posapp/src/pages/ReportsPage.jsx:358
+#: posapp/src/pages/ReportsPage.jsx:369
 msgid "Invoice"
 msgstr ""
 
@@ -1501,7 +1501,7 @@ msgid "Just now"
 msgstr "Baru saja"
 
 #: posapp/src/components/Topbar/index.jsx:122
-#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:90
+#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:93
 msgid "Language"
 msgstr ""
 
@@ -1571,9 +1571,17 @@ msgstr "Program loyalitas berhasil disimpan"
 msgid "Loyalty Programs"
 msgstr "Program loyalitas"
 
-#: posapp/src/components/InvoicePay/index.jsx:456
+#: posapp/src/components/InvoicePay/index.jsx:471
 msgid "Loyalty Redeemed"
 msgstr "Poin loyalitas ditukar"
+
+#: posapp/src/components/InvoicePay/index.jsx:377
+msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
+msgstr "Poin loyalitas tidak dapat ditukar dalam {currency}. ERPNext hanya menukarnya dalam mata uang perusahaan ({company_currency})."
+
+#: easy_pos/api/pos.py:275
+msgid "Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+msgstr "Poin loyalitas tidak dapat ditukar pada faktur {0}. ERPNext hanya menukarnya dalam mata uang perusahaan ({1})."
 
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
@@ -1704,7 +1712,7 @@ msgstr ""
 msgid "Net Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:199
+#: posapp/src/pages/ReportsPage.jsx:210
 msgid "Net sales"
 msgstr "Penjualan bersih"
 
@@ -1758,7 +1766,7 @@ msgstr "Pelanggan baru"
 msgid "New discount"
 msgstr "Diskon baru"
 
-#: posapp/src/pages/LoginPage.jsx:172
+#: posapp/src/pages/LoginPage.jsx:167
 msgid "New here"
 msgstr "Baru di sini"
 
@@ -1894,7 +1902,7 @@ msgstr "Tidak ada barang yang cocok dengan pencarian Anda"
 msgid "No items on this invoice"
 msgstr "Tidak ada barang di faktur ini"
 
-#: posapp/src/pages/ReportsPage.jsx:314
+#: posapp/src/pages/ReportsPage.jsx:325
 msgid "No items sold in this period."
 msgstr "Tidak ada barang terjual pada periode ini."
 
@@ -1902,11 +1910,11 @@ msgstr "Tidak ada barang terjual pada periode ini."
 msgid "No payment modes added"
 msgstr "Belum ada cara pembayaran"
 
-#: posapp/src/components/InvoicePay/index.jsx:408
+#: posapp/src/components/InvoicePay/index.jsx:423
 msgid "No payment modes configured for this POS Profile."
 msgstr "Belum ada cara pembayaran untuk profil POS ini."
 
-#: posapp/src/pages/ReportsPage.jsx:241
+#: posapp/src/pages/ReportsPage.jsx:252
 msgid "No payment modes configured."
 msgstr "Belum ada cara pembayaran."
 
@@ -1918,7 +1926,7 @@ msgstr "Tidak ada cara pembayaran untuk shift ini."
 msgid "No payments"
 msgstr "Tidak ada pembayaran"
 
-#: posapp/src/pages/ReportsPage.jsx:258
+#: posapp/src/pages/ReportsPage.jsx:269
 msgid "No payments recorded in this period."
 msgstr "Tidak ada pembayaran tercatat pada periode ini."
 
@@ -1934,7 +1942,7 @@ msgstr ""
 msgid "No rows"
 msgstr "Tidak ada baris"
 
-#: posapp/src/pages/ReportsPage.jsx:281
+#: posapp/src/pages/ReportsPage.jsx:292
 msgid "No sales in this period."
 msgstr "Tidak ada penjualan pada periode ini."
 
@@ -1942,7 +1950,7 @@ msgstr "Tidak ada penjualan pada periode ini."
 msgid "No shift open"
 msgstr "Tidak ada shift terbuka"
 
-#: posapp/src/pages/ReportsPage.jsx:185
+#: posapp/src/pages/ReportsPage.jsx:196
 msgid "No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here."
 msgstr "Belum ada shift untuk dilaporkan. Buka shift dari terminal untuk melihat angka shift langsung di sini."
 
@@ -1958,7 +1966,7 @@ msgstr "Tidak ada pajak di faktur ini"
 msgid "No tiers added"
 msgstr "Belum ada tingkat"
 
-#: posapp/src/pages/ReportsPage.jsx:354
+#: posapp/src/pages/ReportsPage.jsx:365
 msgid "No transactions in this period."
 msgstr "Tidak ada transaksi pada periode ini."
 
@@ -2003,7 +2011,7 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "Mode offline tidak diaktifkan untuk instalasi ini (Pengaturan EasyPOS). Data tetap disimpan di cache di bawah, tetapi terminal tidak akan menggunakannya saat offline sampai mode diaktifkan."
 
-#: posapp/src/components/InvoicePay/index.jsx:172
+#: posapp/src/components/InvoicePay/index.jsx:178
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Offline — menunggu sinkronisasi. Cetak ulang dari Faktur setelah disinkronkan."
 
@@ -2023,7 +2031,7 @@ msgstr "Satu login per kasir, satu catatan per shift"
 msgid "Online"
 msgstr ""
 
-#: easy_pos/api/pos.py:375
+#: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
 msgstr "Hanya faktur yang sudah diajukan yang dapat diretur"
 
@@ -2048,11 +2056,11 @@ msgstr "Buka layar pelanggan"
 msgid "Open a shift before syncing"
 msgstr "Buka shift sebelum sinkronisasi"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:139
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:152
 msgid "Open till"
 msgstr "Buka kasir"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
 msgid "Open your till"
 msgstr "Buka kasir Anda"
 
@@ -2070,15 +2078,15 @@ msgstr ""
 msgid "Opening Balance Details"
 msgstr ""
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:148
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
 msgstr "Membuka shift memerlukan koneksi internet — stok dan harga untuk profil yang dipilih harus ditentukan secara langsung. Sambungkan kembali untuk membuka kasir."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:177
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:191
 msgid "Opening balance"
 msgstr "Saldo awal"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:136
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:149
 msgid "Opening…"
 msgstr "Membuka…"
 
@@ -2107,11 +2115,11 @@ msgstr ""
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:31
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2137,7 +2145,7 @@ msgstr ""
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:166
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
 #: posapp/src/pages/InvoiceRegisterPage.jsx:191
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
@@ -2166,16 +2174,16 @@ msgstr "Halaman {page} dari {total}"
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:451
+#: posapp/src/components/InvoicePay/index.jsx:466
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:25
 msgid "Partly Paid"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:32
 msgid "Partly Paid and Discounted"
 msgstr ""
 
@@ -2188,11 +2196,11 @@ msgstr ""
 msgid "Party Information"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:127
+#: posapp/src/pages/LoginPage.jsx:122
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:354
+#: posapp/src/components/InvoicePay/index.jsx:360
 msgid "Pay with {gateway}"
 msgstr "Bayar dengan {gateway}"
 
@@ -2214,11 +2222,11 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:400
+#: posapp/src/components/InvoicePay/index.jsx:415
 msgid "Payment Summary"
 msgstr "Ringkasan pembayaran"
 
-#: posapp/src/pages/ReportsPage.jsx:247
+#: posapp/src/pages/ReportsPage.jsx:258
 msgid "Payment method breakdown"
 msgstr "Rincian per cara pembayaran"
 
@@ -2290,16 +2298,16 @@ msgstr "Silakan bayar"
 msgid "Please add at least one item to the cart"
 msgstr "Tambahkan setidaknya satu barang ke keranjang"
 
-#: posapp/src/components/InvoicePay/index.jsx:221
+#: posapp/src/components/InvoicePay/index.jsx:227
 msgid "Please add one or more items to the cart"
 msgstr "Tambahkan satu atau beberapa barang ke keranjang"
 
-#: posapp/src/components/InvoicePay/index.jsx:225
+#: posapp/src/components/InvoicePay/index.jsx:231
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Masukkan jumlah untuk setidaknya satu cara pembayaran"
 
 #: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:223
 msgid "Please select a customer"
 msgstr "Pilih pelanggan"
 
@@ -2565,9 +2573,9 @@ msgstr "Razorpay belum dikonfigurasi. Atur terlebih dahulu di Pengaturan Razorpa
 msgid "Razorpay payment signature verification failed"
 msgstr "Verifikasi tanda tangan pembayaran Razorpay gagal"
 
-#: posapp/src/components/InvoicePay/index.jsx:161
-#: posapp/src/components/InvoicePay/index.jsx:170
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:167
+#: posapp/src/components/InvoicePay/index.jsx:176
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Receipt"
 msgstr ""
 
@@ -2575,7 +2583,7 @@ msgstr ""
 msgid "Receipt Delivery"
 msgstr "Pengiriman struk"
 
-#: posapp/src/pages/ReportsPage.jsx:344
+#: posapp/src/pages/ReportsPage.jsx:355
 msgid "Recent transactions"
 msgstr "Transaksi terbaru"
 
@@ -2583,7 +2591,7 @@ msgstr "Transaksi terbaru"
 msgid "Reconnect to close your shift"
 msgstr "Sambungkan kembali untuk menutup shift"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:144
 msgid "Reconnect to open a shift"
 msgstr "Sambungkan kembali untuk membuka shift"
 
@@ -2603,7 +2611,7 @@ msgstr ""
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:372
+#: posapp/src/components/InvoicePay/index.jsx:387
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "Tukar poin loyalitas ({n} tersedia)"
 
@@ -2619,7 +2627,7 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:142
+#: posapp/src/pages/LoginPage.jsx:137
 msgid "Remember this device"
 msgstr "Ingat perangkat ini"
 
@@ -2636,7 +2644,7 @@ msgid "Remove row"
 msgstr "Hapus baris"
 
 #: posapp/src/components/Sidebar/index.jsx:18
-#: posapp/src/pages/ReportsPage.jsx:98 posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
 
@@ -2656,7 +2664,7 @@ msgstr "Coba sinkronkan lagi"
 msgid "Retrying…"
 msgstr "Mencoba lagi…"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:26
 msgid "Return"
 msgstr ""
 
@@ -2700,7 +2708,7 @@ msgstr ""
 msgid "SMS Notification"
 msgstr "Notifikasi SMS"
 
-#: posapp/src/pages/ReportsPage.jsx:136
+#: posapp/src/pages/ReportsPage.jsx:140
 msgid "Sales"
 msgstr ""
 
@@ -2730,11 +2738,11 @@ msgstr ""
 msgid "Sales completed offline, queued locally until they reach ERPNext."
 msgstr "Penjualan yang diselesaikan offline, mengantre secara lokal sampai tiba di ERPNext."
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by day"
 msgstr "Tren penjualan · per hari"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by hour"
 msgstr "Tren penjualan · per jam"
 
@@ -2862,7 +2870,7 @@ msgstr "Pilih grup barang"
 msgid "Select Mode"
 msgstr "Pilih cara"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:167
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:181
 msgid "Select POS profile"
 msgstr "Pilih profil POS"
 
@@ -2886,11 +2894,11 @@ msgstr "Pilih perusahaan terlebih dahulu"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "Pilih opsi untuk setiap atribut untuk memilih varian."
 
-#: easy_pos/api/pos.py:400 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
 msgid "Select at least one item to return"
 msgstr "Pilih setidaknya satu barang untuk diretur"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:158
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:172
 msgid "Select company"
 msgstr "Pilih perusahaan"
 
@@ -2947,7 +2955,7 @@ msgstr ""
 msgid "Shift"
 msgstr "Shift"
 
-#: posapp/src/pages/ReportsPage.jsx:214
+#: posapp/src/pages/ReportsPage.jsx:225
 msgid "Shift summary"
 msgstr "Ringkasan shift"
 
@@ -2964,11 +2972,11 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Show password"
 msgstr "Tampilkan kata sandi"
 
-#: posapp/src/pages/LoginPage.jsx:104 posapp/src/pages/LoginPage.jsx:164
+#: posapp/src/pages/LoginPage.jsx:99 posapp/src/pages/LoginPage.jsx:159
 msgid "Sign in"
 msgstr "Masuk"
 
@@ -2976,7 +2984,7 @@ msgstr "Masuk"
 msgid "Sign in to open your till and start ringing up sales."
 msgstr "Masuk untuk membuka kasir dan mulai mencatat penjualan."
 
-#: posapp/src/pages/LoginPage.jsx:160
+#: posapp/src/pages/LoginPage.jsx:155
 msgid "Signing in…"
 msgstr "Masuk…"
 
@@ -3006,11 +3014,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:29
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Submitting…"
 msgstr "Mengajukan…"
 
@@ -3082,7 +3090,7 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "Sistem akan memberi tahu untuk menambah atau mengurangi jumlah atau nominal"
 
-#: posapp/src/components/InvoicePay/index.jsx:334
+#: posapp/src/components/InvoicePay/index.jsx:340
 msgid "Take Payment"
 msgstr "Terima pembayaran"
 
@@ -3131,7 +3139,7 @@ msgstr ""
 msgid "Thank You!"
 msgstr "Terima kasih!"
 
-#: posapp/src/components/InvoicePay/index.jsx:305
+#: posapp/src/components/InvoicePay/index.jsx:311
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Percobaan itu gagal — Anda dapat mencoba cara pembayaran lain di jendela {gateway}."
 
@@ -3146,6 +3154,10 @@ msgstr "Faktur ini sudah difinalkan"
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
 msgstr "Penjualan offline ini sudah tidak ada di antrean lokal perangkat ini."
+
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:65
+msgid "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings."
+msgstr "Profil ini menjual dalam {currency}, tetapi mata uang perusahaan adalah {company_currency}. Penjualan pertama ke pelanggan baru akan gagal sampai 'Allow multi-currency invoices against single party account' diaktifkan di Accounts Settings."
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:158
 msgid "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below."
@@ -3192,7 +3204,7 @@ msgstr ""
 msgid "Toggle dark mode"
 msgstr "Alihkan mode gelap"
 
-#: posapp/src/pages/ReportsPage.jsx:290
+#: posapp/src/pages/ReportsPage.jsx:301
 msgid "Top selling items"
 msgstr "Barang terlaris"
 
@@ -3218,7 +3230,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/pages/ReportsPage.jsx:203
+#: posapp/src/pages/ReportsPage.jsx:214
 msgid "Transactions"
 msgstr ""
 
@@ -3244,11 +3256,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "Tidak dapat memulai kamera."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:30
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3314,7 +3326,7 @@ msgstr ""
 msgid "Variant {variant} and its template {template} cannot both be added to the same Pricing Rule"
 msgstr "Varian {variant} dan templatnya {template} tidak dapat ditambahkan bersama ke aturan harga yang sama"
 
-#: posapp/src/pages/ReportsPage.jsx:349
+#: posapp/src/pages/ReportsPage.jsx:360
 msgid "View all"
 msgstr "Lihat semua"
 
@@ -3322,12 +3334,12 @@ msgstr "Lihat semua"
 msgid "View purchase history"
 msgstr "Lihat riwayat pembelian"
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Waiting for {gateway}…"
 msgstr "Menunggu {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:173
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "Pelanggan umum"
 
@@ -3394,7 +3406,7 @@ msgstr ""
 msgid "Your order will appear here shortly."
 msgstr "Pesanan Anda akan segera muncul di sini."
 
-#: posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:155
 msgid "Your sales, shift, and payment summary"
 msgstr "Ringkasan penjualan, shift, dan pembayaran Anda"
 
@@ -3410,7 +3422,7 @@ msgstr "mis. Perak"
 msgid "e.g. customer@example.com"
 msgstr "mis. pelanggan@example.com"
 
-#: easy_pos/api/pos.py:500
+#: easy_pos/api/pos.py:515
 msgid "opening_entry is required for shift scope"
 msgstr ""
 
@@ -3422,19 +3434,19 @@ msgstr "{field} belum ditambahkan ke tabel"
 msgid "{field} is required"
 msgstr "{field} wajib diisi"
 
-#: posapp/src/components/InvoicePay/index.jsx:427
+#: posapp/src/components/InvoicePay/index.jsx:442
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} belum dikonfigurasi."
 
-#: posapp/src/components/InvoicePay/index.jsx:422
+#: posapp/src/components/InvoicePay/index.jsx:437
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} memerlukan koneksi — tidak tersedia saat offline."
 
-#: posapp/src/components/InvoicePay/index.jsx:430
+#: posapp/src/components/InvoicePay/index.jsx:445
 msgid "{gateway} — offline"
 msgstr "{gateway} — offline"
 
-#: posapp/src/components/InvoicePay/index.jsx:149
+#: posapp/src/components/InvoicePay/index.jsx:155
 msgid "{item} (Free)"
 msgstr "{item} (Gratis)"
 
@@ -3451,7 +3463,7 @@ msgstr "{label} — {n} di cache"
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — {n} faktur menunggu sinkronisasi"
 
-#: posapp/src/pages/ReportsPage.jsx:327
+#: posapp/src/pages/ReportsPage.jsx:338
 msgid "{n} invoices"
 msgstr "{n} faktur"
 
@@ -3467,7 +3479,7 @@ msgstr "{n} poin loyalitas tersedia"
 msgid "{n} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile)."
 msgstr "{n} catatan disimpan di cache lokal. Data master hanya-baca saat offline — Ambil mengunduh snapshot baru semua domain sekaligus (semuanya ditentukan bersama untuk profil POS shift saat ini)."
 
-#: posapp/src/pages/ReportsPage.jsx:336
+#: posapp/src/pages/ReportsPage.jsx:347
 msgid "{n} returns"
 msgstr "{n} retur"
 

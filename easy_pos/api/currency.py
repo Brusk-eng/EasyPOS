@@ -116,4 +116,19 @@ def get_currency_context(pos_profile: str) -> dict:
 	currency — throws (via _exchange_rate) if that rate can't be resolved, so a
 	misconfigured multi-currency profile is caught at shift open, not mid-sale."""
 	ctx = get_profile_currency_context(pos_profile)
-	return {**ctx, **_currency_format(ctx.currency)}
+	return {
+		**ctx,
+		**_currency_format(ctx.currency),
+		"multi_currency_party_warning": needs_multi_currency_party_setting(ctx),
+	}
+
+
+def needs_multi_currency_party_setting(ctx) -> bool:
+	"""True when this profile sells in a currency other than the Company's while
+	Accounts Settings' "Allow multi-currency invoices against single party
+	account" is off. ERPNext (AccountsController.validate_party_account_currency)
+	then rejects the first sale to any customer who has no ledger entries yet,
+	because the Debtors account is in the Company's currency."""
+	return ctx.currency != ctx.company_currency and not frappe.db.get_single_value(
+		"Accounts Settings", "allow_multi_currency_invoices_against_single_party_account"
+	)

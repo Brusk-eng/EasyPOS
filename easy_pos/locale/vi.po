@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-23 22:37+0553\n"
+"POT-Creation-Date: 2026-10-24 08:35+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: vi\n"
@@ -44,7 +44,7 @@ msgstr "Ưu đãi tặng sản phẩm trong giỏ này cần kết nối mạng 
 msgid "A new version of Easy POS is available."
 msgstr "Đã có phiên bản Easy POS mới."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:119
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:132
 msgid "A shift needs to be open before you can ring up sales."
 msgstr "Cần mở ca trước khi bán hàng."
 
@@ -223,7 +223,7 @@ msgstr ""
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
 #: posapp/src/pages/InvoiceDetailPage.jsx:411
 #: posapp/src/pages/InvoiceRegisterPage.jsx:40
-#: posapp/src/pages/ReportsPage.jsx:363
+#: posapp/src/pages/ReportsPage.jsx:374
 msgid "Amount"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr "Tự động thêm sản phẩm đã lọc vào giỏ"
 msgid "Automatically Calculated"
 msgstr "Tự động tính"
 
-#: posapp/src/pages/ReportsPage.jsx:206
+#: posapp/src/pages/ReportsPage.jsx:217
 msgid "Avg ticket"
 msgstr "Giá trị TB/đơn"
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "Quay lại danh sách hóa đơn"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Balance Due"
 msgstr "Số dư còn nợ"
 
@@ -419,9 +419,9 @@ msgstr ""
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:346
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:124
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
 msgstr ""
 
@@ -432,11 +432,11 @@ msgstr "Hủy hóa đơn"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:28
 msgid "Cancelled"
 msgstr ""
 
-#: easy_pos/api/pos.py:377
+#: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
 msgstr "Không thể tạo phiếu ghi có cho một phiếu ghi có"
 
@@ -459,7 +459,7 @@ msgstr "Sản phẩm trong giỏ"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:424
+#: posapp/src/components/InvoicePay/index.jsx:439
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "Thu ngân nhập số tiền cần thu; khi Hoàn tất thanh toán, cổng thanh toán {gateway} sẽ mở ra."
 
@@ -467,7 +467,7 @@ msgstr "Thu ngân nhập số tiền cần thu; khi Hoàn tất thanh toán, c�
 msgid "Change Due"
 msgstr "Tiền thừa"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Change to Return"
 msgstr "Chuyển thành trả hàng"
 
@@ -551,7 +551,7 @@ msgstr "Quy tắc tích điểm (hạng)"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: posapp/src/components/Customer/NewCustomerModal.jsx:94
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:157
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:171
 #: posapp/src/pages/CustomerDetailPage.jsx:178
 #: posapp/src/pages/CustomerDetailPage.jsx:303
 #: posapp/src/pages/DiscountDetailPage.jsx:760
@@ -573,7 +573,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "Công ty và kho là bắt buộc"
 
-#: posapp/src/components/InvoicePay/index.jsx:356
+#: posapp/src/components/InvoicePay/index.jsx:362
 msgid "Complete Payment"
 msgstr "Hoàn tất thanh toán"
 
@@ -597,7 +597,7 @@ msgstr "Cấu hình hạng, điểm và quy tắc đổi điểm"
 msgid "Connected to the server"
 msgstr "Đã kết nối máy chủ"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:33
 msgid "Consolidated"
 msgstr ""
 
@@ -610,7 +610,7 @@ msgstr "Hệ số quy đổi (1 điểm = ? tiền)"
 msgid "Cost Center"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:118
+#: posapp/src/pages/ReportsPage.jsx:122
 msgid "Could not load report data."
 msgstr "Không thể tải dữ liệu báo cáo."
 
@@ -618,7 +618,7 @@ msgstr "Không thể tải dữ liệu báo cáo."
 msgid "Could not reach the server to sync."
 msgstr "Không thể kết nối máy chủ để đồng bộ."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:62
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:74
 msgid "Could not resolve this profile's currency."
 msgstr "Không xác định được tiền tệ của hồ sơ này."
 
@@ -674,7 +674,7 @@ msgstr ""
 msgid "Create Demo Data"
 msgstr "Tạo dữ liệu mẫu"
 
-#: posapp/src/pages/LoginPage.jsx:177
+#: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
 msgstr "Tạo tài khoản"
 
@@ -698,7 +698,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:27
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -706,7 +706,7 @@ msgstr ""
 msgid "Credit limit is already defined for one of the selected Companies"
 msgstr "Một trong các công ty đã chọn đã có hạn mức tín dụng"
 
-#: posapp/src/pages/ReportsPage.jsx:332
+#: posapp/src/pages/ReportsPage.jsx:343
 msgid "Credit notes"
 msgstr "Phiếu ghi có"
 
@@ -727,14 +727,14 @@ msgstr "Tiền tệ phải giống tiền tệ của bảng giá: {currency}"
 msgid "Current"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:77
+#: posapp/src/pages/ReportsPage.jsx:80
 msgid "Current shift · {profile}"
 msgstr "Ca hiện tại · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
 #: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:173 posapp/src/engine/sync.js:10
+#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -744,7 +744,7 @@ msgstr "Ca hiện tại · {profile}"
 #: posapp/src/pages/InvoiceRegisterPage.jsx:176
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Customer"
 msgstr ""
 
@@ -911,7 +911,7 @@ msgstr "Tiền chiết khấu"
 msgid "Discount Percentage"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:323
+#: posapp/src/pages/ReportsPage.jsx:334
 msgid "Discount given"
 msgstr "Chiết khấu đã giảm"
 
@@ -931,7 +931,7 @@ msgstr "Đã lưu chiết khấu"
 msgid "Discounts"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:319
+#: posapp/src/pages/ReportsPage.jsx:330
 msgid "Discounts and returns"
 msgstr "Chiết khấu và trả hàng"
 
@@ -946,7 +946,7 @@ msgstr "Không bắt buộc số lượng tặng"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:22
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
 msgid "Draft"
 msgstr ""
 
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Email Notification"
 msgstr "Thông báo email"
 
-#: posapp/src/pages/LoginPage.jsx:117
+#: posapp/src/pages/LoginPage.jsx:112
 msgid "Email or username"
 msgstr "Email hoặc tên đăng nhập"
 
@@ -1049,15 +1049,15 @@ msgstr "Bật chế độ ngoại tuyến"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:335
+#: posapp/src/components/InvoicePay/index.jsx:341
 msgid "Enter the amount received for each payment mode."
 msgstr "Nhập số tiền đã nhận cho từng phương thức thanh toán."
 
-#: posapp/src/pages/LoginPage.jsx:128
+#: posapp/src/pages/LoginPage.jsx:123
 msgid "Enter your password"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:106
+#: posapp/src/pages/LoginPage.jsx:101
 msgid "Enter your workstation credentials to start a shift."
 msgstr "Nhập thông tin đăng nhập máy trạm để bắt đầu ca."
 
@@ -1102,8 +1102,8 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "Không thể hủy hóa đơn"
 
-#: posapp/src/components/InvoicePay/index.jsx:211
-#: posapp/src/components/InvoicePay/index.jsx:318
+#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:324
 msgid "Failed to complete payment"
 msgstr "Không thể hoàn tất thanh toán"
 
@@ -1128,8 +1128,8 @@ msgstr "Không thể xóa liên hệ"
 msgid "Failed to load Razorpay checkout"
 msgstr "Không thể tải trang thanh toán Razorpay"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:105
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:109
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:122
 msgid "Failed to open till"
 msgstr "Không thể mở quầy"
 
@@ -1210,7 +1210,7 @@ msgstr "Lọc theo email"
 msgid "Filter by mobile"
 msgstr "Lọc theo số di động"
 
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "Đang hoàn tất — hóa đơn sẽ được in tại đây khi được xác nhận."
 
@@ -1226,7 +1226,7 @@ msgstr ""
 msgid "For the 'Apply Rule On Other' condition the field {field} is mandatory"
 msgstr "Với điều kiện \"Áp dụng quy tắc cho mục khác\", trường {field} là bắt buộc"
 
-#: posapp/src/pages/LoginPage.jsx:148
+#: posapp/src/pages/LoginPage.jsx:143
 msgid "Forgot password?"
 msgstr "Quên mật khẩu?"
 
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "Give free item for every N quantity"
 msgstr "Tặng một sản phẩm cho mỗi N đơn vị"
 
-#: posapp/src/pages/ReportsPage.jsx:188
+#: posapp/src/pages/ReportsPage.jsx:199
 msgid "Go to Terminal"
 msgstr "Đến màn hình bán hàng"
 
@@ -1274,15 +1274,15 @@ msgstr "Đến màn hình bán hàng"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: posapp/src/components/Cart/index.jsx:692
 #: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:365
+#: posapp/src/components/InvoicePay/index.jsx:182
+#: posapp/src/components/InvoicePay/index.jsx:371
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
 msgid "Grand Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:198
+#: posapp/src/pages/ReportsPage.jsx:209
 msgid "Gross sales"
 msgstr "Doanh thu gộp"
 
@@ -1310,7 +1310,7 @@ msgstr "Ẩn hình ảnh"
 msgid "Hide Unavailable Items"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Hide password"
 msgstr "Ẩn mật khẩu"
 
@@ -1357,7 +1357,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:34
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1365,7 +1365,7 @@ msgstr ""
 msgid "Invalid condition expression"
 msgstr ""
 
-#: easy_pos/api/pricing.py:57 easy_pos/api/pricing.py:168
+#: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
 msgstr "Mã giảm giá không hợp lệ"
 
@@ -1380,7 +1380,7 @@ msgstr ""
 #: posapp/src/components/Cart/DraftPickerModal.jsx:15
 #: posapp/src/pages/InvoiceDetailPage.jsx:106
 #: posapp/src/pages/InvoiceRegisterPage.jsx:22
-#: posapp/src/pages/ReportsPage.jsx:358
+#: posapp/src/pages/ReportsPage.jsx:369
 msgid "Invoice"
 msgstr ""
 
@@ -1501,7 +1501,7 @@ msgid "Just now"
 msgstr "Vừa xong"
 
 #: posapp/src/components/Topbar/index.jsx:122
-#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:90
+#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:93
 msgid "Language"
 msgstr ""
 
@@ -1571,9 +1571,17 @@ msgstr "Đã lưu chương trình khách hàng thân thiết"
 msgid "Loyalty Programs"
 msgstr "Chương trình khách hàng thân thiết"
 
-#: posapp/src/components/InvoicePay/index.jsx:456
+#: posapp/src/components/InvoicePay/index.jsx:471
 msgid "Loyalty Redeemed"
 msgstr "Điểm thưởng đã dùng"
+
+#: posapp/src/components/InvoicePay/index.jsx:377
+msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
+msgstr "Không thể đổi điểm thưởng bằng {currency}. ERPNext chỉ đổi điểm bằng tiền tệ của công ty ({company_currency})."
+
+#: easy_pos/api/pos.py:275
+msgid "Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+msgstr "Không thể đổi điểm thưởng trên hóa đơn {0}. ERPNext chỉ đổi điểm bằng tiền tệ của công ty ({1})."
 
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
@@ -1704,7 +1712,7 @@ msgstr ""
 msgid "Net Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:199
+#: posapp/src/pages/ReportsPage.jsx:210
 msgid "Net sales"
 msgstr "Doanh thu thuần"
 
@@ -1758,7 +1766,7 @@ msgstr "Khách hàng mới"
 msgid "New discount"
 msgstr "Chiết khấu mới"
 
-#: posapp/src/pages/LoginPage.jsx:172
+#: posapp/src/pages/LoginPage.jsx:167
 msgid "New here"
 msgstr "Lần đầu sử dụng"
 
@@ -1894,7 +1902,7 @@ msgstr "Không có sản phẩm phù hợp"
 msgid "No items on this invoice"
 msgstr "Hóa đơn này không có sản phẩm"
 
-#: posapp/src/pages/ReportsPage.jsx:314
+#: posapp/src/pages/ReportsPage.jsx:325
 msgid "No items sold in this period."
 msgstr "Không có sản phẩm nào được bán trong kỳ này."
 
@@ -1902,11 +1910,11 @@ msgstr "Không có sản phẩm nào được bán trong kỳ này."
 msgid "No payment modes added"
 msgstr "Chưa thêm phương thức thanh toán"
 
-#: posapp/src/components/InvoicePay/index.jsx:408
+#: posapp/src/components/InvoicePay/index.jsx:423
 msgid "No payment modes configured for this POS Profile."
 msgstr "Hồ sơ POS này chưa cấu hình phương thức thanh toán."
 
-#: posapp/src/pages/ReportsPage.jsx:241
+#: posapp/src/pages/ReportsPage.jsx:252
 msgid "No payment modes configured."
 msgstr "Chưa cấu hình phương thức thanh toán."
 
@@ -1918,7 +1926,7 @@ msgstr "Không tìm thấy phương thức thanh toán cho ca này."
 msgid "No payments"
 msgstr "Không có thanh toán"
 
-#: posapp/src/pages/ReportsPage.jsx:258
+#: posapp/src/pages/ReportsPage.jsx:269
 msgid "No payments recorded in this period."
 msgstr "Không có thanh toán nào trong kỳ này."
 
@@ -1934,7 +1942,7 @@ msgstr ""
 msgid "No rows"
 msgstr "Không có dòng"
 
-#: posapp/src/pages/ReportsPage.jsx:281
+#: posapp/src/pages/ReportsPage.jsx:292
 msgid "No sales in this period."
 msgstr "Không có doanh số trong kỳ này."
 
@@ -1942,7 +1950,7 @@ msgstr "Không có doanh số trong kỳ này."
 msgid "No shift open"
 msgstr "Chưa mở ca"
 
-#: posapp/src/pages/ReportsPage.jsx:185
+#: posapp/src/pages/ReportsPage.jsx:196
 msgid "No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here."
 msgstr "Chưa có ca nào để báo cáo. Hãy mở ca từ màn hình bán hàng để xem số liệu ca trực tiếp tại đây."
 
@@ -1958,7 +1966,7 @@ msgstr "Hóa đơn này không có thuế"
 msgid "No tiers added"
 msgstr "Chưa thêm hạng"
 
-#: posapp/src/pages/ReportsPage.jsx:354
+#: posapp/src/pages/ReportsPage.jsx:365
 msgid "No transactions in this period."
 msgstr "Không có giao dịch trong kỳ này."
 
@@ -2003,7 +2011,7 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "Chế độ ngoại tuyến chưa được bật cho hệ thống này (Cài đặt EasyPOS). Dữ liệu vẫn được lưu tạm bên dưới, nhưng màn hình bán hàng sẽ không dùng đến khi ngoại tuyến cho đến khi bật."
 
-#: posapp/src/components/InvoicePay/index.jsx:172
+#: posapp/src/components/InvoicePay/index.jsx:178
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Ngoại tuyến — đang chờ đồng bộ. In lại từ mục Hóa đơn sau khi đồng bộ."
 
@@ -2023,7 +2031,7 @@ msgstr "Mỗi thu ngân một tài khoản, mỗi ca một bản ghi"
 msgid "Online"
 msgstr ""
 
-#: easy_pos/api/pos.py:375
+#: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
 msgstr "Chỉ có thể trả hàng cho hóa đơn đã ghi sổ"
 
@@ -2048,11 +2056,11 @@ msgstr "Mở màn hình khách hàng"
 msgid "Open a shift before syncing"
 msgstr "Hãy mở ca trước khi đồng bộ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:139
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:152
 msgid "Open till"
 msgstr "Mở quầy"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
 msgid "Open your till"
 msgstr "Mở quầy của bạn"
 
@@ -2070,15 +2078,15 @@ msgstr ""
 msgid "Opening Balance Details"
 msgstr ""
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:148
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
 msgstr "Mở ca cần có kết nối internet — tồn kho và giá của hồ sơ đã chọn phải được xác định trực tiếp. Hãy kết nối lại để mở quầy."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:177
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:191
 msgid "Opening balance"
 msgstr "Số dư đầu ca"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:136
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:149
 msgid "Opening…"
 msgstr "Đang mở…"
 
@@ -2107,11 +2115,11 @@ msgstr "Hết hàng"
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:31
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2137,7 +2145,7 @@ msgstr ""
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:166
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
 #: posapp/src/pages/InvoiceRegisterPage.jsx:191
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
@@ -2166,16 +2174,16 @@ msgstr "Trang {page}/{total}"
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:451
+#: posapp/src/components/InvoicePay/index.jsx:466
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:25
 msgid "Partly Paid"
 msgstr "Đã thanh toán một phần"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:32
 msgid "Partly Paid and Discounted"
 msgstr "Đã thanh toán một phần và có chiết khấu"
 
@@ -2188,11 +2196,11 @@ msgstr "Hợp danh"
 msgid "Party Information"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:127
+#: posapp/src/pages/LoginPage.jsx:122
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:354
+#: posapp/src/components/InvoicePay/index.jsx:360
 msgid "Pay with {gateway}"
 msgstr "Thanh toán qua {gateway}"
 
@@ -2214,11 +2222,11 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:400
+#: posapp/src/components/InvoicePay/index.jsx:415
 msgid "Payment Summary"
 msgstr "Tóm tắt thanh toán"
 
-#: posapp/src/pages/ReportsPage.jsx:247
+#: posapp/src/pages/ReportsPage.jsx:258
 msgid "Payment method breakdown"
 msgstr "Phân tích theo phương thức thanh toán"
 
@@ -2290,16 +2298,16 @@ msgstr "Vui lòng thanh toán"
 msgid "Please add at least one item to the cart"
 msgstr "Vui lòng thêm ít nhất một sản phẩm vào giỏ"
 
-#: posapp/src/components/InvoicePay/index.jsx:221
+#: posapp/src/components/InvoicePay/index.jsx:227
 msgid "Please add one or more items to the cart"
 msgstr "Vui lòng thêm một hoặc nhiều sản phẩm vào giỏ"
 
-#: posapp/src/components/InvoicePay/index.jsx:225
+#: posapp/src/components/InvoicePay/index.jsx:231
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Vui lòng nhập số tiền cho ít nhất một phương thức thanh toán"
 
 #: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:223
 msgid "Please select a customer"
 msgstr "Vui lòng chọn khách hàng"
 
@@ -2565,9 +2573,9 @@ msgstr "Chưa cấu hình Razorpay. Hãy thiết lập trong Cài đặt Razorpa
 msgid "Razorpay payment signature verification failed"
 msgstr "Xác minh chữ ký thanh toán Razorpay thất bại"
 
-#: posapp/src/components/InvoicePay/index.jsx:161
-#: posapp/src/components/InvoicePay/index.jsx:170
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:167
+#: posapp/src/components/InvoicePay/index.jsx:176
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Receipt"
 msgstr ""
 
@@ -2575,7 +2583,7 @@ msgstr ""
 msgid "Receipt Delivery"
 msgstr "Gửi hóa đơn"
 
-#: posapp/src/pages/ReportsPage.jsx:344
+#: posapp/src/pages/ReportsPage.jsx:355
 msgid "Recent transactions"
 msgstr "Giao dịch gần đây"
 
@@ -2583,7 +2591,7 @@ msgstr "Giao dịch gần đây"
 msgid "Reconnect to close your shift"
 msgstr "Hãy kết nối lại để đóng ca"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:144
 msgid "Reconnect to open a shift"
 msgstr "Hãy kết nối lại để mở ca"
 
@@ -2603,7 +2611,7 @@ msgstr "SL lặp không được nhỏ hơn 0"
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "Hệ thống không hỗ trợ chiết khấu lặp với điều kiện hỗn hợp"
 
-#: posapp/src/components/InvoicePay/index.jsx:372
+#: posapp/src/components/InvoicePay/index.jsx:387
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "Đổi điểm thưởng (có {n})"
 
@@ -2619,7 +2627,7 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:142
+#: posapp/src/pages/LoginPage.jsx:137
 msgid "Remember this device"
 msgstr "Ghi nhớ thiết bị này"
 
@@ -2636,7 +2644,7 @@ msgid "Remove row"
 msgstr "Xóa dòng"
 
 #: posapp/src/components/Sidebar/index.jsx:18
-#: posapp/src/pages/ReportsPage.jsx:98 posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
 
@@ -2656,7 +2664,7 @@ msgstr "Thử đồng bộ lại"
 msgid "Retrying…"
 msgstr "Đang thử lại…"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:26
 msgid "Return"
 msgstr ""
 
@@ -2700,7 +2708,7 @@ msgstr ""
 msgid "SMS Notification"
 msgstr "Thông báo SMS"
 
-#: posapp/src/pages/ReportsPage.jsx:136
+#: posapp/src/pages/ReportsPage.jsx:140
 msgid "Sales"
 msgstr ""
 
@@ -2730,11 +2738,11 @@ msgstr ""
 msgid "Sales completed offline, queued locally until they reach ERPNext."
 msgstr "Giao dịch hoàn tất khi ngoại tuyến, nằm trong hàng đợi cục bộ cho đến khi được gửi lên ERPNext."
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by day"
 msgstr "Xu hướng doanh số · theo ngày"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by hour"
 msgstr "Xu hướng doanh số · theo giờ"
 
@@ -2862,7 +2870,7 @@ msgstr "Chọn nhóm sản phẩm"
 msgid "Select Mode"
 msgstr "Chọn phương thức"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:167
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:181
 msgid "Select POS profile"
 msgstr "Chọn hồ sơ POS"
 
@@ -2886,11 +2894,11 @@ msgstr "Hãy chọn công ty trước"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "Chọn một tùy chọn cho mỗi thuộc tính để chọn biến thể."
 
-#: easy_pos/api/pos.py:400 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
 msgid "Select at least one item to return"
 msgstr "Chọn ít nhất một sản phẩm để trả"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:158
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:172
 msgid "Select company"
 msgstr "Chọn công ty"
 
@@ -2947,7 +2955,7 @@ msgstr ""
 msgid "Shift"
 msgstr "Ca"
 
-#: posapp/src/pages/ReportsPage.jsx:214
+#: posapp/src/pages/ReportsPage.jsx:225
 msgid "Shift summary"
 msgstr "Tóm tắt ca"
 
@@ -2964,11 +2972,11 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Show password"
 msgstr "Hiện mật khẩu"
 
-#: posapp/src/pages/LoginPage.jsx:104 posapp/src/pages/LoginPage.jsx:164
+#: posapp/src/pages/LoginPage.jsx:99 posapp/src/pages/LoginPage.jsx:159
 msgid "Sign in"
 msgstr "Đăng nhập"
 
@@ -2976,7 +2984,7 @@ msgstr "Đăng nhập"
 msgid "Sign in to open your till and start ringing up sales."
 msgstr "Đăng nhập để mở quầy và bắt đầu bán hàng."
 
-#: posapp/src/pages/LoginPage.jsx:160
+#: posapp/src/pages/LoginPage.jsx:155
 msgid "Signing in…"
 msgstr "Đang đăng nhập…"
 
@@ -3006,11 +3014,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:29
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Submitting…"
 msgstr "Đang ghi sổ…"
 
@@ -3082,7 +3090,7 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "Hệ thống sẽ nhắc tăng hoặc giảm số lượng hoặc số tiền"
 
-#: posapp/src/components/InvoicePay/index.jsx:334
+#: posapp/src/components/InvoicePay/index.jsx:340
 msgid "Take Payment"
 msgstr "Thu tiền"
 
@@ -3131,7 +3139,7 @@ msgstr ""
 msgid "Thank You!"
 msgstr "Cảm ơn quý khách!"
 
-#: posapp/src/components/InvoicePay/index.jsx:305
+#: posapp/src/components/InvoicePay/index.jsx:311
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Lần thử này thất bại — bạn có thể thử phương thức thanh toán khác trong cửa sổ {gateway}."
 
@@ -3146,6 +3154,10 @@ msgstr "Hóa đơn này đã được hoàn tất"
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
 msgstr "Giao dịch ngoại tuyến này không còn trong hàng đợi cục bộ của thiết bị."
+
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:65
+msgid "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings."
+msgstr "Hồ sơ này bán bằng {currency} nhưng tiền tệ của công ty là {company_currency}. Lần bán đầu tiên cho khách hàng mới sẽ thất bại cho đến khi bật 'Allow multi-currency invoices against single party account' trong Accounts Settings."
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:158
 msgid "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below."
@@ -3192,7 +3204,7 @@ msgstr ""
 msgid "Toggle dark mode"
 msgstr "Bật/tắt chế độ tối"
 
-#: posapp/src/pages/ReportsPage.jsx:290
+#: posapp/src/pages/ReportsPage.jsx:301
 msgid "Top selling items"
 msgstr "Sản phẩm bán chạy"
 
@@ -3218,7 +3230,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/pages/ReportsPage.jsx:203
+#: posapp/src/pages/ReportsPage.jsx:214
 msgid "Transactions"
 msgstr ""
 
@@ -3244,11 +3256,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "Không thể khởi động camera."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:30
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3314,7 +3326,7 @@ msgstr ""
 msgid "Variant {variant} and its template {template} cannot both be added to the same Pricing Rule"
 msgstr "Không thể thêm cả biến thể {variant} và mẫu {template} của nó vào cùng một quy tắc giá"
 
-#: posapp/src/pages/ReportsPage.jsx:349
+#: posapp/src/pages/ReportsPage.jsx:360
 msgid "View all"
 msgstr "Xem tất cả"
 
@@ -3322,12 +3334,12 @@ msgstr "Xem tất cả"
 msgid "View purchase history"
 msgstr "Xem lịch sử mua hàng"
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Waiting for {gateway}…"
 msgstr "Đang chờ {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:173
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "Khách vãng lai"
 
@@ -3394,7 +3406,7 @@ msgstr ""
 msgid "Your order will appear here shortly."
 msgstr "Đơn hàng của bạn sẽ sớm hiển thị tại đây."
 
-#: posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:155
 msgid "Your sales, shift, and payment summary"
 msgstr "Tóm tắt doanh số, ca và thanh toán của bạn"
 
@@ -3410,7 +3422,7 @@ msgstr "ví dụ: Bạc"
 msgid "e.g. customer@example.com"
 msgstr "ví dụ: customer@example.com"
 
-#: easy_pos/api/pos.py:500
+#: easy_pos/api/pos.py:515
 msgid "opening_entry is required for shift scope"
 msgstr ""
 
@@ -3422,19 +3434,19 @@ msgstr "{field} chưa được thêm vào bảng"
 msgid "{field} is required"
 msgstr "{field} là bắt buộc"
 
-#: posapp/src/components/InvoicePay/index.jsx:427
+#: posapp/src/components/InvoicePay/index.jsx:442
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} chưa được cấu hình."
 
-#: posapp/src/components/InvoicePay/index.jsx:422
+#: posapp/src/components/InvoicePay/index.jsx:437
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} cần kết nối — không khả dụng khi ngoại tuyến."
 
-#: posapp/src/components/InvoicePay/index.jsx:430
+#: posapp/src/components/InvoicePay/index.jsx:445
 msgid "{gateway} — offline"
 msgstr "{gateway} — ngoại tuyến"
 
-#: posapp/src/components/InvoicePay/index.jsx:149
+#: posapp/src/components/InvoicePay/index.jsx:155
 msgid "{item} (Free)"
 msgstr "{item} (Tặng)"
 
@@ -3451,7 +3463,7 @@ msgstr "{label} — đã lưu tạm {n}"
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — {n} hóa đơn chờ đồng bộ"
 
-#: posapp/src/pages/ReportsPage.jsx:327
+#: posapp/src/pages/ReportsPage.jsx:338
 msgid "{n} invoices"
 msgstr "{n} hóa đơn"
 
@@ -3467,7 +3479,7 @@ msgstr "Có {n} điểm thưởng"
 msgid "{n} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile)."
 msgstr "Đã lưu tạm {n} bản ghi trên máy. Dữ liệu gốc chỉ đọc khi ngoại tuyến — \"Lấy\" sẽ tải ảnh chụp mới của mọi phạm vi cùng lúc (chúng được xác định cùng nhau theo hồ sơ POS của ca hiện tại)."
 
-#: posapp/src/pages/ReportsPage.jsx:336
+#: posapp/src/pages/ReportsPage.jsx:347
 msgid "{n} returns"
 msgstr "{n} lần trả hàng"
 

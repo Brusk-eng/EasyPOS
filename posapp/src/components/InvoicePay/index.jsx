@@ -23,6 +23,12 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
   const money = useCurrencyFormatter();
   const currencyPrecision = usePOSSessionStore((s) => s.currencyPrecision);
+  const currencyCode = usePOSSessionStore((s) => s.currencyCode);
+  const companyCurrency = usePOSSessionStore((s) => s.companyCurrency);
+  // ERPNext only redeems loyalty points in the company's currency (see
+  // easy_pos.api.pos._save_sales_invoice), so hide redemption on a profile
+  // that sells in another currency.
+  const loyaltyRedemptionBlocked = currencyCode !== companyCurrency;
   const floatPrecision = usePOSSessionStore((s) => s.floatPrecision);
   const printReceiptOnOrderComplete = usePOSSessionStore((s) => s.printReceiptOnOrderComplete);
   const printFormat = usePOSSessionStore((s) => s.printFormat);
@@ -366,7 +372,16 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
         <span className="invoice-pay-pill-value">{formatAmount(grandTotal)}</span>
       </div>
 
-      {loyaltyProgram && loyaltyPointsBalance > 0 && (
+      {loyaltyProgram && loyaltyPointsBalance > 0 && loyaltyRedemptionBlocked && (
+        <div className="mb-3" style={{ fontSize: 12, color: "var(--color-text-muted)" }}>
+          {__("Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency}).", {
+            currency: currencyCode,
+            company_currency: companyCurrency,
+          })}
+        </div>
+      )}
+
+      {loyaltyProgram && loyaltyPointsBalance > 0 && !loyaltyRedemptionBlocked && (
         <div className="mb-3">
           <CheckboxField
             label={__("Redeem Loyalty Points ({n} available)", { n: loyaltyPointsBalance })}

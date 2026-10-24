@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-23 22:37+0553\n"
+"POT-Creation-Date: 2026-10-24 08:35+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: nb\n"
@@ -44,7 +44,7 @@ msgstr "Et gratisvaretilbud i denne handlekurven krever tilkobling — priser/ra
 msgid "A new version of Easy POS is available."
 msgstr "En ny versjon av Easy POS er tilgjengelig."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:119
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:132
 msgid "A shift needs to be open before you can ring up sales."
 msgstr "Et skift må være åpent før du kan registrere salg."
 
@@ -223,7 +223,7 @@ msgstr ""
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
 #: posapp/src/pages/InvoiceDetailPage.jsx:411
 #: posapp/src/pages/InvoiceRegisterPage.jsx:40
-#: posapp/src/pages/ReportsPage.jsx:363
+#: posapp/src/pages/ReportsPage.jsx:374
 msgid "Amount"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr "Legg filtrert vare automatisk i handlekurven"
 msgid "Automatically Calculated"
 msgstr "Beregnes automatisk"
 
-#: posapp/src/pages/ReportsPage.jsx:206
+#: posapp/src/pages/ReportsPage.jsx:217
 msgid "Avg ticket"
 msgstr "Snittkjøp"
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "Tilbake til fakturaer"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Balance Due"
 msgstr "Utestående beløp"
 
@@ -419,9 +419,9 @@ msgstr ""
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:346
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:124
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
 msgstr ""
 
@@ -432,11 +432,11 @@ msgstr "Kanseller faktura"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:28
 msgid "Cancelled"
 msgstr ""
 
-#: easy_pos/api/pos.py:377
+#: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
 msgstr "Kan ikke opprette kreditnota mot en kreditnota"
 
@@ -459,7 +459,7 @@ msgstr "Varer i handlekurven"
 msgid "Cashier"
 msgstr "Kasserer"
 
-#: posapp/src/components/InvoicePay/index.jsx:424
+#: posapp/src/components/InvoicePay/index.jsx:439
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "Kassereren skriver inn beløpet som skal belastes; en {gateway}-betaling åpnes ved Fullfør betaling."
 
@@ -467,7 +467,7 @@ msgstr "Kassereren skriver inn beløpet som skal belastes; en {gateway}-betaling
 msgid "Change Due"
 msgstr "Veksel tilbake"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Change to Return"
 msgstr "Endre til retur"
 
@@ -551,7 +551,7 @@ msgstr "Opptjeningsregler (nivåer)"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: posapp/src/components/Customer/NewCustomerModal.jsx:94
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:157
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:171
 #: posapp/src/pages/CustomerDetailPage.jsx:178
 #: posapp/src/pages/CustomerDetailPage.jsx:303
 #: posapp/src/pages/DiscountDetailPage.jsx:760
@@ -573,7 +573,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "Firma og lager er påkrevd"
 
-#: posapp/src/components/InvoicePay/index.jsx:356
+#: posapp/src/components/InvoicePay/index.jsx:362
 msgid "Complete Payment"
 msgstr "Fullfør betaling"
 
@@ -597,7 +597,7 @@ msgstr "Konfigurer nivåer, poeng og innløsningsregler"
 msgid "Connected to the server"
 msgstr "Koblet til serveren"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:33
 msgid "Consolidated"
 msgstr "Konsolidert"
 
@@ -610,7 +610,7 @@ msgstr "Omregningsfaktor (1 poeng = ? valuta)"
 msgid "Cost Center"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:118
+#: posapp/src/pages/ReportsPage.jsx:122
 msgid "Could not load report data."
 msgstr "Kunne ikke laste rapportdata."
 
@@ -618,7 +618,7 @@ msgstr "Kunne ikke laste rapportdata."
 msgid "Could not reach the server to sync."
 msgstr "Kunne ikke nå serveren for synkronisering."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:62
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:74
 msgid "Could not resolve this profile's currency."
 msgstr "Kunne ikke fastslå valutaen til denne profilen."
 
@@ -674,7 +674,7 @@ msgstr "Opprett kunde"
 msgid "Create Demo Data"
 msgstr "Opprett demodata"
 
-#: posapp/src/pages/LoginPage.jsx:177
+#: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
 msgstr "Opprett en konto"
 
@@ -698,7 +698,7 @@ msgstr "Kredittgrense"
 msgid "Credit Limits"
 msgstr "Kredittgrenser"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:27
 msgid "Credit Note Issued"
 msgstr "Kreditnota utstedt"
 
@@ -706,7 +706,7 @@ msgstr "Kreditnota utstedt"
 msgid "Credit limit is already defined for one of the selected Companies"
 msgstr "Det er allerede angitt en kredittgrense for ett av de valgte firmaene"
 
-#: posapp/src/pages/ReportsPage.jsx:332
+#: posapp/src/pages/ReportsPage.jsx:343
 msgid "Credit notes"
 msgstr "Kreditnotaer"
 
@@ -727,14 +727,14 @@ msgstr "Valutaen må være den samme som prislistens valuta: {currency}"
 msgid "Current"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:77
+#: posapp/src/pages/ReportsPage.jsx:80
 msgid "Current shift · {profile}"
 msgstr "Gjeldende skift · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
 #: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:173 posapp/src/engine/sync.js:10
+#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -744,7 +744,7 @@ msgstr "Gjeldende skift · {profile}"
 #: posapp/src/pages/InvoiceRegisterPage.jsx:176
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Customer"
 msgstr ""
 
@@ -911,7 +911,7 @@ msgstr "Rabattbeløp"
 msgid "Discount Percentage"
 msgstr "Rabattprosent"
 
-#: posapp/src/pages/ReportsPage.jsx:323
+#: posapp/src/pages/ReportsPage.jsx:334
 msgid "Discount given"
 msgstr "Gitt rabatt"
 
@@ -931,7 +931,7 @@ msgstr "Rabatten er lagret"
 msgid "Discounts"
 msgstr "Rabatter"
 
-#: posapp/src/pages/ReportsPage.jsx:319
+#: posapp/src/pages/ReportsPage.jsx:330
 msgid "Discounts and returns"
 msgstr "Rabatter og returer"
 
@@ -946,7 +946,7 @@ msgstr "Ikke tving antall for gratisvare"
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:22
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
 msgid "Draft"
 msgstr ""
 
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Email Notification"
 msgstr "E-postvarsel"
 
-#: posapp/src/pages/LoginPage.jsx:117
+#: posapp/src/pages/LoginPage.jsx:112
 msgid "Email or username"
 msgstr "E-post eller brukernavn"
 
@@ -1049,15 +1049,15 @@ msgstr "Aktiver frakoblet modus"
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:335
+#: posapp/src/components/InvoicePay/index.jsx:341
 msgid "Enter the amount received for each payment mode."
 msgstr "Skriv inn mottatt beløp for hver betalingsmåte."
 
-#: posapp/src/pages/LoginPage.jsx:128
+#: posapp/src/pages/LoginPage.jsx:123
 msgid "Enter your password"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:106
+#: posapp/src/pages/LoginPage.jsx:101
 msgid "Enter your workstation credentials to start a shift."
 msgstr "Skriv inn påloggingsinformasjonen for arbeidsstasjonen for å starte et skift."
 
@@ -1102,8 +1102,8 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "Kunne ikke kansellere fakturaen"
 
-#: posapp/src/components/InvoicePay/index.jsx:211
-#: posapp/src/components/InvoicePay/index.jsx:318
+#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:324
 msgid "Failed to complete payment"
 msgstr "Kunne ikke fullføre betalingen"
 
@@ -1128,8 +1128,8 @@ msgstr "Kunne ikke slette kontakten"
 msgid "Failed to load Razorpay checkout"
 msgstr "Kunne ikke laste Razorpay-betalingen"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:105
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:109
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:122
 msgid "Failed to open till"
 msgstr "Kunne ikke åpne kassen"
 
@@ -1210,7 +1210,7 @@ msgstr "Filtrer etter e-post"
 msgid "Filter by mobile"
 msgstr "Filtrer etter mobil"
 
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "Fullfører — kvitteringen skrives ut her når den er bekreftet."
 
@@ -1226,7 +1226,7 @@ msgstr "For prisliste"
 msgid "For the 'Apply Rule On Other' condition the field {field} is mandatory"
 msgstr "For betingelsen «Bruk regel på annet» er feltet {field} påkrevd"
 
-#: posapp/src/pages/LoginPage.jsx:148
+#: posapp/src/pages/LoginPage.jsx:143
 msgid "Forgot password?"
 msgstr "Glemt passordet?"
 
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "Give free item for every N quantity"
 msgstr "Gi en gratisvare for hver N enhet"
 
-#: posapp/src/pages/ReportsPage.jsx:188
+#: posapp/src/pages/ReportsPage.jsx:199
 msgid "Go to Terminal"
 msgstr "Gå til terminalen"
 
@@ -1274,15 +1274,15 @@ msgstr "Gå til terminalen"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: posapp/src/components/Cart/index.jsx:692
 #: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:365
+#: posapp/src/components/InvoicePay/index.jsx:182
+#: posapp/src/components/InvoicePay/index.jsx:371
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
 msgid "Grand Total"
 msgstr "Totalsum"
 
-#: posapp/src/pages/ReportsPage.jsx:198
+#: posapp/src/pages/ReportsPage.jsx:209
 msgid "Gross sales"
 msgstr "Bruttosalg"
 
@@ -1310,7 +1310,7 @@ msgstr "Skjul bilder"
 msgid "Hide Unavailable Items"
 msgstr "Skjul utilgjengelige varer"
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Hide password"
 msgstr "Skjul passord"
 
@@ -1357,7 +1357,7 @@ msgstr "Privatperson"
 msgid "Industry"
 msgstr "Bransje"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:34
 msgid "Internal Transfer"
 msgstr "Intern overføring"
 
@@ -1365,7 +1365,7 @@ msgstr "Intern overføring"
 msgid "Invalid condition expression"
 msgstr "Ugyldig betingelsesuttrykk"
 
-#: easy_pos/api/pricing.py:57 easy_pos/api/pricing.py:168
+#: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
 msgstr "Ugyldig kupongkode"
 
@@ -1380,7 +1380,7 @@ msgstr ""
 #: posapp/src/components/Cart/DraftPickerModal.jsx:15
 #: posapp/src/pages/InvoiceDetailPage.jsx:106
 #: posapp/src/pages/InvoiceRegisterPage.jsx:22
-#: posapp/src/pages/ReportsPage.jsx:358
+#: posapp/src/pages/ReportsPage.jsx:369
 msgid "Invoice"
 msgstr "Faktura"
 
@@ -1501,7 +1501,7 @@ msgid "Just now"
 msgstr "Akkurat nå"
 
 #: posapp/src/components/Topbar/index.jsx:122
-#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:90
+#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:93
 msgid "Language"
 msgstr ""
 
@@ -1571,9 +1571,17 @@ msgstr "Lojalitetsprogrammet er lagret"
 msgid "Loyalty Programs"
 msgstr "Lojalitetsprogrammer"
 
-#: posapp/src/components/InvoicePay/index.jsx:456
+#: posapp/src/components/InvoicePay/index.jsx:471
 msgid "Loyalty Redeemed"
 msgstr "Innløst lojalitet"
+
+#: posapp/src/components/InvoicePay/index.jsx:377
+msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
+msgstr "Lojalitetspoeng kan ikke løses inn i {currency}. ERPNext løser dem bare inn i firmaets valuta ({company_currency})."
+
+#: easy_pos/api/pos.py:275
+msgid "Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+msgstr "Lojalitetspoeng kan ikke løses inn på en faktura i {0}. ERPNext løser dem bare inn i firmaets valuta ({1})."
 
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
@@ -1704,7 +1712,7 @@ msgstr "Program med flere nivåer"
 msgid "Net Total"
 msgstr "Nettosum"
 
-#: posapp/src/pages/ReportsPage.jsx:199
+#: posapp/src/pages/ReportsPage.jsx:210
 msgid "Net sales"
 msgstr "Nettosalg"
 
@@ -1758,7 +1766,7 @@ msgstr "Ny kunde"
 msgid "New discount"
 msgstr "Ny rabatt"
 
-#: posapp/src/pages/LoginPage.jsx:172
+#: posapp/src/pages/LoginPage.jsx:167
 msgid "New here"
 msgstr "Ny her"
 
@@ -1894,7 +1902,7 @@ msgstr "Ingen varer samsvarer med søket"
 msgid "No items on this invoice"
 msgstr "Ingen varer på denne fakturaen"
 
-#: posapp/src/pages/ReportsPage.jsx:314
+#: posapp/src/pages/ReportsPage.jsx:325
 msgid "No items sold in this period."
 msgstr "Ingen varer solgt i perioden."
 
@@ -1902,11 +1910,11 @@ msgstr "Ingen varer solgt i perioden."
 msgid "No payment modes added"
 msgstr "Ingen betalingsmåter lagt til"
 
-#: posapp/src/components/InvoicePay/index.jsx:408
+#: posapp/src/components/InvoicePay/index.jsx:423
 msgid "No payment modes configured for this POS Profile."
 msgstr "Ingen betalingsmåter konfigurert for denne POS-profilen."
 
-#: posapp/src/pages/ReportsPage.jsx:241
+#: posapp/src/pages/ReportsPage.jsx:252
 msgid "No payment modes configured."
 msgstr "Ingen betalingsmåter konfigurert."
 
@@ -1918,7 +1926,7 @@ msgstr "Fant ingen betalingsmåter for dette skiftet."
 msgid "No payments"
 msgstr "Ingen betalinger"
 
-#: posapp/src/pages/ReportsPage.jsx:258
+#: posapp/src/pages/ReportsPage.jsx:269
 msgid "No payments recorded in this period."
 msgstr "Ingen betalinger registrert i perioden."
 
@@ -1934,7 +1942,7 @@ msgstr "Fant ingen poster"
 msgid "No rows"
 msgstr "Ingen rader"
 
-#: posapp/src/pages/ReportsPage.jsx:281
+#: posapp/src/pages/ReportsPage.jsx:292
 msgid "No sales in this period."
 msgstr "Ingen salg i perioden."
 
@@ -1942,7 +1950,7 @@ msgstr "Ingen salg i perioden."
 msgid "No shift open"
 msgstr "Ingen åpne skift"
 
-#: posapp/src/pages/ReportsPage.jsx:185
+#: posapp/src/pages/ReportsPage.jsx:196
 msgid "No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here."
 msgstr "Ingen skift å rapportere ennå. Åpne et skift fra terminalen for å se skifttall direkte her."
 
@@ -1958,7 +1966,7 @@ msgstr "Ingen avgifter på denne fakturaen"
 msgid "No tiers added"
 msgstr "Ingen nivåer lagt til"
 
-#: posapp/src/pages/ReportsPage.jsx:354
+#: posapp/src/pages/ReportsPage.jsx:365
 msgid "No transactions in this period."
 msgstr "Ingen transaksjoner i perioden."
 
@@ -2003,7 +2011,7 @@ msgstr "Frakoblet"
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "Frakoblet modus er ikke aktivert for denne installasjonen (EasyPOS-innstillinger). Data bufres fortsatt nedenfor, men terminalen bruker dem ikke frakoblet før modusen er slått på."
 
-#: posapp/src/components/InvoicePay/index.jsx:172
+#: posapp/src/components/InvoicePay/index.jsx:178
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "Frakoblet — venter på synkronisering. Skriv ut på nytt fra Fakturaer når den er synkronisert."
 
@@ -2023,7 +2031,7 @@ msgstr "Én pålogging per kasserer, én post per skift"
 msgid "Online"
 msgstr "Tilkoblet"
 
-#: easy_pos/api/pos.py:375
+#: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
 msgstr "Bare en bokført faktura kan returneres"
 
@@ -2048,11 +2056,11 @@ msgstr "Åpne kundeskjerm"
 msgid "Open a shift before syncing"
 msgstr "Åpne et skift før synkronisering"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:139
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:152
 msgid "Open till"
 msgstr "Åpne kassen"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
 msgid "Open your till"
 msgstr "Åpne kassen din"
 
@@ -2070,15 +2078,15 @@ msgstr "Åpningsbeløp"
 msgid "Opening Balance Details"
 msgstr "Detaljer om inngående beholdning"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:148
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
 msgstr "Å åpne et skift krever internettilkobling — lager og priser for valgt profil må hentes direkte. Koble til igjen for å åpne kassen."
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:177
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:191
 msgid "Opening balance"
 msgstr "Inngående beholdning"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:136
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:149
 msgid "Opening…"
 msgstr "Åpner…"
 
@@ -2107,11 +2115,11 @@ msgstr "Utsolgt"
 msgid "Outstanding Amount"
 msgstr "Utestående beløp"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
 msgid "Overdue"
 msgstr "Forfalt"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:31
 msgid "Overdue and Discounted"
 msgstr "Forfalt og rabattert"
 
@@ -2137,7 +2145,7 @@ msgstr "POS-åpningspost"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:166
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
 #: posapp/src/pages/InvoiceRegisterPage.jsx:191
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
@@ -2166,16 +2174,16 @@ msgstr "Side {page} av {total}"
 msgid "Paid"
 msgstr "Betalt"
 
-#: posapp/src/components/InvoicePay/index.jsx:451
+#: posapp/src/components/InvoicePay/index.jsx:466
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr "Betalt beløp"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:25
 msgid "Partly Paid"
 msgstr "Delvis betalt"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:32
 msgid "Partly Paid and Discounted"
 msgstr "Delvis betalt og rabattert"
 
@@ -2188,11 +2196,11 @@ msgstr "Partnerskap"
 msgid "Party Information"
 msgstr "Partsinformasjon"
 
-#: posapp/src/pages/LoginPage.jsx:127
+#: posapp/src/pages/LoginPage.jsx:122
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:354
+#: posapp/src/components/InvoicePay/index.jsx:360
 msgid "Pay with {gateway}"
 msgstr "Betal med {gateway}"
 
@@ -2214,11 +2222,11 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:400
+#: posapp/src/components/InvoicePay/index.jsx:415
 msgid "Payment Summary"
 msgstr "Betalingssammendrag"
 
-#: posapp/src/pages/ReportsPage.jsx:247
+#: posapp/src/pages/ReportsPage.jsx:258
 msgid "Payment method breakdown"
 msgstr "Fordeling per betalingsmåte"
 
@@ -2290,16 +2298,16 @@ msgstr "Vennligst betal"
 msgid "Please add at least one item to the cart"
 msgstr "Legg til minst én vare i handlekurven"
 
-#: posapp/src/components/InvoicePay/index.jsx:221
+#: posapp/src/components/InvoicePay/index.jsx:227
 msgid "Please add one or more items to the cart"
 msgstr "Legg til én eller flere varer i handlekurven"
 
-#: posapp/src/components/InvoicePay/index.jsx:225
+#: posapp/src/components/InvoicePay/index.jsx:231
 msgid "Please enter an amount for at least one payment mode"
 msgstr "Skriv inn et beløp for minst én betalingsmåte"
 
 #: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:223
 msgid "Please select a customer"
 msgstr "Velg en kunde"
 
@@ -2565,9 +2573,9 @@ msgstr "Razorpay er ikke konfigurert. Sett det opp under Razorpay-innstillinger 
 msgid "Razorpay payment signature verification failed"
 msgstr "Verifisering av Razorpay-betalingens signatur mislyktes"
 
-#: posapp/src/components/InvoicePay/index.jsx:161
-#: posapp/src/components/InvoicePay/index.jsx:170
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:167
+#: posapp/src/components/InvoicePay/index.jsx:176
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Receipt"
 msgstr "Kvittering"
 
@@ -2575,7 +2583,7 @@ msgstr "Kvittering"
 msgid "Receipt Delivery"
 msgstr "Levering av kvittering"
 
-#: posapp/src/pages/ReportsPage.jsx:344
+#: posapp/src/pages/ReportsPage.jsx:355
 msgid "Recent transactions"
 msgstr "Siste transaksjoner"
 
@@ -2583,7 +2591,7 @@ msgstr "Siste transaksjoner"
 msgid "Reconnect to close your shift"
 msgstr "Koble til igjen for å lukke skiftet"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:144
 msgid "Reconnect to open a shift"
 msgstr "Koble til igjen for å åpne et skift"
 
@@ -2603,7 +2611,7 @@ msgstr "Gjentakelsesantall kan ikke være mindre enn 0"
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "Rekursive rabatter med blandede betingelser støttes ikke"
 
-#: posapp/src/components/InvoicePay/index.jsx:372
+#: posapp/src/components/InvoicePay/index.jsx:387
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "Løs inn lojalitetspoeng ({n} tilgjengelige)"
 
@@ -2619,7 +2627,7 @@ msgstr "Registrer"
 msgid "Reload"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:142
+#: posapp/src/pages/LoginPage.jsx:137
 msgid "Remember this device"
 msgstr "Husk denne enheten"
 
@@ -2636,7 +2644,7 @@ msgid "Remove row"
 msgstr "Fjern rad"
 
 #: posapp/src/components/Sidebar/index.jsx:18
-#: posapp/src/pages/ReportsPage.jsx:98 posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
 
@@ -2656,7 +2664,7 @@ msgstr "Prøv synkronisering på nytt"
 msgid "Retrying…"
 msgstr "Prøver på nytt…"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:26
 msgid "Return"
 msgstr "Retur"
 
@@ -2700,7 +2708,7 @@ msgstr "Regelbeskrivelse"
 msgid "SMS Notification"
 msgstr "SMS-varsel"
 
-#: posapp/src/pages/ReportsPage.jsx:136
+#: posapp/src/pages/ReportsPage.jsx:140
 msgid "Sales"
 msgstr "Salg"
 
@@ -2730,11 +2738,11 @@ msgstr "Mal for salgsavgifter og gebyrer"
 msgid "Sales completed offline, queued locally until they reach ERPNext."
 msgstr "Salg fullført frakoblet, lagt i lokal kø til det når ERPNext."
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by day"
 msgstr "Salgsutvikling · per dag"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by hour"
 msgstr "Salgsutvikling · per time"
 
@@ -2862,7 +2870,7 @@ msgstr "Velg varegruppe"
 msgid "Select Mode"
 msgstr "Velg måte"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:167
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:181
 msgid "Select POS profile"
 msgstr "Velg POS-profil"
 
@@ -2886,11 +2894,11 @@ msgstr "Velg et firma først"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "Velg et alternativ for hver egenskap for å velge en variant."
 
-#: easy_pos/api/pos.py:400 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
 msgid "Select at least one item to return"
 msgstr "Velg minst én vare å returnere"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:158
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:172
 msgid "Select company"
 msgstr "Velg firma"
 
@@ -2947,7 +2955,7 @@ msgstr ""
 msgid "Shift"
 msgstr "Skift"
 
-#: posapp/src/pages/ReportsPage.jsx:214
+#: posapp/src/pages/ReportsPage.jsx:225
 msgid "Shift summary"
 msgstr "Skiftsammendrag"
 
@@ -2964,11 +2972,11 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr "Handlekurv"
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Show password"
 msgstr "Vis passord"
 
-#: posapp/src/pages/LoginPage.jsx:104 posapp/src/pages/LoginPage.jsx:164
+#: posapp/src/pages/LoginPage.jsx:99 posapp/src/pages/LoginPage.jsx:159
 msgid "Sign in"
 msgstr "Logg inn"
 
@@ -2976,7 +2984,7 @@ msgstr "Logg inn"
 msgid "Sign in to open your till and start ringing up sales."
 msgstr "Logg inn for å åpne kassen og begynne å selge."
 
-#: posapp/src/pages/LoginPage.jsx:160
+#: posapp/src/pages/LoginPage.jsx:155
 msgid "Signing in…"
 msgstr "Logger inn…"
 
@@ -3006,11 +3014,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:29
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Submitting…"
 msgstr "Bokfører…"
 
@@ -3082,7 +3090,7 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "Systemet varsler om å øke eller redusere antall eller beløp"
 
-#: posapp/src/components/InvoicePay/index.jsx:334
+#: posapp/src/components/InvoicePay/index.jsx:340
 msgid "Take Payment"
 msgstr "Ta betalt"
 
@@ -3131,7 +3139,7 @@ msgstr ""
 msgid "Thank You!"
 msgstr "Takk!"
 
-#: posapp/src/components/InvoicePay/index.jsx:305
+#: posapp/src/components/InvoicePay/index.jsx:311
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "Det forsøket mislyktes — du kan prøve en annen betalingsmåte i {gateway}-vinduet."
 
@@ -3146,6 +3154,10 @@ msgstr "Denne fakturaen er allerede fullført"
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
 msgstr "Dette frakoblede salget ligger ikke lenger i enhetens lokale kø."
+
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:65
+msgid "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings."
+msgstr "Denne profilen selger i {currency}, men firmaets valuta er {company_currency}. Det første salget til en ny kunde vil mislykkes til 'Allow multi-currency invoices against single party account' er slått på i Accounts Settings."
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:158
 msgid "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below."
@@ -3192,7 +3204,7 @@ msgstr ""
 msgid "Toggle dark mode"
 msgstr "Slå mørk modus av/på"
 
-#: posapp/src/pages/ReportsPage.jsx:290
+#: posapp/src/pages/ReportsPage.jsx:301
 msgid "Top selling items"
 msgstr "Mest solgte varer"
 
@@ -3218,7 +3230,7 @@ msgstr "Transaksjon"
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/pages/ReportsPage.jsx:203
+#: posapp/src/pages/ReportsPage.jsx:214
 msgid "Transactions"
 msgstr "Transaksjoner"
 
@@ -3244,11 +3256,11 @@ msgstr "Enhet"
 msgid "Unable to start the camera."
 msgstr "Kunne ikke starte kameraet."
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
 msgid "Unpaid"
 msgstr "Ubetalt"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:30
 msgid "Unpaid and Discounted"
 msgstr "Ubetalt og rabattert"
 
@@ -3314,7 +3326,7 @@ msgstr ""
 msgid "Variant {variant} and its template {template} cannot both be added to the same Pricing Rule"
 msgstr "Varianten {variant} og malen {template} kan ikke begge legges til i samme prisregel"
 
-#: posapp/src/pages/ReportsPage.jsx:349
+#: posapp/src/pages/ReportsPage.jsx:360
 msgid "View all"
 msgstr "Vis alle"
 
@@ -3322,12 +3334,12 @@ msgstr "Vis alle"
 msgid "View purchase history"
 msgstr "Vis kjøpshistorikk"
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Waiting for {gateway}…"
 msgstr "Venter på {gateway}…"
 
-#: posapp/src/components/InvoicePay/index.jsx:173
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "Tilfeldig kunde"
 
@@ -3394,7 +3406,7 @@ msgstr "Du kan bare velge én betalingsmåte som standard"
 msgid "Your order will appear here shortly."
 msgstr "Bestillingen din vises her om litt."
 
-#: posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:155
 msgid "Your sales, shift, and payment summary"
 msgstr "Din oversikt over salg, skift og betalinger"
 
@@ -3410,7 +3422,7 @@ msgstr "f.eks. Sølv"
 msgid "e.g. customer@example.com"
 msgstr "f.eks. kunde@example.com"
 
-#: easy_pos/api/pos.py:500
+#: easy_pos/api/pos.py:515
 msgid "opening_entry is required for shift scope"
 msgstr ""
 
@@ -3422,19 +3434,19 @@ msgstr "{field} er ikke lagt til i tabellen"
 msgid "{field} is required"
 msgstr "{field} er påkrevd"
 
-#: posapp/src/components/InvoicePay/index.jsx:427
+#: posapp/src/components/InvoicePay/index.jsx:442
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} er ikke konfigurert ennå."
 
-#: posapp/src/components/InvoicePay/index.jsx:422
+#: posapp/src/components/InvoicePay/index.jsx:437
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} krever tilkobling — ikke tilgjengelig frakoblet."
 
-#: posapp/src/components/InvoicePay/index.jsx:430
+#: posapp/src/components/InvoicePay/index.jsx:445
 msgid "{gateway} — offline"
 msgstr "{gateway} — frakoblet"
 
-#: posapp/src/components/InvoicePay/index.jsx:149
+#: posapp/src/components/InvoicePay/index.jsx:155
 msgid "{item} (Free)"
 msgstr "{item} (gratis)"
 
@@ -3451,7 +3463,7 @@ msgstr "{label} — {n} bufret"
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — {n} faktura(er) venter på synkronisering"
 
-#: posapp/src/pages/ReportsPage.jsx:327
+#: posapp/src/pages/ReportsPage.jsx:338
 msgid "{n} invoices"
 msgstr "{n} fakturaer"
 
@@ -3467,7 +3479,7 @@ msgstr "{n} lojalitetspoeng tilgjengelige"
 msgid "{n} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile)."
 msgstr "{n} post(er) bufret lokalt. Grunndata er skrivebeskyttet frakoblet — Hent laster ned et nytt øyeblikksbilde av alle områder på én gang (de hentes samlet for gjeldende skifts POS-profil)."
 
-#: posapp/src/pages/ReportsPage.jsx:336
+#: posapp/src/pages/ReportsPage.jsx:347
 msgid "{n} returns"
 msgstr "{n} returer"
 

@@ -47,6 +47,9 @@ const ReportsPage = () => {
   const [fromDate, setFromDate] = useState(today());
   const [toDate, setToDate] = useState(today());
   const [report, setReport] = useState(null);
+  // Which currency Today/Range totals are in, when the cashier sold in more
+  // than one (null = let the server pick the profile's / most-used one).
+  const [reportCurrency, setReportCurrency] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -113,13 +116,14 @@ const ReportsPage = () => {
         pos_profile: posProfile,
         from_date: scope === "today" ? today() : fromDate,
         to_date: scope === "today" ? today() : toDate,
+        currency: reportCurrency,
       });
       if (data) setReport(data);
       else setError(__("Could not load report data."));
       setLoading(false);
     };
     load();
-  }, [scope, fromDate, toDate, selectedShift, posProfile]);
+  }, [scope, fromDate, toDate, selectedShift, posProfile, reportCurrency]);
 
   const kpis = report?.kpis ?? {};
 
@@ -158,6 +162,13 @@ const ReportsPage = () => {
             <span className="text-muted">to</span>
             <DateField value={toDate} onChange={setToDate} />
           </div>
+        )}
+        {scope !== "shift" && report?.available_currencies?.length > 1 && (
+          <FilterChips
+            options={report.available_currencies.map((code) => ({ value: code, label: code }))}
+            value={report.currency}
+            onChange={setReportCurrency}
+          />
         )}
         {scope === "shift" && shiftOptions.length > 0 && (
           <div className="pos-inline-fields" style={{ width: 240 }}>

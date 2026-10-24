@@ -36,6 +36,7 @@ const OpeningEntryModal = () => {
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [currencyWarning, setCurrencyWarning] = useState("");
 
   useEffect(() => {
     if (isOpen) fetchCompanies().then((data) => setCompanies(data ?? []));
@@ -55,8 +56,19 @@ const OpeningEntryModal = () => {
       // a multi-currency profile with no Currency Exchange record is flagged
       // here, before the shift opens, rather than on the first checkout.
       setError("");
+      setCurrencyWarning("");
       fetchCurrencyContext(value)
-        .then((ctx) => setCurrencySymbol(ctx?.symbol || data?.currency || ""))
+        .then((ctx) => {
+          setCurrencySymbol(ctx?.symbol || data?.currency || "");
+          if (ctx?.multi_currency_party_warning) {
+            setCurrencyWarning(
+              __(
+                "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings.",
+                { currency: ctx.currency, company_currency: ctx.company_currency }
+              )
+            );
+          }
+        })
         .catch((err) => {
           setCurrencySymbol(data?.currency || "");
           setError(getServerMessage(err) || __("Could not resolve this profile's currency."));
@@ -90,6 +102,7 @@ const OpeningEntryModal = () => {
     setProfile(null);
     setCurrencySymbol("");
     setError("");
+    setCurrencyWarning("");
     closeOpeningModal();
   };
 
@@ -152,6 +165,7 @@ const OpeningEntryModal = () => {
       )}
 
       <ErrorAlert message={error} />
+      <ErrorAlert message={currencyWarning} variant="warning" />
 
       <SelectField
         label={__("Company")}

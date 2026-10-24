@@ -2,7 +2,7 @@ import json
 
 import frappe
 from frappe import _
-from frappe.query_builder.functions import Sum
+from frappe.query_builder.functions import Count, Sum
 from frappe.utils import cint, flt, get_number_format_info, now, today
 
 from easy_pos.api.currency import get_profile_currency, get_profile_currency_context
@@ -266,6 +266,16 @@ def _save_sales_invoice(invoice: dict, opening_details: dict, ep_offline_id: str
 	# earned even when the cashier isn't redeeming this time); redemption only
 	# applies when the cashier explicitly ticked it with a positive points value.
 	redeeming = bool(invoice.get("redeem_loyalty_points")) and cint(invoice.get("loyalty_points")) > 0
+	# ERPNext's loyalty code works in the invoice's currency with no conversion
+	# (Loyalty Program.validate_loyalty_points, and SalesInvoice.make_gl_entries
+	# posts loyalty_amount as if it were company currency), so redeeming on a
+	# foreign-currency invoice would book the wrong amount. Block it outright.
+	if redeeming and currency_ctx.currency != currency_ctx.company_currency:
+		frappe.throw(
+			_(
+				"Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+			).format(currency_ctx.currency, currency_ctx.company_currency)
+		)
 	loyalty_fields = {
 		"loyalty_program": invoice.get("loyalty_program") or "",
 		"redeem_loyalty_points": 1 if redeeming else 0,
@@ -485,10 +495,15 @@ def get_sales_report(
 	pos_profile: str | None = None,
 	from_date: str | None = None,
 	to_date: str | None = None,
+	currency: str | None = None,
 ) -> dict:
 	"""Cashier-scoped reports/dashboard data. `scope` is 'shift' (all invoices under
 	the given opening entry), or 'today'/'range' (the logged-in cashier's own invoices,
-	optionally narrowed to a POS Profile, over from_date..to_date)."""
+	optionally narrowed to a POS Profile, over from_date..to_date).
+
+	Totals are only ever summed within one currency: 'today'/'range' are filtered to
+	`currency` (else the profile's, else the most-used one), and the response lists
+	every currency the cashier sold in for that period so the page can switch."""
 	SalesInvoice = frappe.qb.DocType("Sales Invoice")
 	SalesInvoiceItem = frappe.qb.DocType("Sales Invoice Item")
 	SalesInvoicePayment = frappe.qb.DocType("Sales Invoice Payment")
@@ -505,6 +520,32 @@ def get_sales_report(
 			condition &= SalesInvoice.pos_profile == pos_profile
 		if from_date and to_date:
 			condition &= (SalesInvoice.posting_date >= from_date) & (SalesInvoice.posting_date <= to_date)
+
+	available_currencies = [
+		row.currency
+		for row in (
+			frappe.qb.from_(SalesInvoice)
+			.select(SalesInvoice.currency, Count(SalesInvoice.name).as_("invoice_count"))
+			.where(condition)
+			.groupby(SalesInvoice.currency)
+			.orderby(Count(SalesInvoice.name), order=frappe.qb.desc)
+		).run(as_dict=True)
+		if row.currency
+	]
+	if scope == "shift":
+		report_currency = get_profile_currency(
+			frappe.db.get_value("EP Opening Entry", opening_entry, "pos_profile")
+		)
+	elif currency in available_currencies:
+		report_currency = currency
+	elif pos_profile and get_profile_currency(pos_profile) in available_currencies:
+		report_currency = get_profile_currency(pos_profile)
+	elif available_currencies:
+		report_currency = available_currencies[0]
+	else:
+		report_currency = currency or (get_profile_currency(pos_profile) if pos_profile else None)
+	if scope != "shift" and report_currency:
+		condition &= SalesInvoice.currency == report_currency
 
 	invoices = (
 		frappe.qb.from_(SalesInvoice)
@@ -568,10 +609,8 @@ def get_sales_report(
 	).run(as_dict=True)
 
 	shift_summary = None
-	report_profile = pos_profile
 	if scope == "shift":
 		open_voucher = frappe.get_doc("EP Opening Entry", opening_entry)
-		report_profile = open_voucher.pos_profile
 		shift_summary = get_closing_entry({"name": opening_entry, "pos_profile": open_voucher.pos_profile})
 
 	recent_invoices = sorted(
@@ -596,8 +635,9 @@ def get_sales_report(
 		},
 		"shift_summary": shift_summary,
 		"recent_invoices": recent_invoices,
-		# Every amount above is in the invoices' own (transaction) currency — a
-		# shift/profile is single-currency, so the page formats with this rather
-		# than the open shift's currency (a past shift may be another profile's).
-		"currency": get_profile_currency(report_profile) if report_profile else None,
+		# Every amount above is in this one currency (the invoices' own transaction
+		# currency); available_currencies lets the page switch when the cashier
+		# sold in more than one over the period.
+		"currency": report_currency,
+		"available_currencies": available_currencies,
 	}

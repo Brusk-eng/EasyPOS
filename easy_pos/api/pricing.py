@@ -4,7 +4,7 @@ import frappe
 from frappe import _
 from frappe.utils import cint, flt, getdate, nowdate
 
-from easy_pos.api.currency import get_profile_currency_context
+from easy_pos.api.currency import get_profile_currency, get_profile_currency_context
 from easy_pos.api.pos import get_currency_precision
 
 # Fields client-side matching (posapp/src/utils/pricingEngine.js) actually
@@ -31,6 +31,7 @@ PRICING_RULE_ENGINE_FIELDS = [
 	"priority",
 	"apply_multiple_pricing_rules",
 	"for_price_list",
+	"currency",
 ]
 
 
@@ -92,6 +93,7 @@ def get_pricing_rules(pos_profile: str) -> list:
 	"""
 	profile = frappe.get_cached_doc("POS Profile", pos_profile)
 	today = getdate(nowdate())
+	invoice_currency = get_profile_currency(pos_profile)
 
 	rules = frappe.get_all(
 		"Pricing Rule",
@@ -110,6 +112,11 @@ def get_pricing_rules(pos_profile: str) -> list:
 		if (not r.valid_from or getdate(r.valid_from) <= today)
 		and (not r.valid_upto or getdate(r.valid_upto) >= today)
 		and (not r.for_price_list or r.for_price_list == profile.selling_price_list)
+		# ERPNext only applies a fixed "Rate" rule when the rule's currency is the
+		# invoice's (pricing_rule.apply_price_discount_rule); otherwise the item
+		# keeps its price list rate. Drop those here so the local engine can't
+		# charge e.g. an INR "Rate = 500" as 500 USD at a USD till.
+		and not (r.rate_or_discount == "Rate" and r.currency and r.currency != invoice_currency)
 	]
 	rule_names = [r.name for r in rules]
 

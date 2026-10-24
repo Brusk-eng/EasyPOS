@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy POS VERSION\n"
 "Report-Msgid-Bugs-To: aashishvashisht6@gmail.com\n"
-"POT-Creation-Date: 2026-10-23 22:37+0553\n"
+"POT-Creation-Date: 2026-10-24 08:35+0553\n"
 "PO-Revision-Date: 2026-10-23 22:37+0553\n"
 "Last-Translator: aashishvashisht6@gmail.com\n"
 "Language: my\n"
@@ -44,7 +44,7 @@ msgstr "ဤခြင်းထဲရှိ အခမဲ့ပစ္စည်း �
 msgid "A new version of Easy POS is available."
 msgstr "Easy POS ဗားရှင်းအသစ် ရနိုင်ပါပြီ။"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:119
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:132
 msgid "A shift needs to be open before you can ring up sales."
 msgstr "အရောင်းမှတ်တမ်းမတင်မီ အလုပ်ဆိုင်းတစ်ခု ဖွင့်ထားရမည်။"
 
@@ -223,7 +223,7 @@ msgstr ""
 #: posapp/src/pages/InvoiceDetailPage.jsx:375
 #: posapp/src/pages/InvoiceDetailPage.jsx:411
 #: posapp/src/pages/InvoiceRegisterPage.jsx:40
-#: posapp/src/pages/ReportsPage.jsx:363
+#: posapp/src/pages/ReportsPage.jsx:374
 msgid "Amount"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr "စစ်ထုတ်ထားသော ပစ္စည်းကို �
 msgid "Automatically Calculated"
 msgstr "အလိုအလျောက် တွက်ချက်သည်"
 
-#: posapp/src/pages/ReportsPage.jsx:206
+#: posapp/src/pages/ReportsPage.jsx:217
 msgid "Avg ticket"
 msgstr "ပျမ်းမျှ ဘောက်ချာ"
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Back to Invoices"
 msgstr "ငွေတောင်းခံလွှာများသို့ ပြန်သွားရန်"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Balance Due"
 msgstr "ပေးရန်ကျန်ငွေ"
 
@@ -419,9 +419,9 @@ msgstr ""
 #: posapp/src/components/Customer/ContactModal.jsx:74
 #: posapp/src/components/Customer/NewCustomerModal.jsx:59
 #: posapp/src/components/Invoice/CreditNoteModal.jsx:116
-#: posapp/src/components/InvoicePay/index.jsx:340
+#: posapp/src/components/InvoicePay/index.jsx:346
 #: posapp/src/components/Items/ItemVariantModal.jsx:87
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:124
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:137
 msgid "Cancel"
 msgstr ""
 
@@ -432,11 +432,11 @@ msgstr "ငွေတောင်းခံလွှာ ပယ်ဖျက်ရ�
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:28
 msgid "Cancelled"
 msgstr ""
 
-#: easy_pos/api/pos.py:377
+#: easy_pos/api/pos.py:387
 msgid "Cannot create a credit note against a credit note"
 msgstr "ခရက်ဒစ်မှတ်စုအပေါ် ခရက်ဒစ်မှတ်စု ထပ်ဖန်တီး၍ မရပါ"
 
@@ -459,7 +459,7 @@ msgstr "ခြင်းထဲရှိ ပစ္စည်းများ"
 msgid "Cashier"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:424
+#: posapp/src/components/InvoicePay/index.jsx:439
 msgid "Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment."
 msgstr "ငွေကိုင်က ကောက်ခံမည့်ပမာဏ ထည့်သည်၊ ငွေပေးချေမှု ပြီးဆုံးချိန်တွင် {gateway} ငွေပေးချေမှုစာမျက်နှာ ပွင့်လာမည်။"
 
@@ -467,7 +467,7 @@ msgstr "ငွေကိုင်က ကောက်ခံမည့်ပမာ�
 msgid "Change Due"
 msgstr "ပြန်အမ်းငွေ"
 
-#: posapp/src/components/InvoicePay/index.jsx:463
+#: posapp/src/components/InvoicePay/index.jsx:478
 msgid "Change to Return"
 msgstr "ပြန်အပ်မှုအဖြစ် ပြောင်းရန်"
 
@@ -551,7 +551,7 @@ msgstr "စုဆောင်းမှုစည်းမျဉ်းများ
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: posapp/src/components/Customer/NewCustomerModal.jsx:94
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:157
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:171
 #: posapp/src/pages/CustomerDetailPage.jsx:178
 #: posapp/src/pages/CustomerDetailPage.jsx:303
 #: posapp/src/pages/DiscountDetailPage.jsx:760
@@ -573,7 +573,7 @@ msgstr ""
 msgid "Company and Warehouse are required"
 msgstr "ကုမ္ပဏီနှင့် ဂိုဒေါင် လိုအပ်သည်"
 
-#: posapp/src/components/InvoicePay/index.jsx:356
+#: posapp/src/components/InvoicePay/index.jsx:362
 msgid "Complete Payment"
 msgstr "ငွေပေးချေမှု ပြီးဆုံးရန်"
 
@@ -597,7 +597,7 @@ msgstr "အဆင့်များ၊ အမှတ်များနှင့�
 msgid "Connected to the server"
 msgstr "ဆာဗာနှင့် ချိတ်ဆက်ပြီး"
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:33
 msgid "Consolidated"
 msgstr ""
 
@@ -610,7 +610,7 @@ msgstr "ပြောင်းလဲမှုမြှောက်ကိန်း
 msgid "Cost Center"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:118
+#: posapp/src/pages/ReportsPage.jsx:122
 msgid "Could not load report data."
 msgstr "အစီရင်ခံစာဒေတာ ဖွင့်၍ မရပါ။"
 
@@ -618,7 +618,7 @@ msgstr "အစီရင်ခံစာဒေတာ ဖွင့်၍ မရပ�
 msgid "Could not reach the server to sync."
 msgstr "ထပ်တူပြုရန် ဆာဗာကို ဆက်သွယ်၍ မရပါ။"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:62
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:74
 msgid "Could not resolve this profile's currency."
 msgstr "ဤပရိုဖိုင်၏ ငွေကြေးကို ဆုံးဖြတ်၍ မရပါ။"
 
@@ -674,7 +674,7 @@ msgstr ""
 msgid "Create Demo Data"
 msgstr "သရုပ်ပြဒေတာ ဖန်တီးရန်"
 
-#: posapp/src/pages/LoginPage.jsx:177
+#: posapp/src/pages/LoginPage.jsx:172
 msgid "Create an account"
 msgstr "အကောင့်ဖွင့်ရန်"
 
@@ -698,7 +698,7 @@ msgstr ""
 msgid "Credit Limits"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:27
 msgid "Credit Note Issued"
 msgstr ""
 
@@ -706,7 +706,7 @@ msgstr ""
 msgid "Credit limit is already defined for one of the selected Companies"
 msgstr "ရွေးထားသော ကုမ္ပဏီတစ်ခုအတွက် အကြွေးကန့်သတ်ချက် သတ်မှတ်ပြီးသား ဖြစ်သည်"
 
-#: posapp/src/pages/ReportsPage.jsx:332
+#: posapp/src/pages/ReportsPage.jsx:343
 msgid "Credit notes"
 msgstr "ခရက်ဒစ်မှတ်စုများ"
 
@@ -727,14 +727,14 @@ msgstr "ငွေကြေးသည် ဈေးနှုန်းစာရင�
 msgid "Current"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:77
+#: posapp/src/pages/ReportsPage.jsx:80
 msgid "Current shift · {profile}"
 msgstr "လက်ရှိ အလုပ်ဆိုင်း · {profile}"
 
 #: posapp/src/components/Cart/DraftPickerModal.jsx:34
 #: posapp/src/components/Cart/DraftPickerModal.jsx:135
 #: posapp/src/components/Cart/index.jsx:417
-#: posapp/src/components/InvoicePay/index.jsx:173 posapp/src/engine/sync.js:10
+#: posapp/src/components/InvoicePay/index.jsx:179 posapp/src/engine/sync.js:10
 #: posapp/src/pages/CustomerDetailPage.jsx:72
 #: posapp/src/pages/CustomerListPage.jsx:19
 #: posapp/src/pages/DiscountDetailPage.jsx:99
@@ -744,7 +744,7 @@ msgstr "လက်ရှိ အလုပ်ဆိုင်း · {profile}"
 #: posapp/src/pages/InvoiceRegisterPage.jsx:176
 #: posapp/src/pages/ItemPriceDetailPage.jsx:210
 #: posapp/src/pages/POSProfileDetailPage.jsx:239
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Customer"
 msgstr ""
 
@@ -911,7 +911,7 @@ msgstr "လျှော့စျေးပမာဏ"
 msgid "Discount Percentage"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:323
+#: posapp/src/pages/ReportsPage.jsx:334
 msgid "Discount given"
 msgstr "ပေးခဲ့သော လျှော့စျေး"
 
@@ -931,7 +931,7 @@ msgstr "လျှော့စျေးကို သိမ်းဆည်းပ�
 msgid "Discounts"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:319
+#: posapp/src/pages/ReportsPage.jsx:330
 msgid "Discounts and returns"
 msgstr "လျှော့စျေးနှင့် ပြန်အပ်မှုများ"
 
@@ -946,7 +946,7 @@ msgstr "အခမဲ့ပစ္စည်း အရေအတွက် မဖြ�
 
 #. Option for the 'Status' (Select) field in DocType 'EP Opening Entry'
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
-#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:22
+#: posapp/src/pages/SyncPage.jsx:198 posapp/src/utils/format.js:21
 msgid "Draft"
 msgstr ""
 
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "Email Notification"
 msgstr "အီးမေးလ် အသိပေးချက်"
 
-#: posapp/src/pages/LoginPage.jsx:117
+#: posapp/src/pages/LoginPage.jsx:112
 msgid "Email or username"
 msgstr "အီးမေးလ် သို့မဟုတ် အသုံးပြုသူအမည်"
 
@@ -1049,15 +1049,15 @@ msgstr "အော့ဖ်လိုင်းမုဒ် ဖွင့်ရန�
 msgid "Enabled"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:335
+#: posapp/src/components/InvoicePay/index.jsx:341
 msgid "Enter the amount received for each payment mode."
 msgstr "ငွေပေးချေမှုနည်းလမ်းတစ်ခုစီအတွက် လက်ခံရရှိသော ပမာဏ ထည့်ပါ။"
 
-#: posapp/src/pages/LoginPage.jsx:128
+#: posapp/src/pages/LoginPage.jsx:123
 msgid "Enter your password"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:106
+#: posapp/src/pages/LoginPage.jsx:101
 msgid "Enter your workstation credentials to start a shift."
 msgstr "အလုပ်ဆိုင်း စတင်ရန် လုပ်ငန်းစခန်း၏ ဝင်ရောက်အချက်အလက်များ ထည့်ပါ။"
 
@@ -1102,8 +1102,8 @@ msgstr ""
 msgid "Failed to cancel invoice"
 msgstr "ငွေတောင်းခံလွှာ ပယ်ဖျက်၍ မရပါ"
 
-#: posapp/src/components/InvoicePay/index.jsx:211
-#: posapp/src/components/InvoicePay/index.jsx:318
+#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:324
 msgid "Failed to complete payment"
 msgstr "ငွေပေးချေမှု ပြီးဆုံး၍ မရပါ"
 
@@ -1128,8 +1128,8 @@ msgstr "ဆက်သွယ်ရန် ဖျက်၍ မရပါ"
 msgid "Failed to load Razorpay checkout"
 msgstr "Razorpay ငွေပေးချေမှုစာမျက်နှာ ဖွင့်၍ မရပါ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:105
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:109
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:122
 msgid "Failed to open till"
 msgstr "ငွေကောင်တာ ဖွင့်၍ မရပါ"
 
@@ -1210,7 +1210,7 @@ msgstr "အီးမေးလ်ဖြင့် စစ်ထုတ်ရန်"
 msgid "Filter by mobile"
 msgstr "ဖုန်းနံပါတ်ဖြင့် စစ်ထုတ်ရန်"
 
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Finishing up — your receipt will print here once it's confirmed."
 msgstr "ပြီးဆုံးနေသည် — အတည်ပြုပြီးသည်နှင့် ဘောက်ချာကို ဤနေရာတွင် ပုံနှိပ်မည်။"
 
@@ -1226,7 +1226,7 @@ msgstr ""
 msgid "For the 'Apply Rule On Other' condition the field {field} is mandatory"
 msgstr "\"အခြားပေါ် စည်းမျဉ်းသုံးရန်\" အခြေအနေအတွက် {field} အကွက် လိုအပ်သည်"
 
-#: posapp/src/pages/LoginPage.jsx:148
+#: posapp/src/pages/LoginPage.jsx:143
 msgid "Forgot password?"
 msgstr "စကားဝှက် မေ့နေပါသလား။"
 
@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "Give free item for every N quantity"
 msgstr "N ခုတိုင်းအတွက် အခမဲ့ပစ္စည်း တစ်ခုပေးရန်"
 
-#: posapp/src/pages/ReportsPage.jsx:188
+#: posapp/src/pages/ReportsPage.jsx:199
 msgid "Go to Terminal"
 msgstr "တာမီနယ်သို့ သွားရန်"
 
@@ -1274,15 +1274,15 @@ msgstr "တာမီနယ်သို့ သွားရန်"
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: posapp/src/components/Cart/index.jsx:692
 #: posapp/src/components/Cart/index.jsx:837
-#: posapp/src/components/InvoicePay/index.jsx:176
-#: posapp/src/components/InvoicePay/index.jsx:365
+#: posapp/src/components/InvoicePay/index.jsx:182
+#: posapp/src/components/InvoicePay/index.jsx:371
 #: posapp/src/pages/DiscountDetailPage.jsx:815
 #: posapp/src/pages/InvoiceDetailPage.jsx:263
 #: posapp/src/pages/POSProfileDetailPage.jsx:740
 msgid "Grand Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:198
+#: posapp/src/pages/ReportsPage.jsx:209
 msgid "Gross sales"
 msgstr "စုစုပေါင်းအရောင်း"
 
@@ -1310,7 +1310,7 @@ msgstr "ပုံများ ဖျောက်ရန်"
 msgid "Hide Unavailable Items"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Hide password"
 msgstr "စကားဝှက် ဖျောက်ရန်"
 
@@ -1357,7 +1357,7 @@ msgstr ""
 msgid "Industry"
 msgstr ""
 
-#: posapp/src/utils/format.js:24
+#: posapp/src/utils/format.js:34
 msgid "Internal Transfer"
 msgstr ""
 
@@ -1365,7 +1365,7 @@ msgstr ""
 msgid "Invalid condition expression"
 msgstr ""
 
-#: easy_pos/api/pricing.py:57 easy_pos/api/pricing.py:168
+#: easy_pos/api/pricing.py:58 easy_pos/api/pricing.py:175
 msgid "Invalid coupon code"
 msgstr "ကူပွန်ကုဒ် မမှန်ကန်ပါ"
 
@@ -1380,7 +1380,7 @@ msgstr ""
 #: posapp/src/components/Cart/DraftPickerModal.jsx:15
 #: posapp/src/pages/InvoiceDetailPage.jsx:106
 #: posapp/src/pages/InvoiceRegisterPage.jsx:22
-#: posapp/src/pages/ReportsPage.jsx:358
+#: posapp/src/pages/ReportsPage.jsx:369
 msgid "Invoice"
 msgstr ""
 
@@ -1501,7 +1501,7 @@ msgid "Just now"
 msgstr "ယခုလေးတင်"
 
 #: posapp/src/components/Topbar/index.jsx:122
-#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:90
+#: posapp/src/components/Topbar/index.jsx:123 posapp/src/pages/LoginPage.jsx:93
 msgid "Language"
 msgstr ""
 
@@ -1571,9 +1571,17 @@ msgstr "သစ္စာရှိမှုအစီအစဉ်ကို သိ�
 msgid "Loyalty Programs"
 msgstr "သစ္စာရှိမှုအစီအစဉ်များ"
 
-#: posapp/src/components/InvoicePay/index.jsx:456
+#: posapp/src/components/InvoicePay/index.jsx:471
 msgid "Loyalty Redeemed"
 msgstr "လဲလှယ်ပြီး အမှတ်များ"
+
+#: posapp/src/components/InvoicePay/index.jsx:377
+msgid "Loyalty points can't be redeemed in {currency}. ERPNext only redeems them in the company's currency ({company_currency})."
+msgstr "သစ္စာရှိမှုအမှတ်များကို {currency} ဖြင့် လဲလှယ်၍ မရပါ။ ERPNext သည် ကုမ္ပဏီ၏ ငွေကြေး ({company_currency}) ဖြင့်သာ လဲလှယ်သည်။"
+
+#: easy_pos/api/pos.py:275
+msgid "Loyalty points can't be redeemed on a {0} invoice. ERPNext only redeems them in the company's currency ({1})."
+msgstr "{0} ငွေတောင်းခံလွှာတွင် သစ္စာရှိမှုအမှတ်များကို လဲလှယ်၍ မရပါ။ ERPNext သည် ကုမ္ပဏီ၏ ငွေကြေး ({1}) ဖြင့်သာ လဲလှယ်သည်။"
 
 #: posapp/src/pages/SyncPage.jsx:235
 msgid "MASTER DATA"
@@ -1704,7 +1712,7 @@ msgstr ""
 msgid "Net Total"
 msgstr ""
 
-#: posapp/src/pages/ReportsPage.jsx:199
+#: posapp/src/pages/ReportsPage.jsx:210
 msgid "Net sales"
 msgstr "အသားတင်အရောင်း"
 
@@ -1758,7 +1766,7 @@ msgstr "ဖောက်သည်အသစ်"
 msgid "New discount"
 msgstr "လျှော့စျေးအသစ်"
 
-#: posapp/src/pages/LoginPage.jsx:172
+#: posapp/src/pages/LoginPage.jsx:167
 msgid "New here"
 msgstr "ဒီမှာ အသစ်လား"
 
@@ -1894,7 +1902,7 @@ msgstr "ရှာဖွေမှုနှင့် ကိုက်ညီသေ�
 msgid "No items on this invoice"
 msgstr "ဤငွေတောင်းခံလွှာတွင် ပစ္စည်း မရှိပါ"
 
-#: posapp/src/pages/ReportsPage.jsx:314
+#: posapp/src/pages/ReportsPage.jsx:325
 msgid "No items sold in this period."
 msgstr "ဤကာလတွင် ပစ္စည်း မရောင်းရပါ။"
 
@@ -1902,11 +1910,11 @@ msgstr "ဤကာလတွင် ပစ္စည်း မရောင်းရ�
 msgid "No payment modes added"
 msgstr "ငွေပေးချေမှုနည်းလမ်း မထည့်ရသေးပါ"
 
-#: posapp/src/components/InvoicePay/index.jsx:408
+#: posapp/src/components/InvoicePay/index.jsx:423
 msgid "No payment modes configured for this POS Profile."
 msgstr "ဤ POS ပရိုဖိုင်အတွက် ငွေပေးချေမှုနည်းလမ်း မသတ်မှတ်ရသေးပါ။"
 
-#: posapp/src/pages/ReportsPage.jsx:241
+#: posapp/src/pages/ReportsPage.jsx:252
 msgid "No payment modes configured."
 msgstr "ငွေပေးချေမှုနည်းလမ်း မသတ်မှတ်ရသေးပါ။"
 
@@ -1918,7 +1926,7 @@ msgstr "ဤအလုပ်ဆိုင်းအတွက် ငွေပေး�
 msgid "No payments"
 msgstr "ငွေပေးချေမှု မရှိပါ"
 
-#: posapp/src/pages/ReportsPage.jsx:258
+#: posapp/src/pages/ReportsPage.jsx:269
 msgid "No payments recorded in this period."
 msgstr "ဤကာလတွင် ငွေပေးချေမှု မှတ်တမ်းမရှိပါ။"
 
@@ -1934,7 +1942,7 @@ msgstr ""
 msgid "No rows"
 msgstr "အတန်း မရှိပါ"
 
-#: posapp/src/pages/ReportsPage.jsx:281
+#: posapp/src/pages/ReportsPage.jsx:292
 msgid "No sales in this period."
 msgstr "ဤကာလတွင် အရောင်း မရှိပါ။"
 
@@ -1942,7 +1950,7 @@ msgstr "ဤကာလတွင် အရောင်း မရှိပါ။"
 msgid "No shift open"
 msgstr "ဖွင့်ထားသော အလုပ်ဆိုင်း မရှိပါ"
 
-#: posapp/src/pages/ReportsPage.jsx:185
+#: posapp/src/pages/ReportsPage.jsx:196
 msgid "No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here."
 msgstr "အစီရင်ခံရန် အလုပ်ဆိုင်း မရှိသေးပါ။ အလုပ်ဆိုင်း ကိန်းဂဏန်းများကို တိုက်ရိုက်ကြည့်ရန် တာမီနယ်မှ အလုပ်ဆိုင်း ဖွင့်ပါ။"
 
@@ -1958,7 +1966,7 @@ msgstr "ဤငွေတောင်းခံလွှာတွင် အခွ�
 msgid "No tiers added"
 msgstr "အဆင့် မထည့်ရသေးပါ"
 
-#: posapp/src/pages/ReportsPage.jsx:354
+#: posapp/src/pages/ReportsPage.jsx:365
 msgid "No transactions in this period."
 msgstr "ဤကာလတွင် ငွေလွှဲမှု မရှိပါ။"
 
@@ -2003,7 +2011,7 @@ msgstr ""
 msgid "Offline mode isn't enabled for this deployment (EasyPOS Settings). Data still caches below for later, but the Terminal won't fall back to it while offline until it's turned on."
 msgstr "ဤတပ်ဆင်မှုအတွက် အော့ဖ်လိုင်းမုဒ် မဖွင့်ထားပါ (EasyPOS ဆက်တင်များ)။ ဒေတာကို အောက်တွင် ဆက်လက်ကက်ရှ်ထားမည်ဖြစ်သော်လည်း မုဒ်မဖွင့်မချင်း တာမီနယ်က အော့ဖ်လိုင်းတွင် မသုံးပါ။"
 
-#: posapp/src/components/InvoicePay/index.jsx:172
+#: posapp/src/components/InvoicePay/index.jsx:178
 msgid "Offline — pending sync. Reprint from Invoices once synced."
 msgstr "အော့ဖ်လိုင်း — ထပ်တူပြုရန် စောင့်နေသည်။ ထပ်တူပြုပြီးနောက် ငွေတောင်းခံလွှာများမှ ပြန်ပုံနှိပ်ပါ။"
 
@@ -2023,7 +2031,7 @@ msgstr "ငွေကိုင်တစ်ဦးလျှင် ဝင်ရေ�
 msgid "Online"
 msgstr ""
 
-#: easy_pos/api/pos.py:375
+#: easy_pos/api/pos.py:385
 msgid "Only a submitted invoice can be returned"
 msgstr "တင်သွင်းပြီး ငွေတောင်းခံလွှာကိုသာ ပြန်အပ်နိုင်သည်"
 
@@ -2048,11 +2056,11 @@ msgstr "ဖောက်သည်မျက်နှာပြင် ဖွင့�
 msgid "Open a shift before syncing"
 msgstr "ထပ်တူမပြုမီ အလုပ်ဆိုင်း ဖွင့်ပါ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:139
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:152
 msgid "Open till"
 msgstr "ငွေကောင်တာ ဖွင့်ရန်"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:118
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
 msgid "Open your till"
 msgstr "သင့်ငွေကောင်တာကို ဖွင့်ပါ"
 
@@ -2070,15 +2078,15 @@ msgstr ""
 msgid "Opening Balance Details"
 msgstr ""
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:148
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:161
 msgid "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till."
 msgstr "အလုပ်ဆိုင်း ဖွင့်ရန် အင်တာနက်ချိတ်ဆက်မှု လိုအပ်သည် — ရွေးထားသော ပရိုဖိုင်၏ စတော့နှင့် ဈေးနှုန်းများကို တိုက်ရိုက်ဆုံးဖြတ်ရမည်။ ငွေကောင်တာဖွင့်ရန် ပြန်ချိတ်ဆက်ပါ။"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:177
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:191
 msgid "Opening balance"
 msgstr "အစလက်ကျန်ငွေ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:136
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:149
 msgid "Opening…"
 msgstr "ဖွင့်နေသည်…"
 
@@ -2107,11 +2115,11 @@ msgstr "ကုန်နေသည်"
 msgid "Outstanding Amount"
 msgstr ""
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:16 posapp/src/utils/format.js:24
 msgid "Overdue"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:31
 msgid "Overdue and Discounted"
 msgstr ""
 
@@ -2137,7 +2145,7 @@ msgstr ""
 #: easy_pos/easy_pos/doctype/ep_closing_entry/ep_closing_entry.json
 #: easy_pos/easy_pos/doctype/ep_opening_entry/ep_opening_entry.json
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:166
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:180
 #: posapp/src/engine/sync.js:14 posapp/src/pages/InvoiceDetailPage.jsx:244
 #: posapp/src/pages/InvoiceRegisterPage.jsx:191
 #: posapp/src/pages/POSProfileDetailPage.jsx:104
@@ -2166,16 +2174,16 @@ msgstr "စာမျက်နှာ {page} / {total}"
 msgid "Paid"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:451
+#: posapp/src/components/InvoicePay/index.jsx:466
 #: posapp/src/pages/InvoiceDetailPage.jsx:264
 msgid "Paid Amount"
 msgstr ""
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:25
 msgid "Partly Paid"
 msgstr "တစ်စိတ်တစ်ပိုင်း ပေးချေပြီး"
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:32
 msgid "Partly Paid and Discounted"
 msgstr "တစ်စိတ်တစ်ပိုင်း ပေးချေပြီး လျှော့စျေးပါ"
 
@@ -2188,11 +2196,11 @@ msgstr "အစုစပ်"
 msgid "Party Information"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:127
+#: posapp/src/pages/LoginPage.jsx:122
 msgid "Password"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:354
+#: posapp/src/components/InvoicePay/index.jsx:360
 msgid "Pay with {gateway}"
 msgstr "{gateway} ဖြင့် ပေးချေရန်"
 
@@ -2214,11 +2222,11 @@ msgid "Payment Reconciliation"
 msgstr ""
 
 #: posapp/src/components/Closing/index.jsx:90
-#: posapp/src/components/InvoicePay/index.jsx:400
+#: posapp/src/components/InvoicePay/index.jsx:415
 msgid "Payment Summary"
 msgstr "ငွေပေးချေမှု အကျဉ်းချုပ်"
 
-#: posapp/src/pages/ReportsPage.jsx:247
+#: posapp/src/pages/ReportsPage.jsx:258
 msgid "Payment method breakdown"
 msgstr "ငွေပေးချေမှုနည်းလမ်းအလိုက် ခွဲခြမ်းချက်"
 
@@ -2290,16 +2298,16 @@ msgstr "ကျေးဇူးပြု၍ ပေးချေပါ"
 msgid "Please add at least one item to the cart"
 msgstr "ခြင်းထဲ ပစ္စည်း အနည်းဆုံး တစ်ခု ထည့်ပါ"
 
-#: posapp/src/components/InvoicePay/index.jsx:221
+#: posapp/src/components/InvoicePay/index.jsx:227
 msgid "Please add one or more items to the cart"
 msgstr "ခြင်းထဲ ပစ္စည်း တစ်ခု သို့မဟုတ် အများ ထည့်ပါ"
 
-#: posapp/src/components/InvoicePay/index.jsx:225
+#: posapp/src/components/InvoicePay/index.jsx:231
 msgid "Please enter an amount for at least one payment mode"
 msgstr "ငွေပေးချေမှုနည်းလမ်း အနည်းဆုံး တစ်ခုအတွက် ပမာဏ ထည့်ပါ"
 
 #: posapp/src/components/Cart/index.jsx:246
-#: posapp/src/components/InvoicePay/index.jsx:217
+#: posapp/src/components/InvoicePay/index.jsx:223
 msgid "Please select a customer"
 msgstr "ဖောက်သည် ရွေးပါ"
 
@@ -2565,9 +2573,9 @@ msgstr "Razorpay ကို မသတ်မှတ်ရသေးပါ။ Razorpa
 msgid "Razorpay payment signature verification failed"
 msgstr "Razorpay ငွေပေးချေမှု လက်မှတ် စစ်ဆေးခြင်း မအောင်မြင်ပါ"
 
-#: posapp/src/components/InvoicePay/index.jsx:161
-#: posapp/src/components/InvoicePay/index.jsx:170
-#: posapp/src/components/InvoicePay/index.jsx:284
+#: posapp/src/components/InvoicePay/index.jsx:167
+#: posapp/src/components/InvoicePay/index.jsx:176
+#: posapp/src/components/InvoicePay/index.jsx:290
 msgid "Receipt"
 msgstr ""
 
@@ -2575,7 +2583,7 @@ msgstr ""
 msgid "Receipt Delivery"
 msgstr "ဘောက်ချာ ပို့ခြင်း"
 
-#: posapp/src/pages/ReportsPage.jsx:344
+#: posapp/src/pages/ReportsPage.jsx:355
 msgid "Recent transactions"
 msgstr "မကြာသေးမီ ငွေလွှဲမှုများ"
 
@@ -2583,7 +2591,7 @@ msgstr "မကြာသေးမီ ငွေလွှဲမှုများ"
 msgid "Reconnect to close your shift"
 msgstr "အလုပ်ဆိုင်း ပိတ်ရန် ပြန်ချိတ်ဆက်ပါ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:131
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:144
 msgid "Reconnect to open a shift"
 msgstr "အလုပ်ဆိုင်း ဖွင့်ရန် ပြန်ချိတ်ဆက်ပါ"
 
@@ -2603,7 +2611,7 @@ msgstr "ထပ်ခါတလဲလဲ အရေအတွက်သည် 0 ထ�
 msgid "Recursive Discounts with Mixed condition is not supported by the system"
 msgstr "ရောနှောအခြေအနေပါသော ထပ်ခါတလဲလဲ လျှော့စျေးကို စနစ်က မပံ့ပိုးပါ"
 
-#: posapp/src/components/InvoicePay/index.jsx:372
+#: posapp/src/components/InvoicePay/index.jsx:387
 msgid "Redeem Loyalty Points ({n} available)"
 msgstr "သစ္စာရှိမှုအမှတ် လဲလှယ်ရန် ({n} ရနိုင်)"
 
@@ -2619,7 +2627,7 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:142
+#: posapp/src/pages/LoginPage.jsx:137
 msgid "Remember this device"
 msgstr "ဤစက်ကို မှတ်ထားရန်"
 
@@ -2636,7 +2644,7 @@ msgid "Remove row"
 msgstr "အတန်း ဖယ်ရှားရန်"
 
 #: posapp/src/components/Sidebar/index.jsx:18
-#: posapp/src/pages/ReportsPage.jsx:98 posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:101 posapp/src/pages/ReportsPage.jsx:155
 msgid "Reports"
 msgstr ""
 
@@ -2656,7 +2664,7 @@ msgstr "ထပ်တူပြုမှု ထပ်ကြိုးစားရ�
 msgid "Retrying…"
 msgstr "ထပ်ကြိုးစားနေသည်…"
 
-#: posapp/src/utils/format.js:22
+#: posapp/src/utils/format.js:26
 msgid "Return"
 msgstr ""
 
@@ -2700,7 +2708,7 @@ msgstr ""
 msgid "SMS Notification"
 msgstr "SMS အသိပေးချက်"
 
-#: posapp/src/pages/ReportsPage.jsx:136
+#: posapp/src/pages/ReportsPage.jsx:140
 msgid "Sales"
 msgstr ""
 
@@ -2730,11 +2738,11 @@ msgstr ""
 msgid "Sales completed offline, queued locally until they reach ERPNext."
 msgstr "အော့ဖ်လိုင်းတွင် ပြီးဆုံးသော အရောင်းများ၊ ERPNext သို့ ရောက်သည်အထိ ဒေသတွင်း တန်းစီထားသည်။"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by day"
 msgstr "အရောင်း လမ်းကြောင်း · ရက်အလိုက်"
 
-#: posapp/src/pages/ReportsPage.jsx:265
+#: posapp/src/pages/ReportsPage.jsx:276
 msgid "Sales trend · by hour"
 msgstr "အရောင်း လမ်းကြောင်း · နာရီအလိုက်"
 
@@ -2862,7 +2870,7 @@ msgstr "ပစ္စည်းအုပ်စု ရွေးပါ"
 msgid "Select Mode"
 msgstr "နည်းလမ်း ရွေးပါ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:167
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:181
 msgid "Select POS profile"
 msgstr "POS ပရိုဖိုင် ရွေးပါ"
 
@@ -2886,11 +2894,11 @@ msgstr "ကုမ္ပဏီကို ဦးစွာ ရွေးပါ"
 msgid "Select an option for every attribute to pick a variant."
 msgstr "မျိုးကွဲရွေးရန် ဂုဏ်သတ္တိတစ်ခုစီအတွက် ရွေးချယ်စရာ တစ်ခု ရွေးပါ။"
 
-#: easy_pos/api/pos.py:400 posapp/src/components/Invoice/CreditNoteModal.jsx:70
+#: easy_pos/api/pos.py:410 posapp/src/components/Invoice/CreditNoteModal.jsx:70
 msgid "Select at least one item to return"
 msgstr "ပြန်အပ်ရန် ပစ္စည်း အနည်းဆုံး တစ်ခု ရွေးပါ"
 
-#: posapp/src/components/Opening/OpeningEntryModal.jsx:158
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:172
 msgid "Select company"
 msgstr "ကုမ္ပဏီ ရွေးပါ"
 
@@ -2947,7 +2955,7 @@ msgstr ""
 msgid "Shift"
 msgstr "အလုပ်ဆိုင်း"
 
-#: posapp/src/pages/ReportsPage.jsx:214
+#: posapp/src/pages/ReportsPage.jsx:225
 msgid "Shift summary"
 msgstr "အလုပ်ဆိုင်း အကျဉ်းချုပ်"
 
@@ -2964,11 +2972,11 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr ""
 
-#: posapp/src/pages/LoginPage.jsx:132
+#: posapp/src/pages/LoginPage.jsx:127
 msgid "Show password"
 msgstr "စကားဝှက် ပြရန်"
 
-#: posapp/src/pages/LoginPage.jsx:104 posapp/src/pages/LoginPage.jsx:164
+#: posapp/src/pages/LoginPage.jsx:99 posapp/src/pages/LoginPage.jsx:159
 msgid "Sign in"
 msgstr "ဝင်ရောက်ရန်"
 
@@ -2976,7 +2984,7 @@ msgstr "ဝင်ရောက်ရန်"
 msgid "Sign in to open your till and start ringing up sales."
 msgstr "ငွေကောင်တာဖွင့်ပြီး ရောင်းချရန် ဝင်ရောက်ပါ။"
 
-#: posapp/src/pages/LoginPage.jsx:160
+#: posapp/src/pages/LoginPage.jsx:155
 msgid "Signing in…"
 msgstr "ဝင်ရောက်နေသည်…"
 
@@ -3006,11 +3014,11 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:29
 msgid "Submitted"
 msgstr ""
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Submitting…"
 msgstr "တင်သွင်းနေသည်…"
 
@@ -3082,7 +3090,7 @@ msgstr ""
 msgid "System will notify to increase or decrease quantity or amount"
 msgstr "အရေအတွက် သို့မဟုတ် ပမာဏ တိုးရန် သို့မဟုတ် လျှော့ရန် စနစ်က အသိပေးမည်"
 
-#: posapp/src/components/InvoicePay/index.jsx:334
+#: posapp/src/components/InvoicePay/index.jsx:340
 msgid "Take Payment"
 msgstr "ငွေလက်ခံရန်"
 
@@ -3131,7 +3139,7 @@ msgstr ""
 msgid "Thank You!"
 msgstr "ကျေးဇူးတင်ပါသည်!"
 
-#: posapp/src/components/InvoicePay/index.jsx:305
+#: posapp/src/components/InvoicePay/index.jsx:311
 msgid "That attempt failed — you can try another payment method in the {gateway} window."
 msgstr "ထိုကြိုးစားမှု မအောင်မြင်ပါ — {gateway} ဝင်းဒိုးတွင် အခြား ငွေပေးချေမှုနည်းလမ်း စမ်းနိုင်သည်။"
 
@@ -3146,6 +3154,10 @@ msgstr "ဤငွေတောင်းခံလွှာကို အပြီ�
 #: posapp/src/pages/InvoiceDetailPage.jsx:140
 msgid "This offline sale isn't in the local queue on this device anymore."
 msgstr "ဤအော့ဖ်လိုင်းအရောင်းသည် ဤစက်၏ ဒေသတွင်း တန်းစီတွင် မရှိတော့ပါ။"
+
+#: posapp/src/components/Opening/OpeningEntryModal.jsx:65
+msgid "This profile sells in {currency} but the company's currency is {company_currency}. A new customer's first sale will fail until 'Allow multi-currency invoices against single party account' is enabled in Accounts Settings."
+msgstr "ဤပရိုဖိုင်သည် {currency} ဖြင့် ရောင်းချသော်လည်း ကုမ္ပဏီ၏ ငွေကြေးမှာ {company_currency} ဖြစ်သည်။ Accounts Settings တွင် 'Allow multi-currency invoices against single party account' ကို မဖွင့်မချင်း ဖောက်သည်အသစ်၏ ပထမဆုံး အရောင်း မအောင်မြင်ပါ။"
 
 #: posapp/src/pages/InvoiceDetailPage.jsx:158
 msgid "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below."
@@ -3192,7 +3204,7 @@ msgstr ""
 msgid "Toggle dark mode"
 msgstr "အမှောင်မုဒ် ဖွင့်/ပိတ်"
 
-#: posapp/src/pages/ReportsPage.jsx:290
+#: posapp/src/pages/ReportsPage.jsx:301
 msgid "Top selling items"
 msgstr "အရောင်းရဆုံး ပစ္စည်းများ"
 
@@ -3218,7 +3230,7 @@ msgstr ""
 
 #. Label of a Card Break in the EASYPOS Workspace
 #: easy_pos/easy_pos/workspace/easypos/easypos.json
-#: posapp/src/pages/ReportsPage.jsx:203
+#: posapp/src/pages/ReportsPage.jsx:214
 msgid "Transactions"
 msgstr ""
 
@@ -3244,11 +3256,11 @@ msgstr ""
 msgid "Unable to start the camera."
 msgstr "ကင်မရာ စတင်၍ မရပါ။"
 
-#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:22
+#: posapp/src/pages/InvoiceRegisterPage.jsx:15 posapp/src/utils/format.js:23
 msgid "Unpaid"
 msgstr ""
 
-#: posapp/src/utils/format.js:23
+#: posapp/src/utils/format.js:30
 msgid "Unpaid and Discounted"
 msgstr ""
 
@@ -3314,7 +3326,7 @@ msgstr ""
 msgid "Variant {variant} and its template {template} cannot both be added to the same Pricing Rule"
 msgstr "မျိုးကွဲ {variant} နှင့် ၎င်း၏ ပုံစံ {template} ကို ဈေးနှုန်းစည်းမျဉ်း တစ်ခုတည်းတွင် နှစ်ခုလုံး မထည့်နိုင်ပါ"
 
-#: posapp/src/pages/ReportsPage.jsx:349
+#: posapp/src/pages/ReportsPage.jsx:360
 msgid "View all"
 msgstr "အားလုံး ကြည့်ရန်"
 
@@ -3322,12 +3334,12 @@ msgstr "အားလုံး ကြည့်ရန်"
 msgid "View purchase history"
 msgstr "ဝယ်ယူမှုမှတ်တမ်း ကြည့်ရန်"
 
-#: posapp/src/components/InvoicePay/index.jsx:351
+#: posapp/src/components/InvoicePay/index.jsx:357
 msgid "Waiting for {gateway}…"
 msgstr "{gateway} ကို စောင့်နေသည်…"
 
-#: posapp/src/components/InvoicePay/index.jsx:173
-#: posapp/src/pages/ReportsPage.jsx:362
+#: posapp/src/components/InvoicePay/index.jsx:179
+#: posapp/src/pages/ReportsPage.jsx:373
 msgid "Walk-in"
 msgstr "ဖြတ်သွားဖောက်သည်"
 
@@ -3394,7 +3406,7 @@ msgstr ""
 msgid "Your order will appear here shortly."
 msgstr "သင့်အော်ဒါ မကြာမီ ဤနေရာတွင် ပေါ်လာမည်။"
 
-#: posapp/src/pages/ReportsPage.jsx:151
+#: posapp/src/pages/ReportsPage.jsx:155
 msgid "Your sales, shift, and payment summary"
 msgstr "သင့်အရောင်း၊ အလုပ်ဆိုင်းနှင့် ငွေပေးချေမှု အကျဉ်းချုပ်"
 
@@ -3410,7 +3422,7 @@ msgstr "ဥပမာ ငွေ"
 msgid "e.g. customer@example.com"
 msgstr "ဥပမာ customer@example.com"
 
-#: easy_pos/api/pos.py:500
+#: easy_pos/api/pos.py:515
 msgid "opening_entry is required for shift scope"
 msgstr ""
 
@@ -3422,19 +3434,19 @@ msgstr "{field} ကို ဇယားထဲ မထည့်ရသေးပါ"
 msgid "{field} is required"
 msgstr "{field} လိုအပ်သည်"
 
-#: posapp/src/components/InvoicePay/index.jsx:427
+#: posapp/src/components/InvoicePay/index.jsx:442
 msgid "{gateway} is not configured yet."
 msgstr "{gateway} ကို မသတ်မှတ်ရသေးပါ။"
 
-#: posapp/src/components/InvoicePay/index.jsx:422
+#: posapp/src/components/InvoicePay/index.jsx:437
 msgid "{gateway} needs a connection — unavailable while offline."
 msgstr "{gateway} အတွက် ချိတ်ဆက်မှု လိုအပ်သည် — အော့ဖ်လိုင်းတွင် မရနိုင်ပါ။"
 
-#: posapp/src/components/InvoicePay/index.jsx:430
+#: posapp/src/components/InvoicePay/index.jsx:445
 msgid "{gateway} — offline"
 msgstr "{gateway} — အော့ဖ်လိုင်း"
 
-#: posapp/src/components/InvoicePay/index.jsx:149
+#: posapp/src/components/InvoicePay/index.jsx:155
 msgid "{item} (Free)"
 msgstr "{item} (အခမဲ့)"
 
@@ -3451,7 +3463,7 @@ msgstr "{label} — ကက်ရှ်ထားပြီး {n}"
 msgid "{label} — {n} invoice(s) pending sync"
 msgstr "{label} — ထပ်တူပြုရန် စောင့်နေသော ငွေတောင်းခံလွှာ {n}"
 
-#: posapp/src/pages/ReportsPage.jsx:327
+#: posapp/src/pages/ReportsPage.jsx:338
 msgid "{n} invoices"
 msgstr "ငွေတောင်းခံလွှာ {n}"
 
@@ -3467,7 +3479,7 @@ msgstr "သစ္စာရှိမှုအမှတ် {n} ရနိုင်"
 msgid "{n} record(s) cached locally. Master data is read-only offline — a Fetch pulls a fresh snapshot of every domain at once (they're all resolved together for the current shift's POS Profile)."
 msgstr "ဒေသတွင်း ကက်ရှ်ထားသော မှတ်တမ်း {n}။ အော့ဖ်လိုင်းတွင် မာစတာဒေတာသည် ဖတ်ရုံသာ — \"ရယူရန်\" က နယ်ပယ်အားလုံး၏ နောက်ဆုံးပုံရိပ်ကို တစ်ပြိုင်နက် ရယူမည် (လက်ရှိအလုပ်ဆိုင်း၏ POS ပရိုဖိုင်အတွက် အတူတကွ ဆုံးဖြတ်သည်)။"
 
-#: posapp/src/pages/ReportsPage.jsx:336
+#: posapp/src/pages/ReportsPage.jsx:347
 msgid "{n} returns"
 msgstr "ပြန်အပ်မှု {n}"
 
