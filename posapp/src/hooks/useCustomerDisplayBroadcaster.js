@@ -61,6 +61,15 @@ const useCustomerDisplayBroadcaster = () => {
 		};
 	};
 
+	// The HELLO handler below is subscribed once per channel, so it reads the
+	// current cart through this ref instead of the cart it closed over (which
+	// was usually empty, leaving a display opened mid-sale stuck on idle).
+	const currentMessageRef = useRef(() => ["CART_IDLE"]);
+	useEffect(() => {
+		currentMessageRef.current = () =>
+			cartItems.length ? ["CART_UPDATE", buildCartSnapshot()] : ["CART_IDLE"];
+	});
+
 	useEffect(() => {
 		if (!customerDisplayEnabled || !posProfile) {
 			channelRef.current?.close();
@@ -73,11 +82,8 @@ const useCustomerDisplayBroadcaster = () => {
 
 		const unsubscribe = subscribeCustomerDisplayChannel(channel, (message) => {
 			if (message?.type === "HELLO") {
-				sendCustomerDisplayMessage(
-					channel,
-					cartItems.length ? "CART_UPDATE" : "CART_IDLE",
-					cartItems.length ? buildCartSnapshot() : undefined
-				);
+				const [type, payload] = currentMessageRef.current();
+				sendCustomerDisplayMessage(channel, type, payload);
 			}
 		});
 
@@ -86,7 +92,6 @@ const useCustomerDisplayBroadcaster = () => {
 			channel.close();
 			channelRef.current = null;
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [customerDisplayEnabled, posProfile]);
 
 	useEffect(() => {
