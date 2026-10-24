@@ -1,7 +1,7 @@
 // Pill-style filter chips for list-view pages (status filters, category filters).
 // options: [{ label, value, danger }] — `danger` renders unselected chip in the danger palette (e.g. "Overdue").
 const FilterChips = ({ options, value, onChange }) => (
-  <div className="d-flex gap-2">
+  <div className="d-flex gap-2 pos-chip-row">
     {options.map((opt) => (
       <span
         key={opt.value}

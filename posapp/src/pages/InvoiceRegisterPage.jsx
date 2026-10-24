@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useOutletContext, useSearchParams } from "react-router-dom";
 import usePOSSessionStore from "../store/posSessionStore";
 import { fetchInvoices } from "../api/InvoiceRegister";
-import { ListTable, FilterChips, Pagination, LinkField, TextField } from "../components/common";
+import { ListTable, FilterChips, Pagination, LinkField, TextField, FilterBar } from "../components/common";
 import { formatDate, invoiceStatusBadgeClass } from "../utils/format";
 
 const PAGE_SIZE = 20;
@@ -146,7 +146,7 @@ const InvoiceRegisterPage = () => {
   return (
     <>
       <div className="d-flex flex-column flex-fill" style={{ minHeight: 0 }}>
-        <div className="d-flex align-items-center justify-content-between px-4 pt-3">
+        <div className="d-flex align-items-center justify-content-between px-4 pt-3 pos-list-toolbar">
           <FilterChips
             options={STATUS_FILTERS.map((f) => ({ ...f, danger: f.value === "Overdue" }))}
             value={status}
@@ -163,8 +163,7 @@ const InvoiceRegisterPage = () => {
           </button>
         </div>
 
-        <div className="px-4 pt-3">
-          <div className="d-flex align-items-end gap-2">
+        <FilterBar active={Boolean(hasActiveFilters)}>
             <div style={{ width: 220 }}>
               <LinkField
                 label="Customer"
@@ -222,8 +221,8 @@ const InvoiceRegisterPage = () => {
                 Clear filters
               </button>
             )}
-          </div>
-        </div>
+
+        </FilterBar>
 
         <div className="d-flex flex-column flex-fill px-4 pt-2 pb-4" style={{ minHeight: 0 }}>
           <div style={{ flex: 1, minHeight: 0 }}>

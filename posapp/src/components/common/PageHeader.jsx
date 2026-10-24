@@ -10,7 +10,7 @@ const PageHeader = ({ title, subtitle, badge, backTo, backLabel = "Back", action
       {backTo && (
         <Link
           to={backTo}
-          className="d-inline-flex align-items-center gap-1 mb-2 text-decoration-none"
+          className="d-inline-flex align-items-center gap-1 mb-2 text-decoration-none pos-back-link"
           style={{ fontSize: 12.5, color: "var(--color-text-muted)" }}
         >
           <i className="bi bi-arrow-left" /> {backLabel}
@@ -26,7 +26,7 @@ const PageHeader = ({ title, subtitle, badge, backTo, backLabel = "Back", action
         </p>
       )}
     </div>
-    {actions && <div className="d-flex flex-wrap gap-2 flex-shrink-0">{actions}</div>}
+    {actions && <div className="d-flex flex-wrap gap-2 flex-shrink-0 pos-page-header-actions">{actions}</div>}
   </div>
 );
 

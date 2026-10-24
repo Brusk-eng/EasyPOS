@@ -187,7 +187,7 @@ const ReportsPage = () => {
       ) : (
         <>
           <div
-            className="mb-3"
+            className="mb-3 pos-kpi-grid"
             style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}
           >
             <StatTile icon="bi-cash-stack" accent="primary" label="Gross sales" value={money(kpis.gross_sales)} />

@@ -79,26 +79,26 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder = "Searc
                 className="dot"
                 style={{ background: isOnline ? "var(--color-success-icon)" : "var(--color-danger-text)" }}
               />
-              {isOnline ? "Online" : "Offline"}
+              <span className="pos-status-label">{isOnline ? "Online" : "Offline"}</span>
             </div>
           )}
 
           {hasOpeningEntry ? (
             <div className="pos-status-pill success">
               <span className="dot" />
-              {openingDetail?.pos_profile}
+              <span className="pos-status-label">{openingDetail?.pos_profile}</span>
             </div>
           ) : (
             <div className="pos-status-pill" style={{ background: "var(--color-warning-bg)", color: "var(--color-warning-text)" }}>
               <span className="dot" style={{ background: "var(--color-warning-text-strong)" }} />
-              No shift open
+              <span className="pos-status-label">No shift open</span>
             </div>
           )}
 
           {hasOpeningEntry && (
             <button
               type="button"
-              className="pos-btn pos-btn-secondary"
+              className="pos-btn pos-btn-secondary pos-hide-mobile"
               style={{ height: 30, fontSize: 12, padding: "0 12px" }}
               onClick={() => setShowClosingModal(true)}
               disabled={offlineModeEnabled && !isOnline}
@@ -110,7 +110,7 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder = "Searc
 
           <button
             type="button"
-            className="pos-icon-btn"
+            className="pos-icon-btn pos-hide-mobile"
             title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             aria-label="Toggle dark mode"
             onClick={toggleTheme}
@@ -139,6 +139,24 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder = "Searc
               <li>
                 <hr className="pos-user-menu-divider" />
               </li>
+              <li className="pos-show-mobile">
+                <button className="dropdown-item pos-user-menu-item" onClick={toggleTheme}>
+                  <i className={`bi ${theme === "dark" ? "bi-sun" : "bi-moon-stars"}`} />
+                  {theme === "dark" ? "Light mode" : "Dark mode"}
+                </button>
+              </li>
+              {hasOpeningEntry && (
+                <li className="pos-show-mobile">
+                  <button
+                    className="dropdown-item pos-user-menu-item"
+                    onClick={() => setShowClosingModal(true)}
+                    disabled={offlineModeEnabled && !isOnline}
+                  >
+                    <i className="bi bi-door-closed" />
+                    Close shift
+                  </button>
+                </li>
+              )}
               <li>
                 <button className="dropdown-item pos-user-menu-item pos-user-menu-item-danger" onClick={handleLogout}>
                   <i className="bi bi-box-arrow-right" />

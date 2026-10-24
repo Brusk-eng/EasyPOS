@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import useIsMobile from "../../hooks/useIsMobile";
 
 // Grid for a child doctype table, shared by both read-only detail views
 // (FormView sections, e.g. Sales Invoice Item / Payment rows) and editable
@@ -34,6 +35,10 @@ import { useEffect, useRef, useState } from "react";
 // - onMoveRow(idx, "up" | "down"): when set, adds up/down reorder buttons
 //   per row; ChildTable never reorders `rows` itself, it just reports intent.
 //
+// Wide tables (6+ columns) without expand/reorder behaviour render as stacked
+// label/value cards on phones instead of scrolling sideways; narrower or
+// feature-rich ones keep the horizontal scroll described below.
+//
 // Tables with many columns (e.g. Items) would otherwise squash unreadably on
 // tablet widths — the grid gets a min-width floor and the outer wrapper
 // scrolls horizontally instead, per the project's "wide content scrolls in
@@ -62,6 +67,7 @@ const ChildTable = ({
   const [expandedKeys, setExpandedKeys] = useState(() => new Set());
   const scrollRef = useRef(null);
   const [showRightFade, setShowRightFade] = useState(false);
+  const isMobile = useIsMobile();
 
   const expandable = typeof renderExpanded === "function";
   const gridColumnsList = [
@@ -70,6 +76,7 @@ const ChildTable = ({
     ...(onMoveRow ? ["52px"] : []),
   ];
   const gridTemplateColumns = gridColumnsList.join(" ");
+  const cardMode = isMobile && !expandable && !onMoveRow && columns.length >= 6 && !loading && rows.length > 0;
   const minWidth = Math.max(gridColumnsList.length * 110, 480);
 
   const toggleExpanded = (key) => {
@@ -121,6 +128,43 @@ const ChildTable = ({
         </p>
       )}
 
+      {cardMode ? (
+        <div className="pos-ct-cards">
+          {rows.map((row, idx) => {
+            const errorMsg = rowError ? rowError(row, idx) : null;
+            return (
+              <div key={row[rowKey] ?? idx} className={`pos-ct-card${errorMsg ? " has-error" : ""}`}>
+                {columns.map((c) => (
+                  <div key={c.key} className="pos-ct-card-field">
+                    {c.label && <span className="pos-ct-card-label">{c.label}</span>}
+                    <span className={c.align === "end" || c.align === "center" ? "num" : undefined}>
+                      {c.render ? c.render(row, idx) : row[c.key]}
+                    </span>
+                  </div>
+                ))}
+                {errorMsg && (
+                  <div className="pos-ct-row-error">
+                    <i className="bi bi-exclamation-circle" />
+                    {errorMsg}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          {footer && (
+            <div className="pos-ct-card pos-ct-card-footer">
+              {footer.map((cell, idx) =>
+                cell?.value != null && cell.value !== "" ? (
+                  <div key={idx} className="pos-ct-card-field">
+                    <span className="pos-ct-card-label">{columns[idx]?.label}</span>
+                    <span className="num">{cell.value}</span>
+                  </div>
+                ) : null,
+              )}
+            </div>
+          )}
+        </div>
+      ) : (
       <div className="pos-ct-wrap" style={{ position: "relative", border: "1px solid var(--color-border-soft)", borderRadius: "var(--radius-md)" }}>
         <div className="pos-ct-scroll" ref={scrollRef} style={{ overflowX: "auto" }}>
           <div style={{ minWidth }}>
@@ -275,6 +319,7 @@ const ChildTable = ({
         </div>
         <div className={`pos-ct-fade-right${showRightFade ? " show" : ""}`} />
       </div>
+      )}
 
       {onAddRow && addRowPosition === "bottom" && (
         <button type="button" className="pos-ct-add-strip" onClick={onAddRow}>
