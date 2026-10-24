@@ -1,3 +1,5 @@
+import { tLabel, useTranslation } from "../../translation";
+
 // Grid-based list table for list-view pages (Invoices, Customers, etc).
 // columns: [{ key, label, width (flex-basis for grid-template-columns, default "1fr"), render(row), align }]
 // Shares its header/row typography, zebra striping, hover highlight, and
@@ -8,10 +10,11 @@ const ListTable = ({
   rows,
   rowKey = "name",
   loading = false,
-  emptyMessage = "No records found",
+  emptyMessage,
   onRowClick,
   rowStyle,
 }) => {
+  const { __ } = useTranslation();
   const gridTemplateColumns = columns.map((c) => c.width || "1fr").join(" ");
 
   return (
@@ -30,7 +33,7 @@ const ListTable = ({
       >
         {columns.map((c) => (
           <span key={c.key} style={{ textAlign: c.align }}>
-            {c.label}
+            {tLabel(__, c.label)}
           </span>
         ))}
       </div>
@@ -42,7 +45,7 @@ const ListTable = ({
           </div>
         ) : rows.length === 0 ? (
           <div className="text-center text-muted py-4" style={{ fontSize: 13 }}>
-            {emptyMessage}
+            {emptyMessage ?? __("No records found")}
           </div>
         ) : (
           rows.map((row, idx) => (

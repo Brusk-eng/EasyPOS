@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 import { getPendingInvoiceCount } from "../../engine/outbox";
+import { _t, useTranslation } from "../../translation";
 
 const PENDING_COUNT_POLL_MS = 15000;
 
 const NAV_ITEMS = [
-  { icon: "bi-display", label: "Terminal", to: "/posapp/terminal" },
-  { icon: "bi-receipt", label: "Invoices", to: "/posapp/invoices" },
-  { icon: "bi-people", label: "Customers", to: "/posapp/customers" },
-  { icon: "bi-shop", label: "POS Profiles", to: "/posapp/pos-profile" },
-  { icon: "bi-tag", label: "Item Prices", to: "/posapp/item-price" },
-  { icon: "bi-list-ul", label: "Price Lists", to: "/posapp/price-list" },
-  { icon: "bi-percent", label: "Discounts", to: "/posapp/discounts" },
-  { icon: "bi-arrow-repeat", label: "Sync", to: "/posapp/sync" },
-  { icon: "bi-bar-chart", label: "Reports", to: "/posapp/reports" },
-  { icon: "bi-gear", label: "Settings", to: "/posapp/settings" },
+  { icon: "bi-display", label: _t("Terminal"), to: "/posapp/terminal" },
+  { icon: "bi-receipt", label: _t("Invoices"), to: "/posapp/invoices" },
+  { icon: "bi-people", label: _t("Customers"), to: "/posapp/customers" },
+  { icon: "bi-shop", label: _t("POS Profiles"), to: "/posapp/pos-profile" },
+  { icon: "bi-tag", label: _t("Item Prices"), to: "/posapp/item-price" },
+  { icon: "bi-list-ul", label: _t("Price Lists"), to: "/posapp/price-list" },
+  { icon: "bi-percent", label: _t("Discounts"), to: "/posapp/discounts" },
+  { icon: "bi-arrow-repeat", label: _t("Sync"), to: "/posapp/sync" },
+  { icon: "bi-bar-chart", label: _t("Reports"), to: "/posapp/reports" },
+  { icon: "bi-gear", label: _t("Settings"), to: "/posapp/settings" },
 ];
 
 const getInitials = (name) => {
@@ -29,6 +30,7 @@ const getInitials = (name) => {
 };
 
 const Sidebar = () => {
+  const { __ } = useTranslation();
   const location = useLocation();
   const fullName = useAuthStore((s) => s.user?.full_name);
 
@@ -61,7 +63,7 @@ const Sidebar = () => {
               key={item.label}
               className="pos-sidebar-item"
               style={{ opacity: 0.35, cursor: "default" }}
-              title={`${item.label} — coming soon`}
+              title={__("{label} — coming soon", { label: __(item.label) })}
             >
               <i className={`bi ${item.icon}`} />
             </div>
@@ -74,8 +76,8 @@ const Sidebar = () => {
               }`}
               title={
                 item.to === "/posapp/sync" && pendingInvoiceCount > 0
-                  ? `${item.label} — ${pendingInvoiceCount} invoice(s) pending sync`
-                  : item.label
+                  ? __("{label} — {n} invoice(s) pending sync", { label: __(item.label), n: pendingInvoiceCount })
+                  : __(item.label)
               }
               style={{ position: "relative" }}
             >
@@ -85,7 +87,7 @@ const Sidebar = () => {
                   style={{
                     position: "absolute",
                     top: 4,
-                    right: 6,
+                    insetInlineEnd: 6,
                     minWidth: 15,
                     height: 15,
                     borderRadius: 8,
