@@ -5,7 +5,10 @@ export const getServerMessage = (error) => {
 	const serverMessages = error?.response?.data?._server_messages;
 	if (!serverMessages) return "";
 	try {
-		return JSON.parse(JSON.parse(serverMessages)[0])?.message || "";
+		const message = JSON.parse(JSON.parse(serverMessages)[0])?.message || "";
+		// frappe.throw messages often carry markup (<strong>, <br>) for desk; the
+		// POS renders them as plain text.
+		return message.replace(/<[^>]*>/g, "");
 	} catch {
 		return "";
 	}

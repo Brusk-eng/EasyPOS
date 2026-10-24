@@ -10,6 +10,7 @@ import useCartStore from "../../store/cartStore";
 import useConnectivityStore from "../../engine/connectivity";
 import { Modal, CurrencyField, NumberField, CheckboxField, ErrorAlert } from "../common";
 import { roundCurrency } from "../../utils/number";
+import { getServerMessage } from "../../utils/serverError";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 import { getLanguage, tData, useTranslation } from "../../translation";
 
@@ -266,10 +267,16 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
         })
       : postPaymentInvoice(invoicePayload, openingDetail, 1, couponCode || undefined);
 
-    paymentPromise.then((data) => {
-      setSubmitting(false);
-      finishCheckout(data, receiptTab);
-    });
+    paymentPromise
+      .then((data) => {
+        setSubmitting(false);
+        finishCheckout(data, receiptTab);
+      })
+      .catch((err) => {
+        setSubmitting(false);
+        receiptTab?.close();
+        setError(getServerMessage(err) || __("Failed to complete payment"));
+      });
   };
 
   const payWithGateway = () => {
