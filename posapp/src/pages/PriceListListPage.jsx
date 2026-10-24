@@ -1,6 +1,4 @@
-import i18n from "../i18n";
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchPriceLists } from "../api/PriceList";
@@ -31,26 +29,26 @@ const PRICE_LIST_COLUMNS = [
     key: "selling",
     label: _t("Selling"),
     width: "0.7fr",
-    render: (p) => <span className={p.selling ? "pos-badge pos-badge-paid" : "pos-badge"}>{p.selling ? i18n.t("Yes") : i18n.t("No")}</span>,
+    render: (p) => <span className={p.selling ? "pos-badge pos-badge-paid" : "pos-badge"}>{p.selling ? __("Yes") : __("No")}</span>,
   },
   {
     key: "buying",
     label: _t("Buying"),
     width: "0.7fr",
-    render: (p) => <span className={p.buying ? "pos-badge pos-badge-paid" : "pos-badge"}>{p.buying ? i18n.t("Yes") : i18n.t("No")}</span>,
+    render: (p) => <span className={p.buying ? "pos-badge pos-badge-paid" : "pos-badge"}>{p.buying ? __("Yes") : __("No")}</span>,
   },
   {
     key: "enabled",
     label: _t("Status"),
     width: "0.8fr",
     render: (p) => (
-      <span className={p.enabled ? "pos-badge pos-badge-paid" : "pos-badge"}>{p.enabled ? i18n.t("Active") : i18n.t("Disabled")}</span>
+      <span className={p.enabled ? "pos-badge pos-badge-paid" : "pos-badge"}>{p.enabled ? __("Active") : __("Disabled")}</span>
     ),
   },
 ];
 
 const PriceListListPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -107,7 +105,7 @@ const PriceListListPage = () => {
           style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}
         >
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          {t("New price list")}
+          {__("New price list")}
         </Link>
       </div>
 
@@ -117,7 +115,7 @@ const PriceListListPage = () => {
             columns={PRICE_LIST_COLUMNS}
             rows={priceLists}
             loading={loading}
-            emptyMessage={t("No price lists found")}
+            emptyMessage={__("No price lists found")}
             onRowClick={(p) => navigate(`/posapp/price-list/${encodeURIComponent(p.name)}`)}
           />
         </div>

@@ -1,6 +1,4 @@
-import i18n from "../i18n";
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchProfiles } from "../api/POSProfile";
@@ -45,14 +43,14 @@ const PROFILE_COLUMNS = [
     width: "0.8fr",
     render: (p) => (
       <span className={p.disabled ? "pos-badge" : "pos-badge pos-badge-paid"}>
-        {p.disabled ? i18n.t("Disabled") : i18n.t("Active")}
+        {p.disabled ? __("Disabled") : __("Active")}
       </span>
     ),
   },
 ];
 
 const POSProfileListPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -118,7 +116,7 @@ const POSProfileListPage = () => {
         <FilterChips options={STATUS_FILTERS} value={status} onChange={resetToFirstPage(setStatus)} />
         <Link to="/posapp/pos-profile/new" className="pos-btn pos-btn-primary" style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}>
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          {t("New profile")}
+          {__("New profile")}
         </Link>
       </div>
 
@@ -126,8 +124,8 @@ const POSProfileListPage = () => {
         <div className="d-flex align-items-end gap-2">
           <div style={{ width: 220 }}>
             <SelectField
-              label={t("Company")}
-              placeholder={t("All companies")}
+              label={__("Company")}
+              placeholder={__("All companies")}
               value={company}
               onChange={resetToFirstPage(setCompany)}
               options={companies.map((c) => ({ label: c.company_name, value: c.name }))}
@@ -140,7 +138,7 @@ const POSProfileListPage = () => {
               style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
               onClick={clearFilters}
             >
-              {t("Clear filters")}
+              {__("Clear filters")}
             </button>
           )}
         </div>
@@ -152,7 +150,7 @@ const POSProfileListPage = () => {
             columns={PROFILE_COLUMNS}
             rows={profiles}
             loading={loading}
-            emptyMessage={t("No POS Profiles found")}
+            emptyMessage={__("No POS Profiles found")}
             onRowClick={(p) => navigate(`/posapp/pos-profile/${encodeURIComponent(p.name)}`)}
           />
         </div>

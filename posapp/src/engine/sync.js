@@ -1,6 +1,6 @@
-import i18n, { _t } from "../i18n";
 import db from "./db";
 import { fetchOfflineSnapshot } from "../api/Sync";
+import { __, _t } from "../translation";
 
 // One entry per Dexie table a full sync writes, in the shape the Sync page
 // needs to list "what master data is cached" and its last-synced time.
@@ -42,7 +42,7 @@ const TABLES = {
 // button, posSessionStore's shift-open hook) decide when it's safe to call.
 export const runFullSync = async (posProfile) => {
 	const snapshot = await fetchOfflineSnapshot(posProfile);
-	if (!snapshot) throw new Error(i18n.t("Could not reach the server to sync."));
+	if (!snapshot) throw new Error(__("Could not reach the server to sync."));
 
 	const syncedAt = snapshot.synced_at || new Date().toISOString();
 

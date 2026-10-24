@@ -1,6 +1,5 @@
 import { dateLocale } from "../utils/format";
-import i18n, { _t, tData } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { __, _t, tData, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { fetchSalesReport, fetchPastShifts } from "../api/Reports";
@@ -38,7 +37,9 @@ const CHART_COLOR_SEQUENCE = ["#f59e0b", "#16a34a", "#8b5cf6", "#dc2626", "#6474
 const today = () => new Date().toISOString().slice(0, 10);
 
 const ReportsPage = () => {
-  const { t } = useTranslation();
+  // Re-render on language change; the module-level __ is used so the report
+  // fetch effect below doesn't re-run when the language switches.
+  useTranslation();
   const { openingDetail, hasOpeningEntry, posProfile } = usePOSSessionStore();
   const { setTopbar } = useOutletContext();
 
@@ -73,7 +74,7 @@ const ReportsPage = () => {
 
   const shiftOptions = [
     ...(hasOpeningEntry && openingDetail?.name
-      ? [{ value: openingDetail.name, label: t("Current shift · {{profile}}", { profile: openingDetail.pos_profile }) }]
+      ? [{ value: openingDetail.name, label: __("Current shift · {profile}", { profile: openingDetail.pos_profile }) }]
       : []),
     ...pastShifts.map((s) => ({
       value: s.name,
@@ -114,7 +115,7 @@ const ReportsPage = () => {
         to_date: scope === "today" ? today() : toDate,
       });
       if (data) setReport(data);
-      else setError(i18n.t("Could not load report data."));
+      else setError(__("Could not load report data."));
       setLoading(false);
     };
     load();
@@ -132,7 +133,7 @@ const ReportsPage = () => {
   const trendChartData = report?.sales_trend?.length
     ? {
         labels: report.sales_trend.map((row) => row.label),
-        datasets: [{ name: t("Sales"), values: report.sales_trend.map((row) => row.amount) }],
+        datasets: [{ name: __("Sales"), values: report.sales_trend.map((row) => row.amount) }],
       }
     : null;
 
@@ -140,14 +141,14 @@ const ReportsPage = () => {
     ...opt,
     label: (
       <>
-        <i className={`bi ${opt.icon}`} style={{ fontSize: 12 }} /> {t(opt.label)}
+        <i className={`bi ${opt.icon}`} style={{ fontSize: 12 }} /> {__(opt.label)}
       </>
     ),
   }));
 
   return (
     <div className="px-3 px-md-4 py-3 py-md-4">
-      <PageHeader title={t("Reports")} subtitle={t("Your sales, shift, and payment summary")} />
+      <PageHeader title={__("Reports")} subtitle={__("Your sales, shift, and payment summary")} />
 
       <div className="d-flex flex-wrap align-items-center gap-3 mb-4">
         <FilterChips options={scopeChipOptions} value={scope} onChange={setScope} />
@@ -181,10 +182,10 @@ const ReportsPage = () => {
           <div className="pos-report-empty">
             <i className="bi bi-cup-hot" />
             <p>
-              {t("No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here.")}
+              {__("No shifts to report on yet. Open a shift from the Terminal to see live shift numbers here.")}
             </p>
             <Link to="/posapp/terminal" className="pos-btn pos-btn-primary">
-              {t("Go to Terminal")}
+              {__("Go to Terminal")}
             </Link>
           </div>
         </div>
@@ -194,15 +195,15 @@ const ReportsPage = () => {
             className="mb-3"
             style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}
           >
-            <StatTile icon="bi-cash-stack" accent="primary" label={t("Gross sales")} value={money(kpis.gross_sales)} />
-            <StatTile icon="bi-graph-up-arrow" accent="success" label={t("Net sales")} value={money(kpis.net_sales)} />
+            <StatTile icon="bi-cash-stack" accent="primary" label={__("Gross sales")} value={money(kpis.gross_sales)} />
+            <StatTile icon="bi-graph-up-arrow" accent="success" label={__("Net sales")} value={money(kpis.net_sales)} />
             <StatTile
               icon="bi-receipt"
               accent="neutral"
-              label={t("Transactions")}
+              label={__("Transactions")}
               value={kpis.transaction_count ?? 0}
             />
-            <StatTile icon="bi-basket" accent="warning" label={t("Avg ticket")} value={money(kpis.avg_ticket)} />
+            <StatTile icon="bi-basket" accent="warning" label={__("Avg ticket")} value={money(kpis.avg_ticket)} />
           </div>
 
           <div
@@ -210,7 +211,7 @@ const ReportsPage = () => {
             style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 12 }}
           >
             {report?.shift_summary && (
-              <ReportCard title={t("Shift summary")} icon="bi-cash-coin" accent="neutral">
+              <ReportCard title={__("Shift summary")} icon="bi-cash-coin" accent="neutral">
                 {report.shift_summary.details.length ? (
                   <div className="d-flex flex-column gap-2">
                     {report.shift_summary.details.map((row, idx) => (
@@ -237,13 +238,13 @@ const ReportsPage = () => {
                   </div>
                 ) : (
                   <p className="text-muted mb-0" style={{ fontSize: 13 }}>
-                    {t("No payment modes configured.")}
+                    {__("No payment modes configured.")}
                   </p>
                 )}
               </ReportCard>
             )}
 
-            <ReportCard title={t("Payment method breakdown")} icon="bi-pie-chart" accent="primary">
+            <ReportCard title={__("Payment method breakdown")} icon="bi-pie-chart" accent="primary">
               {paymentChartData ? (
                 <Chart
                   data={paymentChartData}
@@ -254,14 +255,14 @@ const ReportsPage = () => {
                 />
               ) : (
                 <p className="text-muted mb-0" style={{ fontSize: 13 }}>
-                  {t("No payments recorded in this period.")}
+                  {__("No payments recorded in this period.")}
                 </p>
               )}
             </ReportCard>
           </div>
 
           <ReportCard
-            title={scope === "range" ? t("Sales trend · by day") : t("Sales trend · by hour")}
+            title={scope === "range" ? __("Sales trend · by day") : __("Sales trend · by hour")}
             icon="bi-bar-chart-line"
             accent="success"
             className="mb-3"
@@ -277,7 +278,7 @@ const ReportsPage = () => {
               />
             ) : (
               <p className="text-muted mb-0" style={{ fontSize: 13 }}>
-                {t("No sales in this period.")}
+                {__("No sales in this period.")}
               </p>
             )}
           </ReportCard>
@@ -286,7 +287,7 @@ const ReportsPage = () => {
             className="mb-3"
             style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 12 }}
           >
-            <ReportCard title={t("Top selling items")} icon="bi-star" accent="warning">
+            <ReportCard title={__("Top selling items")} icon="bi-star" accent="warning">
               {report?.top_items?.length ? (
                 <div className="d-flex flex-column gap-3">
                   {report.top_items.map((item, idx) => {
@@ -310,29 +311,29 @@ const ReportsPage = () => {
                 </div>
               ) : (
                 <p className="text-muted mb-0" style={{ fontSize: 13 }}>
-                  {t("No items sold in this period.")}
+                  {__("No items sold in this period.")}
                 </p>
               )}
             </ReportCard>
 
-            <ReportCard title={t("Discounts and returns")} icon="bi-receipt-cutoff" accent="danger">
+            <ReportCard title={__("Discounts and returns")} icon="bi-receipt-cutoff" accent="danger">
               <div className="d-flex flex-column gap-2">
                 <div className="d-flex align-items-center justify-content-between p-2" style={{ background: "var(--color-surface-alt)", borderRadius: "var(--radius-md)" }}>
                   <span className="d-flex align-items-center gap-2" style={{ fontSize: 13 }}>
-                    <i className="bi bi-tag text-muted" /> {t("Discount given")}
+                    <i className="bi bi-tag text-muted" /> {__("Discount given")}
                   </span>
                   <span style={{ fontSize: 13, fontWeight: 600 }}>
                     {money(report?.discounts?.discount_amount)}{" "}
-                    <span className="text-muted fw-normal">· {t("{{n}} invoices", { n: report?.discounts?.discount_count ?? 0 })}</span>
+                    <span className="text-muted fw-normal">· {__("{n} invoices", { n: report?.discounts?.discount_count ?? 0 })}</span>
                   </span>
                 </div>
                 <div className="d-flex align-items-center justify-content-between p-2" style={{ background: "var(--color-surface-alt)", borderRadius: "var(--radius-md)" }}>
                   <span className="d-flex align-items-center gap-2" style={{ fontSize: 13 }}>
-                    <i className="bi bi-arrow-return-left text-muted" /> {t("Credit notes")}
+                    <i className="bi bi-arrow-return-left text-muted" /> {__("Credit notes")}
                   </span>
                   <span style={{ fontSize: 13, fontWeight: 600 }}>
                     {money(report?.discounts?.return_amount)}{" "}
-                    <span className="text-muted fw-normal">· {t("{{n}} returns", { n: report?.discounts?.return_count ?? 0 })}</span>
+                    <span className="text-muted fw-normal">· {__("{n} returns", { n: report?.discounts?.return_count ?? 0 })}</span>
                   </span>
                 </div>
               </div>
@@ -340,17 +341,17 @@ const ReportsPage = () => {
           </div>
 
           <ReportCard
-            title={t("Recent transactions")}
+            title={__("Recent transactions")}
             icon="bi-list-ul"
             accent="neutral"
             actions={
               <Link to="/posapp/invoices" className="pos-btn pos-btn-secondary" style={{ height: 32, fontSize: 12, padding: "0 12px" }}>
-                {t("View all")}
+                {__("View all")}
               </Link>
             }
           >
             <ChildTable
-              emptyMessage={t("No transactions in this period.")}
+              emptyMessage={__("No transactions in this period.")}
               columns={[
                 {
                   key: "name",
@@ -358,7 +359,7 @@ const ReportsPage = () => {
                   width: "1.4fr",
                   render: (row) => <Link to={`/posapp/invoices/${row.name}`}>{row.name}</Link>,
                 },
-                { key: "customer", label: _t("Customer"), width: "1.4fr", render: (row) => row.customer_name || t("Walk-in") },
+                { key: "customer", label: _t("Customer"), width: "1.4fr", render: (row) => row.customer_name || __("Walk-in") },
                 { key: "amount", label: _t("Amount"), width: "1fr", align: "end", render: (row) => money(row.grand_total) },
               ]}
               rows={report?.recent_invoices ?? []}

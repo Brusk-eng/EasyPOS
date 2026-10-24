@@ -1,5 +1,4 @@
-import { tData } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { tData, useTranslation } from "../../translation";
 import { useEffect, useState } from "react";
 import { fetchCompanies } from "../../api/Company";
 import { fetchProfile, fetchProfilesForCompany } from "../../api/POSProfile";
@@ -12,7 +11,7 @@ import useEngineSettingsStore from "../../engine/settingsStore";
 import { SelectField, CurrencyField, Modal, ErrorAlert } from "../common";
 
 const OpeningEntryModal = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const isOpen = usePOSSessionStore((s) => s.openingModalOpen);
   const closeOpeningModal = usePOSSessionStore((s) => s.closeOpeningModal);
   const setOpeningEntry = usePOSSessionStore((s) => s.setOpeningEntry);
@@ -60,7 +59,7 @@ const OpeningEntryModal = () => {
         .then((ctx) => setCurrencySymbol(ctx?.symbol || data?.currency || ""))
         .catch((err) => {
           setCurrencySymbol(data?.currency || "");
-          setError(getServerMessage(err) || t("Could not resolve this profile's currency."));
+          setError(getServerMessage(err) || __("Could not resolve this profile's currency."));
         });
       // Every payment mode on the profile is mandatory on submit — default
       // each to 0 so the cashier isn't forced to touch fields they don't use.
@@ -103,11 +102,11 @@ const OpeningEntryModal = () => {
           setOpeningEntry(data);
           handleClose();
         } else {
-          setError(t("Failed to open till"));
+          setError(__("Failed to open till"));
         }
       })
       .catch((err) => {
-        setError(getServerMessage(err) || err?.response?.data?.exc_type || t("Failed to open till"));
+        setError(getServerMessage(err) || err?.response?.data?.exc_type || __("Failed to open till"));
       })
       .finally(() => setSubmitting(false));
   };
@@ -116,28 +115,28 @@ const OpeningEntryModal = () => {
 
   return (
     <Modal
-      title={t("Open your till")}
-      subtitle={t("A shift needs to be open before you can ring up sales.")}
+      title={__("Open your till")}
+      subtitle={__("A shift needs to be open before you can ring up sales.")}
       onClose={handleClose}
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={handleClose}>
-            {t("Cancel")}
+            {__("Cancel")}
           </button>
           <button
             type="button"
             className="pos-btn pos-btn-primary"
             onClick={handleSubmit}
             disabled={blockedOffline || submitting || !openingForm.company || !openingForm.pos_profile}
-            title={blockedOffline ? t("Reconnect to open a shift") : undefined}
+            title={blockedOffline ? __("Reconnect to open a shift") : undefined}
           >
             {submitting ? (
               <>
                 <span className="spinner-border spinner-border-sm" role="status" />
-                {t("Opening…")}
+                {__("Opening…")}
               </>
             ) : (
-              t("Open till")
+              __("Open till")
             )}
           </button>
         </>
@@ -146,7 +145,7 @@ const OpeningEntryModal = () => {
       {blockedOffline && (
         <div className="text-muted mb-3" style={{ fontSize: 12.5 }}>
           <i className="bi bi-cloud-slash me-1" />
-          {t(
+          {__(
             "Opening a shift requires an internet connection — stock and pricing for the profile you pick have to be resolved live. Reconnect to open your till.",
           )}
         </div>
@@ -155,8 +154,8 @@ const OpeningEntryModal = () => {
       <ErrorAlert message={error} />
 
       <SelectField
-        label={t("Company")}
-        placeholder={t("Select company")}
+        label={__("Company")}
+        placeholder={__("Select company")}
         required
         value={openingForm.company}
         onChange={onChangeCompany}
@@ -164,8 +163,8 @@ const OpeningEntryModal = () => {
       />
 
       <SelectField
-        label={t("POS Profile")}
-        placeholder={t("Select POS profile")}
+        label={__("POS Profile")}
+        placeholder={__("Select POS profile")}
         required
         disabled={!openingForm.company}
         value={openingForm.pos_profile}
@@ -175,7 +174,7 @@ const OpeningEntryModal = () => {
 
       {profile?.payments?.length > 0 && (
         <div>
-          <label className="pos-field-label">{t("Opening balance")}</label>
+          <label className="pos-field-label">{__("Opening balance")}</label>
           {profile.payments.map((row) => (
             <CurrencyField
               key={row.mode_of_payment}

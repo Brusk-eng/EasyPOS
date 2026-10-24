@@ -1,9 +1,8 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 import { getPendingInvoiceCount } from "../../engine/outbox";
-import { _t } from "../../i18n";
+import { _t, useTranslation } from "../../translation";
 
 const PENDING_COUNT_POLL_MS = 15000;
 
@@ -31,7 +30,7 @@ const getInitials = (name) => {
 };
 
 const Sidebar = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const location = useLocation();
   const fullName = useAuthStore((s) => s.user?.full_name);
 
@@ -64,7 +63,7 @@ const Sidebar = () => {
               key={item.label}
               className="pos-sidebar-item"
               style={{ opacity: 0.35, cursor: "default" }}
-              title={t("{{label}} — coming soon", { label: t(item.label) })}
+              title={__("{label} — coming soon", { label: __(item.label) })}
             >
               <i className={`bi ${item.icon}`} />
             </div>
@@ -77,8 +76,8 @@ const Sidebar = () => {
               }`}
               title={
                 item.to === "/posapp/sync" && pendingInvoiceCount > 0
-                  ? t("{{label}} — {{n}} invoice(s) pending sync", { label: t(item.label), n: pendingInvoiceCount })
-                  : t(item.label)
+                  ? __("{label} — {n} invoice(s) pending sync", { label: __(item.label), n: pendingInvoiceCount })
+                  : __(item.label)
               }
               style={{ position: "relative" }}
             >

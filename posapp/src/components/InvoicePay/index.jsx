@@ -1,5 +1,3 @@
-import i18n, { tData } from "../../i18n";
-import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import "./style.css";
 import { postPaymentInvoice } from "../../api/Invoice";
@@ -13,9 +11,10 @@ import useConnectivityStore from "../../engine/connectivity";
 import { Modal, CurrencyField, NumberField, CheckboxField, ErrorAlert } from "../common";
 import { roundCurrency } from "../../utils/number";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
+import { getLanguage, tData, useTranslation } from "../../translation";
 
 const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [paymentModes, setPaymentModes] = useState([]);
@@ -147,7 +146,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
   const buildOfflineReceiptHtml = (displayId) => {
     const rows = [
       ...items.map((row) => ({ label: row.item_code, qty: row.qty, amount: row.amount })),
-      ...freeItems.map((row) => ({ label: t("{{item}} (Free)", { item: row.item_code }), qty: row.qty, amount: 0 })),
+      ...freeItems.map((row) => ({ label: __("{item} (Free)", { item: row.item_code }), qty: row.qty, amount: 0 })),
     ];
     const itemRows = rows
       .map(
@@ -159,7 +158,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
       .filter((row) => parseFloat(row.amount) > 0)
       .map((row) => `<tr><td colspan="2">${tData(row.mode_of_payment)}</td><td style="text-align:end">${formatAmount(row.amount)}</td></tr>`)
       .join("");
-    return `<!doctype html><html lang="${i18n.language}" dir="${document.documentElement.dir || "ltr"}"><head><title>${t("Receipt")} — ${displayId}</title><style>
+    return `<!doctype html><html lang="${getLanguage()}" dir="${document.documentElement.dir || "ltr"}"><head><title>${__("Receipt")} — ${displayId}</title><style>
       body{font-family:monospace;max-width:360px;margin:24px auto;color:#222}
       h3{margin:0 0 2px}
       .muted{color:#777;font-size:12px}
@@ -168,13 +167,13 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
       .banner{background:#fff3cd;color:#7a5b00;padding:6px 10px;font-size:12px;border-radius:4px;margin:10px 0}
       .total{border-top:1px solid #333;margin-top:8px;padding-top:6px;font-weight:bold;display:flex;justify-content:space-between}
     </style></head><body>
-      <h3>${t("Receipt")}</h3>
+      <h3>${__("Receipt")}</h3>
       <div class="muted">${displayId}</div>
-      <div class="banner">${t("Offline — pending sync. Reprint from Invoices once synced.")}</div>
-      <div class="muted">${t("Customer")}: ${customerName || customer || t("Walk-in")}</div>
+      <div class="banner">${__("Offline — pending sync. Reprint from Invoices once synced.")}</div>
+      <div class="muted">${__("Customer")}: ${customerName || customer || __("Walk-in")}</div>
       <table>${itemRows}</table>
       <table>${paymentRows}</table>
-      <div class="total"><span>${t("Grand Total")}</span><span>${formatAmount(grandTotal)}</span></div>
+      <div class="total"><span>${__("Grand Total")}</span><span>${formatAmount(grandTotal)}</span></div>
       <script>window.print();</script>
     </body></html>`;
   };
@@ -209,21 +208,21 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
       onClose();
     } else {
       receiptTab?.close();
-      setError(t("Failed to complete payment"));
+      setError(__("Failed to complete payment"));
     }
   };
 
   const validatePayment = () => {
     if (!customer) {
-      setError(t("Please select a customer"));
+      setError(__("Please select a customer"));
       return false;
     }
     if (items.length < 1) {
-      setError(t("Please add one or more items to the cart"));
+      setError(__("Please add one or more items to the cart"));
       return false;
     }
     if (payments.length < 1 || paidAmount <= 0) {
-      setError(t("Please enter an amount for at least one payment mode"));
+      setError(__("Please enter an amount for at least one payment mode"));
       return false;
     }
     return true;
@@ -282,7 +281,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
     const receiptTab = printReceiptOnOrderComplete ? window.open("", "_blank") : null;
     if (receiptTab) {
       receiptTab.document.write(
-        `<title>${t("Receipt")}</title><body style="font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;color:#666;text-align:center;padding:0 24px">${t(
+        `<title>${__("Receipt")}</title><body style="font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;color:#666;text-align:center;padding:0 24px">${__(
           "Finishing up — your receipt will print here once it's confirmed.",
         )}</body>`,
       );
@@ -303,7 +302,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
         // cashier/customer immediately retry with another method — so just
         // surface a non-blocking notice rather than tearing down the flow.
         onAttemptFailed: () =>
-          setError(t("That attempt failed — you can try another payment method in the {{gateway}} window.", { gateway: gatewayName })),
+          setError(__("That attempt failed — you can try another payment method in the {gateway} window.", { gateway: gatewayName })),
       })
       .then((data) => {
         setSubmitting(false);
@@ -316,7 +315,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
         // A dismissed checkout modal isn't an error — the invoice is left as a
         // Draft, retrievable the same way any other held sale is.
         if (!err?.cancelled) {
-          setError(err?.message || t("Failed to complete payment"));
+          setError(err?.message || __("Failed to complete payment"));
         }
       });
   };
@@ -332,13 +331,13 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
 
   return (
     <Modal
-      title={t("Take Payment")}
-      subtitle={t("Enter the amount received for each payment mode.")}
+      title={__("Take Payment")}
+      subtitle={__("Enter the amount received for each payment mode.")}
       onClose={onClose}
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={onClose}>
-            {t("Cancel")}
+            {__("Cancel")}
           </button>
           <button
             type="button"
@@ -349,12 +348,12 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
             {submitting ? (
               <>
                 <span className="spinner-border spinner-border-sm" role="status" />
-                {payingViaGateway ? t("Waiting for {{gateway}}…", { gateway: gatewayName }) : t("Submitting…")}
+                {payingViaGateway ? __("Waiting for {gateway}…", { gateway: gatewayName }) : __("Submitting…")}
               </>
             ) : payingViaGateway ? (
-              t("Pay with {{gateway}}", { gateway: gatewayName })
+              __("Pay with {gateway}", { gateway: gatewayName })
             ) : (
-              t("Complete Payment")
+              __("Complete Payment")
             )}
           </button>
         </>
@@ -363,14 +362,14 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
       <ErrorAlert message={error} />
 
       <div className="invoice-pay-pill mb-3">
-        <span className="invoice-pay-pill-label">{t("Grand Total")}</span>
+        <span className="invoice-pay-pill-label">{__("Grand Total")}</span>
         <span className="invoice-pay-pill-value">{formatAmount(grandTotal)}</span>
       </div>
 
       {loyaltyProgram && loyaltyPointsBalance > 0 && (
         <div className="mb-3">
           <CheckboxField
-            label={t("Redeem Loyalty Points ({{n}} available)", { n: loyaltyPointsBalance })}
+            label={__("Redeem Loyalty Points ({n} available)", { n: loyaltyPointsBalance })}
             checked={redeemLoyaltyPoints}
             onChange={(checked) => {
               setRedeemLoyaltyPoints(checked);
@@ -398,7 +397,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
         </div>
       )}
 
-      <label className="pos-field-label">{t("Payment Summary")}</label>
+      <label className="pos-field-label">{__("Payment Summary")}</label>
 
       {loadingModes ? (
         <div className="text-center py-3">
@@ -406,7 +405,7 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
         </div>
       ) : paymentModes.length === 0 ? (
         <div className="text-muted text-center py-3" style={{ fontSize: 13 }}>
-          {t("No payment modes configured for this POS Profile.")}
+          {__("No payment modes configured for this POS Profile.")}
         </div>
       ) : (
         <div className="invoice-pay-rows mb-3">
@@ -420,15 +419,15 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
                     style={{ fontSize: 10, fontWeight: 500 }}
                     title={
                       !isOnline
-                        ? t("{{gateway}} needs a connection — unavailable while offline.", { gateway: row.ep_payment_gateway })
+                        ? __("{gateway} needs a connection — unavailable while offline.", { gateway: row.ep_payment_gateway })
                         : gatewayConfig?.enabled
-                        ? t("Cashier enters the amount to charge; a {{gateway}} checkout opens on Complete Payment.", {
+                        ? __("Cashier enters the amount to charge; a {gateway} checkout opens on Complete Payment.", {
                             gateway: row.ep_payment_gateway,
                           })
-                        : t("{{gateway}} is not configured yet.", { gateway: row.ep_payment_gateway })
+                        : __("{gateway} is not configured yet.", { gateway: row.ep_payment_gateway })
                     }
                   >
-                    {!isOnline ? t("{{gateway}} — offline", { gateway: row.ep_payment_gateway }) : row.ep_payment_gateway}
+                    {!isOnline ? __("{gateway} — offline", { gateway: row.ep_payment_gateway }) : row.ep_payment_gateway}
                   </span>
                 )}
               </div>
@@ -449,19 +448,19 @@ const InvoicePay = ({ onClose, grandTotal, taxes, onComplete }) => {
 
       <div className="invoice-pay-summary">
         <div>
-          <div className="invoice-pay-figure-label">{t("Paid Amount")}</div>
+          <div className="invoice-pay-figure-label">{__("Paid Amount")}</div>
           <div className="invoice-pay-figure-value">{formatAmount(paidAmount)}</div>
         </div>
         {loyaltyAmount > 0 && (
           <div>
-            <div className="invoice-pay-figure-label">{t("Loyalty Redeemed")}</div>
+            <div className="invoice-pay-figure-label">{__("Loyalty Redeemed")}</div>
             <div className="invoice-pay-figure-value" style={{ color: "var(--color-success-text)" }}>
               {formatAmount(loyaltyAmount)}
             </div>
           </div>
         )}
         <div>
-          <div className="invoice-pay-figure-label">{balanceDue > 0 ? t("Balance Due") : t("Change to Return")}</div>
+          <div className="invoice-pay-figure-label">{balanceDue > 0 ? __("Balance Due") : __("Change to Return")}</div>
           <div
             className="invoice-pay-figure-value"
             style={{

@@ -1,6 +1,4 @@
-import i18n from "../i18n";
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { fetchCustomers, fetchCustomerGroups, fetchTerritories } from "../api/Customer";
@@ -57,14 +55,14 @@ const CUSTOMER_COLUMNS = [
     width: "0.8fr",
     render: (c) => (
       <span className={c.disabled ? "pos-badge" : "pos-badge pos-badge-paid"}>
-        {c.disabled ? i18n.t("Inactive") : i18n.t("Active")}
+        {c.disabled ? __("Inactive") : __("Active")}
       </span>
     ),
   },
 ];
 
 const CustomerListPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -149,7 +147,7 @@ const CustomerListPage = () => {
             onClick={() => setShowNewModal(true)}
           >
             <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-            {t("New customer")}
+            {__("New customer")}
           </button>
         </div>
 
@@ -157,8 +155,8 @@ const CustomerListPage = () => {
           <div className="d-flex align-items-end gap-2">
             <div style={{ width: 180 }}>
               <SelectField
-                label={t("Customer Group")}
-                placeholder={t("All groups")}
+                label={__("Customer Group")}
+                placeholder={__("All groups")}
                 value={customerGroup}
                 onChange={resetToFirstPage(setCustomerGroup)}
                 options={customerGroups.map((g) => ({ label: g.name, value: g.name }))}
@@ -166,8 +164,8 @@ const CustomerListPage = () => {
             </div>
             <div style={{ width: 160 }}>
               <SelectField
-                label={t("Territory")}
-                placeholder={t("All territories")}
+                label={__("Territory")}
+                placeholder={__("All territories")}
                 value={territory}
                 onChange={resetToFirstPage(setTerritory)}
                 options={territories.map((t) => ({ label: t.name, value: t.name }))}
@@ -175,19 +173,19 @@ const CustomerListPage = () => {
             </div>
             <div style={{ width: 160 }}>
               <TextField
-                label={t("Mobile No")}
+                label={__("Mobile No")}
                 value={mobileNo}
                 onChange={resetToFirstPage(setMobileNo)}
-                placeholder={t("Filter by mobile")}
+                placeholder={__("Filter by mobile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 200 }}>
               <TextField
-                label={t("Email")}
+                label={__("Email")}
                 value={emailId}
                 onChange={resetToFirstPage(setEmailId)}
-                placeholder={t("Filter by email")}
+                placeholder={__("Filter by email")}
                 size="sm"
               />
             </div>
@@ -198,7 +196,7 @@ const CustomerListPage = () => {
                 style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
                 onClick={clearFilters}
               >
-                {t("Clear filters")}
+                {__("Clear filters")}
               </button>
             )}
           </div>
@@ -210,7 +208,7 @@ const CustomerListPage = () => {
               columns={CUSTOMER_COLUMNS}
               rows={customers}
               loading={loading}
-              emptyMessage={t("No customers found")}
+              emptyMessage={__("No customers found")}
               onRowClick={(c) => navigate(`/posapp/customers/${encodeURIComponent(c.name)}`)}
             />
           </div>

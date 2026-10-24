@@ -1,5 +1,4 @@
-import { tLabel } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { tLabel, useTranslation } from "../../translation";
 import DetailField from "./DetailField";
 import ChildTable from "./ChildTable";
 import PageLoader from "./PageLoader";
@@ -16,7 +15,7 @@ import PageHeader from "./PageHeader";
 //   { type: "table", title, columns, rows, rowKey, emptyMessage, footer },
 // ]
 const FormView = ({ title, subtitle, badge, backTo, backLabel, actions, blocks = [], loading }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   if (loading) return <PageLoader />;
 
   return (
@@ -27,7 +26,7 @@ const FormView = ({ title, subtitle, badge, backTo, backLabel, actions, blocks =
         <div className="pos-card mb-3 p-3 p-md-4" key={`${block.type}-${block.title || i}`}>
           {block.title && (
             <h6 className="mb-3" style={{ fontSize: 13, fontWeight: 600 }}>
-              {tLabel(t, block.title)}
+              {tLabel(__, block.title)}
             </h6>
           )}
           {block.type === "table" ? (

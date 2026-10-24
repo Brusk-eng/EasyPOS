@@ -1,12 +1,12 @@
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useTranslation } from "../../translation";
 
 // Shared detail-page header: back link, title, optional badge/subtitle, and
 // right-aligned actions. Used directly by editable detail pages
 // (CustomerDetailPage, POSProfileDetailPage, ...) and internally by FormView
 // for read-only detail pages.
 const PageHeader = ({ title, subtitle, badge, backTo, backLabel, actions }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   return (
     <div className="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
       <div style={{ minWidth: 0 }}>
@@ -16,7 +16,7 @@ const PageHeader = ({ title, subtitle, badge, backTo, backLabel, actions }) => {
             className="d-inline-flex align-items-center gap-1 mb-2 text-decoration-none"
             style={{ fontSize: 12.5, color: "var(--color-text-muted)" }}
           >
-            <i className="bi bi-arrow-left" /> {backLabel ?? t("Back")}
+            <i className="bi bi-arrow-left" /> {backLabel ?? __("Back")}
           </Link>
         )}
         <div className="d-flex flex-wrap align-items-center gap-2">

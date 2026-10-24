@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next";
 
+import { useTranslation } from "../../translation";
 const Pagination = ({ page, totalPages, onPrev, onNext }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   return (
     <div className="d-flex justify-content-between align-items-center">
       <span style={{ fontSize: 12, color: "var(--color-text-muted)" }}>
-        {t("Page {{page}} of {{total}}", { page: page + 1, total: totalPages })}
+        {__("Page {page} of {total}", { page: page + 1, total: totalPages })}
       </span>
       <div className="d-flex gap-2">
         <button
@@ -15,7 +15,7 @@ const Pagination = ({ page, totalPages, onPrev, onNext }) => {
           disabled={page === 0}
           onClick={onPrev}
         >
-          {t("Previous")}
+          {__("Previous")}
         </button>
         <button
           type="button"
@@ -24,7 +24,7 @@ const Pagination = ({ page, totalPages, onPrev, onNext }) => {
           disabled={page + 1 >= totalPages}
           onClick={onNext}
         >
-          {t("Next")}
+          {__("Next")}
         </button>
       </div>
     </div>

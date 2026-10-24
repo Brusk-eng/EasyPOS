@@ -1,5 +1,5 @@
 import axios from "axios";
-import i18n from "../i18n";
+import { getLanguage } from "../translation";
 
 // Always send cookies (required by Frappe)
 axios.defaults.withCredentials = true;
@@ -12,8 +12,8 @@ axios.interceptors.request.use((config) => {
 
 	// Server-side messages (frappe.throw) in the language chosen on this
 	// device — applied by easy_pos.api.language.apply_request_language.
-	if (i18n.language) {
-		config.headers["X-Easy-POS-Language"] = i18n.language;
+	if (getLanguage()) {
+		config.headers["X-Easy-POS-Language"] = getLanguage();
 	}
 
 	// Frappe's whitelisted GET endpoints don't send cache-busting headers, so the

@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useMemo, useState } from "react";
 import { fetchInvoices } from "../../api/InvoiceRegister";
 import { getPendingInvoices } from "../../engine/outbox";
@@ -6,13 +5,14 @@ import { Modal, ListTable, Pagination, LinkField, TextField } from "../common";
 import usePOSSessionStore from "../../store/posSessionStore";
 import useCurrencyFormatter from "../../hooks/useCurrencyFormatter";
 import { formatDate } from "../../utils/format";
+import { useTranslation } from "../../translation";
 
 const PAGE_SIZE = 10;
 
-const buildDraftColumns = (money, t) => [
+const buildDraftColumns = (money, __) => [
   {
     key: "name",
-    label: t("Invoice"),
+    label: __("Invoice"),
     width: "1fr",
     render: (inv) => (
       <span style={{ fontFamily: "var(--font-mono)", color: "var(--color-text-secondary)" }}>
@@ -21,9 +21,9 @@ const buildDraftColumns = (money, t) => [
           <span
             className="badge bg-warning-subtle text-warning-emphasis ms-2"
             style={{ fontSize: 9.5, fontWeight: 500 }}
-            title={inv.__pending?.status === "failed" ? inv.__pending?.error : t("Held offline — not yet synced")}
+            title={inv.__pending?.status === "failed" ? inv.__pending?.error : __("Held offline — not yet synced")}
           >
-            {inv.__pending?.status === "failed" ? t("Sync failed") : t("Offline")}
+            {inv.__pending?.status === "failed" ? __("Sync failed") : __("Offline")}
           </span>
         )}
       </span>
@@ -31,26 +31,26 @@ const buildDraftColumns = (money, t) => [
   },
   {
     key: "customer",
-    label: t("Customer"),
+    label: __("Customer"),
     width: "1.3fr",
     render: (inv) => inv.customer_name || inv.customer,
   },
   {
     key: "posting_date",
-    label: t("Date"),
+    label: __("Date"),
     width: "0.9fr",
     render: (inv) => <span style={{ color: "var(--color-text-muted)" }}>{formatDate(inv.posting_date)}</span>,
   },
   {
     key: "grand_total",
-    label: t("Amount"),
+    label: __("Amount"),
     width: "0.8fr",
     render: (inv) => <span style={{ fontFamily: "var(--font-mono)" }}>{money(inv.grand_total, inv.currency)}</span>,
   },
 ];
 
 const DraftPickerModal = ({ onClose, onSelect }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
 
   const [customer, setCustomer] = useState("");
@@ -62,7 +62,7 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const money = useCurrencyFormatter(drafts.map((inv) => inv.currency));
-  const columns = useMemo(() => buildDraftColumns(money, t), [money, t]);
+  const columns = useMemo(() => buildDraftColumns(money, __), [money, __]);
 
   // Sales Invoices queued locally (submit=0, i.e. "Save Draft" made while
   // offline — see engine/outbox.js) that haven't synced to ERPNext yet. Only
@@ -126,13 +126,13 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
   return (
-    <Modal open onClose={onClose} title={t("Load Draft")} subtitle={t("Search and pull a saved draft into the terminal")} size="lg">
+    <Modal open onClose={onClose} title={__("Load Draft")} subtitle={__("Search and pull a saved draft into the terminal")} size="lg">
       <div className="d-flex flex-column" style={{ height: 480, minHeight: 0 }}>
         <div style={{ flexShrink: 0 }}>
           <div className="d-flex align-items-end gap-2 flex-wrap">
             <div style={{ width: 200 }}>
               <LinkField
-                label={t("Customer")}
+                label={__("Customer")}
                 doctype="Customer"
                 value={customer}
                 displayValue={customerName}
@@ -141,25 +141,25 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
                   setCustomer(docname ?? "");
                   setCustomerName(docname ? option?.label || option?.description || docname : "");
                 }}
-                placeholder={t("Filter by customer")}
+                placeholder={__("Filter by customer")}
                 size="sm"
               />
             </div>
             <div style={{ width: 160 }}>
               <TextField
-                label={t("Mobile No")}
+                label={__("Mobile No")}
                 value={mobileNo}
                 onChange={resetToFirstPage(setMobileNo)}
-                placeholder={t("Filter by mobile")}
+                placeholder={__("Filter by mobile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 180 }}>
               <TextField
-                label={t("Email")}
+                label={__("Email")}
                 value={email}
                 onChange={resetToFirstPage(setEmail)}
-                placeholder={t("Filter by email")}
+                placeholder={__("Filter by email")}
                 size="sm"
               />
             </div>
@@ -170,7 +170,7 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
                 style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
                 onClick={clearFilters}
               >
-                {t("Clear filters")}
+                {__("Clear filters")}
               </button>
             )}
           </div>
@@ -182,7 +182,7 @@ const DraftPickerModal = ({ onClose, onSelect }) => {
               columns={columns}
               rows={drafts}
               loading={loading}
-              emptyMessage={t("No draft invoices found")}
+              emptyMessage={__("No draft invoices found")}
               onRowClick={(inv) => onSelect(inv.__offline ? inv : inv.name)}
             />
           </div>

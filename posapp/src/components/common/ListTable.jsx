@@ -1,5 +1,4 @@
-import { tLabel } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { tLabel, useTranslation } from "../../translation";
 
 // Grid-based list table for list-view pages (Invoices, Customers, etc).
 // columns: [{ key, label, width (flex-basis for grid-template-columns, default "1fr"), render(row), align }]
@@ -15,7 +14,7 @@ const ListTable = ({
   onRowClick,
   rowStyle,
 }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const gridTemplateColumns = columns.map((c) => c.width || "1fr").join(" ");
 
   return (
@@ -34,7 +33,7 @@ const ListTable = ({
       >
         {columns.map((c) => (
           <span key={c.key} style={{ textAlign: c.align }}>
-            {tLabel(t, c.label)}
+            {tLabel(__, c.label)}
           </span>
         ))}
       </div>
@@ -46,7 +45,7 @@ const ListTable = ({
           </div>
         ) : rows.length === 0 ? (
           <div className="text-center text-muted py-4" style={{ fontSize: 13 }}>
-            {emptyMessage ?? t("No records found")}
+            {emptyMessage ?? __("No records found")}
           </div>
         ) : (
           rows.map((row, idx) => (

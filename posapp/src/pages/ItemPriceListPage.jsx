@@ -1,6 +1,4 @@
-import i18n from "../i18n";
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchItemPrices, fetchPriceListOptions } from "../api/ItemPrice";
@@ -56,7 +54,7 @@ const ITEM_PRICE_COLUMNS = [
     width: "0.8fr",
     render: (p) => (
       <span className={p.selling ? "pos-badge pos-badge-paid" : "pos-badge"}>
-        {p.selling ? i18n.t("Selling") : p.buying ? i18n.t("Buying") : "—"}
+        {p.selling ? __("Selling") : p.buying ? __("Buying") : "—"}
       </span>
     ),
   },
@@ -69,7 +67,7 @@ const ITEM_PRICE_COLUMNS = [
 ];
 
 const ItemPriceListPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -139,7 +137,7 @@ const ItemPriceListPage = () => {
           style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}
         >
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          {t("New item price")}
+          {__("New item price")}
         </Link>
       </div>
 
@@ -147,8 +145,8 @@ const ItemPriceListPage = () => {
         <div className="d-flex align-items-end gap-2">
           <div style={{ width: 220 }}>
             <SelectField
-              label={t("Price List")}
-              placeholder={t("All price lists")}
+              label={__("Price List")}
+              placeholder={__("All price lists")}
               value={priceList}
               onChange={resetToFirstPage(setPriceList)}
               options={priceListOptions.map((pl) => ({ label: pl.name, value: pl.name }))}
@@ -161,7 +159,7 @@ const ItemPriceListPage = () => {
               style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
               onClick={clearFilters}
             >
-              {t("Clear filters")}
+              {__("Clear filters")}
             </button>
           )}
         </div>
@@ -173,7 +171,7 @@ const ItemPriceListPage = () => {
             columns={ITEM_PRICE_COLUMNS}
             rows={itemPrices}
             loading={loading}
-            emptyMessage={t("No item prices found")}
+            emptyMessage={__("No item prices found")}
             onRowClick={(p) => navigate(`/posapp/item-price/${encodeURIComponent(p.name)}`)}
           />
         </div>

@@ -1,7 +1,6 @@
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { _t } from "../i18n";
+import { _t, useTranslation } from "../translation";
 
 const SETTINGS_ITEMS = [
   {
@@ -19,12 +18,12 @@ const SETTINGS_ITEMS = [
 ];
 
 const SettingsPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
 
   useEffect(() => {
-    setTopbar({ title: t("Settings") });
-  }, [setTopbar, t]);
+    setTopbar({ title: __("Settings") });
+  }, [setTopbar, __]);
 
   return (
     <div className="px-4 py-4">
@@ -41,11 +40,11 @@ const SettingsPage = () => {
               key={item.label}
               className="pos-card"
               style={{ padding: 20, opacity: 0.5, cursor: "default" }}
-              title={t("{{label}} — coming soon", { label: t(item.label) })}
+              title={__("{label} — coming soon", { label: __(item.label) })}
             >
               <i className={`bi ${item.icon}`} style={{ fontSize: 22 }} />
-              <div className="mt-2 fw-semibold">{t(item.label)}</div>
-              <div style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{t(item.description)}</div>
+              <div className="mt-2 fw-semibold">{__(item.label)}</div>
+              <div style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{__(item.description)}</div>
             </div>
           ) : (
             <Link
@@ -55,8 +54,8 @@ const SettingsPage = () => {
               style={{ padding: 20, display: "block", textDecoration: "none", color: "inherit" }}
             >
               <i className={`bi ${item.icon}`} style={{ fontSize: 22, color: "var(--color-primary)" }} />
-              <div className="mt-2 fw-semibold">{t(item.label)}</div>
-              <div style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{t(item.description)}</div>
+              <div className="mt-2 fw-semibold">{__(item.label)}</div>
+              <div style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{__(item.description)}</div>
             </Link>
           ),
         )}

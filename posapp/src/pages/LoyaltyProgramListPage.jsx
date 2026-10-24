@@ -1,5 +1,4 @@
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchLoyaltyPrograms } from "../api/LoyaltyProgram";
@@ -47,7 +46,7 @@ const PROGRAM_COLUMNS = [
 ];
 
 const LoyaltyProgramListPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -92,7 +91,7 @@ const LoyaltyProgramListPage = () => {
       <div className="d-flex align-items-center justify-content-end px-4 pt-3">
         <Link to="/posapp/loyalty-program/new" className="pos-btn pos-btn-primary" style={{ height: 32, fontSize: "12.5px", padding: "0 14px" }}>
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          {t("New program")}
+          {__("New program")}
         </Link>
       </div>
 
@@ -102,7 +101,7 @@ const LoyaltyProgramListPage = () => {
             columns={PROGRAM_COLUMNS}
             rows={programs}
             loading={loading}
-            emptyMessage={t("No Loyalty Programs found")}
+            emptyMessage={__("No Loyalty Programs found")}
             onRowClick={(p) => navigate(`/posapp/loyalty-program/${encodeURIComponent(p.name)}`)}
           />
         </div>

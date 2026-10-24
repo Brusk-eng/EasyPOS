@@ -1,11 +1,10 @@
-import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 import usePOSSessionStore from "../../store/posSessionStore";
 import useThemeStore from "../../store/themeStore";
 import useLanguageStore from "../../store/languageStore";
-import { LANGUAGES, tLabel } from "../../i18n";
+import { LANGUAGES, tLabel, useTranslation } from "../../translation";
 import useConnectivityStore from "../../engine/connectivity";
 import useEngineSettingsStore from "../../engine/settingsStore";
 import ClosingModal from "../Closing";
@@ -21,7 +20,7 @@ const getInitials = (name) => {
 };
 
 const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanClick }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const navigate = useNavigate();
   const openingDetail = usePOSSessionStore((s) => s.openingDetail);
   const hasOpeningEntry = usePOSSessionStore((s) => s.hasOpeningEntry);
@@ -44,14 +43,14 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
     <>
       <div className="pos-topbar">
         <div className="d-flex align-items-center gap-3">
-          <span className="pos-topbar-title">{tLabel(t, title)}</span>
+          <span className="pos-topbar-title">{tLabel(__, title)}</span>
           {onSearchChange && (
             <div className={onScanClick ? "pos-search has-scan" : "pos-search"}>
               <i className="bi bi-search" />
               <input
                 type="text"
                 className={onScanClick ? "has-scan-btn" : ""}
-                placeholder={searchPlaceholder ? t(searchPlaceholder) : t("Search...")}
+                placeholder={searchPlaceholder ? __(searchPlaceholder) : __("Search...")}
                 value={searchValue}
                 onChange={(e) => onSearchChange(e.target.value)}
               />
@@ -59,8 +58,8 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
                 <button
                   type="button"
                   className="pos-search-scan-btn"
-                  title={t("Scan with camera")}
-                  aria-label={t("Scan with camera")}
+                  title={__("Scan with camera")}
+                  aria-label={__("Scan with camera")}
                   onClick={onScanClick}
                 >
                   <i className="bi bi-upc-scan" />
@@ -74,7 +73,7 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
           {offlineModeEnabled && (
             <div
               className="pos-status-pill"
-              title={isOnline ? t("Connected to the server") : t("No connection — working from cached data")}
+              title={isOnline ? __("Connected to the server") : __("No connection — working from cached data")}
               style={
                 isOnline
                   ? { background: "var(--color-success-bg)", color: "var(--color-success-text)" }
@@ -85,7 +84,7 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
                 className="dot"
                 style={{ background: isOnline ? "var(--color-success-icon)" : "var(--color-danger-text)" }}
               />
-              {isOnline ? t("Online") : t("Offline")}
+              {isOnline ? __("Online") : __("Offline")}
             </div>
           )}
 
@@ -97,7 +96,7 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
           ) : (
             <div className="pos-status-pill" style={{ background: "var(--color-warning-bg)", color: "var(--color-warning-text)" }}>
               <span className="dot" style={{ background: "var(--color-warning-text-strong)" }} />
-              {t("No shift open")}
+              {__("No shift open")}
             </div>
           )}
 
@@ -108,9 +107,9 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
               style={{ height: 30, fontSize: 12, padding: "0 12px" }}
               onClick={() => setShowClosingModal(true)}
               disabled={offlineModeEnabled && !isOnline}
-              title={offlineModeEnabled && !isOnline ? t("Reconnect to close your shift") : undefined}
+              title={offlineModeEnabled && !isOnline ? __("Reconnect to close your shift") : undefined}
             >
-              {t("Close shift")}
+              {__("Close shift")}
             </button>
           )}
 
@@ -120,12 +119,12 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
               className="pos-icon-btn"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              title={t("Language")}
-              aria-label={t("Language")}
+              title={__("Language")}
+              aria-label={__("Language")}
             >
               <i className="bi bi-translate" />
             </button>
-            <ul className="dropdown-menu dropdown-menu-end pos-user-menu">
+            <ul className="dropdown-menu dropdown-menu-end pos-user-menu pos-language-menu">
               {LANGUAGES.map((lang) => (
                 <li key={lang.code}>
                   <button
@@ -144,8 +143,8 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
           <button
             type="button"
             className="pos-icon-btn"
-            title={theme === "dark" ? t("Switch to light mode") : t("Switch to dark mode")}
-            aria-label={t("Toggle dark mode")}
+            title={theme === "dark" ? __("Switch to light mode") : __("Switch to dark mode")}
+            aria-label={__("Toggle dark mode")}
             onClick={toggleTheme}
           >
             <i className={`bi ${theme === "dark" ? "bi-sun" : "bi-moon-stars"}`} />
@@ -165,7 +164,7 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
               <li className="pos-user-menu-header">
                 <span className="pos-avatar pos-avatar-active pos-user-menu-avatar">{getInitials(fullName)}</span>
                 <div className="pos-user-menu-identity">
-                  <div className="pos-user-menu-name">{fullName || t("User")}</div>
+                  <div className="pos-user-menu-name">{fullName || __("User")}</div>
                   {email && <div className="pos-user-menu-email">{email}</div>}
                 </div>
               </li>
@@ -175,7 +174,7 @@ const Topbar = ({ title, searchValue, onSearchChange, searchPlaceholder, onScanC
               <li>
                 <button className="dropdown-item pos-user-menu-item pos-user-menu-item-danger" onClick={handleLogout}>
                   <i className="bi bi-box-arrow-right" />
-                  {t("Log out")}
+                  {__("Log out")}
                 </button>
               </li>
             </ul>

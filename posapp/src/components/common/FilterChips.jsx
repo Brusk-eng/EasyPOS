@@ -1,10 +1,9 @@
-import { tLabel } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { tLabel, useTranslation } from "../../translation";
 
 // Pill-style filter chips for list-view pages (status filters, category filters).
 // options: [{ label, value, danger }] — `danger` renders unselected chip in the danger palette (e.g. "Overdue").
 const FilterChips = ({ options, value, onChange }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   return (
     <div className="d-flex gap-2">
       {options.map((opt) => (
@@ -15,7 +14,7 @@ const FilterChips = ({ options, value, onChange }) => {
           }`}
           onClick={() => onChange(opt.value)}
         >
-          {tLabel(t, opt.label)}
+          {tLabel(__, opt.label)}
         </span>
       ))}
     </div>

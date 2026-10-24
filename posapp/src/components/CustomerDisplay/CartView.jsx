@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { formatCurrency } from "../../utils/format";
+import { useTranslation } from "../../translation";
 
 // currencyFormat ({ symbol, number_format, symbol_on_right }) comes from the
 // Terminal's broadcast snapshot (hooks/useCustomerDisplayBroadcaster.js).
@@ -9,7 +9,7 @@ const formatAmount = (value, currencyFormat, precision) => formatCurrency(value 
 // hooks/useCustomerDisplayBroadcaster.js) — this component only renders the
 // snapshot it's handed, at kiosk-readable font sizes.
 const CartView = ({ snapshot }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { items, netTotal, taxRows, discountAmount, grandTotal, currencyFormat, precision } = snapshot;
 
   return (
@@ -26,12 +26,12 @@ const CartView = ({ snapshot }) => {
 
       <div className="customer-display-totals">
         <div className="customer-display-total-row">
-          <span>{t("Subtotal")}</span>
+          <span>{__("Subtotal")}</span>
           <span>{formatAmount(netTotal, currencyFormat, precision)}</span>
         </div>
         {discountAmount > 0 && (
           <div className="customer-display-total-row">
-            <span>{t("Discount")}</span>
+            <span>{__("Discount")}</span>
             <span>-{formatAmount(discountAmount, currencyFormat, precision)}</span>
           </div>
         )}
@@ -42,7 +42,7 @@ const CartView = ({ snapshot }) => {
           </div>
         ))}
         <div className="customer-display-grand-total">
-          <span>{t("Total")}</span>
+          <span>{__("Total")}</span>
           <span>{formatAmount(grandTotal, currencyFormat, precision)}</span>
         </div>
       </div>

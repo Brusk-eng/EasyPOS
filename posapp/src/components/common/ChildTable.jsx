@@ -1,5 +1,4 @@
-import { tLabel } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { tLabel, useTranslation } from "../../translation";
 import { useEffect, useRef, useState } from "react";
 
 // Grid for a child doctype table, shared by both read-only detail views
@@ -61,7 +60,7 @@ const ChildTable = ({
   rowError,
   onMoveRow,
 }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [expandedKeys, setExpandedKeys] = useState(() => new Set());
   const scrollRef = useRef(null);
   const [showRightFade, setShowRightFade] = useState(false);
@@ -113,7 +112,7 @@ const ChildTable = ({
               style={{ height: 30, fontSize: 12, padding: "0 12px" }}
               onClick={onAddRow}
             >
-              {addRowLabel ?? t("+ Add row")}
+              {addRowLabel ?? __("+ Add row")}
             </button>
           )}
         </div>
@@ -141,7 +140,7 @@ const ChildTable = ({
               {expandable && <span />}
               {columns.map((c) => (
                 <span key={c.key} style={{ textAlign: c.align }}>
-                  {tLabel(t, c.label)}
+                  {tLabel(__, c.label)}
                 </span>
               ))}
               {onMoveRow && <span />}
@@ -170,7 +169,7 @@ const ChildTable = ({
                 <div className="pos-ct-empty-icon">
                   <i className="bi bi-inbox" />
                 </div>
-                <div className="pos-ct-empty-title">{emptyMessage ?? t("No rows")}</div>
+                <div className="pos-ct-empty-title">{emptyMessage ?? __("No rows")}</div>
                 {emptyDescription && <div className="pos-ct-empty-desc">{emptyDescription}</div>}
               </div>
             ) : (
@@ -206,7 +205,7 @@ const ChildTable = ({
                           type="button"
                           className={`pos-ct-expand-btn${isOpen ? " open" : ""}`}
                           onClick={() => toggleExpanded(key)}
-                          title={isOpen ? t("Collapse") : t("Expand")}
+                          title={isOpen ? __("Collapse") : __("Expand")}
                         >
                           <i className="bi bi-chevron-right" />
                         </button>
@@ -227,7 +226,7 @@ const ChildTable = ({
                             className="pos-btn-icon"
                             disabled={idx === 0}
                             onClick={() => onMoveRow(idx, "up")}
-                            title={t("Move up")}
+                            title={__("Move up")}
                           >
                             <i className="bi bi-chevron-up" />
                           </button>
@@ -236,7 +235,7 @@ const ChildTable = ({
                             className="pos-btn-icon"
                             disabled={isLast}
                             onClick={() => onMoveRow(idx, "down")}
-                            title={t("Move down")}
+                            title={__("Move down")}
                           >
                             <i className="bi bi-chevron-down" />
                           </button>
@@ -282,7 +281,7 @@ const ChildTable = ({
       {onAddRow && addRowPosition === "bottom" && (
         <button type="button" className="pos-ct-add-strip" onClick={onAddRow}>
           <i className="bi bi-plus-lg" />
-          {(addRowLabel ?? t("+ Add row")).replace(/^\+\s*/, "")}
+          {(addRowLabel ?? __("+ Add row")).replace(/^\+\s*/, "")}
         </button>
       )}
     </div>

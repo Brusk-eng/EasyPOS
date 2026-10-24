@@ -1,6 +1,5 @@
 import { getServerMessage } from "../../utils/serverError";
-import { _t } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { _t, useTranslation } from "../../translation";
 import { useEffect, useState } from "react";
 import { Modal, ChildTable, ErrorAlert } from "../common";
 import { createCreditNote } from "../../api/Invoice";
@@ -36,7 +35,7 @@ const seedTaxRows = (invoice) =>
   }));
 
 const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [itemRows, setItemRows] = useState([]);
   const [taxRows, setTaxRows] = useState([]);
   const [saving, setSaving] = useState(false);
@@ -68,7 +67,7 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
 
   const handleSubmit = async () => {
     if (selectedItems.length === 0) {
-      setError(t("Select at least one item to return"));
+      setError(__("Select at least one item to return"));
       return;
     }
     setError("");
@@ -98,7 +97,7 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
       onCreated?.(creditNote);
       onClose();
     } catch (err) {
-      setError(getServerMessage(err) || t("Failed to create credit note"));
+      setError(getServerMessage(err) || __("Failed to create credit note"));
     } finally {
       setSaving(false);
     }
@@ -108,17 +107,17 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
     <Modal
       open={open}
       onClose={onClose}
-      title={t("Create Credit Note")}
+      title={__("Create Credit Note")}
       subtitle={invoice?.name}
       size="xl"
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={onClose} disabled={saving}>
-            {t("Cancel")}
+            {__("Cancel")}
           </button>
           <button type="button" className="pos-btn pos-btn-primary" onClick={handleSubmit} disabled={saving}>
             {saving && <span className="spinner-border spinner-border-sm" role="status" />}
-            {t("Create Credit Note")}
+            {__("Create Credit Note")}
           </button>
         </>
       }
@@ -126,13 +125,13 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
       <ErrorAlert message={error} />
 
       <h6 className="mb-2" style={{ fontSize: 13, fontWeight: 600 }}>
-        {t("Items to Return")}
+        {__("Items to Return")}
       </h6>
       <div className="mb-4">
         <ChildTable
           rowKey="_idx"
           rows={itemRows}
-          emptyMessage={t("No items on this invoice")}
+          emptyMessage={__("No items on this invoice")}
           columns={[
             {
               key: "selected",
@@ -182,19 +181,19 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
             null,
             null,
             null,
-            { value: t("Return Total"), align: "end" },
+            { value: __("Return Total"), align: "end" },
             { value: money(returnTotal), align: "end" },
           ]}
         />
       </div>
 
       <h6 className="mb-2" style={{ fontSize: 13, fontWeight: 600 }}>
-        {t("Taxes and Charges")}
+        {__("Taxes and Charges")}
       </h6>
       <ChildTable
         rowKey="_idx"
         rows={taxRows}
-        emptyMessage={t("No taxes on this invoice")}
+        emptyMessage={__("No taxes on this invoice")}
         columns={[
           { key: "account_head", label: _t("Account Head"), width: "1.8fr" },
           { key: "charge_type", label: _t("Type"), width: "1.4fr" },
@@ -235,7 +234,7 @@ const CreditNoteModal = ({ open, onClose, invoice, onCreated }) => {
         ]}
       />
       <p className="text-muted mt-2 mb-0" style={{ fontSize: 11.5 }}>
-        {t(
+        {__(
           'Rate (%) applies to percentage-based charges; Amount applies to "Actual" charges. Totals are recalculated against the returned items when the credit note is created.',
         )}
       </p>

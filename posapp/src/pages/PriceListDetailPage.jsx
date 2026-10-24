@@ -1,6 +1,5 @@
 import { getServerMessage } from "../utils/serverError";
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchPriceList, createPriceList, savePriceList } from "../api/PriceList";
@@ -29,7 +28,7 @@ const emptyPriceList = {
 };
 
 const PriceListDetailPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { name } = useParams();
   const navigate = useNavigate();
   const { setTopbar } = useOutletContext();
@@ -94,17 +93,17 @@ const PriceListDetailPage = () => {
 
   const handleSubmit = async () => {
     if (!form.price_list_name || !form.currency) {
-      setError(t("Price List Name and Currency are required"));
+      setError(__("Price List Name and Currency are required"));
       return;
     }
     // Mirrors price_list.py's validate(): a Price List must be usable for at
     // least one of Buying/Selling.
     if (!form.buying && !form.selling) {
-      setError(t("Price List must be applicable for Buying or Selling"));
+      setError(__("Price List must be applicable for Buying or Selling"));
       return;
     }
     if (duplicateCountries.length > 0) {
-      setError(t("Country added more than once: {{countries}}", { countries: [...new Set(duplicateCountries)].join(", ") }));
+      setError(__("Country added more than once: {countries}", { countries: [...new Set(duplicateCountries)].join(", ") }));
       return;
     }
     setError("");
@@ -136,9 +135,9 @@ const PriceListDetailPage = () => {
       if (!isEdit) {
         navigate(`/posapp/price-list/${encodeURIComponent(saved.name)}`, { replace: true });
       }
-      toastSuccess(t("Price List saved successfully"));
+      toastSuccess(__("Price List saved successfully"));
     } catch (err) {
-      const message = getServerMessage(err) || t("Failed to save Price List");
+      const message = getServerMessage(err) || __("Failed to save Price List");
       setError(message);
       toastError(message);
     } finally {
@@ -151,9 +150,9 @@ const PriceListDetailPage = () => {
   return (
     <div className="px-3 px-md-4 py-3 py-md-4">
       <PageHeader
-        title={isEdit ? form.name : t("New Price List")}
+        title={isEdit ? form.name : __("New Price List")}
         backTo="/posapp/price-list"
-        backLabel={t("Price Lists")}
+        backLabel={__("Price Lists")}
         actions={<SaveButton saving={saving} onClick={handleSubmit} />}
       />
 
@@ -161,21 +160,21 @@ const PriceListDetailPage = () => {
 
       <div className="pos-card mb-3 p-3 p-md-4">
         <h6 className="mb-3" style={{ fontSize: 13, fontWeight: 600 }}>
-          {t("Price List Details")}
+          {__("Price List Details")}
         </h6>
         <div className="row g-3">
           <div className="col-6 col-md-4">
-            <TextField label={t("Price List Name")} required value={form.price_list_name} onChange={update("price_list_name")} />
+            <TextField label={__("Price List Name")} required value={form.price_list_name} onChange={update("price_list_name")} />
           </div>
           <div className="col-6 col-md-4">
-            <LinkField label={t("Currency")} required doctype="Currency" value={form.currency} onChange={update("currency")} />
+            <LinkField label={__("Currency")} required doctype="Currency" value={form.currency} onChange={update("currency")} />
           </div>
           <div className="col-12 d-flex flex-wrap gap-4">
-            <CheckboxField label={t("Buying")} checked={form.buying} onChange={(v) => update("buying")(v ? 1 : 0)} />
-            <CheckboxField label={t("Selling")} checked={form.selling} onChange={(v) => update("selling")(v ? 1 : 0)} />
-            <CheckboxField label={t("Enabled")} checked={form.enabled} onChange={(v) => update("enabled")(v ? 1 : 0)} />
+            <CheckboxField label={__("Buying")} checked={form.buying} onChange={(v) => update("buying")(v ? 1 : 0)} />
+            <CheckboxField label={__("Selling")} checked={form.selling} onChange={(v) => update("selling")(v ? 1 : 0)} />
+            <CheckboxField label={__("Enabled")} checked={form.enabled} onChange={(v) => update("enabled")(v ? 1 : 0)} />
             <CheckboxField
-              label={t("Price Not UOM Dependent")}
+              label={__("Price Not UOM Dependent")}
               checked={form.price_not_uom_dependent}
               onChange={(v) => update("price_not_uom_dependent")(v ? 1 : 0)}
             />
@@ -185,11 +184,11 @@ const PriceListDetailPage = () => {
 
       <div className="pos-card mb-3 p-3 p-md-4">
         <ChildTable
-          title={t("Applicable for Countries")}
-          description={t("Leave empty to make this price list applicable for all countries, or restrict it to specific ones.")}
+          title={__("Applicable for Countries")}
+          description={__("Leave empty to make this price list applicable for all countries, or restrict it to specific ones.")}
           onAddRow={addCountryRow}
           rows={form.countries}
-          emptyMessage={t("No countries added — applies to all countries")}
+          emptyMessage={__("No countries added — applies to all countries")}
           columns={[
             {
               key: "idx",
@@ -204,12 +203,12 @@ const PriceListDetailPage = () => {
                 const isDuplicate = row.country && duplicateCountries.includes(row.country);
                 return (
                   <LinkField
-                    placeholder={t("Select Country")}
+                    placeholder={__("Select Country")}
                     doctype="Country"
                     filters={{ name: ["not in", selectedCountries.filter((c) => c !== row.country)] }}
                     value={row.country}
                     onChange={(v) => updateCountryRow(idx, v)}
-                    error={isDuplicate ? t("Already added") : undefined}
+                    error={isDuplicate ? __("Already added") : undefined}
                   />
                 );
               },

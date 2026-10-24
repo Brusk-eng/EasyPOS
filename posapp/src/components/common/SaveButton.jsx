@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 
+import { useTranslation } from "../../translation";
 // pos-btn that swaps its label for a spinner + "Saving…" while an async save is in flight.
 const SaveButton = ({
   saving,
@@ -11,7 +11,7 @@ const SaveButton = ({
   type = "button",
   className = "",
 }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   return (
     <button
       type={type}
@@ -22,10 +22,10 @@ const SaveButton = ({
       {saving ? (
         <>
           <span className="spinner-border spinner-border-sm me-2" role="status" />
-          {savingLabel ?? t("Saving…")}
+          {savingLabel ?? __("Saving…")}
         </>
       ) : (
-        label ?? t("Save")
+        label ?? __("Save")
       )}
     </button>
   );

@@ -1,6 +1,5 @@
 import { getServerMessage } from "../utils/serverError";
-import { _t, tData } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { _t, tData, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, useOutletContext } from "react-router-dom";
 import { fetchInvoice, cancelInvoice } from "../api/Invoice";
@@ -33,7 +32,7 @@ const formatItemTaxRate = (value) => {
 };
 
 const InvoiceDetailPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { name } = useParams();
   const navigate = useNavigate();
   const { setTopbar } = useOutletContext();
@@ -98,7 +97,7 @@ const InvoiceDetailPage = () => {
     if (result?.ok) {
       navigate(`/posapp/invoices/${encodeURIComponent(result.name)}`, { replace: true });
     } else {
-      setRetryError(result?.error || t("Sync failed — check the Sync page for details."));
+      setRetryError(result?.error || __("Sync failed — check the Sync page for details."));
       loadInvoice();
     }
   };
@@ -121,7 +120,7 @@ const InvoiceDetailPage = () => {
       setCancelOpen(false);
       loadInvoice();
     } catch (err) {
-      setCancelError(getServerMessage(err) || t("Failed to cancel invoice"));
+      setCancelError(getServerMessage(err) || __("Failed to cancel invoice"));
     } finally {
       setCancelling(false);
     }
@@ -133,12 +132,12 @@ const InvoiceDetailPage = () => {
 
   if (isOfflineDisplayId(name)) {
     if (loading) {
-      return <div className="px-4 py-5 text-center text-muted" style={{ fontSize: 13 }}>{t("Loading…")}</div>;
+      return <div className="px-4 py-5 text-center text-muted" style={{ fontSize: 13 }}>{__("Loading…")}</div>;
     }
     if (!pendingRow) {
       return (
         <div className="px-4 py-5 text-center text-muted" style={{ fontSize: 13 }}>
-          {t("This offline sale isn't in the local queue on this device anymore.")}
+          {__("This offline sale isn't in the local queue on this device anymore.")}
         </div>
       );
     }
@@ -151,18 +150,18 @@ const InvoiceDetailPage = () => {
           <span
             className={`badge ${pendingRow.status === "failed" ? "bg-danger-subtle text-danger" : "bg-warning-subtle text-warning-emphasis"}`}
           >
-            {pendingRow.status === "failed" ? t("Sync failed") : pendingRow.status === "syncing" ? t("Syncing…") : t("Pending sync")}
+            {pendingRow.status === "failed" ? __("Sync failed") : pendingRow.status === "syncing" ? __("Syncing…") : __("Pending sync")}
           </span>
         </div>
         <div className="pos-card mb-3" style={{ padding: "12px 16px", fontSize: 12.5, color: "var(--color-text-muted)" }}>
           <i className="bi bi-cloud-slash me-2" />
-          {t(
+          {__(
             "This sale was completed offline and hasn't reached ERPNext yet. It will get a real invoice number once it syncs — reconnect and it should sync automatically, or retry below.",
           )}
         </div>
         <ErrorAlert message={retryError} />
         <div className="pos-card mb-3" style={{ padding: "16px" }}>
-          <div style={{ fontSize: 12, color: "var(--color-text-faint)", marginBottom: 8 }}>{t("ITEMS")}</div>
+          <div style={{ fontSize: 12, color: "var(--color-text-faint)", marginBottom: 8 }}>{__("ITEMS")}</div>
           {rows.map((r, i) => (
             <div key={i} className="d-flex justify-content-between" style={{ fontSize: 13, padding: "4px 0" }}>
               <span>{r.item_code} × {r.qty}</span>
@@ -170,19 +169,19 @@ const InvoiceDetailPage = () => {
             </div>
           ))}
           <div className="d-flex justify-content-between" style={{ fontSize: 13, fontWeight: 600, borderTop: "1px solid var(--color-border-soft)", marginTop: 8, paddingTop: 8 }}>
-            <span>{t("Total")}</span>
+            <span>{__("Total")}</span>
             <span style={{ fontFamily: "var(--font-mono)" }}>{money(total)}</span>
           </div>
         </div>
         <div className="d-flex gap-2">
           <button type="button" className="pos-btn pos-btn-secondary" onClick={() => navigate("/posapp/invoices")}>
-            {t("Back to Invoices")}
+            {__("Back to Invoices")}
           </button>
           <button type="button" className="pos-btn pos-btn-primary" onClick={handleRetrySync} disabled={retrying || !isOnline}>
             {retrying ? (
-              <><span className="spinner-border spinner-border-sm" role="status" /> {t("Syncing…")}</>
+              <><span className="spinner-border spinner-border-sm" role="status" /> {__("Syncing…")}</>
             ) : (
-              <><i className="bi bi-arrow-repeat" style={{ fontSize: 14 }} /> {t("Retry sync")}</>
+              <><i className="bi bi-arrow-repeat" style={{ fontSize: 14 }} /> {__("Retry sync")}</>
             )}
           </button>
         </div>
@@ -199,7 +198,7 @@ const InvoiceDetailPage = () => {
     const offlineUnavailable = offlineModeEnabled && !isOnline;
     return (
       <div className="px-4 py-5 text-center text-muted" style={{ fontSize: 13 }}>
-        {offlineUnavailable ? t("Invoice details aren't available offline. Reconnect and try again.") : t("Invoice not found.")}
+        {offlineUnavailable ? __("Invoice details aren't available offline. Reconnect and try again.") : __("Invoice not found.")}
       </div>
     );
   }
@@ -212,7 +211,7 @@ const InvoiceDetailPage = () => {
       <FormView
         loading={loading}
         backTo="/posapp/invoices"
-        backLabel={t("Invoices")}
+        backLabel={__("Invoices")}
         title={invoice?.name}
         subtitle={invoice?.pos_profile}
         badge={invoice && <span className={invoiceStatusBadgeClass(invoice.status)}>{invoiceStatusLabel(invoice.status)}</span>}
@@ -220,16 +219,16 @@ const InvoiceDetailPage = () => {
           <>
             {canReturn && (
               <button type="button" className="pos-btn pos-btn-secondary" onClick={() => setCreditNoteOpen(true)}>
-                <i className="bi bi-arrow-return-left" style={{ fontSize: 14 }} /> {t("Create Credit Note")}
+                <i className="bi bi-arrow-return-left" style={{ fontSize: 14 }} /> {__("Create Credit Note")}
               </button>
             )}
             {canCancel && (
               <button type="button" className="pos-btn pos-btn-danger" onClick={() => setCancelOpen(true)}>
-                <i className="bi bi-x-circle" style={{ fontSize: 14 }} /> {t("Cancel Invoice")}
+                <i className="bi bi-x-circle" style={{ fontSize: 14 }} /> {__("Cancel Invoice")}
               </button>
             )}
             <button type="button" className="pos-btn pos-btn-primary" onClick={openPrintView}>
-              <i className="bi bi-printer" style={{ fontSize: 14 }} /> {t("Print / Reprint")}
+              <i className="bi bi-printer" style={{ fontSize: 14 }} /> {__("Print / Reprint")}
             </button>
           </>
         }
@@ -323,7 +322,7 @@ const InvoiceDetailPage = () => {
                 null,
                 null,
                 null,
-                { value: t("Net Total"), align: "end" },
+                { value: __("Net Total"), align: "end" },
                 { value: money(invoice.net_total), align: "end" },
               ],
             },
@@ -427,10 +426,10 @@ const InvoiceDetailPage = () => {
         open={cancelOpen}
         onClose={() => (cancelling ? null : setCancelOpen(false))}
         onConfirm={handleCancel}
-        title={t("Cancel Invoice")}
-        message={t("Are you sure you want to cancel {{name}}? This cannot be undone.", { name: invoice?.name })}
-        confirmLabel={t("Yes, Cancel")}
-        cancelLabel={t("No")}
+        title={__("Cancel Invoice")}
+        message={__("Are you sure you want to cancel {name}? This cannot be undone.", { name: invoice?.name })}
+        confirmLabel={__("Yes, Cancel")}
+        cancelLabel={__("No")}
         danger
         loading={cancelling}
         error={cancelError}

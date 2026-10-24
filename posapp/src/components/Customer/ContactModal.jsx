@@ -1,8 +1,8 @@
 import { getServerMessage } from "../../utils/serverError";
-import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { createContact, saveContact } from "../../api/Customer";
 import { Modal, TextField, CheckboxField, ErrorAlert } from "../common";
+import { useTranslation } from "../../translation";
 
 const blankForm = {
   first_name: "",
@@ -22,7 +22,7 @@ const blankForm = {
 // set_primary) derives them from the email_ids/phone_nos child tables, so we
 // build those child rows on submit instead of sending the flat fields as-is.
 const ContactModal = ({ customerName, contact, onClose, onSaved }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [form, setForm] = useState(contact ? { ...blankForm, ...contact } : blankForm);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -57,7 +57,7 @@ const ContactModal = ({ customerName, contact, onClose, onSaved }) => {
         : await createContact(customerName, payload);
       onSaved(saved);
     } catch (err) {
-      setError(getServerMessage(err) || t("Failed to save Contact"));
+      setError(getServerMessage(err) || __("Failed to save Contact"));
     } finally {
       setSubmitting(false);
     }
@@ -65,22 +65,22 @@ const ContactModal = ({ customerName, contact, onClose, onSaved }) => {
 
   return (
     <Modal
-      title={contact ? t("Edit Contact") : t("New Contact")}
+      title={contact ? __("Edit Contact") : __("New Contact")}
       onClose={onClose}
       size="lg"
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={onClose}>
-            {t("Cancel")}
+            {__("Cancel")}
           </button>
           <button type="button" className="pos-btn pos-btn-primary" onClick={handleSubmit} disabled={submitting}>
             {submitting ? (
               <>
                 <span className="spinner-border spinner-border-sm me-2" role="status" />
-                {t("Saving…")}
+                {__("Saving…")}
               </>
             ) : (
-              t("Save")
+              __("Save")
             )}
           </button>
         </>
@@ -90,32 +90,32 @@ const ContactModal = ({ customerName, contact, onClose, onSaved }) => {
 
       <div className="row g-3">
         <div className="col-6">
-          <TextField label={t("First Name")} value={form.first_name} onChange={update("first_name")} />
+          <TextField label={__("First Name")} value={form.first_name} onChange={update("first_name")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Last Name")} value={form.last_name} onChange={update("last_name")} />
+          <TextField label={__("Last Name")} value={form.last_name} onChange={update("last_name")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Email Address")} type="email" value={form.email_id} onChange={update("email_id")} />
+          <TextField label={__("Email Address")} type="email" value={form.email_id} onChange={update("email_id")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Phone")} value={form.phone} onChange={update("phone")} />
+          <TextField label={__("Phone")} value={form.phone} onChange={update("phone")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Mobile No")} value={form.mobile_no} onChange={update("mobile_no")} />
+          <TextField label={__("Mobile No")} value={form.mobile_no} onChange={update("mobile_no")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Designation")} value={form.designation} onChange={update("designation")} />
+          <TextField label={__("Designation")} value={form.designation} onChange={update("designation")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Department")} value={form.department} onChange={update("department")} />
+          <TextField label={__("Department")} value={form.department} onChange={update("department")} />
         </div>
         <div className="col-6">
-          <TextField label={t("Company Name")} value={form.company_name} onChange={update("company_name")} />
+          <TextField label={__("Company Name")} value={form.company_name} onChange={update("company_name")} />
         </div>
         <div className="col-6">
           <CheckboxField
-            label={t("Is Primary Contact")}
+            label={__("Is Primary Contact")}
             checked={form.is_primary_contact}
             onChange={(v) => update("is_primary_contact")(v ? 1 : 0)}
           />

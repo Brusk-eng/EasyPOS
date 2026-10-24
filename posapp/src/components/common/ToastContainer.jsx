@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import useToastStore from "../../store/toastStore";
+import { useTranslation } from "../../translation";
 
 const ICON_BY_TYPE = {
   success: "bi-check-circle-fill",
@@ -17,7 +17,7 @@ const ICON_BY_TYPE = {
 const ToastContainer = () => {
   const toasts = useToastStore((s) => s.toasts);
   const dismiss = useToastStore((s) => s.dismiss);
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
 
   if (toasts.length === 0) return null;
 
@@ -27,7 +27,7 @@ const ToastContainer = () => {
         <div key={toast.id} className={`pos-toast pos-toast-${toast.type}`} role="status">
           <i className={`bi ${ICON_BY_TYPE[toast.type] || ICON_BY_TYPE.info} pos-toast-icon`} />
           <span className="pos-toast-message">{toast.message}</span>
-          <button type="button" className="pos-toast-close" aria-label={t("Dismiss")} onClick={() => dismiss(toast.id)}>
+          <button type="button" className="pos-toast-close" aria-label={__("Dismiss")} onClick={() => dismiss(toast.id)}>
             <i className="bi bi-x" />
           </button>
         </div>

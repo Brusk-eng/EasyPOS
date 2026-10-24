@@ -1,6 +1,5 @@
-import { _t } from "../../i18n";
+import { _t, useTranslation } from "../../translation";
 import { getServerMessage } from "../../utils/serverError";
-import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { createCustomer, fetchCustomerGroups, fetchTerritories } from "../../api/Customer";
 import { Modal, TextField, SelectField, ErrorAlert } from "../common";
@@ -15,7 +14,7 @@ const emptyForm = {
 };
 
 const NewCustomerModal = ({ onClose, onCreated }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [form, setForm] = useState(emptyForm);
   const [customerGroups, setCustomerGroups] = useState([]);
   const [territories, setTerritories] = useState([]);
@@ -29,7 +28,7 @@ const NewCustomerModal = ({ onClose, onCreated }) => {
 
   const handleSubmit = () => {
     if (!form.customer_name.trim()) {
-      setError(t("Customer name is required"));
+      setError(__("Customer name is required"));
       return;
     }
     setError("");
@@ -40,24 +39,24 @@ const NewCustomerModal = ({ onClose, onCreated }) => {
         if (data?.name) {
           onCreated(data);
         } else {
-          setError(t("Failed to create customer"));
+          setError(__("Failed to create customer"));
         }
       })
       .catch((err) => {
         setSubmitting(false);
-        setError(getServerMessage(err) || t("Failed to create customer"));
+        setError(getServerMessage(err) || __("Failed to create customer"));
       });
   };
 
   return (
     <Modal
-      title={t("New Customer")}
-      subtitle={t("Add a new customer to bill this sale against.")}
+      title={__("New Customer")}
+      subtitle={__("Add a new customer to bill this sale against.")}
       onClose={onClose}
       footer={
         <>
           <button type="button" className="pos-btn pos-btn-secondary" onClick={onClose}>
-            {t("Cancel")}
+            {__("Cancel")}
           </button>
           <button
             type="button"
@@ -68,10 +67,10 @@ const NewCustomerModal = ({ onClose, onCreated }) => {
             {submitting ? (
               <>
                 <span className="spinner-border spinner-border-sm" role="status" />
-                {t("Creating…")}
+                {__("Creating…")}
               </>
             ) : (
-              t("Create Customer")
+              __("Create Customer")
             )}
           </button>
         </>
@@ -80,15 +79,15 @@ const NewCustomerModal = ({ onClose, onCreated }) => {
       <ErrorAlert message={error} />
 
       <TextField
-        label={t("Customer Name")}
+        label={__("Customer Name")}
         required
-        placeholder={t("e.g. Aarav Sharma")}
+        placeholder={__("e.g. Aarav Sharma")}
         value={form.customer_name}
         onChange={(value) => setForm((prev) => ({ ...prev, customer_name: value }))}
       />
 
       <SelectField
-        label={t("Customer Type")}
+        label={__("Customer Type")}
         required
         value={form.customer_type}
         onChange={(value) => setForm((prev) => ({ ...prev, customer_type: value }))}
@@ -96,32 +95,32 @@ const NewCustomerModal = ({ onClose, onCreated }) => {
       />
 
       <SelectField
-        label={t("Customer Group")}
-        placeholder={t("Select customer group")}
+        label={__("Customer Group")}
+        placeholder={__("Select customer group")}
         value={form.customer_group}
         onChange={(value) => setForm((prev) => ({ ...prev, customer_group: value }))}
         options={customerGroups.map((g) => ({ label: g.name, value: g.name }))}
       />
 
       <SelectField
-        label={t("Territory")}
-        placeholder={t("Select territory")}
+        label={__("Territory")}
+        placeholder={__("Select territory")}
         value={form.territory}
         onChange={(value) => setForm((prev) => ({ ...prev, territory: value }))}
         options={territories.map((t) => ({ label: t.name, value: t.name }))}
       />
 
       <TextField
-        label={t("Mobile No")}
+        label={__("Mobile No")}
         placeholder="e.g. 9876543210"
         value={form.mobile_no}
         onChange={(value) => setForm((prev) => ({ ...prev, mobile_no: value }))}
       />
 
       <TextField
-        label={t("Email")}
+        label={__("Email")}
         type="email"
-        placeholder={t("e.g. customer@example.com")}
+        placeholder={__("e.g. customer@example.com")}
         value={form.email_id}
         onChange={(value) => setForm((prev) => ({ ...prev, email_id: value }))}
       />

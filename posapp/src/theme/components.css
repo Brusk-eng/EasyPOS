@@ -642,6 +642,17 @@
   margin-bottom: 0;
 }
 
+/* Language switchers: 38 languages, so the login picker is a compact select
+   and the Topbar menu scrolls instead of running off-screen. */
+.pos-login-language .form-select {
+  width: auto;
+}
+
+.pos-language-menu {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
 /* NumberField: hide native spinner arrows, use the stepper UI instead */
 .pos-field input[type="number"]::-webkit-outer-spin-button,
 .pos-field input[type="number"]::-webkit-inner-spin-button {

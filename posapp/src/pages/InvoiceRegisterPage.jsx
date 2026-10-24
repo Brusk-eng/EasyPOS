@@ -1,5 +1,4 @@
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { _t, useTranslation } from "../translation";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useOutletContext, useSearchParams } from "react-router-dom";
 import usePOSSessionStore from "../store/posSessionStore";
@@ -57,7 +56,7 @@ const buildInvoiceColumns = (money) => [
 ];
 
 const InvoiceRegisterPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -166,7 +165,7 @@ const InvoiceRegisterPage = () => {
             onClick={() => navigate("/posapp/terminal")}
           >
             <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-            {t("New invoice")}
+            {__("New invoice")}
           </button>
         </div>
 
@@ -174,7 +173,7 @@ const InvoiceRegisterPage = () => {
           <div className="d-flex align-items-end gap-2">
             <div style={{ width: 220 }}>
               <LinkField
-                label={t("Customer")}
+                label={__("Customer")}
                 doctype="Customer"
                 value={customer}
                 displayValue={customerName}
@@ -183,13 +182,13 @@ const InvoiceRegisterPage = () => {
                   setCustomer(docname ?? "");
                   setCustomerName(docname ? option?.label || option?.description || docname : "");
                 }}
-                placeholder={t("Filter by customer")}
+                placeholder={__("Filter by customer")}
                 size="sm"
               />
             </div>
             <div style={{ width: 200 }}>
               <LinkField
-                label={t("POS Profile")}
+                label={__("POS Profile")}
                 doctype="POS Profile"
                 value={posProfile}
                 onChange={(docname) => {
@@ -197,25 +196,25 @@ const InvoiceRegisterPage = () => {
                   setPosProfile(docname ?? "");
                   setPosProfileTouched(true);
                 }}
-                placeholder={t("Filter by POS Profile")}
+                placeholder={__("Filter by POS Profile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 180 }}>
               <TextField
-                label={t("Mobile No")}
+                label={__("Mobile No")}
                 value={mobileNo}
                 onChange={resetToFirstPage(setMobileNo)}
-                placeholder={t("Filter by mobile")}
+                placeholder={__("Filter by mobile")}
                 size="sm"
               />
             </div>
             <div style={{ width: 220 }}>
               <TextField
-                label={t("Email")}
+                label={__("Email")}
                 value={email}
                 onChange={resetToFirstPage(setEmail)}
-                placeholder={t("Filter by email")}
+                placeholder={__("Filter by email")}
                 size="sm"
               />
             </div>
@@ -226,7 +225,7 @@ const InvoiceRegisterPage = () => {
                 style={{ height: 30, fontSize: 12, padding: "0 12px", marginBottom: 14 }}
                 onClick={clearFilters}
               >
-                {t("Clear filters")}
+                {__("Clear filters")}
               </button>
             )}
           </div>
@@ -238,7 +237,7 @@ const InvoiceRegisterPage = () => {
               columns={columns}
               rows={visibleInvoices}
               loading={loading}
-              emptyMessage={t("No invoices found")}
+              emptyMessage={__("No invoices found")}
               onRowClick={(inv) => navigate(`/posapp/invoices/${encodeURIComponent(inv.name)}`)}
               rowStyle={(inv) =>
                 inv.status?.startsWith("Overdue") ? { background: "var(--color-warning-bg-soft)" } : null

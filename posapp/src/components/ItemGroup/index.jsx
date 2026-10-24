@@ -1,11 +1,10 @@
-import { tData } from "../../i18n";
-import { useTranslation } from "react-i18next";
+import { tData, useTranslation } from "../../translation";
 import { useEffect, useState, useMemo } from "react";
 import { fetchItemGroups } from "../../api/ItemGroup";
 import usePOSSessionStore from "../../store/posSessionStore";
 
 const ItemGroup = ({ selectedGroup, onChangeGroup }) => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [allItemGroups, setAllItemGroups] = useState([]);
   // POS Profile item_groups restriction (PP-04) — empty = unrestricted.
   const allowedGroups = usePOSSessionStore((s) => s.itemGroups);
@@ -39,7 +38,7 @@ const ItemGroup = ({ selectedGroup, onChangeGroup }) => {
         onClick={() => onChangeGroup("")}
       >
         <i className="bi bi-grid" />
-        <span>{t("All")}</span>
+        <span>{__("All")}</span>
       </div>
 
       {itemGroups.map((row) => (

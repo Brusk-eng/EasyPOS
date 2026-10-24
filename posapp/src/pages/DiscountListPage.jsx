@@ -1,6 +1,4 @@
-import i18n from "../i18n";
-import { _t } from "../i18n";
-import { useTranslation } from "react-i18next";
+import { __, _t, useTranslation } from "../translation";
 import { useEffect, useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { fetchPricingRules } from "../api/PricingRule";
@@ -16,7 +14,7 @@ const STATUS_FILTERS = [
 ];
 
 const discountLabel = (rule) => {
-  if (rule.price_or_product_discount === "Product") return i18n.t("Free item");
+  if (rule.price_or_product_discount === "Product") return __("Free item");
   if (rule.rate_or_discount === "Discount Percentage") return `${rule.discount_percentage || 0}%`;
   if (rule.rate_or_discount === "Discount Amount") return rule.discount_amount || 0;
   return "—";
@@ -46,7 +44,7 @@ const DISCOUNT_COLUMNS = [
     width: "0.8fr",
     render: (r) => (
       <span className={r.selling ? "pos-badge pos-badge-paid" : "pos-badge"}>
-        {r.selling ? i18n.t("Selling") : r.buying ? i18n.t("Buying") : "—"}
+        {r.selling ? __("Selling") : r.buying ? __("Buying") : "—"}
       </span>
     ),
   },
@@ -68,13 +66,13 @@ const DISCOUNT_COLUMNS = [
     label: _t("Status"),
     width: "0.8fr",
     render: (r) => (
-      <span className={r.disable ? "pos-badge" : "pos-badge pos-badge-paid"}>{r.disable ? i18n.t("Disabled") : i18n.t("Active")}</span>
+      <span className={r.disable ? "pos-badge" : "pos-badge pos-badge-paid"}>{r.disable ? __("Disabled") : __("Active")}</span>
     ),
   },
 ];
 
 const DiscountListPage = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const { setTopbar } = useOutletContext();
   const navigate = useNavigate();
 
@@ -132,7 +130,7 @@ const DiscountListPage = () => {
           onClick={() => navigate("/posapp/discounts/new")}
         >
           <i className="bi bi-plus-lg" style={{ fontSize: 14 }} />
-          {t("New discount")}
+          {__("New discount")}
         </button>
       </div>
 
@@ -142,7 +140,7 @@ const DiscountListPage = () => {
             columns={DISCOUNT_COLUMNS}
             rows={pricingRules}
             loading={loading}
-            emptyMessage={t("No discounts found")}
+            emptyMessage={__("No discounts found")}
             onRowClick={(r) => navigate(`/posapp/discounts/${encodeURIComponent(r.name)}`)}
           />
         </div>

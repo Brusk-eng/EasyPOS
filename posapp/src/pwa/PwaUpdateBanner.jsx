@@ -1,6 +1,6 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import { Workbox } from "workbox-window";
+import { useTranslation } from "../translation";
 
 // The built sw.js is emitted alongside the JS/CSS bundle under
 // /assets/easy_pos/posapp/, but a worker's default scope is limited to the
@@ -12,7 +12,7 @@ const SW_URL = "/api/method/easy_pos.api.pwa.service_worker";
 const SW_SCOPE = "/posapp/";
 
 const PwaUpdateBanner = () => {
-  const { t } = useTranslation();
+  const { __ } = useTranslation();
   const [needRefresh, setNeedRefresh] = useState(false);
   const wbRef = useRef(null);
 
@@ -41,16 +41,16 @@ const PwaUpdateBanner = () => {
         padding: "12px 16px",
       }}
     >
-      <span style={{ fontSize: 13.5 }}>{t("A new version of Easy POS is available.")}</span>
+      <span style={{ fontSize: 13.5 }}>{__("A new version of Easy POS is available.")}</span>
       <button
         type="button"
         className="pos-btn pos-btn-primary"
         onClick={() => wbRef.current?.messageSkipWaiting()}
       >
-        {t("Reload")}
+        {__("Reload")}
       </button>
       <button type="button" className="pos-btn" onClick={() => setNeedRefresh(false)}>
-        {t("Dismiss")}
+        {__("Dismiss")}
       </button>
     </div>
   );
